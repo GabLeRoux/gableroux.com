@@ -7,7 +7,7 @@ layout: default
     <div id="home-articles-list">
         {% for post in site.posts %}
         <article class="blog-post">
-            <header>
+            <header class="post-header">
                 <hr>
                 <h1>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" name="{{ post.title }}">
