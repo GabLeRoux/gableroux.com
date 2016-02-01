@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pelican Gruntfile</title>
+    <meta name="description" content="
+            ">
+    <meta name="author" content="Gabriel Le Breton">
+
+    <link rel="canonical" href="http://gableroux.com/pelican/grunt/gruntfile/coffeescript/2014/08/17/pelican-gruntfile.html">
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="
+            http://gableroux.com/feed.xml"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="
+            /bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="
+            /bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="
+            /bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                
+                    <li>
+                        <a href="/">
+                            <img src="/images/GabLeRoux-logo-small-white.png" alt=""/>
+                        </a>
+                    </li>
+                
+
+                <li class="">
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
+                </li>
+
+                
+                
+                
+    
+        
+            <li><a href="/about/">About</a></li>
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+            <li><a href="/todo/">Todo</a></li>
+        
+    
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<main class="containter" id="wrap">
+    <div class="container">
+        <div class="row">
+            <div class="page-content">
+                <article class="blog-post">
+
+    <header class="post-header">
+        <div class="row">
+            <h1 class="post-title">Pelican Gruntfile</h1>
+
+            <p class="post-meta">Aug 17, 2014
+            </p>
+        </div>
+    </header>
+    <hr/>
+
+    <article class="post-content">
+        <p><img src="/images/grunt-logo-large.jpg" alt="grunt" /></p>
+
+<p>Now that I use <a href="http://www.gruntjs.com/">grunt, the JavaScript Task Runner</a> my life has changed! It makes task automation so cool that it is a must have in every web project (and even sometime in other projects!). There’s also a great alternative called <a href="http://gulpjs.com/">Gulp.js</a>. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool <em>yet</em>.</p>
+
+<!-- more -->
+
+<h2 id="pelican-automation">Pelican automation</h2>
+
+<p>I searched <code>pelican gruntfile</code> on <a href="https://duckduckgo.com/">duckduckgo</a> and found nothing very interesting. There is this <a href="https://github.com/chuwy/grunt-pelican/">grunt-pelican repo</a> but it doesn’t seem to work right at the time of writing this article and its ReadMe is missing some code. </p>
+
+<p>Because pelican is easy to use, I decided to make my own <code>gruntfile</code> instead! After around half an hour, I managed to get something interesting.</p>
+
+<h3 id="how-to">How to</h3>
+
+<p>First, create a <code>package.json</code> file to save dependencies using this command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm init</code></pre></div>
+
+<p>Then, install the fun stuff</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save-dev grunt-coffeelint grunt-contrib-coffee grunt-contrib-connect grunt-contrib-jshint   grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks</code></pre></div>
+
+<p>Everything will be saved in your <code>package.json</code>, so next time you want to install them, you only have to run <code>npm install</code>. The package file will contain something like this:</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">&quot;devDependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;coffeelint&quot;</span><span class="p">:</span> <span class="s2">&quot;^1.5.6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;grunt-coffeelint&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.13&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;grunt-contrib-coffee&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.11.1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;grunt-contrib-connect&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.8.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;grunt-contrib-jshint&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.10.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;grunt-contrib-sass&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.7.4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;grunt-contrib-watch&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.6.1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;grunt-shell&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.7.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;load-grunt-tasks&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.6.0&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="the-gruntfile">The Gruntfile</h3>
+
+<p>Here’s my awesome <code>Gruntfile.coffee</code>:</p>
+
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">module.exports = </span><span class="nf">(grunt) -&gt;</span>
+  <span class="c1"># Load all grunt tasks.</span>
+  <span class="nx">require</span><span class="p">(</span><span class="s">&#39;load-grunt-tasks&#39;</span><span class="p">)(</span><span class="nx">grunt</span><span class="p">)</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span>
+    <span class="c1"># watch for files and load tasks when files change</span>
+    <span class="nv">watch:</span>
+      <span class="nv">coffee:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.coffee&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;coffeelint&#39;</span><span class="p">,</span> <span class="s">&#39;coffee&#39;</span><span class="p">,</span> <span class="s">&#39;shell&#39;</span><span class="p">]</span>
+      <span class="nv">jshint:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.js&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;jshint&#39;</span><span class="p">,</span> <span class="s">&#39;shell&#39;</span><span class="p">]</span>
+      <span class="nv">md:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;content/**/*.md&#39;</span><span class="p">,</span> <span class="s">&#39;!output&#39;</span><span class="p">,</span> <span class="s">&#39;!node_modules&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;shell&#39;</span><span class="p">]</span>
+      <span class="nv">scss:</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/css/**/*.scss&#39;</span><span class="p">]</span>
+        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;scss&#39;</span><span class="p">,</span> <span class="s">&#39;shell&#39;</span><span class="p">]</span>
+      <span class="nv">output:</span>
+        <span class="nv">options:</span>
+          <span class="nv">livereload: </span><span class="kc">true</span>
+        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;output/**/*&#39;</span><span class="p">]</span>
+
+    <span class="c1"># execute pelican to generate static files</span>
+    <span class="nv">shell:</span>
+      <span class="nv">pelican:</span>
+        <span class="nv">command: </span><span class="s">&quot;pelican&quot;</span>
+
+    <span class="nv">scss:</span>
+      <span class="nv">options:</span>
+        <span class="nv">style: </span><span class="s">&#39;expanded&#39;</span>
+      <span class="nv">files:</span>
+        <span class="s">&#39;theme/gableroux/static/css/main.css&#39;</span><span class="o">:</span> <span class="s">&#39;theme/gableroux/static/css/main.scss&#39;</span>
+
+    <span class="nv">coffeelint:</span>
+      <span class="nv">options:</span>
+        <span class="nv">configFile: </span><span class="s">&#39;coffeelint.json&#39;</span>
+      <span class="nv">all:</span>
+        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.coffee&#39;</span><span class="p">]</span>
+
+    <span class="nv">jshint:</span>
+      <span class="nv">options:</span>
+        <span class="nv">jshintrc: </span><span class="s">&#39;theme/gableroux/static/js/jshintrc&#39;</span>
+      <span class="nv">all:</span>
+        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.js&#39;</span><span class="p">]</span>
+
+    <span class="nv">coffee:</span>
+      <span class="nv">compile:</span>
+        <span class="nv">expand: </span><span class="kc">true</span>
+        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.coffee&#39;</span><span class="p">]</span>
+        <span class="nv">ext: </span><span class="s">&#39;.js&#39;</span>
+
+    <span class="nv">connect:</span>
+      <span class="nv">server:</span>
+        <span class="nv">options:</span>
+          <span class="nv">port: </span><span class="mi">8000</span>
+          <span class="nv">hostname: </span><span class="s">&#39;*&#39;</span>
+          <span class="nv">base: </span><span class="s">&#39;output&#39;</span>
+
+    <span class="nv">clean:</span>
+      <span class="nv">test:</span>
+        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;output&#39;</span><span class="p">]</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s">&#39;coffeelint&#39;</span>
+    <span class="c1"># &#39;jshint&#39;</span>
+  <span class="p">]</span>
+
+  <span class="c1"># Default task when typing grunt without parameter in the cli.</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s">&#39;test&#39;</span>
+    <span class="s">&#39;shell&#39;</span>
+    <span class="s">&#39;connect&#39;</span>
+    <span class="s">&#39;watch&#39;</span>
+  <span class="p">]</span></code></pre></div>
+
+<p><em>Note</em>: make sure you have <code>pelican</code> installed with <code>pip install pelican</code>. Replace <code>gableroux</code> with your own theme name (where your magic files are stored) and enjoy the Grunt awesomeness by running <code>grunt</code> in a terminal.</p>
+
+<p>Here’s the <code>jshintrc</code> file I used:</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&quot;esnext&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;bitwise&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;camelcase&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;curly&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;eqeqeq&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;immed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;indent&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="nt">&quot;latedef&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;newcap&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;noarg&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;quotmark&quot;</span><span class="p">:</span> <span class="s2">&quot;single&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;undef&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;unused&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;strict&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;trailing&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;smarttabs&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;white&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span></code></pre></div>
+
+<p>And my <code>coffeelint.json</code> file:</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&quot;indentation&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;max_line_length&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;ignore&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;line_endings&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;arrow_spacing&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;space_operators&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;cyclomatic_complexity&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;empty_constructor_needs_parens&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;no_empty_param_list&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;no_unnecessary_fat_arrows&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<blockquote>
+  <p>Why coffeescript? Visit <a href="http://coffeescript.org/">coffeescript’s website</a>, click on “try coffeescript”, copy/paste my Gruntfile.coffee and see how it is easier to read in coffee. Consider this as syntax sugar, but when it comes to <a href="http://coffeescript.org/#classes">extending javascript classes</a>, I really prefer using coffeescript.</p>
+</blockquote>
+
+<h2 id="the-fun-part">The fun part</h2>
+<p>Now, when I write new content in markdown files, or when I edit my theme, my browser <strong>automagically</strong> refresh my website using <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">LiveReload Chrome Extension</a> on my second screen. Having a workflow updating like this lets me write quality content (can you confirm this?), instead of running a bunch of scripts manually every time only to fix a typo on a blog post.</p>
+
+<p>Grunt rocks.<br />
+Enjoy</p>
+
+<h2 id="september-2015-edit">September 2015 edit</h2>
+
+<p>You should use <a href="http://www.browsersync.io/">Browser Sync</a> instead, it’s even more awesome!</p>
+
+
+    </article>
+
+    
+
+    </div>
+</article>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer clearfix">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="alt"><a href="/"><img src="
+                    /images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo"></a>
+            </li>
+            
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="http://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="http://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="mailto:gab@gableroux.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
+                </li>
+            
+            <li class="rss"><a href="
+                    http://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/js/main.js" type="application/javascript"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19518991-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body>
+
+</html>

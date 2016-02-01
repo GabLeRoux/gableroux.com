@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <div id="home-articles-list">
+        {% for post in site.posts %}
+            <article class="blog-post">
+                <hr>
+                <h1>
+                    <a class="post-link" href="
+                            {{ post.url | prepend: site.baseurl }}" name="{{ post.title }}">{{ post.title }}</a>
+                </h1>
+
+                <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+                <hr>
+
+                <div class="row">
+                    {{ post.content | split: '<!-- more -->' | first }}
+                    <a class="btn btn-primary post-link" href="
+                            {{ post.url | prepend: site.baseurl }}" name="{{ post.title }}">Read More
+                        <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+
+                {% if post.tags %}
+                    <div class="col-md-6 col-xs-12 text-left xs-text-center">
+                        {% for tag in post.tags %}
+                            <a class="label label-primary" href="#">{{- tag -}}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+            </article>
+        {% endfor %}
+    </div>
+
+</div>

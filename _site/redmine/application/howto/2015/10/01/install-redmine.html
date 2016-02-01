@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Install redmine on centos 7</title>
+    <meta name="description" content="
+            A collegue had to install [redmine][redmine] once and I gave this a look. Turns out [redmine documentation for centos] is getting old, we gave a try and wow,...">
+    <meta name="author" content="Gabriel Le Breton">
+
+    <link rel="canonical" href="http://gableroux.com/redmine/application/howto/2015/10/01/install-redmine.html">
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="
+            http://gableroux.com/feed.xml"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="
+            /bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="
+            /bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="
+            /bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                
+                    <li>
+                        <a href="/">
+                            <img src="/images/GabLeRoux-logo-small-white.png" alt=""/>
+                        </a>
+                    </li>
+                
+
+                <li class="">
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
+                </li>
+
+                
+                
+                
+    
+        
+            <li><a href="/about/">About</a></li>
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+            <li><a href="/todo/">Todo</a></li>
+        
+    
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<main class="containter" id="wrap">
+    <div class="container">
+        <div class="row">
+            <div class="page-content">
+                <article class="blog-post">
+
+    <header class="post-header">
+        <div class="row">
+            <h1 class="post-title">Install redmine on centos 7</h1>
+
+            <p class="post-meta">Oct 1, 2015
+            </p>
+        </div>
+    </header>
+    <hr/>
+
+    <article class="post-content">
+        <p>A collegue had to install [redmine][redmine] once and I gave this a look. Turns out [redmine documentation for centos] is getting old, we gave a try and wow, this is not as easy as it seems.</p>
+
+<!-- more -->
+
+<p>If you are here because you want to install redmine from scratch, I really suggest you use something like the one click digital ocean image, it will take you 5 minutes and this includes creating your account and loging into the app.</p>
+
+<h2 id="still-there">Still there?</h2>
+
+<p>Close your eyes, this will be ugly.</p>
+
+<h1 id="redmine-installation-on-ubunutu-1404-x64">Redmine installation on ubunutu 14.04 x64</h1>
+
+<pre><code>sudo apt-get install redmine redmine-mysql mysql-server -y
+</code></pre>
+
+<h1 id="mariadb-root-password-yav1div8ac9kesh3cy3wub4ab4fou">mariadb root password: yaV1diV8Ac9kesH3cY3wuB4Ab4Fou</h1>
+<p># MySQL application password for redmine/instances/default: iR3oC4kEwt7yU6Wyef3hed4or6Oc2</p>
+
+<pre><code>sudo apt-get install apache2 libapache2-mod-passenger -y
+sudo cp /usr/share/doc/redmine/examples/apache2-passenger-host.conf /etc/apache2/sites-available/
+
+gem install bundler
+</code></pre>
+
+<h1 id="customize-apache2-passenger-hostconf-listen-80">customize apache2-passenger-host.conf (listen 80)</h1>
+
+<pre><code>vim /etc/apache2/sites-available/apache2-passenger-host.conf
+</code></pre>
+
+<h1 id="passenger-conf">passenger conf</h1>
+
+<p>add <code>PassengerDefaultUser www-data</code> to <code>passenger.conf</code></p>
+
+<pre><code>vim /etc/apache2/mods-available/passenger.conf
+</code></pre>
+
+<h1 id="customize-apache2conf-nameserver">customize apache2.conf (NameServer)</h1>
+
+<pre><code>vim /etc/apache2/apache2.conf
+
+sudo ln -sf /usr/share/redmine /var/lib/redmine/default/passenger
+sudo a2ensite apache2-passenger-host.conf
+sudo service apache2 reload
+</code></pre>
+
+    </article>
+
+    
+
+    </div>
+</article>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer clearfix">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="alt"><a href="/"><img src="
+                    /images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo"></a>
+            </li>
+            
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="http://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="http://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+            
+            
+                <li>
+                    <a href="mailto:gab@gableroux.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
+                </li>
+            
+            <li class="rss"><a href="
+                    http://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/js/main.js" type="application/javascript"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19518991-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body>
+
+</html>

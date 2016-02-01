@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                {% if page.url != "/index.html" %}
+                    <li>
+                        <a href="/">
+                            <img src="{{ "/images/GabLeRoux-logo-small-white.png" | prepend: site.baseurl }}" alt="{{ site.baseurl }}"/>
+                        </a>
+                    </li>
+                {% endif %}
+
+                <li class="{% if page.url == "/index.html" %}active{% endif %}">
+                    <a href="/"><i class="fa fa-home"></i> Home</a>
+                </li>
+
+                {% assign pages_list = site.pages %}
+                {% assign group = 'navigation' %}
+                {% include pages_list.html %}
+            </ul>
+        </div>
+    </div>
+</nav>
