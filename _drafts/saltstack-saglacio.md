@@ -4,9 +4,8 @@ title:  "Saltstack presentation at the SagLacIO"
 date:   2015-06-03 12:00
 categories: presentation
 tags: saglacio saltstack
+featured_image: /images/saltstack-saglac-io.jpg
 ---
-
-![saltstack](/images/saltstack-salgacio.jpg)
 
 I gave a presentation at the [SagLacIO]() on SaltStack with Micael Bergeron, Here are the slides.
 

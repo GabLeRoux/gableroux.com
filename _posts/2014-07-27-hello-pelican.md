@@ -3,9 +3,8 @@ layout: post
 title:  "Hello Pelican"
 date:   2014-07-27 15:00:00
 categories: Pelican hello-world
+featured_image: /images/hello-pelican.jpg
 ---
-
-![Hello Pelican](/images/hello-pelican.jpg)
 
 Hi there,  
 Welcome to my blog. This is my first post (in fact, it's my second). I first attempted to create my blog with [wagtail][wagtail] but I had a [blocking issue][blocking-issue]. *Edit: problem solved, but I'm happy with pelican!* Anyway, I'm glad you're here, I made a branch and moved my work to [Pelican][pelican].

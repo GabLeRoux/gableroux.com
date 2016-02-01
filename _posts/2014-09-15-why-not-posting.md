@@ -3,9 +3,8 @@ layout: post
 title:  "More than a year later, why not!?"
 date:   2015-09-15 20:00:00
 categories: jekyll update
+featured_image: /images/hello-jekyll.jpg
 ---
-
-![Hello Jekyll](/images/hello-jekyll.jpg)
 
 Hey there,  
 This site is still maintained! I was running my personal site on [pelican][pelican] and I just decided to move to [jekyll][Jekyll]!

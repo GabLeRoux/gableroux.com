@@ -3,9 +3,10 @@ layout: post
 title:  "Install redmine on centos 7"
 date:   2015-09-31 18:00
 categories: redmine application howto
+featured_image: /images/redmine-centos.jpg
 ---
 
-A collegue had to install [redmine][redmine] once and I gave this a look. Turns out [redmine documentation for centos] is getting old, we gave a try and wow, this is not as easy as it seems.
+A colleague had to install [redmine][redmine] once and I gave this a look. Turns out [redmine documentation for centos] is getting old, we gave a try and wow, this is not as easy as it seems.
 
 <!-- more -->
 

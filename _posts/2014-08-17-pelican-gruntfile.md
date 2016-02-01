@@ -3,9 +3,8 @@ layout: post
 title:  "Pelican Gruntfile"
 date:   2014-08-17 12:00
 categories: Pelican grunt gruntfile coffeescript
+featured_image: /images/grunt-logo-large.jpg
 ---
-
-![grunt](/images/grunt-logo-large.jpg)
 
 Now that I use [grunt, the JavaScript Task Runner][gruntjs] my life has changed! It makes task automation so cool that it is a must have in every web project (and even sometime in other projects!). There's also a great alternative called [Gulp.js][gulpjs]. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool *yet*.
 

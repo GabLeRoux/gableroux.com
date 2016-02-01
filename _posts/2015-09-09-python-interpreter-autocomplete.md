@@ -4,9 +4,8 @@ title:  "Python interpreter autocomplete + history with ~/.pythonrc"
 date:   2015-07-27 15:00:00
 categories: python
 tag: dotfile history python pythonrc autocomplete
+featured_image: /images/pythonrc-history.png
 ---
-
-![Hello ~/.pythonrc](/images/hello-pelican.jpg)
 
 Using great tools is great, using autocompletion with great tools is even better!
 

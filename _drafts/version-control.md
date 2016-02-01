@@ -4,9 +4,8 @@ title:  "Y U NO GIT"
 date:   2015-06-04 12:00
 categories: tutorial
 tags: version-control git
+featured_image: /images/y-u-no-git.jpg
 ---
-
-![git diff terminal](/images/y-u-no-git.jpg)
 
 [Git][git] is a must have tool for programmers known as *the stupid content tracker*. Every programmer should learn to use it as soon as they can. Git could save a couple days and could even save your life (yep, git will save your life, it did with mine). 
 

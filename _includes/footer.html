@@ -1,45 +1,58 @@
 <footer class="site-footer clearfix">
     <div class="container">
         <ul class="nav nav-pills">
-            <li class="alt"><a href="/"><img src="
-                    {{ "/images/GabLeRoux-logo-small-white.png" | prepend: site.baseurl }}" alt="GabLeRoux logo"></a>
+            <li class="alt">
+                <a href="/">
+                    <img src="{{ '/images/GabLeRoux-logo-small-white.png' | prepend: site.baseurl }}"
+                         alt="GabLeRoux logo">
+                </a>
             </li>
             {% if site.github_username %}
-                <li>
-                    <a href="https://github.com/{{ site.github_username }}" rel="publisher" title="See {{ site.author }}'s code on GitHub"><i class="fa fa-github-square"></i></a>
-                </li>
+            <li>
+                <a href="https://github.com/{{ site.github_username }}" rel="publisher"
+                   title="See {{ site.author }}'s code on GitHub"><i class="fa fa-github-square"></i></a>
+            </li>
             {% endif %}
             {% if site.twitter_username %}
-                <li>
-                    <a href="http://www.facebook.com/{{ site.facebook_username }}/" target="_blank" title="Stalk {{ site.author }} on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
-                </li>
+            <li>
+                <a href="http://www.facebook.com/{{ site.facebook_username }}/" target="_blank"
+                   title="Stalk {{ site.author }} on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+            </li>
             {% endif %}
             {% if site.twitter_username %}
-                <li>
-                    <a href="http://twitter.com/{{ site.twitter_username }}" target="_blank" title="Follow @{{ site.twitter_username }}"><i class="fa fa-twitter-square fa-fw"></i></a>
-                </li>
+            <li>
+                <a href="http://twitter.com/{{ site.twitter_username }}" target="_blank"
+                   title="Follow @{{ site.twitter_username }}"><i class="fa fa-twitter-square fa-fw"></i></a>
+            </li>
             {% endif %}
             {% if site.google_plus_username %}
-                <li>
-                    <a href="https://plus.google.com/+{{ site.google_plus_username }}" rel="publisher" title="Find {{ site.author }} on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
-                </li>
+            <li>
+                <a href="https://plus.google.com/+{{ site.google_plus_username }}" rel="publisher"
+                   title="Find {{ site.author }} on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+            </li>
             {% endif %}
             {% if site.email %}
-                <li>
-                    <a href="mailto:{{ site.email }}" rel="publisher" title="Send an email to {{ site.author }}"><i class="fa fa-envelope fa-fw"></i></a>
-                </li>
+            <li>
+                <a href="mailto:{{ site.email }}" rel="publisher" title="Send an email to {{ site.author }}"><i
+                        class="fa fa-envelope fa-fw"></i></a>
+            </li>
             {% endif %}
             <li class="rss"><a href="
-                    {{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+                    {{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" title="Follow rss feed"><i
+                    class="fa fa-rss fa-fw"></i></a>
             </li>
         </ul>
     </div>
 </footer>
 
-<script src="{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}" type="application/javascript"></script>
-<script src="{{ "/bower_components/bootstrap/dist/js/bootstrap.min.js" | prepend: site.baseurl }}" type="application/javascript"></script>
-<script src="{{ "/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" | prepend: site.baseurl }}" type="application/javascript"></script>
-<script src="{{ "/js/main.js" | prepend: site.baseurl }}" type="application/javascript"></script>
+<script src="{{ '/bower_components/jquery/dist/jquery.min.js' | prepend: site.baseurl }}"
+        type="application/javascript"></script>
+<script src="{{ '/bower_components/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl }}"
+        type="application/javascript"></script>
+<script src="{{ '/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js' | prepend: site.baseurl }}"
+        type="application/javascript"></script>
+<script src="{{ '/js/main.js' | prepend: site.baseurl }}"
+        type="application/javascript"></script>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];

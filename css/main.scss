@@ -215,11 +215,17 @@ a {
 
 /* Blog page */
 
-.post-meta {
+.post-meta, .post-header {
   text-align: center;
 }
 
-.blog-post {
+.post-content {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+  }
+}
+
+.post-header {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: justify;

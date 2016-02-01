@@ -6,13 +6,13 @@
 </description>
     <link>http://gableroux.com/</link>
     <atom:link href="http://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Sep 2015 13:26:05 -0400</pubDate>
-    <lastBuildDate>Wed, 09 Sep 2015 13:26:05 -0400</lastBuildDate>
+    <pubDate>Sun, 31 Jan 2016 22:55:14 -0500</pubDate>
+    <lastBuildDate>Sun, 31 Jan 2016 22:55:14 -0500</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Install redmine on centos 7</title>
-        <description>&lt;p&gt;A collegue had to install [redmine][redmine] once and I gave this a look. Turns out [redmine documentation for centos] is getting old, we gave a try and wow, this is not as easy as it seems.&lt;/p&gt;
+        <description>&lt;p&gt;A colleague had to install [redmine][redmine] once and I gave this a look. Turns out [redmine documentation for centos] is getting old, we gave a try and wow, this is not as easy as it seems.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -72,9 +72,7 @@ sudo service apache2 reload
     
       <item>
         <title>More than a year later, why not!?</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/hello-jekyll.jpg&quot; alt=&quot;Hello Jekyll&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hey there,&lt;br /&gt;
+        <description>&lt;p&gt;Hey there,&lt;br /&gt;
 This site is still maintained! I was running my personal site on &lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;pelican&lt;/a&gt; and I just decided to move to &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt;!&lt;/p&gt;
 
 &lt;!-- more --&gt;
@@ -127,9 +125,7 @@ This site is still maintained! I was running my personal site on &lt;a href=&quo
     
       <item>
         <title>Python interpreter autocomplete + history with ~/.pythonrc</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/hello-pelican.jpg&quot; alt=&quot;Hello ~/.pythonrc&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Using great tools is great, using autocompletion with great tools is even better!&lt;/p&gt;
+        <description>&lt;p&gt;Using great tools is great, using autocompletion with great tools is even better!&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -187,9 +183,7 @@ This site is still maintained! I was running my personal site on &lt;a href=&quo
     
       <item>
         <title>Y U NO GIT</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/y-u-no-git.jpg&quot; alt=&quot;git diff terminal&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.git.com&quot;&gt;Git&lt;/a&gt; is a must have tool for programmers known as &lt;em&gt;the stupid content tracker&lt;/em&gt;. Every programmer should learn to use it as soon as they can. Git could save a couple days and could even save your life (yep, git will save your life, it did with mine). &lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.git.com&quot;&gt;Git&lt;/a&gt; is a must have tool for programmers known as &lt;em&gt;the stupid content tracker&lt;/em&gt;. Every programmer should learn to use it as soon as they can. Git could save a couple days and could even save your life (yep, git will save your life, it did with mine). &lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -349,9 +343,7 @@ Date:   Tue Sep 8 21:44:29 2015 -0400&lt;/p&gt;
     
       <item>
         <title>Saltstack presentation at the SagLacIO</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/saltstack-salgacio.jpg&quot; alt=&quot;saltstack&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I gave a presentation at the &lt;a href=&quot;&quot;&gt;SagLacIO&lt;/a&gt; on SaltStack with Micael Bergeron, Here are the slides.&lt;/p&gt;
+        <description>&lt;p&gt;I gave a presentation at the &lt;a href=&quot;&quot;&gt;SagLacIO&lt;/a&gt; on SaltStack with Micael Bergeron, Here are the slides.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -459,9 +451,7 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
     
       <item>
         <title>Pelican Gruntfile</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/grunt-logo-large.jpg&quot; alt=&quot;grunt&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now that I use &lt;a href=&quot;http://www.gruntjs.com/&quot;&gt;grunt, the JavaScript Task Runner&lt;/a&gt; my life has changed! It makes task automation so cool that it is a must have in every web project (and even sometime in other projects!). There’s also a great alternative called &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp.js&lt;/a&gt;. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool &lt;em&gt;yet&lt;/em&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;Now that I use &lt;a href=&quot;http://www.gruntjs.com/&quot;&gt;grunt, the JavaScript Task Runner&lt;/a&gt; my life has changed! It makes task automation so cool that it is a must have in every web project (and even sometime in other projects!). There’s also a great alternative called &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp.js&lt;/a&gt;. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool &lt;em&gt;yet&lt;/em&gt;.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -664,9 +654,7 @@ Enjoy&lt;/p&gt;
     
       <item>
         <title>Hello Pelican</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/hello-pelican.jpg&quot; alt=&quot;Hello Pelican&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Hi there,&lt;br /&gt;
+        <description>&lt;p&gt;Hi there,&lt;br /&gt;
 Welcome to my blog. This is my first post (in fact, it’s my second). I first attempted to create my blog with &lt;a href=&quot;http://wagtail.io/&quot;&gt;wagtail&lt;/a&gt; but I had a &lt;a href=&quot;http://stackoverflow.com/questions/24976561/wagtail-pages-giving-none-url-with-live-status&quot;&gt;blocking issue&lt;/a&gt;. &lt;em&gt;Edit: problem solved, but I’m happy with pelican!&lt;/em&gt; Anyway, I’m glad you’re here, I made a branch and moved my work to &lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!-- more --&gt;
