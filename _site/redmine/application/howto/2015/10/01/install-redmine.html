@@ -139,46 +139,46 @@
 
 <!-- more -->
 
-<p>If you are here because you want to install redmine from scratch, I really suggest you use something like the one click digital ocean image, it will take you 5 minutes and this includes creating your account and loging into the app.</p>
+<p>If you are here because you want to install redmine from scratch, I really suggest you use something like the <a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-one-click-install-redmine-on-ubuntu-14-04-image">one click digital ocean image</a>, it will take you 5 minutes and you’ll be done.</p>
 
 <h2 id="still-there">Still there?</h2>
 
 <p>Close your eyes, this will be ugly.</p>
 
-<h1 id="redmine-installation-on-ubunutu-1404-x64">Redmine installation on ubunutu 14.04 x64</h1>
+<h2 id="redmine-installation-on-cemtos-7">Redmine installation on CemtOS 7</h2>
 
-<pre><code>sudo apt-get install redmine redmine-mysql mysql-server -y
-</code></pre>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install redmine redmine-mysql mysql-server -y</code></pre></figure>
 
-<h1 id="mariadb-root-password-yav1div8ac9kesh3cy3wub4ab4fou">mariadb root password: yaV1diV8Ac9kesH3cY3wuB4Ab4Fou</h1>
-<p># MySQL application password for redmine/instances/default: iR3oC4kEwt7yU6Wyef3hed4or6Oc2</p>
+<p>You should use mariadb instead of mysql for <a href="https://seravo.fi/2015/10-reasons-to-migrate-to-mariadb-if-still-using-mysql">the following 10 reasons</a></p>
 
-<pre><code>sudo apt-get install apache2 libapache2-mod-passenger -y
+<p>Install apache2 (haven’t tried with nginx here, its usually better than apache, but not covered here sorry)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install apache2 libapache2-mod-passenger -y
 sudo cp /usr/share/doc/redmine/examples/apache2-passenger-host.conf /etc/apache2/sites-available/
 
-gem install bundler
-</code></pre>
+gem install bundler</code></pre></figure>
 
-<h1 id="customize-apache2-passenger-hostconf-listen-80">customize apache2-passenger-host.conf (listen 80)</h1>
+<h2 id="customize-apache2-passenger-hostconf-listen-80">Customize apache2-passenger-host.conf (listen 80)</h2>
 
-<pre><code>vim /etc/apache2/sites-available/apache2-passenger-host.conf
-</code></pre>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vim /etc/apache2/sites-available/apache2-passenger-host.conf</code></pre></figure>
 
-<h1 id="passenger-conf">passenger conf</h1>
+<p>Have a look to its content and comment, if you’re new to this, don’t edit ;)</p>
 
-<p>add <code>PassengerDefaultUser www-data</code> to <code>passenger.conf</code></p>
+<h2 id="edit-passenger-conf">Edit passenger conf</h2>
 
-<pre><code>vim /etc/apache2/mods-available/passenger.conf
-</code></pre>
+<p>Add <code class="highlighter-rouge">PassengerDefaultUser www-data</code> to <code class="highlighter-rouge">passenger.conf</code></p>
 
-<h1 id="customize-apache2conf-nameserver">customize apache2.conf (NameServer)</h1>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vim /etc/apache2/mods-available/passenger.conf</code></pre></figure>
 
-<pre><code>vim /etc/apache2/apache2.conf
+<h2 id="customize-apache2conf-nameserver">Customize apache2.conf (NameServer)</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vim /etc/apache2/apache2.conf
 
 sudo ln -sf /usr/share/redmine /var/lib/redmine/default/passenger
 sudo a2ensite apache2-passenger-host.conf
-sudo service apache2 reload
-</code></pre>
+sudo service apache2 reload</code></pre></figure>
+
+<p>Almost done.</p>
 
     </article>
 

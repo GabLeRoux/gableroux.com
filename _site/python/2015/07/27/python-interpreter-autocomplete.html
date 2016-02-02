@@ -141,41 +141,41 @@
 
 <h2 id="ever-used-python-interpreter">Ever used python interpreter?</h2>
 
-<p>You should, <a href="https://www.python.org/downloads/">install python</a> if it’s not already the case and run <code>python</code> in your terminal. Awesome, an interpreter!</p>
+<p>You should, <a href="https://www.python.org/downloads/">install python</a> if it’s not already the case and run <code class="highlighter-rouge">python</code> in your terminal. Awesome, an interpreter!</p>
 
 <h2 id="autocomplete">Autocomplete</h2>
 
 <p>Yes that’s right, here is what you’re looking for. Create this file:</p>
 
-<p><code>~/.pythonrc</code></p>
+<p><code class="highlighter-rouge">~/.pythonrc</code></p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">atexit</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">readline</span><span class="o">,</span> <span class="nn">rlcompleter</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">atexit</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">readline</span><span class="o">,</span> <span class="nn">rlcompleter</span>
 
-<span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">&#39;tab:complete&#39;</span><span class="p">)</span>
+<span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">'tab:complete'</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;.pythonrc :: AutoCompletion Loaded&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">".pythonrc :: AutoCompletion Loaded"</span><span class="p">)</span>
 
 <span class="c"># History</span>
-<span class="n">historyPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~/.pyhistory&quot;</span><span class="p">)</span>
+<span class="n">historyPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">"~/.pyhistory"</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">save_history</span><span class="p">(</span><span class="n">historyPath</span><span class="o">=</span><span class="n">historyPath</span><span class="p">):</span>
     <span class="kn">import</span> <span class="nn">readline</span>
     <span class="n">readline</span><span class="o">.</span><span class="n">write_history_file</span><span class="p">(</span><span class="n">historyPath</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;.pythonrc :: history saved to &quot;</span> <span class="o">+</span> <span class="n">historyPath</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">".pythonrc :: history saved to "</span> <span class="o">+</span> <span class="n">historyPath</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">historyPath</span><span class="p">):</span>
     <span class="n">readline</span><span class="o">.</span><span class="n">read_history_file</span><span class="p">(</span><span class="n">historyPath</span><span class="p">)</span>
 
-<span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">save_history</span><span class="p">)</span></code></pre></div>
+<span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">save_history</span><span class="p">)</span></code></pre></figure>
 
-<p>Then, you need to tell python interpreter to use this <code>~/.pythonrc</code> file, so add the following line somewhere in an <code>rc</code> file (either <code>~/.bashrc</code> if you’re using <a href="https://fr.wikipedia.org/wiki/Bourne-Again_shell">bash</a> or <code>~/.zshrc</code> for the awesome <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>)</p>
+<p>Then, you need to tell python interpreter to use this <code class="highlighter-rouge">~/.pythonrc</code> file, so add the following line somewhere in an <code class="highlighter-rouge">rc</code> file (either <code class="highlighter-rouge">~/.bashrc</code> if you’re using <a href="https://fr.wikipedia.org/wiki/Bourne-Again_shell">bash</a> or <code class="highlighter-rouge">~/.zshrc</code> for the awesome <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>)</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">export</span> <span class="n">PYTHONSTARTUP</span><span class="o">=~/.</span><span class="n">pythonrc</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">export</span> <span class="n">PYTHONSTARTUP</span><span class="o">=~/.</span><span class="n">pythonrc</span></code></pre></figure>
 
 <p>You can also run this directly in your shell if you want to test before editing your rc file.</p>
 
-<p>That’s it, fire up a terminal, run <code>python</code> again and enjoy autocompletion with tab.</p>
+<p>That’s it, fire up a terminal, run <code class="highlighter-rouge">python</code> again and enjoy autocompletion with tab.</p>
 
 <p><img src="/images/python-interpreter-autocompletion.png" alt="pythonrc terminal example" /></p>
 

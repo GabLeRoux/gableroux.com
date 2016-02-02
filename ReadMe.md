@@ -14,6 +14,7 @@ Hey there, welcome to the backstage of my website.
 
 ## Deployment
 
+    bundle exec jekyll build
     git commit -m "publish"
 
 Now go read my posts!

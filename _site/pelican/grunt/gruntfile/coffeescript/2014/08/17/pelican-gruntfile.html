@@ -141,170 +141,170 @@
 
 <h2 id="pelican-automation">Pelican automation</h2>
 
-<p>I searched <code>pelican gruntfile</code> on <a href="https://duckduckgo.com/">duckduckgo</a> and found nothing very interesting. There is this <a href="https://github.com/chuwy/grunt-pelican/">grunt-pelican repo</a> but it doesn’t seem to work right at the time of writing this article and its ReadMe is missing some code. </p>
+<p>I searched <code class="highlighter-rouge">pelican gruntfile</code> on <a href="https://duckduckgo.com/">duckduckgo</a> and found nothing very interesting. There is this <a href="https://github.com/chuwy/grunt-pelican/">grunt-pelican repo</a> but it doesn’t seem to work right at the time of writing this article and its ReadMe is missing some code.</p>
 
-<p>Because pelican is easy to use, I decided to make my own <code>gruntfile</code> instead! After around half an hour, I managed to get something interesting.</p>
+<p>Because pelican is easy to use, I decided to make my own <code class="highlighter-rouge">gruntfile</code> instead! After around half an hour, I managed to get something interesting.</p>
 
 <h3 id="how-to">How to</h3>
 
-<p>First, create a <code>package.json</code> file to save dependencies using this command:</p>
+<p>First, create a <code class="highlighter-rouge">package.json</code> file to save dependencies using this command:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm init</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm init</code></pre></figure>
 
 <p>Then, install the fun stuff</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save-dev grunt-coffeelint grunt-contrib-coffee grunt-contrib-connect grunt-contrib-jshint   grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --save-dev grunt-coffeelint grunt-contrib-coffee grunt-contrib-connect grunt-contrib-jshint   grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks</code></pre></figure>
 
-<p>Everything will be saved in your <code>package.json</code>, so next time you want to install them, you only have to run <code>npm install</code>. The package file will contain something like this:</p>
+<p>Everything will be saved in your <code class="highlighter-rouge">package.json</code>, so next time you want to install them, you only have to run <code class="highlighter-rouge">npm install</code>. The package file will contain something like this:</p>
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">&quot;devDependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&quot;coffeelint&quot;</span><span class="p">:</span> <span class="s2">&quot;^1.5.6&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;grunt-coffeelint&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.13&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;grunt-contrib-coffee&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.11.1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;grunt-contrib-connect&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.8.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;grunt-contrib-jshint&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.10.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;grunt-contrib-sass&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.7.4&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;grunt-contrib-watch&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.6.1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;grunt-shell&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.7.0&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;load-grunt-tasks&quot;</span><span class="p">:</span> <span class="s2">&quot;^0.6.0&quot;</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">"devDependencies"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"coffeelint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.5.6"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"grunt-coffeelint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0.13"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"grunt-contrib-coffee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.11.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"grunt-contrib-connect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.8.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"grunt-contrib-jshint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.10.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"grunt-contrib-sass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.7.4"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"grunt-contrib-watch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.6.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"grunt-shell"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.7.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"load-grunt-tasks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.6.0"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <h3 id="the-gruntfile">The Gruntfile</h3>
 
-<p>Here’s my awesome <code>Gruntfile.coffee</code>:</p>
+<p>Here’s my awesome <code class="highlighter-rouge">Gruntfile.coffee</code>:</p>
 
-<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nv">module.exports = </span><span class="nf">(grunt) -&gt;</span>
-  <span class="c1"># Load all grunt tasks.</span>
-  <span class="nx">require</span><span class="p">(</span><span class="s">&#39;load-grunt-tasks&#39;</span><span class="p">)(</span><span class="nx">grunt</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nx">module</span><span class="p">.</span><span class="na">exports</span> <span class="o">=</span> <span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="o">-&gt;</span>
+  <span class="c1"># Load all grunt tasks.
+</span>  <span class="nx">require</span><span class="p">(</span><span class="s">'load-grunt-tasks'</span><span class="p">)(</span><span class="nx">grunt</span><span class="p">)</span>
 
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span>
-    <span class="c1"># watch for files and load tasks when files change</span>
-    <span class="nv">watch:</span>
-      <span class="nv">coffee:</span>
-        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.coffee&#39;</span><span class="p">]</span>
-        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;coffeelint&#39;</span><span class="p">,</span> <span class="s">&#39;coffee&#39;</span><span class="p">,</span> <span class="s">&#39;shell&#39;</span><span class="p">]</span>
-      <span class="nv">jshint:</span>
-        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.js&#39;</span><span class="p">]</span>
-        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;jshint&#39;</span><span class="p">,</span> <span class="s">&#39;shell&#39;</span><span class="p">]</span>
-      <span class="nv">md:</span>
-        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;content/**/*.md&#39;</span><span class="p">,</span> <span class="s">&#39;!output&#39;</span><span class="p">,</span> <span class="s">&#39;!node_modules&#39;</span><span class="p">]</span>
-        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;shell&#39;</span><span class="p">]</span>
-      <span class="nv">scss:</span>
-        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/css/**/*.scss&#39;</span><span class="p">]</span>
-        <span class="nv">tasks: </span><span class="p">[</span><span class="s">&#39;scss&#39;</span><span class="p">,</span> <span class="s">&#39;shell&#39;</span><span class="p">]</span>
-      <span class="nv">output:</span>
-        <span class="nv">options:</span>
-          <span class="nv">livereload: </span><span class="kc">true</span>
-        <span class="nv">files: </span><span class="p">[</span><span class="s">&#39;output/**/*&#39;</span><span class="p">]</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="na">initConfig</span>
+    <span class="c1"># watch for files and load tasks when files change
+</span>    <span class="na">watch</span><span class="o">:</span>
+      <span class="na">coffee</span><span class="o">:</span>
+        <span class="na">files</span><span class="o">:</span> <span class="p">[</span><span class="s">'theme/gableroux/static/js/*.coffee'</span><span class="p">]</span>
+        <span class="na">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s">'coffeelint'</span><span class="p">,</span> <span class="s">'coffee'</span><span class="p">,</span> <span class="s">'shell'</span><span class="p">]</span>
+      <span class="na">jshint</span><span class="o">:</span>
+        <span class="na">files</span><span class="o">:</span> <span class="p">[</span><span class="s">'theme/gableroux/static/js/*.js'</span><span class="p">]</span>
+        <span class="na">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s">'jshint'</span><span class="p">,</span> <span class="s">'shell'</span><span class="p">]</span>
+      <span class="na">md</span><span class="o">:</span>
+        <span class="na">files</span><span class="o">:</span> <span class="p">[</span><span class="s">'content/**/*.md'</span><span class="p">,</span> <span class="s">'!output'</span><span class="p">,</span> <span class="s">'!node_modules'</span><span class="p">]</span>
+        <span class="na">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s">'shell'</span><span class="p">]</span>
+      <span class="na">scss</span><span class="o">:</span>
+        <span class="na">files</span><span class="o">:</span> <span class="p">[</span><span class="s">'theme/gableroux/static/css/**/*.scss'</span><span class="p">]</span>
+        <span class="na">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s">'scss'</span><span class="p">,</span> <span class="s">'shell'</span><span class="p">]</span>
+      <span class="na">output</span><span class="o">:</span>
+        <span class="na">options</span><span class="o">:</span>
+          <span class="na">livereload</span><span class="o">:</span> <span class="no">true</span>
+        <span class="na">files</span><span class="o">:</span> <span class="p">[</span><span class="s">'output/**/*'</span><span class="p">]</span>
 
-    <span class="c1"># execute pelican to generate static files</span>
-    <span class="nv">shell:</span>
-      <span class="nv">pelican:</span>
-        <span class="nv">command: </span><span class="s">&quot;pelican&quot;</span>
+    <span class="c1"># execute pelican to generate static files
+</span>    <span class="na">shell</span><span class="o">:</span>
+      <span class="na">pelican</span><span class="o">:</span>
+        <span class="na">command</span><span class="o">:</span> <span class="s">"pelican"</span>
 
-    <span class="nv">scss:</span>
-      <span class="nv">options:</span>
-        <span class="nv">style: </span><span class="s">&#39;expanded&#39;</span>
-      <span class="nv">files:</span>
-        <span class="s">&#39;theme/gableroux/static/css/main.css&#39;</span><span class="o">:</span> <span class="s">&#39;theme/gableroux/static/css/main.scss&#39;</span>
+    <span class="na">scss</span><span class="o">:</span>
+      <span class="na">options</span><span class="o">:</span>
+        <span class="na">style</span><span class="o">:</span> <span class="s">'expanded'</span>
+      <span class="na">files</span><span class="o">:</span>
+        <span class="s">'theme/gableroux/static/css/main.css'</span><span class="o">:</span> <span class="s">'theme/gableroux/static/css/main.scss'</span>
 
-    <span class="nv">coffeelint:</span>
-      <span class="nv">options:</span>
-        <span class="nv">configFile: </span><span class="s">&#39;coffeelint.json&#39;</span>
-      <span class="nv">all:</span>
-        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.coffee&#39;</span><span class="p">]</span>
+    <span class="na">coffeelint</span><span class="o">:</span>
+      <span class="na">options</span><span class="o">:</span>
+        <span class="na">configFile</span><span class="o">:</span> <span class="s">'coffeelint.json'</span>
+      <span class="na">all</span><span class="o">:</span>
+        <span class="na">src</span><span class="o">:</span> <span class="p">[</span><span class="s">'theme/gableroux/static/js/*.coffee'</span><span class="p">]</span>
 
-    <span class="nv">jshint:</span>
-      <span class="nv">options:</span>
-        <span class="nv">jshintrc: </span><span class="s">&#39;theme/gableroux/static/js/jshintrc&#39;</span>
-      <span class="nv">all:</span>
-        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.js&#39;</span><span class="p">]</span>
+    <span class="na">jshint</span><span class="o">:</span>
+      <span class="na">options</span><span class="o">:</span>
+        <span class="na">jshintrc</span><span class="o">:</span> <span class="s">'theme/gableroux/static/js/jshintrc'</span>
+      <span class="na">all</span><span class="o">:</span>
+        <span class="na">src</span><span class="o">:</span> <span class="p">[</span><span class="s">'theme/gableroux/static/js/*.js'</span><span class="p">]</span>
 
-    <span class="nv">coffee:</span>
-      <span class="nv">compile:</span>
-        <span class="nv">expand: </span><span class="kc">true</span>
-        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;theme/gableroux/static/js/*.coffee&#39;</span><span class="p">]</span>
-        <span class="nv">ext: </span><span class="s">&#39;.js&#39;</span>
+    <span class="na">coffee</span><span class="o">:</span>
+      <span class="na">compile</span><span class="o">:</span>
+        <span class="na">expand</span><span class="o">:</span> <span class="no">true</span>
+        <span class="na">src</span><span class="o">:</span> <span class="p">[</span><span class="s">'theme/gableroux/static/js/*.coffee'</span><span class="p">]</span>
+        <span class="na">ext</span><span class="o">:</span> <span class="s">'.js'</span>
 
-    <span class="nv">connect:</span>
-      <span class="nv">server:</span>
-        <span class="nv">options:</span>
-          <span class="nv">port: </span><span class="mi">8000</span>
-          <span class="nv">hostname: </span><span class="s">&#39;*&#39;</span>
-          <span class="nv">base: </span><span class="s">&#39;output&#39;</span>
+    <span class="na">connect</span><span class="o">:</span>
+      <span class="na">server</span><span class="o">:</span>
+        <span class="na">options</span><span class="o">:</span>
+          <span class="na">port</span><span class="o">:</span> <span class="mi">8000</span>
+          <span class="na">hostname</span><span class="o">:</span> <span class="s">'*'</span>
+          <span class="na">base</span><span class="o">:</span> <span class="s">'output'</span>
 
-    <span class="nv">clean:</span>
-      <span class="nv">test:</span>
-        <span class="nv">src: </span><span class="p">[</span><span class="s">&#39;output&#39;</span><span class="p">]</span>
+    <span class="na">clean</span><span class="o">:</span>
+      <span class="na">test</span><span class="o">:</span>
+        <span class="na">src</span><span class="o">:</span> <span class="p">[</span><span class="s">'output'</span><span class="p">]</span>
 
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="p">[</span>
-    <span class="s">&#39;coffeelint&#39;</span>
-    <span class="c1"># &#39;jshint&#39;</span>
-  <span class="p">]</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="na">registerTask</span> <span class="s">'test'</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s">'coffeelint'</span>
+    <span class="c1"># 'jshint'
+</span>  <span class="p">]</span>
 
-  <span class="c1"># Default task when typing grunt without parameter in the cli.</span>
-  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span> <span class="s">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span>
-    <span class="s">&#39;test&#39;</span>
-    <span class="s">&#39;shell&#39;</span>
-    <span class="s">&#39;connect&#39;</span>
-    <span class="s">&#39;watch&#39;</span>
-  <span class="p">]</span></code></pre></div>
+  <span class="c1"># Default task when typing grunt without parameter in the cli.
+</span>  <span class="nx">grunt</span><span class="p">.</span><span class="na">registerTask</span> <span class="s">'default'</span><span class="p">,</span> <span class="p">[</span>
+    <span class="s">'test'</span>
+    <span class="s">'shell'</span>
+    <span class="s">'connect'</span>
+    <span class="s">'watch'</span>
+  <span class="p">]</span></code></pre></figure>
 
-<p><em>Note</em>: make sure you have <code>pelican</code> installed with <code>pip install pelican</code>. Replace <code>gableroux</code> with your own theme name (where your magic files are stored) and enjoy the Grunt awesomeness by running <code>grunt</code> in a terminal.</p>
+<p><em>Note</em>: make sure you have <code class="highlighter-rouge">pelican</code> installed with <code class="highlighter-rouge">pip install pelican</code>. Replace <code class="highlighter-rouge">gableroux</code> with your own theme name (where your magic files are stored) and enjoy the Grunt awesomeness by running <code class="highlighter-rouge">grunt</code> in a terminal.</p>
 
-<p>Here’s the <code>jshintrc</code> file I used:</p>
+<p>Here’s the <code class="highlighter-rouge">jshintrc</code> file I used:</p>
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&quot;esnext&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;bitwise&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;camelcase&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;curly&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;eqeqeq&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;immed&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;indent&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-    <span class="nt">&quot;latedef&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;newcap&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;noarg&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;quotmark&quot;</span><span class="p">:</span> <span class="s2">&quot;single&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;undef&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;unused&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&quot;strict&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;trailing&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;smarttabs&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;white&quot;</span><span class="p">:</span> <span class="kc">true</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"esnext"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"bitwise"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"camelcase"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"curly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"eqeqeq"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"immed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"indent"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"latedef"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"newcap"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"noarg"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"quotmark"</span><span class="p">:</span><span class="w"> </span><span class="s2">"single"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"undef"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"unused"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"strict"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"trailing"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"smarttabs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"white"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
-<p>And my <code>coffeelint.json</code> file:</p>
+<p>And my <code class="highlighter-rouge">coffeelint.json</code> file:</p>
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&quot;indentation&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="mi">2</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;max_line_length&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;ignore&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;line_endings&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;arrow_spacing&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;space_operators&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;cyclomatic_complexity&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;empty_constructor_needs_parens&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;no_empty_param_list&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;no_unnecessary_fat_arrows&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;error&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nt">"indentation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"max_line_length"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ignore"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"line_endings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"arrow_spacing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"space_operators"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"cyclomatic_complexity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"empty_constructor_needs_parens"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"no_empty_param_list"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"no_unnecessary_fat_arrows"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <blockquote>
   <p>Why coffeescript? Visit <a href="http://coffeescript.org/">coffeescript’s website</a>, click on “try coffeescript”, copy/paste my Gruntfile.coffee and see how it is easier to read in coffee. Consider this as syntax sugar, but when it comes to <a href="http://coffeescript.org/#classes">extending javascript classes</a>, I really prefer using coffeescript.</p>
