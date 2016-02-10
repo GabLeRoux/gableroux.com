@@ -20,5 +20,5 @@ disqus_shortname: gableroux
 markdown: kramdown
 
 sass:
-    style: compressed
-    sass_dir: _sass
+  style: compressed
+  sass_dir: _sass

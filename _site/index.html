@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>GabLeRoux <Developer></title>
-    <meta name="description" content="
-            Personal site about code, ideas, technologies and anything else. I like to write python and work on crazy projects, read my stuff!
+
+    <meta name="description" content="Personal site about code, ideas, technologies and anything else. I like to write python and work on crazy projects, read my stuff!
 ">
     <meta name="author" content="Gabriel Le Breton">
 
     <link rel="canonical" href="http://gableroux.com/">
-    <link rel="alternate"
-          type="application/rss+xml" title="GabLeRoux <Developer>"
-          href="http://gableroux.com/feed.xml"/>
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="http://gableroux.com/feed.xml"/>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -30,16 +28,14 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet"
-          href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet"
-          href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
-    <link rel="stylesheet"
-          href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -62,7 +58,7 @@
             <ul class="nav navbar-nav">
 
                 
-                <li>
+                <li class="home-link">
                     <a href="/">
                         <img src="/images/GabLeRoux-logo-small-white.png"
                              alt=""/>
@@ -113,6 +109,13 @@
     </div>
 </nav>
 
+<header class="site-header">
+    <a href="/">
+        <img class="animated fadeInUp" src="/images/GabLeRoux-logo.png" alt="GabLeRoux logo">
+    </a>
+
+    <p class="lead animated fadeInUp">&lt;Developer&gt;</p>
+</header>
 
 
 <main class="containter" id="wrap">
@@ -122,6 +125,50 @@
                 <div class="home">
 
     <div id="home-articles-list">
+        
+        <article class="blog-post">
+            <header class="post-header">
+                <hr>
+                <h1>
+                    <a class="post-link" href="/tips/2016/02/09/keep-saltstack-colored-output.html" name="Save saltstack console colored output to file">
+                        Save saltstack console colored output to file
+                    </a>
+                </h1>
+
+                <p class="post-meta">Feb 9, 2016</p>
+
+                
+                <a class="featured-image-link" href="/tips/2016/02/09/keep-saltstack-colored-output.html" name="Save saltstack console colored output to file">
+                    <img class="featured-image" src="/images/saltstack-colors-output.jpg" alt="Save saltstack console colored output to file">
+                </a>
+                
+
+                <hr>
+            </header>
+
+            <div class="row">
+                <p>Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files?</p>
+
+
+                <a class="btn btn-primary post-link"
+                   href="/tips/2016/02/09/keep-saltstack-colored-output.html"
+                   name="Save saltstack console colored output to file">Read More <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+
+            
+            <div class="col-md-6 col-xs-12 text-left xs-text-center">
+                
+                <a class="label label-primary" href="#"></a>
+                
+                <a class="label label-primary" href="#"></a>
+                
+                <a class="label label-primary" href="#"></a>
+                
+            </div>
+            
+
+        </article>
         
         <article class="blog-post">
             <header class="post-header">
@@ -263,7 +310,7 @@ This site is still <em>maintained</em>! I was running my personal site on <a hre
             </header>
 
             <div class="row">
-                <p>Using great tools is great, using autocompletion with great tools is even better!</p>
+                <p>Using great tools is important, using autocompletion with great tools is even better!</p>
 
 
                 <a class="btn btn-primary post-link"
@@ -532,52 +579,54 @@ Welcome to my blog. This is my first post (in fact, it’s my second). I first a
     </div>
 </main>
 
-<footer class="site-footer clearfix">
-    <div class="container">
-        <ul class="nav nav-pills">
-            <li class="alt">
-                <a href="/">
-                    <img src="/images/GabLeRoux-logo-small-white.png"
-                         alt="GabLeRoux logo">
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://github.com/GabLeRoux" rel="publisher"
-                   title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="http://www.facebook.com/gableroux/" target="_blank"
-                   title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="http://twitter.com/gableroux" target="_blank"
-                   title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher"
-                   title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="mailto:gab@gableroux.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i
-                        class="fa fa-envelope fa-fw"></i></a>
-            </li>
-            
-            <li class="rss"><a href="
+<div class="footer-margin-fix">
+    <footer class="site-footer clearfix">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="alt">
+                    <a href="/">
+                        <img src="/images/GabLeRoux-logo-small-white.png"
+                             alt="GabLeRoux logo">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher"
+                       title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="http://www.facebook.com/gableroux/" target="_blank"
+                       title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="http://twitter.com/gableroux" target="_blank"
+                       title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher"
+                       title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="mailto:gab@gableroux.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i
+                            class="fa fa-envelope fa-fw"></i></a>
+                </li>
+                
+                <li class="rss"><a href="
                     http://gableroux.com/feed.xml" title="Follow rss feed"><i
-                    class="fa fa-rss fa-fw"></i></a>
-            </li>
-        </ul>
-    </div>
-</footer>
+                        class="fa fa-rss fa-fw"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"
         type="application/javascript"></script>

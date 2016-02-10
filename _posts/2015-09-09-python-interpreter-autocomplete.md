@@ -7,7 +7,7 @@ tag: dotfile history python pythonrc autocomplete
 featured_image: /images/pythonrc-history.png
 ---
 
-Using great tools is great, using autocompletion with great tools is even better!
+Using great tools is important, using autocompletion with great tools is even better!
 
 <!-- more -->
 
@@ -15,9 +15,9 @@ Using great tools is great, using autocompletion with great tools is even better
 
 You should, [install python][install-python] if it's not already the case and run `python` in your terminal. Awesome, an interpreter!
 
-## Autocomplete
+## Get interpreter autocompletion
 
-Yes that's right, here is what you're looking for. Create this file:
+Here is what you're looking for, create this file:
 
 `~/.pythonrc`
 
@@ -49,9 +49,9 @@ Then, you need to tell python interpreter to use this `~/.pythonrc` file, so add
 export PYTHONSTARTUP=~/.pythonrc
 {% endhighlight %}
 
-You can also run this directly in your shell if you want to test before editing your rc file.
+You can also run this directly in your shell if you want to test before editing your `rc`` file.
 
-That's it, fire up a terminal, run `python` again and enjoy autocompletion with tab.
+That's it, fire up a terminal, run `python` again and enjoy autocompletion with when you hit `tab` key :D
 
 ![pythonrc terminal example](/images/python-interpreter-autocompletion.png)
 

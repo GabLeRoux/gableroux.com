@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Hello Pelican</title>
-    <meta name="description" content="
-            Hi there,Welcome to my blog. This is my first post (in fact, it’s my second). I first attempted to create my blog with wagtail but I had a blocking issue. Ed...">
+
+    <meta name="description" content="Hi there,Welcome to my blog. This is my first post (in fact, it’s my second). I first attempted to create my blog with wagtail but I had a blocking issue. Ed...">
     <meta name="author" content="Gabriel Le Breton">
 
     <link rel="canonical" href="http://gableroux.com/pelican/hello-world/2014/07/27/hello-pelican.html">
-    <link rel="alternate"
-          type="application/rss+xml" title="GabLeRoux <Developer>"
-          href="http://gableroux.com/feed.xml"/>
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="http://gableroux.com/feed.xml"/>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -29,16 +27,14 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet"
-          href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet"
-          href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
-    <link rel="stylesheet"
-          href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -61,7 +57,7 @@
             <ul class="nav navbar-nav">
 
                 
-                <li>
+                <li class="home-link">
                     <a href="/">
                         <img src="/images/GabLeRoux-logo-small-white.png"
                              alt=""/>
@@ -118,13 +114,15 @@
     <div class="container">
         <div class="row">
             <div class="page-content">
-                <article class="blog-post">
+                <article class="blog-page">
 
-    <header class="post-header">
+    <header class="page-header">
         <div class="row">
-            <h1 class="post-title">Hello Pelican</h1>
+            <h1 class="page-title">Hello Pelican</h1>
 
-            <p class="post-meta">Jul 27, 2014
+            <p class="page-meta">
+                Jul 27, 2014
+                
             </p>
 
             <img src="/images/hello-pelican.jpg" alt="Hello Pelican">
@@ -134,7 +132,7 @@
 
     <hr>
 
-    <article class="post-content">
+    <article class="page-content">
         <p>Hi there,<br />
 Welcome to my blog. This is my first post (in fact, it’s my second). I first attempted to create my blog with <a href="http://wagtail.io/">wagtail</a> but I had a <a href="http://stackoverflow.com/questions/24976561/wagtail-pages-giving-none-url-with-live-status">blocking issue</a>. <em>Edit: problem solved, but I’m happy with pelican!</em> Anyway, I’m glad you’re here, I made a branch and moved my work to <a href="http://blog.getpelican.com/">Pelican</a>.</p>
 
@@ -200,7 +198,6 @@ Done. Your new project is available at *******/***/********/*****
 
     
 
-    </div>
 </article>
 
             </div>
@@ -208,52 +205,54 @@ Done. Your new project is available at *******/***/********/*****
     </div>
 </main>
 
-<footer class="site-footer clearfix">
-    <div class="container">
-        <ul class="nav nav-pills">
-            <li class="alt">
-                <a href="/">
-                    <img src="/images/GabLeRoux-logo-small-white.png"
-                         alt="GabLeRoux logo">
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://github.com/GabLeRoux" rel="publisher"
-                   title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="http://www.facebook.com/gableroux/" target="_blank"
-                   title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="http://twitter.com/gableroux" target="_blank"
-                   title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher"
-                   title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
-            </li>
-            
-            
-            <li>
-                <a href="mailto:gab@gableroux.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i
-                        class="fa fa-envelope fa-fw"></i></a>
-            </li>
-            
-            <li class="rss"><a href="
+<div class="footer-margin-fix">
+    <footer class="site-footer clearfix">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="alt">
+                    <a href="/">
+                        <img src="/images/GabLeRoux-logo-small-white.png"
+                             alt="GabLeRoux logo">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher"
+                       title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="http://www.facebook.com/gableroux/" target="_blank"
+                       title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="http://twitter.com/gableroux" target="_blank"
+                       title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher"
+                       title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="mailto:gab@gableroux.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i
+                            class="fa fa-envelope fa-fw"></i></a>
+                </li>
+                
+                <li class="rss"><a href="
                     http://gableroux.com/feed.xml" title="Follow rss feed"><i
-                    class="fa fa-rss fa-fw"></i></a>
-            </li>
-        </ul>
-    </div>
-</footer>
+                        class="fa fa-rss fa-fw"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
 
 <script src="/bower_components/jquery/dist/jquery.min.js"
         type="application/javascript"></script>

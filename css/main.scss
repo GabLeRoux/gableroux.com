@@ -92,7 +92,11 @@ footer.site-footer {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 90px;
+  //height: 90px;
+}
+
+.footer-margin-fix {
+  height: 20px;
 }
 
 footer.site-footer {

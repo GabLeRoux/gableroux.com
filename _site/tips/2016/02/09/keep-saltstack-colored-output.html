@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Saltstack presentation at the SagLacIO</title>
+    <title>Save saltstack console colored output to file</title>
 
-    <meta name="description" content="I gave a presentation at the SagLacIO about SaltStack with Micael Bergeron. Here are the slides.">
+    <meta name="description" content="Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files?">
     <meta name="author" content="Gabriel Le Breton">
 
-    <link rel="canonical" href="http://gableroux.com/presentation/2015/06/03/saltstack-saglacio.html">
+    <link rel="canonical" href="http://gableroux.com/tips/2016/02/09/keep-saltstack-colored-output.html">
     <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="http://gableroux.com/feed.xml"/>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -118,14 +118,14 @@
 
     <header class="page-header">
         <div class="row">
-            <h1 class="page-title">Saltstack presentation at the SagLacIO</h1>
+            <h1 class="page-title">Save saltstack console colored output to file</h1>
 
             <p class="page-meta">
-                Jun 3, 2015
+                Feb 9, 2016
                 
             </p>
 
-            <img src="/images/saglacio/saltstack.jpg" alt="Saltstack presentation at the SagLacIO">
+            <img src="/images/saltstack-colors-output.jpg" alt="Save saltstack console colored output to file">
 
         </div>
     </header>
@@ -133,12 +133,72 @@
     <hr>
 
     <article class="page-content">
-        <p>I gave a presentation at the <a href="http://saglac.io">SagLacIO</a> about <a href="http://saltstack.com/">SaltStack</a> with <a href="https://www.linkedin.com/in/micael-bergeron-76ba8976">Micael Bergeron</a>. Here are the slides.</p>
+        <p>Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files?</p>
 
 <!-- more -->
 
-<iframe src="https://docs.google.com/presentation/d/1JVwUZwpbWZJY6_stEKqGR1st71R7fX8HN4qVGxX1KlY/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<p>Saltstack’s output has colors for the great good, green when result is pass, pink when it’s modified and red when it fails. Pretty much what you’d expect, easier to see what’s wrong. Now when you start running commands on multiple servers, salt is pretty much handy, but what if you’d like to share the output with a teamate? Go for it, copy paste, plain white/black text. Here’s a solution :)</p>
 
+<h2 id="console-colors-introduction">Console colors introduction</h2>
+
+<p>See <a href="http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">Bash Prompt HOWTO: Colors</a> for reference ;)</p>
+
+<p>Now let’s say I want cyan output</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">CYAN</span><span class="o">=</span><span class="s2">"</span><span class="se">\[\0</span><span class="s2">33[0;36m</span><span class="se">\]</span><span class="s2">"</span>
+<span class="nv">YELLOW</span><span class="o">=</span><span class="s2">"</span><span class="se">\[\0</span><span class="s2">33[0;33m</span><span class="se">\]</span><span class="s2">"</span>
+<span class="nv">NO_COLOUR</span><span class="o">=</span><span class="s2">"</span><span class="se">\[\0</span><span class="s2">33[0m</span><span class="se">\]</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"</span><span class="nv">$CYAN</span><span class="se">\c</span><span class="s2">olors </span><span class="nv">$NO_COLOUR</span><span class="se">\a</span><span class="s2">re </span><span class="nv">$YELLOW</span><span class="se">\m</span><span class="s2">ainstream"</span></code></pre></figure>
+
+<p>cool (todo: fixme)</p>
+
+<h2 id="keep-colors">Keep colors</h2>
+
+<p>Now, if you write this to a file</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$CYAN</span><span class="se">\c</span><span class="s2">olors </span><span class="nv">$NO_COLOUR</span><span class="se">\a</span><span class="s2">re </span><span class="nv">$YELLOW</span><span class="se">\m</span><span class="s2">ainstream"</span> &gt; a_file.txt</code></pre></figure>
+
+<p>Have a look to this file, and it’s plain text.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat a_file.txt
+colors are mainstream</code></pre></figure>
+
+<p>Solution: <code class="highlighter-rouge">grep</code> to the rescue</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>echo “$CYAN\colors $NO_COLOUR\are $YELLOW\mainstream”</td>
+      <td>grep –color=always &gt; a_file.txt</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There are a few options available;</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">grep --color<span class="o">=</span>auto
+grep --color<span class="o">=</span>always
+grep --color<span class="o">=</span><span class="nb">false</span> <span class="o">(</span>todo: confirm me<span class="o">)</span></code></pre></figure>
+
+<h2 id="read-colored-output-from-file">Read colored output from file</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat a_file.txt | less -r</code></pre></figure>
+
+<p><code class="highlighter-rouge">-r</code> is necessary as you’ll see color codes in plain text otherwise, thanks to <a href="http://superuser.com/a/36045/55267">this answer on stackoverflow</a> and it’s first comment.</p>
+
+<h2 id="keep-salt-colored-output">keep salt colored output</h2>
+
+<p>Haven’t talked much about salt, but in our case, salt command has a <code class="highlighter-rouge">--force-color</code> parameter <a href="https://github.com/saltstack/salt/issues/4121">added here</a> which does similar to what grep does as shown above.</p>
+
+<p>Solution to keep salt output looks pretty much like this:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">salt-call state.highstate -l debug --force-color | tee salt.log</code></pre></figure>
+
+<p>Using tee to keep std::out in current console + keeping it’s output in a file at the same time. Since we’re using <code class="highlighter-rouge">--force-color</code>, output keeps color. Now to read <code class="highlighter-rouge">salt.log</code>, you simply use <code class="highlighter-rouge">less -r</code></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat salt.log | less -r</code></pre></figure>
+
+<p>Awesome, salt colors!</p>
 
     </article>
 

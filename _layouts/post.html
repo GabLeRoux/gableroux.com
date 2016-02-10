@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
-<article class="blog-post">
+<article class="blog-page">
 
-    <header class="post-header">
+    <header class="page-header">
         <div class="row">
-            <h1 class="post-title">{{ page.title }}</h1>
+            <h1 class="page-title">{{ page.title }}</h1>
 
-            <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}
-            {% if page.meta %} • {{ page.meta }}{% endif %}</p>
+            <p class="page-meta">
+                {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}
+                {% if page.meta %} • {{ page.meta }}{% endif %}
+            </p>
 
             <img src="{{ page.featured_image }}" alt="{{ page.title }}">
 
@@ -17,29 +19,29 @@ layout: default
 
     <hr>
 
-    <article class="post-content">
+    <article class="page-content">
         {{ content }}
     </article>
 
     {% if page.comments %}
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES * * */
-            // Required: on line below, replace text in quotes with your forum shortname
-            var disqus_shortname = '{{ site.disqus_shortname }}';
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = '{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '{{ page.slug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function () {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
 
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </noscript>
     {% endif %}
 
-    </div>
 </article>
