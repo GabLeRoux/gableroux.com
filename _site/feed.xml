@@ -6,8 +6,8 @@
 </description>
     <link>http://gableroux.com/</link>
     <atom:link href="http://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Feb 2016 13:30:09 -0500</pubDate>
-    <lastBuildDate>Wed, 10 Feb 2016 13:30:09 -0500</lastBuildDate>
+    <pubDate>Wed, 10 Feb 2016 22:38:50 -0500</pubDate>
+    <lastBuildDate>Wed, 10 Feb 2016 22:38:50 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -18,66 +18,70 @@
 
 &lt;p&gt;Saltstack’s output has colors for the great good, green when result is pass, pink when it’s modified and red when it fails. Pretty much what you’d expect, easier to see what’s wrong. Now when you start running commands on multiple servers, salt is pretty much handy, but what if you’d like to share the output with a teamate? Go for it, copy paste, plain white/black text. Here’s a solution :)&lt;/p&gt;
 
-&lt;h2 id=&quot;console-colors-introduction&quot;&gt;Console colors introduction&lt;/h2&gt;
+&lt;h2 id=&quot;console-colors&quot;&gt;Console colors&lt;/h2&gt;
 
 &lt;p&gt;See &lt;a href=&quot;http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html&quot;&gt;Bash Prompt HOWTO: Colors&lt;/a&gt; for reference ;)&lt;/p&gt;
 
-&lt;p&gt;Now let’s say I want cyan output&lt;/p&gt;
+&lt;p&gt;Here are some env variable colors&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;CYAN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33[0;36m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;YELLOW&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33[0;33m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;NO_COLOUR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[\0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33[0m&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CYAN&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;olors &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$NO_COLOUR&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;re &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$YELLOW&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\m&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ainstream&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;export TEXT_BLACK=$&#39;\033&#39;\[30m
+export TEXT_RED=$&#39;\033&#39;\[31m
+export TEXT_GREEN=$&#39;\033&#39;\[32m
+export TEXT_YELLOW=$&#39;\033&#39;\[33m
+export TEXT_BLUE=$&#39;\033&#39;\[34m
+export TEXT_MAGENTA=$&#39;\033&#39;\[35m
+export TEXT_CYAN=$&#39;\033&#39;\[36m
+export TEXT_WHITE=$&#39;\033&#39;\[37m&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;cool (todo: fixme)&lt;/p&gt;
+&lt;p&gt;Values are &lt;a href=&quot;https://en.wikipedia.org/wiki/ANSI_escape_code&quot;&gt;ANSI Escape Codes&lt;/a&gt;. These environment variables comes by default with &lt;a href=&quot;http://ohmyz.sh/&quot;&gt;Oh-my-zsh&lt;/a&gt; :)&lt;/p&gt;
 
-&lt;h2 id=&quot;keep-colors&quot;&gt;Keep colors&lt;/h2&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_CYAN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; colors &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_GREEN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; are &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_RED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; mainstream&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Now, if you write this to a file&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/colors-in-shell-example.png&quot; alt=&quot;example for the above&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CYAN&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;olors &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$NO_COLOUR&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;re &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$YELLOW&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\m&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ainstream&quot;&lt;/span&gt; &amp;gt; a_file.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;colors-and-files&quot;&gt;Colors and files&lt;/h2&gt;
 
-&lt;p&gt;Have a look to this file, and it’s plain text.&lt;/p&gt;
+&lt;p&gt;Now, depending on your shell, writing this to a shell with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; should keep these ANSI characters, so when you &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; the file again, you should see it with colors.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat a_file.txt
-colors are mainstream&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_CYAN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; colors &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_GREEN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; are &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_RED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; mainstream&quot;&lt;/span&gt; &amp;gt; colored_file.txt &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat colored_file.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Solution: &lt;code class=&quot;highlighter-rouge&quot;&gt;grep&lt;/code&gt; to the rescue&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;echo “$CYAN\colors $NO_COLOUR\are $YELLOW\mainstream”&lt;/td&gt;
-      &lt;td&gt;grep –color=always &amp;gt; a_file.txt&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;There are a few options available;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;grep --color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;auto
-grep --color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;always
-grep --color&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;todo: confirm me&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;In my case, colors are kept and I’m happy with it, but sometimes, it’s not the case depending on the command&lt;/p&gt;
 
 &lt;h2 id=&quot;read-colored-output-from-file&quot;&gt;Read colored output from file&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat a_file.txt | less -r&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Depending on your shell and configuration, &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt; command may not need additional parameters, but if you try to pipe a colored file to less and don’t get any colors, try with &lt;code class=&quot;highlighter-rouge&quot;&gt;-r&lt;/code&gt; parameter:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-r&lt;/code&gt; is necessary as you’ll see color codes in plain text otherwise, thanks to &lt;a href=&quot;http://superuser.com/a/36045/55267&quot;&gt;this answer on stackoverflow&lt;/a&gt; and it’s first comment.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat colored_file.txt | less -r&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;http://superuser.com/a/36045/55267&quot;&gt;this answer on stackoverflow&lt;/a&gt; and its comments.&lt;/p&gt;
 
 &lt;h2 id=&quot;keep-salt-colored-output&quot;&gt;keep salt colored output&lt;/h2&gt;
 
-&lt;p&gt;Haven’t talked much about salt, but in our case, salt command has a &lt;code class=&quot;highlighter-rouge&quot;&gt;--force-color&lt;/code&gt; parameter &lt;a href=&quot;https://github.com/saltstack/salt/issues/4121&quot;&gt;added here&lt;/a&gt; which does similar to what grep does as shown above.&lt;/p&gt;
+&lt;p&gt;Haven’t talked much about salt yet, but writing salt output to a file doesn’t keep ANSI colors. Luckily for us, salt command has a &lt;code class=&quot;highlighter-rouge&quot;&gt;--force-color&lt;/code&gt; parameter &lt;a href=&quot;https://github.com/saltstack/salt/issues/4121&quot;&gt;added here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/salt-colored-output.png&quot; alt=&quot;Salt colored output example&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Solution to keep salt output looks pretty much like this:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;salt-call state.highstate -l debug --force-color | tee salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Using tee to keep std::out in current console + keeping it’s output in a file at the same time. Since we’re using &lt;code class=&quot;highlighter-rouge&quot;&gt;--force-color&lt;/code&gt;, output keeps color. Now to read &lt;code class=&quot;highlighter-rouge&quot;&gt;salt.log&lt;/code&gt;, you simply use &lt;code class=&quot;highlighter-rouge&quot;&gt;less -r&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat salt.log | less -r&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
 &lt;p&gt;Awesome, salt colors!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about-clear-text&quot;&gt;What about clear text?&lt;/h2&gt;
+
+&lt;p&gt;I you want to remove colored output, there are a few solutions available, here’s a &lt;a href=&quot;http://superuser.com/q/380772/55267&quot;&gt;question asking for a regex to remove ANSI Escape codes&lt;/a&gt;. My favorite answer is pretty much &lt;a href=&quot;https://github.com/chalk/strip-ansi-cli&quot;&gt;annsi-strip-cli npm module&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --g strip-ansi-cli&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat colored_file.txt | strip-ansi&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;No more colors :)&lt;/p&gt;
+
+&lt;h2 id=&quot;fun&quot;&gt;Fun&lt;/h2&gt;
+
+&lt;p&gt;Have a look to &lt;a href=&quot;http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/&quot;&gt;lolcat&lt;/a&gt;, that’s what I used in the header picture.&lt;/p&gt;
 </description>
         <pubDate>Tue, 09 Feb 2016 19:00:00 -0500</pubDate>
         <link>http://gableroux.com/tips/2016/02/09/keep-saltstack-colored-output.html</link>
