@@ -2,7 +2,8 @@
 layout: post
 title:  "Pelican Gruntfile"
 date:   2014-08-17 12:00
-categories: Pelican grunt gruntfile coffeescript
+categories: pelican
+tag: pelican grunt gruntfile coffeescript
 featured_image: /images/grunt-logo-large.jpg
 ---
 

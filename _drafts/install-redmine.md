@@ -2,7 +2,8 @@
 layout: post
 title:  "Install redmine on centos 7"
 date:   2015-09-31 18:00
-categories: redmine application howto
+categories: tips
+tags: redmine application howto
 featured_image: /images/redmine-centos.jpg
 ---
 

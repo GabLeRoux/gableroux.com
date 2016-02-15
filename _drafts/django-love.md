@@ -2,7 +2,8 @@
 layout: post
 title:  "Django Love"
 date:   2014-09-16 12:00
-categories: django python
+categories: python
+tags: django python
 ---
 
 ![django-love](/images/django-love.jpg)

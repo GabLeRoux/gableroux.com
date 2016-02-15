@@ -1,4 +1,4 @@
-CACHE
-.sass-cache
-*.pyc
-node_modules
+### Jekyll
+_site/
+.sass-cache/
+.jekyll-metadata

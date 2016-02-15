@@ -2,7 +2,8 @@
 layout: post
 title:  "Hello Pelican"
 date:   2014-07-27 15:00:00
-categories: Pelican hello-world
+categories: news
+tags: Pelican hello-world
 featured_image: /images/hello-pelican.jpg
 ---
 

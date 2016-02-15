@@ -2,7 +2,7 @@
 layout: post
 title:  "Y U NO GIT"
 date:   2015-06-04 12:00
-categories: tutorial
+categories: tips
 tags: version-control git
 featured_image: /images/y-u-no-git.jpg
 ---
