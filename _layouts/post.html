@@ -3,11 +3,11 @@ layout: default
 ---
 <article class="blog-page">
 
-    <header class="page-header">
+    <header class="post-header">
         <div class="row">
-            <h1 class="page-title">{{ page.title }}</h1>
+            <h1 class="post-title">{{ page.title }}</h1>
 
-            <p class="page-meta">
+            <p class="post-meta">
                 {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}
                 {% if page.meta %} • {{ page.meta }}{% endif %}
             </p>

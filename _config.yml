@@ -13,6 +13,9 @@ google_plus_username: GabrielLeBreton
 github_username: GabLeRoux
 facebook_username: gableroux
 
+paginate: 5
+paginate_path: "/page:num/"
+
 comments: true
 disqus_shortname: gableroux
 
@@ -22,3 +25,5 @@ markdown: kramdown
 sass:
   style: compressed
   sass_dir: _sass
+
+gems: [jekyll-paginate]

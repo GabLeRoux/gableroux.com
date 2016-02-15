@@ -36,7 +36,7 @@ Values are [ANSI Escape Codes](https://en.wikipedia.org/wiki/ANSI_escape_code). 
 echo "$TEXT_CYAN colors $TEXT_GREEN are $TEXT_RED mainstream"
 {% endhighlight %}
 
-![example for the above](/images/colors-in-shell-example.png)
+![example for the above](/images/colors-in-shell-example.png){: .center-block }
 
 ## Colors and files
 
@@ -62,7 +62,7 @@ Thanks to [this answer on stackoverflow](http://superuser.com/a/36045/55267) and
 
 Haven't talked much about salt yet, but writing salt output to a file doesn't keep ANSI colors. Luckily for us, salt command has a `--force-color` parameter [added here](https://github.com/saltstack/salt/issues/4121).
 
-![Salt colored output example](/images/salt-colored-output.png)
+![Salt colored output example](/images/salt-colored-output.png){: .center-block }
 
 Solution to keep salt output looks pretty much like this:
 
@@ -74,7 +74,7 @@ Awesome, salt colors!
 
 ## What about clear text?
 
-I you want to remove colored output, there are a few solutions available, here's a [question asking for a regex to remove ANSI Escape codes](http://superuser.com/q/380772/55267). My favorite answer is pretty much [annsi-strip-cli npm module](https://github.com/chalk/strip-ansi-cli)
+I you want to remove colored output, there are a few solutions available, here's a [question asking for a regex to remove ANSI Escape codes](http://superuser.com/q/380772/55267). My favorite answer is pretty much [ansi-strip-cli npm module](https://github.com/chalk/strip-ansi-cli)
 
 {% highlight bash %}
 npm install --g strip-ansi-cli

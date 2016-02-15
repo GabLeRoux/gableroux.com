@@ -53,7 +53,7 @@ You can also run this directly in your shell if you want to test before editing 
 
 That's it, fire up a terminal, run `python` again and enjoy autocompletion with when you hit `tab` key :D
 
-![pythonrc terminal example](/images/python-interpreter-autocompletion.png)
+![pythonrc terminal example](/images/python-interpreter-autocompletion.png){: .center-block }
 
 [install-python]: https://www.python.org/downloads/
 [bash]: https://fr.wikipedia.org/wiki/Bourne-Again_shell

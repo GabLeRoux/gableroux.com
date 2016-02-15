@@ -11,12 +11,12 @@ group: "navigation"
         <h2>About the guy behind this site</h2>
         Hi!  
         I am <strong>Gabriel Le Breton</strong>, a developer who likes to play with cool things such as 
-        <a href="https://www.python.org/"><strong class="label label-danger">Python</strong></a>, 
-        <a href="https://www.djangoproject.com/"><strong class="label label-danger">Django</strong></a>, 
-        <a href="http://coffeescript.org/"><strong class="label label-danger">coffeescript</strong></a> and 
-        <a href="https://angularjs.org/"><strong class="label label-danger">AngularJS</strong></a>. 
+        <a href="https://www.python.org/"><strong>Python</strong></a>, 
+        <a href="https://www.djangoproject.com/"><strong>Django</strong></a>, 
+        <a href="http://coffeescript.org/"><strong>coffeescript</strong></a> and 
+        <a href="https://angularjs.org/"><strong>AngularJS</strong></a>. 
 
-        I like to work on <strong class="label label-info">open source</strong> projects, I organised some <strong class="label label-info">Lan Party</strong> and <strong class="label label-info">Game Jams</strong>. I also gave a few talks about programming, web crawling and funny tools.
+        I like to work on <strong>open source</strong> projects, I organised some <strong>Lan Party</strong> and <strong>Game Jams</strong>. I also gave a few talks about programming, web crawling and funny tools.
 
         <hr>
 
