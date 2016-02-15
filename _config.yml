@@ -2,11 +2,11 @@
 title: GabLeRoux <Developer>
 email: gab@gableroux.com
 description: >
-  Personal site about code, ideas, technologies and anything else.
+  Personal site about code, ideas, technologies and everything.
   I like to write python and work on crazy projects, read my stuff!
 author: Gabriel Le Breton
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://gableroux.com" # the base hostname & protocol for your site
+url: "https://gableroux.com" # the base hostname & protocol for your site
 
 twitter_username: gableroux
 google_plus_username: GabrielLeBreton

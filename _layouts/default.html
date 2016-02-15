@@ -3,11 +3,14 @@
 {% include head.html %}
 <body>
 {% include navigation.html %}
+
 {% if page.url == "/" %}
 {% include header.html %}
+{% else %}
+<div class="navbar-no-header-spacer"></div>
 {% endif %}
 
-<main class="containter" id="wrap">
+<main id="wrap">
     <div class="container">
         <div class="row">
             <div class="page-content">
