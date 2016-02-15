@@ -361,6 +361,30 @@ a {
   }
 }
 
+/* Responsive iframe (for presentations) */
+.responsive-iframe-wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background: #CCC
+}
+
+.responsive-iframe {
+  position: relative;
+  .ratio {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /* Responsive videos */
 
 .responsive-object {
