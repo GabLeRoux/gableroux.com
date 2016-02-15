@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python interpreter autocomplete + history with ~/.pythonrc"
-date:   2015-07-27 15:00:00
+date:   2016-01-20 15:00:00
 categories: python
 tag: dotfile history python pythonrc autocomplete
 featured_image: /images/pythonrc-history.png

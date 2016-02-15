@@ -10,6 +10,7 @@ group: "navigation"
 * <i class="fa fa-square"></i> Better Facebook Sharing (og:image tags, og:description, etc.)
 * <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
 * <i class="fa fa-square"></i> Customize the [about page](/about.html), add a picture of awesome me
+* <i class="fa fa-square"></i> Add some random space pictures in header 
 
 ## What I'll talk about
 

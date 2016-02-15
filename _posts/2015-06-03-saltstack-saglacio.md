@@ -3,7 +3,7 @@ layout: post
 title:  "Saltstack presentation at the SagLacIO"
 date:   2015-06-03 12:00
 categories: presentation
-tags: saglacio saltstack
+tags: saglacio saltstack minecraft github
 featured_image: /images/saglacio/saltstack.jpg
 ---
 
@@ -18,6 +18,13 @@ I gave a presentation at the [SagLacIO][saglacio] about [SaltStack][saltstack] w
     </div>
 </div>
 
+## Cool stuff
+
+Micael created a [Minecraft saltstack <i class="fa fa-github"></i> repository ][micaelbergeron/salt.minecraft] to easily deploy a minecraft server using [SpigotMC][spigot] and [MSM][msm]. :) Go star this thing!
+
 [saglacio]: http://saglac.io
 [saltstack]: http://saltstack.com/
 [micael-bergeron-linkedin]: https://www.linkedin.com/in/micael-bergeron-76ba8976
+[micaelbergeron/salt.minecraft]: https://github.com/micaelbergeron/salt.minecraft
+[spigot]: https://www.spigotmc.org/
+[msm]: http://msmhq.com/
