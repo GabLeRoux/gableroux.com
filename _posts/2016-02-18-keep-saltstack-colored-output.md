@@ -10,7 +10,7 @@ featured_image: /images/such-terminal-colors.jpg
 Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files? Chrome extension inside (help needed!)
 
 <!-- more -->
-
+<!-- todo: add some example results for salt output, but the idea is here -->
 
 ---
 
