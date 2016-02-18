@@ -6,7 +6,7 @@ group: "navigation"
 ---
 
 ## What needs to be done
-
+* <i class="fa fa-square"></i> Add comments system back
 * <i class="fa fa-square"></i> Better Facebook Sharing (og:image tags, og:description, etc.)
 * <i class="fa fa-square"></i> Minify content, I'm lazy, did not do it yet
 * <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
