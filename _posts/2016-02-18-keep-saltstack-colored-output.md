@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Save saltstack console colored output to file"
-date:   2016-02-15 19:00
+date:   2016-02-18 8:00
 categories: tips
 tags: saltstack console output
 featured_image: /images/such-terminal-colors.jpg

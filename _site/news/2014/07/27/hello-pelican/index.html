@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Saltstack presentation at the SagLacIO</title>
+    <title>Hello Pelican</title>
 
-    <meta name="description" content="I gave a presentation at the SagLacIO about SaltStack with Micael Bergeron. Here are the slides.">
+    <meta name="description" content="Hi there,Welcome to my blog. This is my first post (in fact, it’s my second). I first attempted to create my blog with wagtail but I had a blocking issue. Ed...">
     <meta name="author" content="Gabriel Le Breton">
 
-    <link rel="canonical" href="https://gableroux.com/presentation/2015/06/03/saltstack-saglacio.html">
+    <link rel="canonical" href="https://gableroux.com/news/2014/07/27/hello-pelican/">
     <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="https://gableroux.com/feed.xml"/>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -123,14 +123,14 @@
 
     <header class="post-header">
         <div class="row">
-            <h1 class="post-title">Saltstack presentation at the SagLacIO</h1>
+            <h1 class="post-title">Hello Pelican</h1>
 
             <p class="post-meta">
-                Jun 3, 2015
+                Jul 27, 2014
                 
             </p>
 
-            <img src="/images/saglacio/saltstack.jpg" alt="Saltstack presentation at the SagLacIO">
+            <img src="/images/hello-pelican.jpg" alt="Hello Pelican">
 
         </div>
     </header>
@@ -138,20 +138,65 @@
     <hr>
 
     <article class="page-content">
-        <p>I gave a presentation at the <a href="http://saglac.io">SagLacIO</a> about <a href="http://saltstack.com/">SaltStack</a> with <a href="https://www.linkedin.com/in/micael-bergeron-76ba8976">Micael Bergeron</a>. Here are the slides.</p>
+        <p>Hi there,<br />
+Welcome to my blog. This is my first post (in fact, it’s my second). I first attempted to create my blog with <a href="http://wagtail.io/">wagtail</a> but I had a <a href="http://stackoverflow.com/questions/24976561/wagtail-pages-giving-none-url-with-live-status">blocking issue</a>. <em>Edit: problem solved, but I’m happy with pelican!</em> Anyway, I’m glad you’re here, I made a branch and moved my work to <a href="http://blog.getpelican.com/">Pelican</a>.</p>
 
 <!-- more -->
 
-<div class="responsive-iframe-wrapperr">
-    <div class="responsive-iframe">
-        <img class="ratio" src="http://placehold.it/16x9" />
-        <iframe src="https://docs.google.com/presentation/d/1JVwUZwpbWZJY6_stEKqGR1st71R7fX8HN4qVGxX1KlY/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
-</div>
+<p>It’s probably more conveniant for my simple website. I can’t tell alot about pelican as I did not play much with it yet, but it seems very easy to work with. Oh and I love writing in <code class="highlighter-rouge">markdown</code>, that’s probably because of Github ReadMe files Eh.</p>
 
-<h2 id="cool-stuff">Cool stuff</h2>
+<h2 id="pelican">Pelican</h2>
 
-<p>Micael created a <a href="https://github.com/micaelbergeron/salt.minecraft">Minecraft saltstack <i class="fa fa-github"></i> repository </a> to easily deploy a minecraft server using <a href="https://www.spigotmc.org/">SpigotMC</a> and <a href="http://msmhq.com/">MSM</a>. :) Go star this thing!</p>
+<p>Here’s how I got started with <code class="highlighter-rouge">pelican</code> running <code class="highlighter-rouge">$ pelican-quickstart</code></p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">pelican-quickstart
+Welcome to pelican-quickstart v3.4.0.
+
+This script will help you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+&gt; Where do you want to create your new web site? [.]
+&gt; What will be the title of this web site? GabLeRoux
+&gt; Who will be the author of this web site? GabLeRoux
+&gt; What will be the default language of this web site? [en]
+&gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) y
+&gt; What is your URL prefix? (see above example; no trailing slash) http://www.gableroux.com
+&gt; Do you want to enable article pagination? (Y/n) y
+&gt; How many articles per page do you want? [10] 5
+&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) y
+&gt; Do you want an auto-reload &amp; simpleHTTP script to assist with theme and site development? (Y/n) y
+&gt; Do you want to upload your website using FTP? (y/N) n
+&gt; Do you want to upload your website using SSH? (y/N) y
+&gt; What is the hostname of your SSH server? [localhost] gableroux.com
+&gt; What is the port of your SSH server? [22]
+&gt; What is your username on that server? [root] ***************
+&gt; Where do you want to put your web site on that server? [/var/www] *********************
+&gt; Do you want to upload your website using Dropbox? (y/N) n
+&gt; Do you want to upload your website using S3? (y/N) n
+&gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) n
+&gt; Do you want to upload your website using GitHub Pages? (y/N) n
+Done. Your new project is available at *******/***/********/*****
+�F�</code></pre></figure>
+
+<p>Ok so not quite sure about that last line, but my stuff is ready to go now :). Thanks to the <a href="http://docs.getpelican.com/en/">documentation</a>, it’s very well explained and easy to follow.</p>
+
+<h3 id="plugins">Plugins!</h3>
+
+<p>Now that my site is up and running, I’ll need to try the <a href="https://github.com/getpelican/pelican-plugins">plugins</a>. I’m only using the <code class="highlighter-rouge">sitemap</code> plugin atm thow :P</p>
+
+<h3 id="themes">Themes!</h3>
+
+<p>If you’re reading this post, you see the theme I made. If you want to create your own theme, that’s easy! have a look at <a href="https://github.com/getpelican/pelican-themes">pelican-themes</a> on GitHub.</p>
+
+<p>You can then insert this in your pelican settings:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    THEME <span class="o">=</span> <span class="s2">"/home/user/pelican-themes/theme-name"</span></code></pre></figure>
+
+<h2 id="whats-next">What’s next</h2>
+
+<p>There’s not much on my site right now, but I’ll keep updating this place by posting cool stuff. I’ll be using <a href="https://disqus.com/">Disqus</a> on this site so feel free to comment and talk about stuff. I have a small <a href="/todo.html">todo list here</a>, I’ll add some things to fix here and there and will note some articles and apps to talk about ^^.</p>
 
 
     </article>

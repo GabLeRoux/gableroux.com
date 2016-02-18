@@ -16,6 +16,8 @@ facebook_username: gableroux
 paginate: 5
 paginate_path: "/page:num/"
 
+permalink: pretty
+
 comments: true
 disqus_shortname: gableroux
 

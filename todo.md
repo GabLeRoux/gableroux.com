@@ -8,12 +8,14 @@ group: "navigation"
 ## What needs to be done
 
 * <i class="fa fa-square"></i> Better Facebook Sharing (og:image tags, og:description, etc.)
+* <i class="fa fa-square"></i> Minify content, I'm lazy, did not do it yet
 * <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
 * <i class="fa fa-square"></i> Customize the [about page](/about.html), add a picture of awesome me
 * <i class="fa fa-square"></i> Add some random space pictures in header 
 
 ## What I'll talk about
 
+* <i class="fa fa-square"></i> Share nginx [letsencrypt][letsencrypt] config because it's aweomse
 * <i class="fa fa-square"></i> <span class="label label-info">Work in progress</span> [django][django] love
 * <i class="fa fa-square"></i> Version Control: Git and what I should have learned at school (but didn't)
 * <i class="fa fa-square"></i> Editors (JetBrains, vim, sublime text, Atom)
@@ -26,6 +28,7 @@ group: "navigation"
 
 ## Completed tasks
 
+* <i class="fa fa-check-square"></i> <del>Use permalinks for nicer urls</del> (solution was `permalink: pretty`)
 * <i class="fa fa-check-square"></i> <del>Use [GitHub Activity][github-activity]</del> <i>added a badge in about page instead</i>
 * <i class="fa fa-check-square"></i> <del>Do something with headers on other pages ([index](/) looks good)</del>
 * <i class="fa fa-check-square"></i> <del>Change the look and feel of `archive pages`</del> <i>Removed it</i>
@@ -47,3 +50,4 @@ group: "navigation"
 [meteor]: https://www.meteor.com/
 [codewars]: http://www.codewars.com/about
 [django]: https://www.djangoproject.com/
+[letsencrypt]: https://letsencrypt.org/

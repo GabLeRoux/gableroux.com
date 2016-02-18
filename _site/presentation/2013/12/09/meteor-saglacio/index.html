@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Python interpreter autocomplete + history with ~/.pythonrc</title>
+    <title>Meteorjs introduction presentation at the SagLacIO</title>
 
-    <meta name="description" content="Using great tools is important, using autocompletion with great tools is even better!">
+    <meta name="description" content="I gave a presentation at the SagLacIO about Hubot. Here are the slides.">
     <meta name="author" content="Gabriel Le Breton">
 
-    <link rel="canonical" href="https://gableroux.com/python/2016/01/20/python-interpreter-autocomplete.html">
+    <link rel="canonical" href="https://gableroux.com/presentation/2013/12/09/meteor-saglacio/">
     <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="https://gableroux.com/feed.xml"/>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -123,14 +123,14 @@
 
     <header class="post-header">
         <div class="row">
-            <h1 class="post-title">Python interpreter autocomplete + history with ~/.pythonrc</h1>
+            <h1 class="post-title">Meteorjs introduction presentation at the SagLacIO</h1>
 
             <p class="post-meta">
-                Jan 20, 2016
+                Dec 9, 2013
                 
             </p>
 
-            <img src="/images/pythonrc-history.png" alt="Python interpreter autocomplete + history with ~/.pythonrc">
+            <img src="/images/saglacio/meteor.jpg" alt="Meteorjs introduction presentation at the SagLacIO">
 
         </div>
     </header>
@@ -138,51 +138,19 @@
     <hr>
 
     <article class="page-content">
-        <p>Using great tools is important, using autocompletion with great tools is even better!</p>
+        <p>I gave a presentation at the <a href="http://saglac.io">SagLacIO</a> about <a href="https://www.meteor.com/">Hubot</a>. Here are the slides.</p>
 
 <!-- more -->
 
-<h2 id="ever-used-python-interpreter">Ever used python interpreter?</h2>
+<div class="responsive-iframe-wrapperr">
+    <div class="responsive-iframe">
+        <img class="ratio" src="http://placehold.it/16x9" />
+        <!-- todo: update me to https and host here -->
+        <iframe src="http://meteor.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</div>
 
-<p>You should, <a href="https://www.python.org/downloads/">install python</a> if it’s not already the case and run <code class="highlighter-rouge">python</code> in your terminal. Awesome, an interpreter!</p>
-
-<h2 id="get-interpreter-autocompletion">Get interpreter autocompletion</h2>
-
-<p>Here is what you’re looking for, create this file:</p>
-
-<p><code class="highlighter-rouge">~/.pythonrc</code></p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">atexit</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">readline</span><span class="o">,</span> <span class="nn">rlcompleter</span>
-
-<span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">'tab:complete'</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">".pythonrc :: AutoCompletion Loaded"</span><span class="p">)</span>
-
-<span class="c"># History</span>
-<span class="n">historyPath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">"~/.pyhistory"</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">save_history</span><span class="p">(</span><span class="n">historyPath</span><span class="o">=</span><span class="n">historyPath</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">rea</span> <span class="nn">dline</span>
-    <span class="n">readline</span><span class="o">.</span><span class="n">write_history_file</span><span class="p">(</span><span class="n">historyPath</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">".pythonrc :: history saved to "</span> <span class="o">+</span> <span class="n">historyPath</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">historyPath</span><span class="p">):</span>
-    <span class="n">readline</span><span class="o">.</span><span class="n">read_history_file</span><span class="p">(</span><span class="n">historyPath</span><span class="p">)</span>
-
-<span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">save_history</span><span class="p">)</span></code></pre></figure>
-
-<p>Then, you need to tell python interpreter to use this <code class="highlighter-rouge">~/.pythonrc</code> file, so add the following line somewhere in an <code class="highlighter-rouge">rc</code> file (either <code class="highlighter-rouge">~/.bashrc</code> if you’re using <a href="https://fr.wikipedia.org/wiki/Bourne-Again_shell">bash</a> or <code class="highlighter-rouge">~/.zshrc</code> for the awesome <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>)</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">export</span> <span class="n">PYTHONSTARTUP</span><span class="o">=~/.</span><span class="n">pythonrc</span></code></pre></figure>
-
-<p>You can also run this directly in your shell if you want to test before editing your <code class="highlighter-rouge">rc</code>` file.</p>
-
-<p>That’s it, fire up a terminal, run <code class="highlighter-rouge">python</code> again and enjoy autocompletion with when you hit <code class="highlighter-rouge">tab</code> key :D</p>
-
-<p><img src="/images/python-interpreter-autocompletion.png" alt="pythonrc terminal example" class="center-block" /></p>
-
-<p>All of your tests in a local interpreter are now recoreded to <code class="highlighter-rouge">~/.pyhistory</code> which could be useful and tab auto completion is just so usefull when experimenting with modules from the interwebs :)</p>
+<p>See full page <a href="https://meteor.gableroux.com/">presentation website</a></p>
 
 
     </article>
