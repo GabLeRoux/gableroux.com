@@ -8,12 +8,25 @@
 
 (function() {
   (function(jQuery) {
+    var preventDisabledNavigationScroll, setRandomHeader;
+    setRandomHeader = function() {
+      var headersCount, picturePath, randVal;
+      headersCount = 7;
+      randVal = Math.floor(Math.random() * headersCount);
+      picturePath = "/images/layout/background-" + randVal + ".jpg";
+      console.log("Loaded random header " + picturePath);
+      return jQuery('header.site-header').css('background-image', "url('" + picturePath + "')");
+    };
+    preventDisabledNavigationScroll = function() {
+      return jQuery('li.disabled a').click(function(e) {
+        return e.preventDefault();
+      });
+    };
     jQuery('document').ready(function() {
       'use strict';
       jQuery('.navbar.autohide').autoHidingNavbar();
-      jQuery('li.disabled a').click(function(e) {
-        return e.preventDefault();
-      });
+      preventDisabledNavigationScroll();
+      setRandomHeader();
     });
   })(jQuery);
 

@@ -6,9 +6,156 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Feb 2016 13:08:23 -0500</pubDate>
-    <lastBuildDate>Mon, 15 Feb 2016 13:08:23 -0500</lastBuildDate>
+    <pubDate>Thu, 18 Feb 2016 00:30:10 -0500</pubDate>
+    <lastBuildDate>Thu, 18 Feb 2016 00:30:10 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Save saltstack console colored output to file</title>
+        <description>&lt;p&gt;Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files? Chrome extension inside (help needed!)&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Hey, before we begin, I started playing around with colors in a terminal and tough it could be cool to have a chrome extension for this. Let’s create &lt;a href=&quot;https://github.com/gableroux/ansi-colors-chrome-extension&quot;&gt;&lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt; ANSI colors chrome extension&lt;/a&gt; together!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;alright-lets-begin&quot;&gt;Alright let’s begin&lt;/h2&gt;
+
+&lt;p&gt;Saltstack’s output has colors for the great good, green when result is pass, pink when it’s modified and red when it fails.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/colors-in-shell-saltstack.png&quot; alt=&quot;saltstack-output-example&quot; class=&quot;center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pretty much what you’d expect, easier to see when something goes wrong. Now when you start running commands on multiple servers, salt is pretty much handy, but what if you’d like to share the output with a teamate? Go for it, copy paste, plain white/black text. Here’s a solution :)&lt;/p&gt;
+
+&lt;h2 id=&quot;console-colors&quot;&gt;Console colors&lt;/h2&gt;
+
+&lt;p&gt;See &lt;a href=&quot;http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html&quot;&gt;Bash Prompt HOWTO: Colors&lt;/a&gt; for reference ;)&lt;/p&gt;
+
+&lt;p&gt;Here are some env variable colors&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;export TEXT_BLACK=$&#39;\033&#39;\[30m
+export TEXT_RED=$&#39;\033&#39;\[31m
+export TEXT_GREEN=$&#39;\033&#39;\[32m
+export TEXT_YELLOW=$&#39;\033&#39;\[33m
+export TEXT_BLUE=$&#39;\033&#39;\[34m
+export TEXT_MAGENTA=$&#39;\033&#39;\[35m
+export TEXT_CYAN=$&#39;\033&#39;\[36m
+export TEXT_WHITE=$&#39;\033&#39;\[37m&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Values are &lt;a href=&quot;https://en.wikipedia.org/wiki/ANSI_escape_code&quot;&gt;ANSI Escape Codes&lt;/a&gt;. These environment variables comes by default with &lt;a href=&quot;http://ohmyz.sh/&quot;&gt;Oh-my-zsh&lt;/a&gt; :)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_CYAN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; colors &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_GREEN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; are &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_RED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; mainstream&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/colors-in-shell-example.png&quot; alt=&quot;example for the above&quot; class=&quot;center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;colors-and-files&quot;&gt;Colors and files&lt;/h2&gt;
+
+&lt;p&gt;Now, depending on your shell, writing this to a shell with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; should keep these ANSI characters, so when you &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; the file again, you should see it with colors.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_CYAN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; colors &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_GREEN&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; are &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TEXT_RED&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; mainstream&quot;&lt;/span&gt; &amp;gt; colored_file.txt &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat colored_file.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;In my case, colors are kept and I’m happy with it (using &lt;a href=&quot;http://ohmyz.sh/&quot;&gt;Oh-my-zsh&lt;/a&gt; with &lt;a href=&quot;https://iterm2.com/&quot;&gt;iterm2 terminal emulator&lt;/a&gt;), but sometimes, it’s not the case depending on the command or the shell being used.&lt;/p&gt;
+
+&lt;h2 id=&quot;read-colored-output-from-file&quot;&gt;Read colored output from file&lt;/h2&gt;
+
+&lt;p&gt;Depending on your shell and configuration, &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt; command may not need additional parameters, but if you try to pipe a colored file to less and don’t get any colors, try with &lt;code class=&quot;highlighter-rouge&quot;&gt;-r&lt;/code&gt; parameter:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat colored_file.txt | less -r&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;http://superuser.com/a/36045/55267&quot;&gt;this answer on stackoverflow&lt;/a&gt; and its comments.&lt;/p&gt;
+
+&lt;h2 id=&quot;keep-salt-colored-output&quot;&gt;keep salt colored output&lt;/h2&gt;
+
+&lt;p&gt;Haven’t talked much about salt in current post so lets beggin. Writing salt output to a file doesn’t keep ANSI colors. Luckily for us, salt command has a &lt;code class=&quot;highlighter-rouge&quot;&gt;--force-color&lt;/code&gt; parameter &lt;a href=&quot;https://github.com/saltstack/salt/issues/4121&quot;&gt;added in salt issue #4121&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/salt-colored-output.png&quot; alt=&quot;Salt colored output example&quot; class=&quot;center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Solution to keep salt output looks pretty much like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;salt-call state.highstate -l debug --force-color &amp;gt; salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Awesome, salt colors!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about-clear-text&quot;&gt;What about clear text?&lt;/h2&gt;
+
+&lt;p&gt;I you want to remove colored output, there are a few solutions available, here’s a &lt;a href=&quot;http://superuser.com/q/380772/55267&quot;&gt;question asking for a regex to remove ANSI Escape codes&lt;/a&gt;. My favorite answer is pretty much &lt;a href=&quot;https://github.com/chalk/strip-ansi-cli&quot;&gt;ansi-strip-cli npm module&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --g strip-ansi-cli&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat colored_file.txt | strip-ansi&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;No more colors :)&lt;/p&gt;
+
+&lt;p&gt;Otherwise, you can strip output with &lt;code class=&quot;highlighter-rouge&quot;&gt;perl -pe &#39;s/\x1b\[[0-9;]*[mG]//g&#39;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat colored_file.txt | perl -pe &lt;span class=&quot;s1&quot;&gt;&#39;s/\x1b\[[0-9;]*[mG]//g&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;salt-solution&quot;&gt;salt solution&lt;/h2&gt;
+
+&lt;p&gt;So with salt, I managed to get both output using the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;salt-call state.highstate -l debug --force-color &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+| tee salt-colored.log &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+| tee &amp;gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;strip-ansi &amp;gt; salt.log&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Prefer not to bloat your system with npm?&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;salt-call state.highstate -l debug --force-color &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+| tee salt-colored.log &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+| tee &amp;gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;perl -pe &lt;span class=&quot;s1&quot;&gt;&#39;s/\x1b\[[0-9;]*[mG]//g&#39;&lt;/span&gt; &amp;gt; salt.log&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now you can enjoy salt output in both ways :)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat salt-colored.log
+cat salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;whats-the-tee-command&quot;&gt;What’s the &lt;code class=&quot;highlighter-rouge&quot;&gt;tee&lt;/code&gt; command?&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;http://tldr-pages.github.io/&quot;&gt;tldr pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;tldr tee&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  tee
+  Read from standard input and write to standard output and files.
+
+  - Copy standard input to each FILE, and also to standard output:
+    echo &quot;example&quot; | tee FILE
+
+  - Append to the given FILEs, do not overwrite:
+    echo &quot;example&quot; | tee -a FILE&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;some-random-stuff-because-why-not&quot;&gt;Some random stuff because why not&lt;/h2&gt;
+
+&lt;p&gt;Get &lt;a href=&quot;http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/&quot;&gt;lolcat&lt;/a&gt; for the lolz&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install lolcat&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/man-ascii-lolcat.png&quot; alt=&quot;man ascii lolcat&quot; class=&quot;center-block&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 15 Feb 2016 19:00:00 -0500</pubDate>
+        <link>https://gableroux.com/tips/2016/02/15/keep-saltstack-colored-output.html</link>
+        <guid isPermaLink="true">https://gableroux.com/tips/2016/02/15/keep-saltstack-colored-output.html</guid>
+        
+        <category>saltstack</category>
+        
+        <category>console</category>
+        
+        <category>output</category>
+        
+        
+        <category>tips</category>
+        
+      </item>
     
       <item>
         <title>More than a year later, what&#39;s up?</title>
@@ -122,6 +269,8 @@ Stay tuned!&lt;/p&gt;
 &lt;p&gt;That’s it, fire up a terminal, run &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt; again and enjoy autocompletion with when you hit &lt;code class=&quot;highlighter-rouge&quot;&gt;tab&lt;/code&gt; key :D&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/python-interpreter-autocompletion.png&quot; alt=&quot;pythonrc terminal example&quot; class=&quot;center-block&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All of your tests in a local interpreter are now recoreded to &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.pyhistory&lt;/code&gt; which could be useful and tab auto completion is just so usefull when experimenting with modules from the interwebs :)&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 20 Jan 2016 10:00:00 -0500</pubDate>

@@ -61,11 +61,16 @@ header.site-header {
   padding-top: 150px;
   padding-bottom: 150px;
   text-align: center;
-  background: $black url("../images/layout/background-keyboard.jpg") no-repeat top;
+  //background: $black url("../images/layout/background-0.jpg") no-repeat top;
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
   background-size: cover;
+
   img {
     max-width: 90%;
   }
+
   .lead {
     line-height: 1em;
     font-family: $font_main, $font_1, $font_2, $font_3;

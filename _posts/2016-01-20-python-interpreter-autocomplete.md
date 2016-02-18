@@ -55,6 +55,8 @@ That's it, fire up a terminal, run `python` again and enjoy autocompletion with 
 
 ![pythonrc terminal example](/images/python-interpreter-autocompletion.png){: .center-block }
 
+All of your tests in a local interpreter are now recoreded to `~/.pyhistory` which could be useful and tab auto completion is just so usefull when experimenting with modules from the interwebs :)
+
 [install-python]: https://www.python.org/downloads/
 [bash]: https://fr.wikipedia.org/wiki/Bourne-Again_shell
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
