@@ -15,7 +15,7 @@ I gave a presentation at the [SagLacIO][saglacio] about [Hubot][meteor]. Here ar
     <div class="responsive-iframe">
         <img class="ratio" src="http://placehold.it/16x9"/>
         <!-- todo: update me to https and host here -->
-        <iframe src="http://meteor.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://meteor.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
 
