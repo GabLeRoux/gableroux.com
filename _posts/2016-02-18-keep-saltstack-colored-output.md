@@ -24,7 +24,7 @@ Saltstack's output has colors for the great good, green when result is pass, pin
 
 ![saltstack-output-example](/images/colors-in-shell-saltstack.png){: .center-block }
 
-Pretty much what you'd expect, easier to see when something goes wrong. Now when you start running commands on multiple servers, salt is pretty much handy, but what if you'd like to share the output with a teamate? Go for it, copy paste, plain white/black text. Here's a solution :)
+Easy to see when something goes wrong. Now when you start running commands on multiple servers, salt is very handy, but what if you'd like to share the output with a teammate? Go for it, copy paste, plain white/black text or take a screenshot of your terminal? Continue reading for a solution ;)
 
 ## Console colors
 
@@ -43,7 +43,7 @@ export TEXT_CYAN=$'\033'\[36m
 export TEXT_WHITE=$'\033'\[37m
 {% endhighlight %}
 
-Values are [ANSI Escape Codes][ANSI_escape_code]. These environment variables comes by default with [Oh-my-zsh][oh-my-zsh] :)
+Values are [ANSI Escape Codes][ANSI_escape_code] and the environment variables above comes by default with [Oh-my-zsh][oh-my-zsh] :)
  
 {% highlight bash %}
 echo "$TEXT_CYAN colors $TEXT_GREEN are $TEXT_RED mainstream"
@@ -59,11 +59,11 @@ Now, depending on your shell, writing this to a shell with `>` should keep these
 echo "$TEXT_CYAN colors $TEXT_GREEN are $TEXT_RED mainstream" > colored_file.txt && cat colored_file.txt
 {% endhighlight %}
 
-In my case, colors are kept and I'm happy with it (using [Oh-my-zsh][oh-my-zsh] with [iterm2 terminal emulator][iterm2]), but sometimes, it's not the case depending on the command or the shell being used.
+In my case, colors are kept (using [Oh-my-zsh][oh-my-zsh] with [iterm2 terminal emulator][iterm2]) and I'm happy with it, but sometimes, it's not the case depending on the command or the shell being used.
 
 ## Read colored output from file
 
-Depending on your shell and configuration, `less` command may not need additional parameters, but if you try to pipe a colored file to less and don't get any colors, try with `-r` parameter:
+Depending on your shell environment, `less` command may not need additional parameters, but if you try to pipe a colored file to `less` and don't get any colors, try with `-r` parameter:
 
 {% highlight bash %}
 cat colored_file.txt | less -r
@@ -73,11 +73,11 @@ Thanks to [this answer on stackoverflow](http://superuser.com/a/36045/55267) and
 
 ## keep salt colored output
 
-Haven't talked much about salt in current post so lets beggin. Writing salt output to a file doesn't keep ANSI colors. Luckily for us, salt command has a `--force-color` parameter [added in salt issue #4121][salt#4121].
+Haven't talked much about salt in current post so lets begin. Writing salt output to a file doesn't keep ANSI colors. Luckily for us, salt command has a `--force-color` parameter [added in salt issue #4121][salt#4121].
 
 ![Salt colored output example](/images/salt-colored-output.png){: .center-block }
 
-Solution to keep salt output looks pretty much like this:
+Solution to keep salt output looks like this:
 
 {% highlight bash %}
 salt-call state.highstate -l debug --force-color > salt.log
@@ -89,9 +89,9 @@ cat salt.log
 
 Awesome, salt colors!
 
-## What about clear text?
+## What about clear text (no color)?
 
-I you want to remove colored output, there are a few solutions available, here's a [question asking for a regex to remove ANSI Escape codes](http://superuser.com/q/380772/55267). My favorite answer is pretty much [ansi-strip-cli npm module][strip-ansi-cli]
+I you want to remove colors from output, there are a few solutions available, here's a [question asking for a regex to remove ANSI Escape codes](http://superuser.com/q/380772/55267). My favorite answer is [ansi-strip-cli npm module][strip-ansi-cli]
 
 {% highlight bash %}
 npm install --g strip-ansi-cli
@@ -105,7 +105,7 @@ cat colored_file.txt | strip-ansi
 
 No more colors :)
 
-Otherwise, you can strip output with `perl -pe 's/\x1b\[[0-9;]*[mG]//g'`.
+Otherwise, you can strip output with `perl -pe 's/\x1b\[[0-9;]*[mG]//g'` which is perfect if you don't want node.
 
 {% highlight bash %}
 cat colored_file.txt | perl -pe 's/\x1b\[[0-9;]*[mG]//g'
@@ -157,7 +157,7 @@ tldr tee
 
 ## Some random stuff because why not
 
-Get [lolcat](http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/) for the lolz
+Cool, you've reached this far, get [lolcat](http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/) for the lolz
 
 {% highlight bash %}
 gem install lolcat

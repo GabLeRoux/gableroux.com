@@ -7,8 +7,12 @@ description: A list of things to do!
 ---
 
 ## What needs to be done
+* <i class="fa fa-square"></i> Minify js assets
+* <i class="fa fa-square"></i> Minify pictures assets
+* <i class="fa fa-square"></i> Fix footer size on mobile
 * <i class="fa fa-square"></i> Add comments system back
-* <i class="fa fa-square"></i> Minify content, I'm lazy, did not do it yet
+* <i class="fa fa-square"></i> Fix sass live reload (broken because of `css/main.scss` header
+* <i class="fa fa-square"></i> Minify content from gulp, I'm lazy, did not do it yet
 * <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
 
 ## What I'll talk about
@@ -26,6 +30,7 @@ description: A list of things to do!
 
 ## Completed tasks
 
+* <i class="fa fa-check-square"></i> <del>Minify css assets</del>
 * <i class="fa fa-check-square"></i> <del>Better Facebook Sharing (og:image tags, og:description, etc.)</del>
 * <i class="fa fa-check-square"></i> <del>Customize the [about page](/about/)</del>
 * <i class="fa fa-check-square"></i> <del>Add some cool random space pictures in header</del>

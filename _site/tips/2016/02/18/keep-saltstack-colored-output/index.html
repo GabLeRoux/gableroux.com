@@ -204,7 +204,7 @@
 
 <p><img src="/images/colors-in-shell-saltstack.png" alt="saltstack-output-example" class="center-block" /></p>
 
-<p>Pretty much what you’d expect, easier to see when something goes wrong. Now when you start running commands on multiple servers, salt is pretty much handy, but what if you’d like to share the output with a teamate? Go for it, copy paste, plain white/black text. Here’s a solution :)</p>
+<p>Easy to see when something goes wrong. Now when you start running commands on multiple servers, salt is very handy, but what if you’d like to share the output with a teammate? Go for it, copy paste, plain white/black text or take a screenshot of your terminal? Continue reading for a solution ;)</p>
 
 <h2 id="console-colors">Console colors</h2>
 
@@ -221,7 +221,7 @@ export TEXT_MAGENTA=$'\033'\[35m
 export TEXT_CYAN=$'\033'\[36m
 export TEXT_WHITE=$'\033'\[37m</code></pre></figure>
 
-<p>Values are <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI Escape Codes</a>. These environment variables comes by default with <a href="http://ohmyz.sh/">Oh-my-zsh</a> :)</p>
+<p>Values are <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI Escape Codes</a> and the environment variables above comes by default with <a href="http://ohmyz.sh/">Oh-my-zsh</a> :)</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$TEXT_CYAN</span><span class="s2"> colors </span><span class="nv">$TEXT_GREEN</span><span class="s2"> are </span><span class="nv">$TEXT_RED</span><span class="s2"> mainstream"</span></code></pre></figure>
 
@@ -233,11 +233,11 @@ export TEXT_WHITE=$'\033'\[37m</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$TEXT_CYAN</span><span class="s2"> colors </span><span class="nv">$TEXT_GREEN</span><span class="s2"> are </span><span class="nv">$TEXT_RED</span><span class="s2"> mainstream"</span> &gt; colored_file.txt <span class="o">&amp;&amp;</span> cat colored_file.txt</code></pre></figure>
 
-<p>In my case, colors are kept and I’m happy with it (using <a href="http://ohmyz.sh/">Oh-my-zsh</a> with <a href="https://iterm2.com/">iterm2 terminal emulator</a>), but sometimes, it’s not the case depending on the command or the shell being used.</p>
+<p>In my case, colors are kept (using <a href="http://ohmyz.sh/">Oh-my-zsh</a> with <a href="https://iterm2.com/">iterm2 terminal emulator</a>) and I’m happy with it, but sometimes, it’s not the case depending on the command or the shell being used.</p>
 
 <h2 id="read-colored-output-from-file">Read colored output from file</h2>
 
-<p>Depending on your shell and configuration, <code class="highlighter-rouge">less</code> command may not need additional parameters, but if you try to pipe a colored file to less and don’t get any colors, try with <code class="highlighter-rouge">-r</code> parameter:</p>
+<p>Depending on your shell environment, <code class="highlighter-rouge">less</code> command may not need additional parameters, but if you try to pipe a colored file to <code class="highlighter-rouge">less</code> and don’t get any colors, try with <code class="highlighter-rouge">-r</code> parameter:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat colored_file.txt | less -r</code></pre></figure>
 
@@ -245,11 +245,11 @@ export TEXT_WHITE=$'\033'\[37m</code></pre></figure>
 
 <h2 id="keep-salt-colored-output">keep salt colored output</h2>
 
-<p>Haven’t talked much about salt in current post so lets beggin. Writing salt output to a file doesn’t keep ANSI colors. Luckily for us, salt command has a <code class="highlighter-rouge">--force-color</code> parameter <a href="https://github.com/saltstack/salt/issues/4121">added in salt issue #4121</a>.</p>
+<p>Haven’t talked much about salt in current post so lets begin. Writing salt output to a file doesn’t keep ANSI colors. Luckily for us, salt command has a <code class="highlighter-rouge">--force-color</code> parameter <a href="https://github.com/saltstack/salt/issues/4121">added in salt issue #4121</a>.</p>
 
 <p><img src="/images/salt-colored-output.png" alt="Salt colored output example" class="center-block" /></p>
 
-<p>Solution to keep salt output looks pretty much like this:</p>
+<p>Solution to keep salt output looks like this:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">salt-call state.highstate -l debug --force-color &gt; salt.log</code></pre></figure>
 
@@ -257,9 +257,9 @@ export TEXT_WHITE=$'\033'\[37m</code></pre></figure>
 
 <p>Awesome, salt colors!</p>
 
-<h2 id="what-about-clear-text">What about clear text?</h2>
+<h2 id="what-about-clear-text-no-color">What about clear text (no color)?</h2>
 
-<p>I you want to remove colored output, there are a few solutions available, here’s a <a href="http://superuser.com/q/380772/55267">question asking for a regex to remove ANSI Escape codes</a>. My favorite answer is pretty much <a href="https://github.com/chalk/strip-ansi-cli">ansi-strip-cli npm module</a></p>
+<p>I you want to remove colors from output, there are a few solutions available, here’s a <a href="http://superuser.com/q/380772/55267">question asking for a regex to remove ANSI Escape codes</a>. My favorite answer is <a href="https://github.com/chalk/strip-ansi-cli">ansi-strip-cli npm module</a></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --g strip-ansi-cli</code></pre></figure>
 
@@ -269,7 +269,7 @@ export TEXT_WHITE=$'\033'\[37m</code></pre></figure>
 
 <p>No more colors :)</p>
 
-<p>Otherwise, you can strip output with <code class="highlighter-rouge">perl -pe 's/\x1b\[[0-9;]*[mG]//g'</code>.</p>
+<p>Otherwise, you can strip output with <code class="highlighter-rouge">perl -pe 's/\x1b\[[0-9;]*[mG]//g'</code> which is perfect if you don’t want node.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat colored_file.txt | perl -pe <span class="s1">'s/\x1b\[[0-9;]*[mG]//g'</span></code></pre></figure>
 
@@ -309,7 +309,7 @@ cat salt.log</code></pre></figure>
 
 <h2 id="some-random-stuff-because-why-not">Some random stuff because why not</h2>
 
-<p>Get <a href="http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/">lolcat</a> for the lolz</p>
+<p>Cool, you’ve reached this far, get <a href="http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/">lolcat</a> for the lolz</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install lolcat</code></pre></figure>
 
