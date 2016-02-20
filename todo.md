@@ -3,6 +3,7 @@ layout: page
 title: Todo
 permalink: /todo/
 group: "navigation"
+description: A list of things to do!
 ---
 
 ## What needs to be done

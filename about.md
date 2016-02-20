@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 group: "navigation"
+description: Who is Gabriel Le Breton?
 ---
 
 <!-- <img class="img-circle center-block" src="{{ site.author.email | to_gravatar }}" /> -->

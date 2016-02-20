@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 Feb 2016 13:15:54 -0500</pubDate>
-    <lastBuildDate>Sat, 20 Feb 2016 13:15:54 -0500</lastBuildDate>
+    <pubDate>Sat, 20 Feb 2016 13:24:21 -0500</pubDate>
+    <lastBuildDate>Sat, 20 Feb 2016 13:24:21 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -209,7 +209,7 @@ This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal si
 
 &lt;hr /&gt;
 
-&lt;p&gt;Been a busy year eh.&lt;br /&gt;
+&lt;p&gt;That was a busy year eh.&lt;br /&gt;
 Next post will probably be about the great &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;LetsEncrypt&lt;/a&gt; who provides https certificates for free!&lt;br /&gt;
 Stay tuned!&lt;/p&gt;
 
