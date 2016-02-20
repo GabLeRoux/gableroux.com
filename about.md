@@ -5,25 +5,27 @@ permalink: /about/
 group: "navigation"
 ---
 
+<!-- <img class="img-circle center-block" src="{{ site.author.email | to_gravatar }}" /> -->
+
+<div class="row text-center">
+    <div class="github-card" height="300" width="350" data-theme="medium" data-github="gableroux"></div>
+    <script src="http://lab.lepture.com/github-cards/widget.js"></script>
+</div>
+
+<hr>
 
 <div class="row">
     <div class="col-md-6">
         <h2>Me</h2>
         <p>
-         Hey there!<br>
-                I am <strong>Gabriel Le Breton</strong>, a developer who likes to play with cool things such as 
-                <a href="https://www.python.org/"><strong>Python</strong></a>, 
-                <a href="https://www.djangoproject.com/"><strong>Django</strong></a>, 
-                <a href="http://coffeescript.org/"><strong>coffeescript</strong></a> and 
-                <a href="https://angularjs.org/"><strong>AngularJS</strong></a>.        
-                I like to work on <strong>open source</strong> projects, I organised some <strong>Lan Party</strong> and <strong>Game Jams</strong>. I also gave a few talks about programming, web crawling and funny tools.
+        Hey there!<br>
+        I am <strong>Gabriel Le Breton</strong>, a developer who likes to play with cool things such as 
+        <a href="https://www.python.org/"><strong>Python</strong></a>, 
+        <a href="https://www.djangoproject.com/"><strong>Django</strong></a>, 
+        <a href="http://coffeescript.org/"><strong>coffeescript</strong></a> and 
+        <a href="https://angularjs.org/"><strong>AngularJS</strong></a>.        
+        I like to work on <strong>open source</strong> projects, I organised some <strong>Lan Party</strong> and <strong>Game Jams</strong>. I also gave a few talks about programming, web crawling and funny tools.
         </p>
-        <hr>
-
-        <div class="text-center">
-            <div class="github-card" height="300" width="350" data-theme="medium" data-github="gableroux"></div>
-            <script src="http://lab.lepture.com/github-cards/widget.js"></script>
-        </div>
     </div>
 
     <div class="col-md-6">

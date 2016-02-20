@@ -7,11 +7,8 @@ group: "navigation"
 
 ## What needs to be done
 * <i class="fa fa-square"></i> Add comments system back
-* <i class="fa fa-square"></i> Better Facebook Sharing (og:image tags, og:description, etc.)
 * <i class="fa fa-square"></i> Minify content, I'm lazy, did not do it yet
 * <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
-* <i class="fa fa-square"></i> Customize the [about page](/about.html), add a picture of awesome me
-* <i class="fa fa-square"></i> Add some random space pictures in header 
 
 ## What I'll talk about
 
@@ -28,7 +25,10 @@ group: "navigation"
 
 ## Completed tasks
 
-* <i class="fa fa-check-square"></i> <del>Use permalinks for nicer urls</del> (solution was `permalink: pretty`)
+* <i class="fa fa-check-square"></i> <del>Better Facebook Sharing (og:image tags, og:description, etc.)</del>
+* <i class="fa fa-check-square"></i> <del>Customize the [about page](/about/)</del>
+* <i class="fa fa-check-square"></i> <del>Add some cool random space pictures in header</del>
+* <i class="fa fa-check-square"></i> <del>Use permalinks for nicer urls</del> <i>solution was `permalink: pretty`</i>
 * <i class="fa fa-check-square"></i> <del>Use [GitHub Activity][github-activity]</del> <i>added a badge in about page instead</i>
 * <i class="fa fa-check-square"></i> <del>Do something with headers on other pages ([index](/) looks good)</del>
 * <i class="fa fa-check-square"></i> <del>Change the look and feel of `archive pages`</del> <i>Removed it</i>

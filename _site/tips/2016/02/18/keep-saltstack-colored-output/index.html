@@ -38,12 +38,78 @@
 
     <link rel="stylesheet" href="/css/main.css">
 
-</head>
+    <!-- facebook Open Graph Metadatas -->
+    <meta content="253381494995396" property="fb:app_id">
+    <meta content="GabLeRoux <Developer>" property="og:site_name">
 
+    
+    <meta content="Save saltstack console colored output to file" property="og:title">
+    
+
+    
+    <meta content="website" property="og:type">
+    
+
+
+    
+    <meta content="Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files? Chrome extension inside (help needed!)
+
+" property="og:description">
+    
+
+    
+    <meta content="https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/" property="og:url">
+    
+
+    
+    <meta content="2016-02-18T08:00:00-05:00" property="article:published_time">
+    <meta content="https://gableroux.com/about/" property="article:author">
+    
+
+    
+    <meta content="https://gableroux.com/images/such-terminal-colors.jpg" property="og:image">
+    
+
+    
+    
+    <meta content="tips" property="article:section">
+    
+    
+
+    
+    
+    <meta content="saltstack" property="article:tag">
+    
+    <meta content="console" property="article:tag">
+    
+    <meta content="output" property="article:tag">
+    
+    
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '253381494995396',
+                xfbml      : true,
+                version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+</head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
     <div class="container">
         <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i> <img src="/images/GabLeRoux-logo-small-white.png" alt=""/></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -51,18 +117,8 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-
-                
-                <li class="home-link">
-                    <a href="/">
-                        <img src="/images/GabLeRoux-logo-small-white.png" alt=""/>
-                    </a>
-                </li>
-                
-
                 
                 
                 
@@ -91,7 +147,6 @@
     
 
     
-
 
 
 
@@ -263,6 +318,8 @@ cat salt.log</code></pre></figure>
 
     </article>
 
+    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+
     
 
 </article>
@@ -276,57 +333,52 @@ cat salt.log</code></pre></figure>
             <ul class="nav nav-pills">
                 <li class="alt">
                     <a href="/">
-                        <img src="/images/GabLeRoux-logo-small-white.png"
-                             alt="GabLeRoux logo">
+                        <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo">
                     </a>
                 </li>
                 
                 <li>
-                    <a href="https://github.com/GabLeRoux" rel="publisher"
-                       title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
                 </li>
                 
                 
                 <li>
-                    <a href="http://www.facebook.com/gableroux/" target="_blank"
-                       title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                    <a href="http://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
                 </li>
                 
                 
                 <li>
-                    <a href="http://twitter.com/gableroux" target="_blank"
-                       title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                    <a href="http://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
                 </li>
                 
                 
                 <li>
-                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher"
-                       title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
                 </li>
                 
                 
                 <li>
-                    <a href="mailto:gab@gableroux.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i
-                            class="fa fa-envelope fa-fw"></i></a>
+                    <a href="mailto:lebreton.gabriel@gmail.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
                 </li>
                 
-                <li class="rss"><a href="
-                    https://gableroux.com/feed.xml" title="Follow rss feed"><i
-                        class="fa fa-rss fa-fw"></i></a>
+
+                <li class="rss">
+                    <a href=" https://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
                 </li>
+
+                <li class="feedly">
+                    <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fhttps%3A%2F%2Fgableroux.com'  target='blank'><img id='feedlyFollow' src='http://s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png' alt='Read Gabriel Le Breton on feedly' width='71' height='28'></a>
+                </li>
+
             </ul>
         </div>
     </footer>
 </div>
 
-<script src="/bower_components/jquery/dist/jquery.min.js"
-        type="application/javascript"></script>
-<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"
-        type="application/javascript"></script>
-<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js"
-        type="application/javascript"></script>
-<script src="/js/main.js"
-        type="application/javascript"></script>
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/js/main.js" type="application/javascript"></script>
 
 <script type="text/javascript">
     var _gaq = _gaq || [];

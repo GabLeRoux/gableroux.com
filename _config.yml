@@ -4,7 +4,10 @@ email: gab@gableroux.com
 description: >
   Personal site about code, ideas, technologies and everything.
   I like to write python and work on crazy projects, read my stuff!
-author: Gabriel Le Breton
+author:
+  name: Gabriel Le Breton
+  email: lebreton.gabriel@gmail.com
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://gableroux.com" # the base hostname & protocol for your site
 
