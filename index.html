@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home container">
 
     <div id="home-articles-list">
         {% for post in paginator.posts %}
         <article class="blog-post">
-            <header class="post-header">
+            <header class="post-header row">
                 <hr>
                 <h1>
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" name="{{ post.title }}">
@@ -46,8 +46,8 @@ layout: default
         {% endfor %}
     </div>
 
-    {% if paginator.total_pages > 1 %}
-    {% include pagination.html %}
-    {% endif %}
-
 </div>
+
+{% if paginator.total_pages > 1 %}
+{% include pagination.html %}
+{% endif %}

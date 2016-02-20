@@ -1,8 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -14,17 +13,12 @@
             <ul class="nav navbar-nav">
 
                 {% if page.url != "/index.html" %}
-                <li class="home-link">
+                <li class="{% if page.url == '/' %}active {% endif %}home-link">
                     <a href="/">
-                        <img src="{{ '/images/GabLeRoux-logo-small-white.png' | prepend: site.baseurl }}"
-                             alt="{{ site.baseurl }}"/>
+                        <img src="{{ '/images/GabLeRoux-logo-small-white.png' | prepend: site.baseurl }}" alt="{{ site.baseurl }}"/>
                     </a>
                 </li>
                 {% endif %}
-
-                <li class="{% if page.url == '/index.html' %}active{% endif %}">
-                    <a href="/"><i class="fa fa-home"></i> Home</a>
-                </li>
 
                 {% assign pages_list = site.pages %}
                 {% assign group = 'navigation' %}

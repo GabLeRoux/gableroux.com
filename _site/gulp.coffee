@@ -4,16 +4,14 @@ sass = require('gulp-sass')
 prefix = require('gulp-autoprefixer')
 cp = require('child_process')
 
-jekyll = if process.platform == 'win32' then 'jekyll.bat' else 'jekyll'
-
-messages = jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
+messages = jekyllBuild: '<span style="color: grey">Running:</span> $ bundle exec jekyll build'
 
 ###*
 # Build the Jekyll Site
 ###
 gulp.task 'jekyll-build', (done) ->
   browserSync.notify messages.jekyllBuild
-  cp.spawn(jekyll, [ 'build' ], stdio: 'inherit').on 'close', done
+  cp.spawn('bundle', ['exec', 'jekyll', 'build'], stdio: 'inherit').on 'close', done
 
 ###*
 # Rebuild Jekyll & do page reload
@@ -37,7 +35,7 @@ gulp.task 'browser-sync', [
 # Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
 ###
 gulp.task 'sass', ->
-  gulp.src('_scss/main.scss').pipe(sass(
+  gulp.src(['_scss/*.scss']).pipe(sass(
     includePaths: [ 'scss' ]
     onError: browserSync.notify)).pipe(prefix([
     'last 15 versions'
@@ -47,7 +45,6 @@ gulp.task 'sass', ->
   ], cascade: true))
   .pipe(gulp.dest('_site/css'))
   .pipe(browserSync.reload(stream: true))
-  .pipe gulp.dest('css')
 
 ###*
 # Compile files from _scss into both _site/js (for live injecting) and site (for future jekyll builds)
@@ -71,12 +68,15 @@ gulp.task 'coffee', ->
 # Watch html/md files, run jekyll & reload BrowserSync
 ###
 gulp.task 'watch', ->
-  gulp.watch '_scss/*.scss', [ 'sass' ]
+  gulp.watch ['_scss/*.scss', 'css/*.scss'], [ 'sass' ]
   gulp.watch '_js/*.coffe', [ 'coffee' ]
   gulp.watch [
+    '*.md'
     '*.html'
     '_layouts/*.html'
+    '_includes/*.html'
     '_posts/*'
+    'images/*'
   ], [ 'jekyll-rebuild' ]
   return
 
