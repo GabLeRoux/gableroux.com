@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 Feb 2016 21:47:23 -0500</pubDate>
-    <lastBuildDate>Mon, 22 Feb 2016 21:47:23 -0500</lastBuildDate>
+    <pubDate>Mon, 22 Feb 2016 21:51:26 -0500</pubDate>
+    <lastBuildDate>Mon, 22 Feb 2016 21:51:26 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -631,7 +631,7 @@ Done. Your new project is available at *******/***/********/*****
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;http://placehold.it/16x9&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;https://placehold.it/16x9&quot; /&gt;
         &lt;!-- todo: update me to https and host here --&gt;
         &lt;iframe src=&quot;https://meteor.gableroux.com/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
