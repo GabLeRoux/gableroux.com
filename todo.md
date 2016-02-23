@@ -7,6 +7,7 @@ description: A list of things to do!
 ---
 
 ## What needs to be done
+* <i class="fa fa-square"></i> Add a categories / tags page
 * <i class="fa fa-square"></i> Minify js assets
 * <i class="fa fa-square"></i> Minify pictures assets
 * <i class="fa fa-square"></i> Fix footer size on mobile

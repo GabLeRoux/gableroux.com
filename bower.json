@@ -5,7 +5,7 @@
     "Gabriel Le Breton <lebreton.gabriel@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "http://gableroux.com",
+  "homepage": "https://gableroux.com",
   "ignore": [
     "**/.*",
     "node_modules",
