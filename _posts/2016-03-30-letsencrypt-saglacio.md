@@ -4,7 +4,7 @@ title:  "Let’s Encrypt all the things"
 date:   2016-03-30 19:00
 categories: presentation
 tags: saglacio letsencrypt https revealjs
-featured_image: /images/saglacio/letsencrypt.jpg
+featured_image: /images/letsencrypt-all-the-things.jpg
 ---
 
 This site is being served as **https** and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the [SagLacIO][saglacio] inside!
