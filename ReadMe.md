@@ -7,10 +7,11 @@ Hey there, welcome to the backstage of my website.
     gem install bundle
     bundle install
     npm install
+    npm install coffee-gulp -g
 
 ## Running this website
 
-    bundle exec jekyll serve --drafts
+    gulp
 
 ## Deployment
 

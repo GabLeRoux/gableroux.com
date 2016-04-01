@@ -35,32 +35,37 @@ gulp.task 'browser-sync', [
 # Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
 ###
 gulp.task 'sass', ->
-  gulp.src(['_scss/*.scss']).pipe(sass(
+  gulp.src(['_scss/**/*.scss', 'css/**/*.scss'])
+  .pipe sass(
     includePaths: [ 'scss' ]
-    onError: browserSync.notify)).pipe(prefix([
-    'last 15 versions'
-    '> 1%'
-    'ie 8'
-    'ie 7'
-  ], cascade: true))
-  .pipe(gulp.dest('_site/css'))
-  .pipe(browserSync.reload(stream: true))
+    onError: browserSync.notify
+  )
+  .pipe(prefix([
+      'last 15 versions'
+      '> 1%'
+      'ie 8'
+      'ie 7'
+    ], cascade: true)
+  )
+  .pipe gulp.dest('_site/css')
+  .pipe browserSync.reload(stream: true)
 
 ###*
 # Compile files from _scss into both _site/js (for live injecting) and site (for future jekyll builds)
 ###
 gulp.task 'coffee', ->
-  gulp.src('_scss/main.coffee').pipe(sass(
+  gulp.src('js/**/*.coffee')
+  .pipe coffee(
     includePaths: [ 'coffee' ]
-    onError: browserSync.notify)).pipe(prefix([
+    onError: browserSync.notify)
+  .pipe(prefix([
     'last 15 versions'
     '> 1%'
     'ie 8'
     'ie 7'
   ], cascade: true))
-  .pipe(gulp.dest('_site/js'))
-  .pipe(browserSync.reload(stream: true))
-  .pipe gulp.dest('js')
+  .pipe gulp.dest('_site/js')
+  .pipe browserSync.reload(stream: true)
 
 
 ###*
@@ -68,8 +73,8 @@ gulp.task 'coffee', ->
 # Watch html/md files, run jekyll & reload BrowserSync
 ###
 gulp.task 'watch', ->
-  gulp.watch ['_scss/*.scss', 'css/*.scss'], [ 'sass' ]
-  gulp.watch '_js/*.coffe', [ 'coffee' ]
+  gulp.watch ['_scss/**/*.scss', 'css/**/*.scss'], [ 'sass' ]
+  gulp.watch 'js/**/*.coffee', [ 'coffee' ]
   gulp.watch [
     '*.md'
     '*.html'

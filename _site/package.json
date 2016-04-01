@@ -10,7 +10,9 @@
     "gulp-coffee": "^2.3.1",
     "gulp-sass": "^2.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^2.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -6,9 +6,162 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 Feb 2016 21:51:26 -0500</pubDate>
-    <lastBuildDate>Mon, 22 Feb 2016 21:51:26 -0500</lastBuildDate>
+    <pubDate>Thu, 31 Mar 2016 08:48:33 -0400</pubDate>
+    <lastBuildDate>Thu, 31 Mar 2016 08:48:33 -0400</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Let’s Encrypt all the things</title>
+        <description>&lt;p&gt;This site is being served as https and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt; inside!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;whats-lets-encrypt&quot;&gt;What’s Let’s Encrypt?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Let’s Encrypt is a new Certificate Authority:
+It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;, and &lt;strong&gt;open&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Have a look at &lt;a href=&quot;https://www.letsencrypt.org/&quot;&gt;Let’s Encrypt website&lt;/a&gt; and their &lt;a href=&quot;https://community.letsencrypt.org/t/frequently-asked-questions-faq/26&quot;&gt;FAQ&lt;/a&gt; if you didn’t do it yet!&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
+
+&lt;p&gt;I’ll jump straight to what’s interesting; What are the steps to have a fully working and valid free https certificate on a website behind &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt; and how to get a nice score on &lt;a href=&quot;https://www.ssllabs.com/ssltest/&quot;&gt;ssltest&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Most of the things needed to get started are described on &lt;a href=&quot;https://letsencrypt.org/getting-started/&quot;&gt;Let’s Encrypt getting started page&lt;/a&gt; along with most up to date informations.&lt;/p&gt;
+
+&lt;p&gt;Have a look to [Get HTTPS for free! on github][https://gethttpsforfree.com/] which shows you what happens in the background when using the client. Everything is client side!&lt;/p&gt;
+
+&lt;h3 id=&quot;install-letsencrypt&quot;&gt;Install letsencrypt&lt;/h3&gt;
+
+&lt;p&gt;Grab letsencrypt official client on your server this way:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/letsencrypt/letsencrypt
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;letsencrypt
+./letsencrypt-auto --help&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;nginx-configuration&quot;&gt;nginx configuration&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/site-available/gableroux.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## https redirect
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[::]:80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gableroux.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;&#39;/.well-known/acme-challenge&#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;default_type&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;text/plain&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/var/www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;301&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$server_name$request_uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;## www removal
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[::]:80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;www.gableroux.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;&#39;/.well-known/acme-challenge&#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;default_type&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;text/plain&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/var/www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;301&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://gableroux.com&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$request_uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;## Main server config
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ssl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gableroux.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/var/www/gableroux.com/_site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;index&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;### SSL Config (using letsencrypt)
+&lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;ssl_certificate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/letsencrypt/live/gableroux.com/fullchain.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_certificate_key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/letsencrypt/live/gableroux.com/privkey.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_session_timeout&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_session_cache&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;shared:SSL:5m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Generate ssl_dhparam using `openssl dhparam -out dhparams.pem 4096`
+&lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;ssl_dhparam&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/nginx/dhparams.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_protocols&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1.1&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_ciphers&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;### Logs
+&lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;access_log&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;/var/log/nginx/gableroux.com.access.log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;error_log&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;/var/log/nginx/gableroux.com.error.log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;### Serve root
+&lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;/var/www/gableroux.com/_site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;#### Todo: better 404
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is what my nginx config looks once rendered by my custom salt commands (not covered here tough) It should get you on tracks.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; is the public folder of my static website, but really, this is up to you. grab what fits your needs in the config ;)&lt;/p&gt;
+
+&lt;h3 id=&quot;request-a-cert--renew-command&quot;&gt;Request a cert + renew command&lt;/h3&gt;
+
+&lt;p&gt;First, create a config file:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/etc/le-renew-webroot.ini&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;err&quot;&gt;rsa-key-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;4096&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lebreton.gabriel@gmail.com&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;domains&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gableroux.com, www.gableroux.com&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;webroot-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/var/www/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then run the following:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;letsencrypt-auto certonly -a webroot --renew-by-default &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+--config /usr/local/etc/le-renew-webroot.ini&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Yay https! Now run the above command in a daily cron job at a random hour to auto renew! That’s it, &lt;strong&gt;no more human intervention ever&lt;/strong&gt;. Let’s Encrypt certificates expires after 3 months, you don’t want to do this by hand ;).&lt;/p&gt;
+
+&lt;h2 id=&quot;the-slides&quot;&gt;The slides&lt;/h2&gt;
+
+&lt;p&gt;Btw, there are a few interesting links at the end of the slides.&lt;/p&gt;
+
+&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
+    &lt;div class=&quot;responsive-iframe&quot;&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;https://placehold.it/16x9&quot; /&gt;
+        &lt;!-- todo: update me to https and host here --&gt;
+        &lt;iframe src=&quot;https://letsencrypt.gableroux.com/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;See full page &lt;a href=&quot;https://letsencrypt.gableroux.com/&quot;&gt;presentation website&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 30 Mar 2016 19:00:00 -0400</pubDate>
+        <link>https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/</guid>
+        
+        <category>saglacio</category>
+        
+        <category>letsencrypt</category>
+        
+        <category>https</category>
+        
+        <category>revealjs</category>
+        
+        
+        <category>presentation</category>
+        
+      </item>
     
       <item>
         <title>Save saltstack console colored output to file</title>

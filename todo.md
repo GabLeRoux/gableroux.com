@@ -15,6 +15,7 @@ description: A list of things to do!
 * <i class="fa fa-square"></i> Fix sass live reload (broken because of `css/main.scss` header
 * <i class="fa fa-square"></i> Minify content from gulp, I'm lazy, did not do it yet
 * <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
+* <i class="fa fa-square"></i> Better 404 [Probably with this](http://yizeng.me/2013/05/26/create-a-custom-jekyll-404-page/)
 
 ## What I'll talk about
 
