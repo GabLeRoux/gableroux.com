@@ -187,7 +187,7 @@
     <hr>
 
     <article class="page-content">
-        <p>This site is being served as https and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the <a href="http://saglac.io">SagLacIO</a> inside!</p>
+        <p>This site is being served as <strong>https</strong> and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the <a href="http://saglac.io">SagLacIO</a> inside!</p>
 
 <!-- more -->
 
@@ -218,9 +218,12 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 
 <h3 id="nginx-configuration">nginx configuration</h3>
 
-<p><code class="highlighter-rouge">/etc/nginx/site-available/gableroux.conf</code></p>
+<p>Note: Thanks to <a href="http://jipiboily.com/">@jipiboily</a>, he shared me the awesome <a href="https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/">letsecure.me</a> website and here’s what my nginx configuration looks like now (a bit different from what I’ve shown in my slides):
+<code class="highlighter-rouge">/etc/nginx/site-available/gableroux.conf</code></p>
 
-<figure class="highlight"><pre><code class="language-nginx" data-lang="nginx"><span class="c1">## https redirect
+<figure class="highlight"><pre><code class="language-nginx" data-lang="nginx"><span class="c1"># gableroux.com configuration generated from salt
+</span>
+<span class="c1">## https redirect
 </span><span class="k">server</span> <span class="p">{</span>
   <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
   <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
@@ -254,23 +257,39 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 
 <span class="c1">## Main server config
 </span><span class="k">server</span> <span class="p">{</span>
-  <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span><span class="p">;</span>
+  <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
   <span class="kn">server_name</span> <span class="s">gableroux.com</span><span class="p">;</span>
-  <span class="kn">root</span> <span class="n">/var/www/gableroux.com/_site</span><span class="p">;</span>
+  <span class="kn">root</span> <span class="n">/var/www/gableroux.com/_side</span><span class="p">;</span>
 
   <span class="kn">index</span>  <span class="s">index.html</span><span class="p">;</span>
 
   <span class="c1">### SSL Config (using letsencrypt)
 </span>  <span class="kn">ssl_certificate</span> <span class="n">/etc/letsencrypt/live/gableroux.com/fullchain.pem</span><span class="p">;</span>
   <span class="kn">ssl_certificate_key</span> <span class="n">/etc/letsencrypt/live/gableroux.com/privkey.pem</span><span class="p">;</span>
-  <span class="kn">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
-  <span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:5m</span><span class="p">;</span>
 
   <span class="c1"># Generate ssl_dhparam using `openssl dhparam -out dhparams.pem 4096`
 </span>  <span class="kn">ssl_dhparam</span> <span class="n">/etc/nginx/dhparams.pem</span><span class="p">;</span>
+
+  <span class="c1"># Secure headers
+</span>  <span class="kn">add_header</span> <span class="s">Strict-Transport-Security</span> <span class="s">"max-age=31557600</span><span class="p">;</span> <span class="kn">includeSubDomains"</span><span class="p">;</span>
+  <span class="kn">add_header</span> <span class="s">X-Frame-Options</span> <span class="s">"SAMEORIGIN"</span><span class="p">;</span>
+  <span class="kn">add_header</span> <span class="s">X-Content-Type-Options</span> <span class="s">"nosniff"</span><span class="p">;</span>
+  <span class="kn">add_header</span> <span class="s">X-Xss-Protection</span> <span class="s">"1"</span><span class="p">;</span>
+  <span class="c1">## allows google fonts from stylesheets and google analytics for scripts
+</span>  <span class="c1">## Using 'unsafe-inline' as we're not nazis...
+</span>  <span class="kn">add_header</span> <span class="s">Content-Security-Policy</span> <span class="s">"default-src</span> <span class="s">'self'</span><span class="p">;</span> <span class="kn">style-src</span> <span class="s">'self'</span> <span class="s">'unsafe-inline'</span> <span class="s">*.googleapis.com</span><span class="p">;</span> <span class="kn">script-src</span> <span class="s">'self'</span> <span class="s">'unsafe-inline'</span> <span class="s">*.google-analytics.com"</span><span class="p">;</span>
+
   <span class="kn">ssl_protocols</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
   <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
-  <span class="kn">ssl_ciphers</span> <span class="s">'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH'</span><span class="p">;</span>
+  <span class="kn">ssl_ciphers</span> <span class="s">EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5</span><span class="p">;</span>
+
+  <span class="kn">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
+  <span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:128m</span><span class="p">;</span>
+  <span class="kn">ssl_stapling</span> <span class="no">on</span><span class="p">;</span>
+  <span class="kn">ssl_stapling_verify</span> <span class="no">on</span><span class="p">;</span>
+
+  <span class="c1"># Your favorite resolver may be used instead of the Google one below
+</span>  <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span><span class="p">;</span>
 
   <span class="c1">### Logs
 </span>  <span class="kn">access_log</span>  <span class="n">/var/log/nginx/gableroux.com.access.log</span><span class="p">;</span>
@@ -305,6 +324,9 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 --config /usr/local/etc/le-renew-webroot.ini</code></pre></figure>
 
 <p>Yay https! Now run the above command in a daily cron job at a random hour to auto renew! That’s it, <strong>no more human intervention ever</strong>. Let’s Encrypt certificates expires after 3 months, you don’t want to do this by hand ;).</p>
+
+<p>Try running <a href="https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;hideResults=on&amp;latest">ssltest on gableroux.com</a>. Spoiler, it looks like this:<br />
+<img src="/images/gableroux-ssltest-a-plus.png" alt="A+ ssltest gableroux.com result" /></p>
 
 <h2 id="the-slides">The slides</h2>
 

@@ -7,7 +7,7 @@ tags: saglacio letsencrypt https revealjs
 featured_image: /images/saglacio/letsencrypt.jpg
 ---
 
-This site is being served as https and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the [SagLacIO][saglacio] inside!
+This site is being served as **https** and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the [SagLacIO][saglacio] inside!
 
 <!-- more -->
 
@@ -38,9 +38,12 @@ cd letsencrypt
 
 ### nginx configuration
 
+Note: Thanks to [@jipiboily][jipiboily], he shared me the awesome [letsecure.me][letsecure] website and here's what my nginx configuration looks like now (a bit different from what I've shown in my slides):
 `/etc/nginx/site-available/gableroux.conf`
 
 {% highlight nginx %}
+# gableroux.com configuration generated from salt
+
 ## https redirect
 server {
   listen 80;
@@ -75,23 +78,39 @@ server {
 
 ## Main server config
 server {
-  listen 443 ssl;
+  listen 443 ssl http2;
   server_name gableroux.com;
-  root /var/www/gableroux.com/_site;
+  root /var/www/gableroux.com/_side;
 
   index  index.html;
 
   ### SSL Config (using letsencrypt)
   ssl_certificate /etc/letsencrypt/live/gableroux.com/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/gableroux.com/privkey.pem;
-  ssl_session_timeout 5m;
-  ssl_session_cache shared:SSL:5m;
 
   # Generate ssl_dhparam using `openssl dhparam -out dhparams.pem 4096`
   ssl_dhparam /etc/nginx/dhparams.pem;
+
+  # Secure headers
+  add_header Strict-Transport-Security "max-age=31557600; includeSubDomains";
+  add_header X-Frame-Options "SAMEORIGIN";
+  add_header X-Content-Type-Options "nosniff";
+  add_header X-Xss-Protection "1";
+  ## allows google fonts from stylesheets and google analytics for scripts
+  ## Using 'unsafe-inline' as we're not nazis...
+  add_header Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com; script-src 'self' 'unsafe-inline' *.google-analytics.com";
+
   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
   ssl_prefer_server_ciphers on;
-  ssl_ciphers 'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH';
+  ssl_ciphers EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5;
+
+  ssl_session_timeout 5m;
+  ssl_session_cache shared:SSL:128m;
+  ssl_stapling on;
+  ssl_stapling_verify on;
+
+  # Your favorite resolver may be used instead of the Google one below
+  resolver 8.8.8.8;
 
   ### Logs
   access_log  /var/log/nginx/gableroux.com.access.log;
@@ -131,6 +150,9 @@ letsencrypt-auto certonly -a webroot --renew-by-default \
 
 Yay https! Now run the above command in a daily cron job at a random hour to auto renew! That's it, **no more human intervention ever**. Let’s Encrypt certificates expires after 3 months, you don't want to do this by hand ;).
 
+Try running [ssltest on gableroux.com][ssltest_gableroux]. Spoiler, it looks like this:  
+![A+ ssltest gableroux.com result](/images/gableroux-ssltest-a-plus.png)
+
 ## The slides
 
 Btw, there are a few interesting links at the end of the slides.
@@ -151,3 +173,6 @@ See full page [presentation website][presentation]
 [faq]: https://community.letsencrypt.org/t/frequently-asked-questions-faq/26
 [getting-started]: https://letsencrypt.org/getting-started/
 [ssltest]: https://www.ssllabs.com/ssltest/
+[ssltest_gableroux]: https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&hideResults=on&latest
+[jipiboily]: http://jipiboily.com/
+[letsecure]: https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/

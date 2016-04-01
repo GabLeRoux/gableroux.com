@@ -6,13 +6,13 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 Mar 2016 08:48:33 -0400</pubDate>
-    <lastBuildDate>Thu, 31 Mar 2016 08:48:33 -0400</lastBuildDate>
+    <pubDate>Fri, 01 Apr 2016 13:57:37 -0400</pubDate>
+    <lastBuildDate>Fri, 01 Apr 2016 13:57:37 -0400</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
         <title>Let’s Encrypt all the things</title>
-        <description>&lt;p&gt;This site is being served as https and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt; inside!&lt;/p&gt;
+        <description>&lt;p&gt;This site is being served as &lt;strong&gt;https&lt;/strong&gt; and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt; inside!&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -43,9 +43,12 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
 &lt;h3 id=&quot;nginx-configuration&quot;&gt;nginx configuration&lt;/h3&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/site-available/gableroux.conf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Note: Thanks to &lt;a href=&quot;http://jipiboily.com/&quot;&gt;@jipiboily&lt;/a&gt;, he shared me the awesome &lt;a href=&quot;https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/&quot;&gt;letsecure.me&lt;/a&gt; website and here’s what my nginx configuration looks like now (a bit different from what I’ve shown in my slides):
+&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/site-available/gableroux.conf&lt;/code&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span class=&quot;c1&quot;&gt;## https redirect
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# gableroux.com configuration generated from salt
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;## https redirect
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[::]:80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -79,23 +82,39 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
 &lt;span class=&quot;c1&quot;&gt;## Main server config
 &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ssl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ssl&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;http2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gableroux.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/var/www/gableroux.com/_site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/var/www/gableroux.com/_side&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
   &lt;span class=&quot;kn&quot;&gt;index&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
   &lt;span class=&quot;c1&quot;&gt;### SSL Config (using letsencrypt)
 &lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;ssl_certificate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/letsencrypt/live/gableroux.com/fullchain.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;ssl_certificate_key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/letsencrypt/live/gableroux.com/privkey.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kn&quot;&gt;ssl_session_timeout&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kn&quot;&gt;ssl_session_cache&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;shared:SSL:5m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
   &lt;span class=&quot;c1&quot;&gt;# Generate ssl_dhparam using `openssl dhparam -out dhparams.pem 4096`
 &lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;ssl_dhparam&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/nginx/dhparams.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Secure headers
+&lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Strict-Transport-Security&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;max-age=31557600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;includeSubDomains&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;X-Frame-Options&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;SAMEORIGIN&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;X-Content-Type-Options&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;nosniff&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;X-Xss-Protection&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;## allows google fonts from stylesheets and google analytics for scripts
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;## Using &#39;unsafe-inline&#39; as we&#39;re not nazis...
+&lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Content-Security-Policy&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;default-src&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;self&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;style-src&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;self&#39;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;unsafe-inline&#39;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;*.googleapis.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;script-src&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;self&#39;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;unsafe-inline&#39;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;*.google-analytics.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
   &lt;span class=&quot;kn&quot;&gt;ssl_protocols&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1.1&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;kn&quot;&gt;ssl_ciphers&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_ciphers&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kn&quot;&gt;ssl_session_timeout&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_session_cache&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;shared:SSL:128m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_stapling&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;ssl_stapling_verify&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Your favorite resolver may be used instead of the Google one below
+&lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;resolver&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;.8.8.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
   &lt;span class=&quot;c1&quot;&gt;### Logs
 &lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;access_log&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;/var/log/nginx/gableroux.com.access.log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -130,6 +149,9 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 --config /usr/local/etc/le-renew-webroot.ini&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Yay https! Now run the above command in a daily cron job at a random hour to auto renew! That’s it, &lt;strong&gt;no more human intervention ever&lt;/strong&gt;. Let’s Encrypt certificates expires after 3 months, you don’t want to do this by hand ;).&lt;/p&gt;
+
+&lt;p&gt;Try running &lt;a href=&quot;https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;amp;hideResults=on&amp;amp;latest&quot;&gt;ssltest on gableroux.com&lt;/a&gt;. Spoiler, it looks like this:&lt;br /&gt;
+&lt;img src=&quot;/images/gableroux-ssltest-a-plus.png&quot; alt=&quot;A+ ssltest gableroux.com result&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-slides&quot;&gt;The slides&lt;/h2&gt;
 

@@ -19,7 +19,6 @@ description: A list of things to do!
 
 ## What I'll talk about
 
-* <i class="fa fa-square"></i> Share nginx [letsencrypt][letsencrypt] config because it's aweomse
 * <i class="fa fa-square"></i> <span class="label label-info">Work in progress</span> [django][django] love
 * <i class="fa fa-square"></i> Version Control: Git and what I should have learned at school (but didn't)
 * <i class="fa fa-square"></i> Editors (JetBrains, vim, sublime text, Atom)
@@ -32,6 +31,7 @@ description: A list of things to do!
 
 ## Completed tasks
 
+* <i class="fa fa-check-square"></i> <del>Share nginx [letsencrypt][letsencrypt] config because it's aweomse</del>
 * <i class="fa fa-check-square"></i> <del>Minify css assets</del>
 * <i class="fa fa-check-square"></i> <del>Better Facebook Sharing (og:image tags, og:description, etc.)</del>
 * <i class="fa fa-check-square"></i> <del>Customize the [about page](/about/)</del>
