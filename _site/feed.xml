@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Apr 2016 14:42:51 -0400</pubDate>
-    <lastBuildDate>Fri, 01 Apr 2016 14:42:51 -0400</lastBuildDate>
+    <pubDate>Fri, 01 Apr 2016 15:13:03 -0400</pubDate>
+    <lastBuildDate>Fri, 01 Apr 2016 15:13:03 -0400</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -31,7 +31,7 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
 &lt;p&gt;Most of the things needed to get started are described on &lt;a href=&quot;https://letsencrypt.org/getting-started/&quot;&gt;Let’s Encrypt getting started page&lt;/a&gt; along with most up to date informations.&lt;/p&gt;
 
-&lt;p&gt;Have a look to [Get HTTPS for free! on github][https://gethttpsforfree.com/] which shows you what happens in the background when using the client. Everything is client side!&lt;/p&gt;
+&lt;p&gt;Have a look to &lt;a href=&quot;https://gethttpsforfree.com/&quot;&gt;Get HTTPS for free! on github&lt;/a&gt; which shows you what happens in the background when using the client. Everything is client side!&lt;/p&gt;
 
 &lt;h3 id=&quot;install-letsencrypt&quot;&gt;Install letsencrypt&lt;/h3&gt;
 

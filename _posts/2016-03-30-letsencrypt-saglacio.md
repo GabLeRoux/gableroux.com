@@ -24,7 +24,7 @@ I'll jump straight to what's interesting; What are the steps to have a fully wor
 
 Most of the things needed to get started are described on [Let’s Encrypt getting started page][getting-started] along with most up to date informations.
 
-Have a look to [Get HTTPS for free! on github][https://gethttpsforfree.com/] which shows you what happens in the background when using the client. Everything is client side!
+Have a look to [Get HTTPS for free! on github][gethttpsforfree] which shows you what happens in the background when using the client. Everything is client side!
 
 ### Install letsencrypt
 
@@ -176,3 +176,4 @@ See full page [presentation website][presentation]
 [ssltest_gableroux]: https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&hideResults=on&latest
 [jipiboily]: http://jipiboily.com/
 [letsecure]: https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/
+[gethttpsforfree]: https://gethttpsforfree.com/
