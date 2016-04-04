@@ -38,7 +38,7 @@ cd letsencrypt
 
 ### nginx configuration
 
-Note: Thanks to [@jipiboily][jipiboily], he shared me the awesome [letsecure.me][letsecure] website and here's what my nginx configuration looks like now (a bit different from what I've shown in my slides):
+Thanks to [@jipiboily][jipiboily], he shared me the awesome [letsecure.me][letsecure] website. Here's how my updated nginx configuration looks like:
 `/etc/nginx/site-available/gableroux.conf`
 
 {% highlight nginx %}
@@ -125,9 +125,9 @@ server {
 }
 {% endhighlight %}
 
-This is what my nginx config looks once rendered by my custom salt commands (not covered here tough) It should get you on tracks.
+It should get you on tracks.
 
-`_site` is the public folder of my static website, but really, this is up to you. grab what fits your needs in the config ;)
+`_site` is the public folder of my static website, but really, this is up to you. Grab what fits your needs in the config ;)
 
 ### Request a cert + renew command
 
@@ -148,7 +148,7 @@ letsencrypt-auto certonly -a webroot --renew-by-default \
 --config /usr/local/etc/le-renew-webroot.ini
 {% endhighlight %}
 
-Yay https! Now run the above command in a daily cron job at a random hour to auto renew! That's it, **no more human intervention ever**. Let’s Encrypt certificates expires after 3 months, you don't want to do this by hand ;).
+Yay https! Now run the above command in a daily cron job at a random hour to auto renew!  Let’s Encrypt certificates expires after 3 months and you don't want to do this by hand ;). That's it, **no more human intervention ever**.
 
 Try running [ssltest on gableroux.com][ssltest_gableroux]. Spoiler, it looks like this:  
 ![A+ ssltest gableroux.com result](/images/gableroux-ssltest-a-plus.png)

@@ -218,7 +218,7 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 
 <h3 id="nginx-configuration">nginx configuration</h3>
 
-<p>Note: Thanks to <a href="http://jipiboily.com/">@jipiboily</a>, he shared me the awesome <a href="https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/">letsecure.me</a> website and here’s what my nginx configuration looks like now (a bit different from what I’ve shown in my slides):
+<p>Thanks to <a href="http://jipiboily.com/">@jipiboily</a>, he shared me the awesome <a href="https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/">letsecure.me</a> website. Here’s how my updated nginx configuration looks like:
 <code class="highlighter-rouge">/etc/nginx/site-available/gableroux.conf</code></p>
 
 <figure class="highlight"><pre><code class="language-nginx" data-lang="nginx"><span class="c1"># gableroux.com configuration generated from salt
@@ -303,9 +303,9 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 </span>  <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>This is what my nginx config looks once rendered by my custom salt commands (not covered here tough) It should get you on tracks.</p>
+<p>It should get you on tracks.</p>
 
-<p><code class="highlighter-rouge">_site</code> is the public folder of my static website, but really, this is up to you. grab what fits your needs in the config ;)</p>
+<p><code class="highlighter-rouge">_site</code> is the public folder of my static website, but really, this is up to you. Grab what fits your needs in the config ;)</p>
 
 <h3 id="request-a-cert--renew-command">Request a cert + renew command</h3>
 
@@ -323,7 +323,7 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">letsencrypt-auto certonly -a webroot --renew-by-default <span class="se">\</span>
 --config /usr/local/etc/le-renew-webroot.ini</code></pre></figure>
 
-<p>Yay https! Now run the above command in a daily cron job at a random hour to auto renew! That’s it, <strong>no more human intervention ever</strong>. Let’s Encrypt certificates expires after 3 months, you don’t want to do this by hand ;).</p>
+<p>Yay https! Now run the above command in a daily cron job at a random hour to auto renew!  Let’s Encrypt certificates expires after 3 months and you don’t want to do this by hand ;). That’s it, <strong>no more human intervention ever</strong>.</p>
 
 <p>Try running <a href="https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;hideResults=on&amp;latest">ssltest on gableroux.com</a>. Spoiler, it looks like this:<br />
 <img src="/images/gableroux-ssltest-a-plus.png" alt="A+ ssltest gableroux.com result" /></p>
