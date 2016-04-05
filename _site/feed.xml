@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Apr 2016 15:13:03 -0400</pubDate>
-    <lastBuildDate>Fri, 01 Apr 2016 15:13:03 -0400</lastBuildDate>
+    <pubDate>Mon, 04 Apr 2016 23:28:19 -0400</pubDate>
+    <lastBuildDate>Mon, 04 Apr 2016 23:28:19 -0400</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -43,7 +43,7 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
 &lt;h3 id=&quot;nginx-configuration&quot;&gt;nginx configuration&lt;/h3&gt;
 
-&lt;p&gt;Note: Thanks to &lt;a href=&quot;http://jipiboily.com/&quot;&gt;@jipiboily&lt;/a&gt;, he shared me the awesome &lt;a href=&quot;https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/&quot;&gt;letsecure.me&lt;/a&gt; website and here’s what my nginx configuration looks like now (a bit different from what I’ve shown in my slides):
+&lt;p&gt;Thanks to &lt;a href=&quot;http://jipiboily.com/&quot;&gt;@jipiboily&lt;/a&gt;, he shared me the awesome &lt;a href=&quot;https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/&quot;&gt;letsecure.me&lt;/a&gt; website. Here’s how my updated nginx configuration looks like:
 &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/nginx/site-available/gableroux.conf&lt;/code&gt;&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-nginx&quot; data-lang=&quot;nginx&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# gableroux.com configuration generated from salt
@@ -128,9 +128,9 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 &lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This is what my nginx config looks once rendered by my custom salt commands (not covered here tough) It should get you on tracks.&lt;/p&gt;
+&lt;p&gt;It should get you on tracks.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; is the public folder of my static website, but really, this is up to you. grab what fits your needs in the config ;)&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; is the public folder of my static website, but really, this is up to you. Grab what fits your needs in the config ;)&lt;/p&gt;
 
 &lt;h3 id=&quot;request-a-cert--renew-command&quot;&gt;Request a cert + renew command&lt;/h3&gt;
 
@@ -148,7 +148,7 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;letsencrypt-auto certonly -a webroot --renew-by-default &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 --config /usr/local/etc/le-renew-webroot.ini&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Yay https! Now run the above command in a daily cron job at a random hour to auto renew! That’s it, &lt;strong&gt;no more human intervention ever&lt;/strong&gt;. Let’s Encrypt certificates expires after 3 months, you don’t want to do this by hand ;).&lt;/p&gt;
+&lt;p&gt;Yay https! Now run the above command in a daily cron job at a random hour to auto renew!  Let’s Encrypt certificates expires after 3 months and you don’t want to do this by hand ;). That’s it, &lt;strong&gt;no more human intervention ever&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Try running &lt;a href=&quot;https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;amp;hideResults=on&amp;amp;latest&quot;&gt;ssltest on gableroux.com&lt;/a&gt;. Spoiler, it looks like this:&lt;br /&gt;
 &lt;img src=&quot;/images/gableroux-ssltest-a-plus.png&quot; alt=&quot;A+ ssltest gableroux.com result&quot; /&gt;&lt;/p&gt;

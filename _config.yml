@@ -31,4 +31,6 @@ sass:
   style: compressed
   sass_dir: _sass
 
+exclude: [node_modules, package.json, gulpfile.coffee, gemfile, gemfile.lock, bower.json]
+
 gems: [jekyll-paginate]
