@@ -3,6 +3,8 @@ browserSync = require('browser-sync')
 sass = require('gulp-sass')
 prefix = require('gulp-autoprefixer')
 cp = require('child_process')
+imagemin = require('gulp-imagemin')
+pngquant = require('imagemin-pngquant')
 
 messages = jekyllBuild: '<span style="color: grey">Running:</span> $ bundle exec jekyll build'
 
@@ -67,6 +69,19 @@ gulp.task 'coffee', ->
   .pipe gulp.dest('_site/js')
   .pipe browserSync.reload(stream: true)
 
+
+gulp.task 'imagemin', ->
+  gulp.src('images/**/*')
+  .pipe(imagemin(
+    progressive: true
+    svgoPlugins: [
+      { removeViewBox: false }
+      { cleanupIDs: false }
+    ]
+    use: [
+      pngquant()
+    ]))
+    .pipe gulp.dest('_site/images')
 
 ###*
 # Watch scss files for changes & recompile

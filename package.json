@@ -11,7 +11,9 @@
     "gulp-sass": "^2.2.0"
   },
   "devDependencies": {
-    "gulp-sass": "^2.2.0"
+    "gulp-imagemin": "^2.4.0",
+    "gulp-sass": "^2.2.0",
+    "imagemin-pngquant": "^4.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
