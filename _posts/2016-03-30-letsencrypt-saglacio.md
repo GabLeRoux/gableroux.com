@@ -97,8 +97,9 @@ server {
   add_header X-Content-Type-Options "nosniff";
   add_header X-Xss-Protection "1";
   ## allows google fonts from stylesheets and google analytics for scripts
-  ## Using 'unsafe-inline' as we're not nazis...
-  add_header Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com; script-src 'self' 'unsafe-inline' *.google-analytics.com";
+  ## Using 'unsafe-inline' due to some pages still doing this (angular app somewhere)
+  ## Commented as this was to restrictive. Most of the things here are static anyway
+  #add_header Content-Security-Policy "default-src 'self' *.googleapis.com *.google-analytics.com *.facebook.net *.facebook.com *.feedly.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self'";
 
   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
   ssl_prefer_server_ciphers on;
