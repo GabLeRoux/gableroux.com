@@ -329,6 +329,79 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 <p>Try running <a href="https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;hideResults=on&amp;latest">ssltest on gableroux.com</a>. Spoiler, it looks like this:<br />
 <img src="/images/gableroux-ssltest-a-plus.png" alt="A+ ssltest gableroux.com result" /></p>
 
+<h2 id="edit-openssl-padding-oracle-vulnerability-cve-2016-2107httpsblogcloudflarecomyet-another-padding-oracle-in-openssl-cbc-ciphersuites">Edit: <a href="https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/">OpenSSL Padding Oracle vulnerability (CVE-2016-2107)</a></h2>
+
+<p>So there is a new problem in the wild!
+My ssltest went from an A+ to an F in no time!  Here’s an handy tool to verify vulnerability:
+<a href="https://github.com/FiloSottile/CVE-2016-2107">FiloSottile/CVE-2016-2107</a></p>
+
+<p>Solution: <em>upgrade to <a href="http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html">openssl</a> 1.0.2h (64bit)</em></p>
+
+<p>On trusty Ubuntu 14.04 LTS</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>openssl version -v
+</code></pre>
+</div>
+
+<blockquote>
+  <p>OpenSSL 1.0.1f 6 Jan 2014</p>
+</blockquote>
+
+<p>These will take a few minutes to run:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>wget https://www.openssl.org/source/openssl-1.0.2h.tar.gz
+tar -xzvf openssl-1.0.2h.tar.gz
+cd openssl-1.0.2h
+sudo ./config
+sudo make
+sudo make install
+sudo ln -sf /usr/local/ssl/bin/openssl $(which openssl)
+openssl version -v
+</code></pre>
+</div>
+
+<blockquote>
+  <p>OpenSSL 1.0.2h  3 May 2016</p>
+</blockquote>
+
+<p>Inspired by <a href="http://www.miguelvallejo.com/updating-to-openssl-1-0-2g-on-ubuntu-server-12-04-14-04-lts-to-stop-cve-2016-0800-drown-attack/">Miguel’s solution</a></p>
+
+<p>I was still getting the error, and I found this blog post: <a href="https://bobcares.com/blog/fix-high-severity-openssl-bugs-memory-corruption-padding-oracle-ubuntu-centos-redhat-opensuse-linux/">How to fix high severity OpenSSL bugs (Memory corruption, Padding oracle) in Ubuntu, CentOS, RedHat, OpenSuse and other Linux servers</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>apt-get install --only-upgrade libssl1.0.0
+</code></pre>
+</div>
+
+<p>Now verify it did apply the patch by reading the changelog:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>zgrep -ie "CVE-2016-2107" /usr/share/doc/libssl1.0.0/changelog.Debian.gz
+</code></pre>
+</div>
+
+<blockquote>
+  <ul>
+    <li>debian/patches/CVE-2016-2107.patch: check that there are enough</li>
+    <li>CVE-2016-2107</li>
+  </ul>
+</blockquote>
+
+<p>Great! But still an F</p>
+
+<p>From <a href="http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html">nginx announcement</a>, upgrade nginx to <code class="highlighter-rouge">1.11.1-1</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install --upgrade nginx
+</code></pre>
+</div>
+
+<p>Now let’s verify again localy</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>CVE-2016-2107 gableroux.com
+2016/06/10 13:32:17 Vulnerable: false
+</code></pre>
+</div>
+
+<p>Awesome, scoring <em>A+</em> again, solved! :)</p>
+
 <h2 id="the-slides">The slides</h2>
 
 <p>Btw, there are a few interesting links at the end of the slides.</p>

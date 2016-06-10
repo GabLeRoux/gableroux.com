@@ -154,6 +154,59 @@ Yay https! Now run the above command in a daily cron job at a random hour to aut
 Try running [ssltest on gableroux.com][ssltest_gableroux]. Spoiler, it looks like this:  
 ![A+ ssltest gableroux.com result](/images/gableroux-ssltest-a-plus.png)
 
+## Edit: [OpenSSL Padding Oracle vulnerability (CVE-2016-2107)](https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/)
+
+So there is a new problem in the wild!
+My ssltest went from an A+ to an F in no time!  Here's an handy tool to verify vulnerability:
+[FiloSottile/CVE-2016-2107](https://github.com/FiloSottile/CVE-2016-2107)
+
+Solution: *upgrade to [openssl](http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html) 1.0.2h (64bit)*
+
+On trusty Ubuntu 14.04 LTS
+
+    openssl version -v
+
+> OpenSSL 1.0.1f 6 Jan 2014
+
+These will take a few minutes to run:
+
+    wget https://www.openssl.org/source/openssl-1.0.2h.tar.gz
+    tar -xzvf openssl-1.0.2h.tar.gz
+    cd openssl-1.0.2h
+    sudo ./config
+    sudo make
+    sudo make install
+    sudo ln -sf /usr/local/ssl/bin/openssl $(which openssl)
+    openssl version -v
+
+> OpenSSL 1.0.2h  3 May 2016
+
+Inspired by [Miguel's solution](http://www.miguelvallejo.com/updating-to-openssl-1-0-2g-on-ubuntu-server-12-04-14-04-lts-to-stop-cve-2016-0800-drown-attack/)
+
+I was still getting the error, and I found this blog post: [How to fix high severity OpenSSL bugs (Memory corruption, Padding oracle) in Ubuntu, CentOS, RedHat, OpenSuse and other Linux servers](https://bobcares.com/blog/fix-high-severity-openssl-bugs-memory-corruption-padding-oracle-ubuntu-centos-redhat-opensuse-linux/)
+
+    apt-get install --only-upgrade libssl1.0.0
+
+Now verify it did apply the patch by reading the changelog:
+
+    zgrep -ie "CVE-2016-2107" /usr/share/doc/libssl1.0.0/changelog.Debian.gz
+
+>    - debian/patches/CVE-2016-2107.patch: check that there are enough
+>    - CVE-2016-2107
+
+Great! But still an F
+
+From [nginx announcement](http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html), upgrade nginx to `1.11.1-1`.
+
+    sudo apt-get install --upgrade nginx
+
+Now let's verify again localy
+
+    CVE-2016-2107 gableroux.com
+    2016/06/10 13:32:17 Vulnerable: false
+
+Awesome, scoring *A+* again, solved! :)
+
 ## The slides
 
 Btw, there are a few interesting links at the end of the slides.

@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Apr 2016 15:40:14 -0400</pubDate>
-    <lastBuildDate>Tue, 05 Apr 2016 15:40:14 -0400</lastBuildDate>
+    <pubDate>Fri, 10 Jun 2016 13:36:17 -0400</pubDate>
+    <lastBuildDate>Fri, 10 Jun 2016 13:36:17 -0400</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -153,6 +153,79 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
 &lt;p&gt;Try running &lt;a href=&quot;https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;amp;hideResults=on&amp;amp;latest&quot;&gt;ssltest on gableroux.com&lt;/a&gt;. Spoiler, it looks like this:&lt;br /&gt;
 &lt;img src=&quot;/images/gableroux-ssltest-a-plus.png&quot; alt=&quot;A+ ssltest gableroux.com result&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;edit-openssl-padding-oracle-vulnerability-cve-2016-2107httpsblogcloudflarecomyet-another-padding-oracle-in-openssl-cbc-ciphersuites&quot;&gt;Edit: &lt;a href=&quot;https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/&quot;&gt;OpenSSL Padding Oracle vulnerability (CVE-2016-2107)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;So there is a new problem in the wild!
+My ssltest went from an A+ to an F in no time!  Here’s an handy tool to verify vulnerability:
+&lt;a href=&quot;https://github.com/FiloSottile/CVE-2016-2107&quot;&gt;FiloSottile/CVE-2016-2107&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Solution: &lt;em&gt;upgrade to &lt;a href=&quot;http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html&quot;&gt;openssl&lt;/a&gt; 1.0.2h (64bit)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;On trusty Ubuntu 14.04 LTS&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;openssl version -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;OpenSSL 1.0.1f 6 Jan 2014&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;These will take a few minutes to run:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://www.openssl.org/source/openssl-1.0.2h.tar.gz
+tar -xzvf openssl-1.0.2h.tar.gz
+cd openssl-1.0.2h
+sudo ./config
+sudo make
+sudo make install
+sudo ln -sf /usr/local/ssl/bin/openssl $(which openssl)
+openssl version -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;OpenSSL 1.0.2h  3 May 2016&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Inspired by &lt;a href=&quot;http://www.miguelvallejo.com/updating-to-openssl-1-0-2g-on-ubuntu-server-12-04-14-04-lts-to-stop-cve-2016-0800-drown-attack/&quot;&gt;Miguel’s solution&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I was still getting the error, and I found this blog post: &lt;a href=&quot;https://bobcares.com/blog/fix-high-severity-openssl-bugs-memory-corruption-padding-oracle-ubuntu-centos-redhat-opensuse-linux/&quot;&gt;How to fix high severity OpenSSL bugs (Memory corruption, Padding oracle) in Ubuntu, CentOS, RedHat, OpenSuse and other Linux servers&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get install --only-upgrade libssl1.0.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now verify it did apply the patch by reading the changelog:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zgrep -ie &quot;CVE-2016-2107&quot; /usr/share/doc/libssl1.0.0/changelog.Debian.gz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;debian/patches/CVE-2016-2107.patch: check that there are enough&lt;/li&gt;
+    &lt;li&gt;CVE-2016-2107&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Great! But still an F&lt;/p&gt;
+
+&lt;p&gt;From &lt;a href=&quot;http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html&quot;&gt;nginx announcement&lt;/a&gt;, upgrade nginx to &lt;code class=&quot;highlighter-rouge&quot;&gt;1.11.1-1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install --upgrade nginx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now let’s verify again localy&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CVE-2016-2107 gableroux.com
+2016/06/10 13:32:17 Vulnerable: false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Awesome, scoring &lt;em&gt;A+&lt;/em&gt; again, solved! :)&lt;/p&gt;
 
 &lt;h2 id=&quot;the-slides&quot;&gt;The slides&lt;/h2&gt;
 

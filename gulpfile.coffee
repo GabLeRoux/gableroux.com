@@ -5,6 +5,7 @@ prefix = require('gulp-autoprefixer')
 cp = require('child_process')
 imagemin = require('gulp-imagemin')
 pngquant = require('imagemin-pngquant')
+coffee = require('gulp-coffee')
 
 messages = jekyllBuild: '<span style="color: grey">Running:</span> $ bundle exec jekyll build'
 
