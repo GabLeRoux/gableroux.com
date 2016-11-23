@@ -12,20 +12,20 @@ description: A list of things to do!
 * <i class="fa fa-square"></i> Minify pictures assets
 * <i class="fa fa-square"></i> Fix footer size on mobile
 * <i class="fa fa-square"></i> Add comments system back
-* <i class="fa fa-square"></i> Fix sass live reload (broken because of `css/main.scss` header
+* <i class="fa fa-square"></i> Fix sass live reload (broken because of `css/main.scss` header)
 * <i class="fa fa-square"></i> Minify content from gulp, I'm lazy, did not do it yet
 * <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
 * <i class="fa fa-square"></i> Better 404 [Probably with this](http://yizeng.me/2013/05/26/create-a-custom-jekyll-404-page/)
 
 ## What I'll talk about
 
-* <i class="fa fa-square"></i> <span class="label label-info">Work in progress</span> [django][django] love
-* <i class="fa fa-square"></i> Version Control: Git and what I should have learned at school (but didn't)
+* <i class="fa fa-square"></i> <span class="label label-info">Draft in progress</span> [django][django] love
 * <i class="fa fa-square"></i> Editors (JetBrains, vim, sublime text, Atom)
 * <i class="fa fa-square"></i> [MeteorJS][meteor] in a nutshell <del>post old presentation</del>
 * <i class="fa fa-square"></i> [Coffeescript][coffeescript] power
 * <i class="fa fa-square"></i> [CodeWars][codewars], become a Code Kata!
 * <i class="fa fa-square"></i> Windows 10 (lol, just kidding, wont't talk about that)
+* <i class="fa fa-check-square"></i> <del>Version Control: Git and what I should have learned at school (but didn't)</del>
 * <i class="fa fa-check-square"></i> <del>Grunt or Gulp, livereload, omg</del>
 * <i class="fa fa-check-square"></i> <del>Write about Pelican</del>
 
