@@ -14,11 +14,11 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.5",
-    "bootstrap-autohidingnavbar": "~1.0.2",
+    "bootstrap": "3.3.7",
+    "bootstrap-autohidingnavbar": "1.0.6",
     "cyborg-bootstrap": "~0.0.1",
-    "font-awesome": "^4.5.0",
-    "hover": "~2.0.2",
+    "font-awesome": "4.7.0",
+    "hover": "2.1.0",
     "jquery": "~2.1.4"
   }
 }

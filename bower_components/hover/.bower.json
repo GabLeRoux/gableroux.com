@@ -1,6 +1,6 @@
 {
   "name": "hover",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "homepage": "http://ianlunn.github.io/Hover",
   "authors": [
     "Ian Lunn <hello@ianlunn.co.uk>"
@@ -26,14 +26,14 @@
     "test",
     "tests"
   ],
-  "_release": "2.0.2",
+  "_release": "2.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "2.0.2",
-    "commit": "3d9e7d9d6722807de737810c5ecbe18207c80aa6"
+    "tag": "2.1.0",
+    "commit": "948508aefa886794c7d5ec508eda9e95b9a5a233"
   },
-  "_source": "git://github.com/IanLunn/Hover.git",
-  "_target": "~2.0.2",
+  "_source": "https://github.com/IanLunn/Hover.git",
+  "_target": "2.1.0",
   "_originalSource": "hover",
   "_direct": true
 }

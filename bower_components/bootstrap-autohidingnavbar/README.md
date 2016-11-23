@@ -46,6 +46,7 @@ When calling `$(".navbar-fixed-top").autoHidingNavbar()` you can pass a paramete
 - `showOnBottom`, defaults to `'true'`, the navbar shows up when scroll reaches the page's end.
 - `hideOffset`, defaults to `'auto'`, hides the navbar after scrolling that much pixel. Auto means the navbar's height.
 - `animationDuration`, defaults to `'200'`, is the duration of the show and hide animations in milliseconds.
+- `navbarOffset`, defaults to `'0'`, the navbar doesn't hide that many pixels from the bottom. 
 
 ### Methods
 
@@ -55,6 +56,26 @@ To call methods on the auto hiding instance, use the following syntax:
 
 ```javascript
 $(selector).autoHidingNavbar(methodName, parameter);
+```
+
+### Events
+
+You can listen for following events.
+
+- `show.autoHidingNavbar` triggers when element is shown.
+- `hide.autoHidingNavbar` triggers when element is hidden.
+
+```javascript
+var element = $(selector);
+
+element.on("show.autoHidingNavbar", function() {
+  // on show
+});
+
+element.on("hide.autoHidingNavbar", function() {
+  // on hide
+});
+
 ```
 
 Here are the available methods:

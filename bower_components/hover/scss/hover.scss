@@ -1,6 +1,6 @@
 /*!
  * Hover.css (http://ianlunn.github.io/Hover/)
- * Version: 2.0.2
+ * Version: 2.1.0
  * Author: Ian Lunn @IanLunn
  * Author URL: http://ianlunn.co.uk/
  * Github: https://github.com/IanLunn/Hover
@@ -203,6 +203,20 @@
 @if $includeClasses {
 	.#{$nameSpace}-buzz-out {
 	    @include buzz-out();
+	}
+}
+
+@import "effects/2d-transitions/forward";
+@if $includeClasses {
+	.#{$nameSpace}-forward {
+		@include forward();
+	}
+}
+
+@import "effects/2d-transitions/backward";
+@if $includeClasses {
+	.#{$nameSpace}-backward {
+		@include backward();
 	}
 }
 
