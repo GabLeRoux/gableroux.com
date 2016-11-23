@@ -7,7 +7,8 @@ tags: version-control git presentation
 featured_image: /images/y-u-no-git.jpg
 ---
 
-[Git][git] is a must have tool known as *the stupid content tracker*. Every programmer should learn to use it as soon as they can. Git will save you time and could even save your life (yep). I gave that presentation at the UQAC [SagLacIO][saglacio] Special edition! Thank you all, that was an awesome night!
+[Git][git] is a must have tool known as *the stupid content tracker*.  
+Every programmer should learn to use it as soon as they can. Git will save you time and could even save your life (yep). I gave that presentation at the UQAC [SagLacIO][saglacio] Special edition! Thank you all, that was an awesome night!
 
 <!-- more -->
 
