@@ -1,6 +1,6 @@
 {
 	"name": "bootstrap-autohidingnavbar",
-	"version": "1.0.2",
+	"version": "1.0.5",
 	"homepage": "http://www.virtuosoft.eu/code/bootstrap-autohidingnavbar/",
 	"authors": [
     {
@@ -12,7 +12,7 @@
 	"main": "src/jquery.bootstrap-autohidingnavbar.js",
   "dependencies": {
     "jquery": ">=1.9.0",
-    "bootstrap": ">=3.0.0"
+    "bootstrap": "~3.0"
   },
 	"keywords": [
 		"jquery",

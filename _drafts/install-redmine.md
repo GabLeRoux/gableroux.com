@@ -7,13 +7,13 @@ tags: redmine application howto
 featured_image: /images/redmine-centos.jpg
 ---
 
-A colleague had to install [redmine][redmine] once and I gave this a look. Turns out [redmine documentation for centos] is getting old, we gave a try and wow, this is not as easy as it seems.
+A coworker had to install [redmine][redmine], I didn't know the tool, but I like challenges. Turns out [redmine documentation for centos] is getting old, we gave a try and wow, this is not as easy as it seems.
 
 <!-- more -->
 
-If you are here because you want to install redmine from scratch, I really suggest you use something like the [one click digital ocean image](https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-one-click-install-redmine-on-ubuntu-14-04-image), it will take you 5 minutes and you'll be done.
+If you are here because you want to install redmine from scratch, I strongly suggest you to use something like the [one click digital ocean image](https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-one-click-install-redmine-on-ubuntu-14-04-image), it will take you 5 minutes and you'll be done.
 
-## Still there? 
+## Still there?
 
 Close your eyes, this will be ugly.
 
@@ -60,4 +60,4 @@ sudo a2ensite apache2-passenger-host.conf
 sudo service apache2 reload
 {% endhighlight %}
 
-Almost done.
+Almost done. Todo: finish this post one day, I never posted this, but could be handy for someone unless they managed to make it easier :O

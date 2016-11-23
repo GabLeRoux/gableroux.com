@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>InfluxDB Telegraf and Grafana <3</title>
+
+    <meta name="description" content="Do you like graphs? Grafana! What about storing time series? InfluxDB! And grabbing informations from many sources easily? Telegraf! Here we go!">
+    <meta name="author" content="Gabriel Le Breton">
+
+    <link rel="canonical" href="https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/">
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="https://gableroux.com/feed.xml"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- facebook Open Graph Metadatas -->
+    <meta content="253381494995396" property="fb:app_id">
+    <meta content="GabLeRoux <Developer>" property="og:site_name">
+
+    
+    <meta content="InfluxDB Telegraf and Grafana <3" property="og:title">
+    
+
+    
+    <meta content="article" property="og:type">
+    
+
+
+    
+    <meta content="Do you like graphs? Grafana! What about storing time series? InfluxDB! And grabbing informations from many sources easily? Telegraf! Here we go!
+
+" property="og:description">
+    
+
+    
+    <meta content="https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/" property="og:url">
+    
+
+    
+    <meta content="2016-06-21T19:00:00-04:00" property="article:published_time">
+    <meta content="https://gableroux.com/about/" property="article:author">
+    
+
+    
+    <meta content="https://gableroux.com/images/influxdb-telegraf-grafana.jpg" property="og:image">
+    
+
+    
+    
+    <meta content="presentation" property="article:section">
+    
+    
+
+    
+    
+    <meta content="saglacio" property="article:tag">
+    
+    <meta content="influxdb" property="article:tag">
+    
+    <meta content="telegraf" property="article:tag">
+    
+    <meta content="grafana" property="article:tag">
+    
+    
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '253381494995396',
+                xfbml      : true,
+                version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i> <img src="/images/GabLeRoux-logo-small-white.png" alt=""/></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                
+                
+    
+        
+            <li><a href="/about/">About</a></li>
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+            <li><a href="/todo/">Todo</a></li>
+        
+    
+
+    
+
+    
+
+
+
+
+                <li>
+                    <a href="https://totemastudio.com" target="_blank" title="Totema Studio"><i class="fa fa-gamepad"></i> Totema Studio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="navbar-no-header-spacer"></div>
+
+
+<main id="wrap">
+    <div class="page-content">
+        <article class="blog-page container">
+
+    <header class="post-header">
+        <div class="row">
+            <h1 class="post-title">InfluxDB Telegraf and Grafana <3</h1>
+
+            <p class="post-meta">
+                Jun 21, 2016
+                
+            </p>
+
+            <img src="/images/influxdb-telegraf-grafana.jpg" alt="InfluxDB Telegraf and Grafana <3">
+
+        </div>
+    </header>
+
+    <hr>
+
+    <article class="page-content">
+        <p>Do you like graphs? <code class="highlighter-rouge">Grafana</code>! What about storing <em>time series</em>? <code class="highlighter-rouge">InfluxDB</code>! And grabbing informations from many sources easily? <code class="highlighter-rouge">Telegraf</code>! Here we go!</p>
+
+<!-- more -->
+
+<p>I gave a presentation at the <a href="http://saglac.io">SagLacIO</a> on June 21 about <a href="https://www.influxdata.com/time-series-platform/influxdb/">Influxdb</a>, <a href="https://www.influxdata.com/time-series-platform/telegraf/">telegraf</a> and <a href="http://grafana.org/">Grafana</a>.</p>
+
+<p>If you like this kind of stuff, have a look at the amazing <a href="https://github.com/obazoud/awesome-dashboard">obazoud/awesome-dashboard</a> list! :D</p>
+
+<h2 id="here-goes-the-slides-">Here goes the slides :)</h2>
+
+<div class="responsive-iframe-wrapperr">
+    <div class="responsive-iframe">
+        <img class="ratio" src="http://placehold.it/16x9" />
+        <iframe src="https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&amp;loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<p><a href="https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&amp;loop=false">Direct link to presentation</a></p>
+
+
+    </article>
+
+    <div class="fb-like" data-colorscheme="dark" data-share="true" data-width="450" data-show-faces="true"></div>
+
+    
+
+</article>
+
+    </div>
+</main>
+
+<div class="footer-margin-fix">
+    <footer class="site-footer clearfix">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="alt">
+                    <a href="/">
+                        <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="mailto:lebreton.gabriel@gmail.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
+                </li>
+                
+
+                <li class="rss">
+                    <a href="https://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+                </li>
+
+                <li class="feedly">
+                    <a href='https://cloud.feedly.com/#subscription%2Ffeed%2Fhttps%3A%2F%2Fgableroux.com%2Ffeed.xml'  target='blank'><img id='feedlyFollow' src='https://s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png' alt='Read Gabriel Le Breton on feedly' width='71' height='28'></a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/js/main.js" type="application/javascript"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19518991-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body>
+
+</html>

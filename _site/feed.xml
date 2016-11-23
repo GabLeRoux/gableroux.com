@@ -6,9 +6,143 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Jun 2016 13:36:17 -0400</pubDate>
-    <lastBuildDate>Fri, 10 Jun 2016 13:36:17 -0400</lastBuildDate>
+    <pubDate>Wed, 23 Nov 2016 02:16:06 -0500</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2016 02:16:06 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>Y U NO GIT</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.git.com&quot;&gt;Git&lt;/a&gt; is a must have tool known as &lt;em&gt;the stupid content tracker&lt;/em&gt;. Every programmer should learn to use it as soon as they can. Git will save you time and could even save your life (yep). I gave that presentation at the UQAC &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt; Special edition! Thank you all, that was an awesome night!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h1 id=&quot;git-larbre-de-la-vie&quot;&gt;Git, l’arbre de la vie&lt;/h1&gt;
+
+&lt;p&gt;I learned &lt;strong&gt;git&lt;/strong&gt; by myself and I want you to learn it too!&lt;/p&gt;
+
+&lt;h2 id=&quot;version-control&quot;&gt;Version control?&lt;/h2&gt;
+
+&lt;p&gt;YES! You want to time travel in your code and into other people’s code! Git is a &lt;strong&gt;collaboration tool&lt;/strong&gt;, it’s about &lt;strong&gt;being able to work with people&lt;/strong&gt; but it’s also great for working alone! Did you know &lt;strong&gt;github currently has more than 2.7M repositories&lt;/strong&gt; publicly available? Please, don’t reinvent the wheel!&lt;/p&gt;
+
+&lt;h2 id=&quot;learn-git&quot;&gt;Learn git&lt;/h2&gt;
+
+&lt;p&gt;This is what you want to start with:&lt;br /&gt;
+&lt;a href=&quot;https://learn.github.com/&quot;&gt;learn.github.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And remember:&lt;br /&gt;
+&lt;img src=&quot;/images/when-in-doubt-git-commit-meme.png&quot; alt=&quot;when in doubt, git commit&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;starting-a-new-repository&quot;&gt;Starting a new repository?&lt;/h2&gt;
+
+&lt;p&gt;Make sure you add the right &lt;a href=&quot;https://git-scm.com/docs/gitignore&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt;&lt;/a&gt; file from the &lt;a href=&quot;https://github.com/github/gitignore&quot;&gt;github/gitignore repository&lt;/a&gt; for your project. You don’t want to track useless/generated files with git!&lt;/p&gt;
+
+&lt;h2 id=&quot;are-you-a-student&quot;&gt;Are you a student?&lt;/h2&gt;
+
+&lt;p&gt;Save money, get github pro for free and way more with the &lt;a href=&quot;https://education.github.com/pack&quot;&gt;github backpack&lt;/a&gt;! If you’re only looking for private repositories (ex, for your homeworks), &lt;a href=&quot;https://bitbucket.org/&quot;&gt;bitbucket&lt;/a&gt; offers free private repositories for teams &amp;lt; 5. :)&lt;/p&gt;
+
+&lt;h2 id=&quot;handy-resources&quot;&gt;Handy resources&lt;/h2&gt;
+
+&lt;h3 id=&quot;tldr&quot;&gt;tldr&lt;/h3&gt;
+&lt;p&gt;I recommend you to install &lt;a href=&quot;http://tldr-pages.github.io/&quot;&gt;tldr&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g tldr
+tldr --update
+tldr tldr
+
+tldr
+
+Simplified man pages.
+
+- Get typical usages of a command (hint: this is how you got here!):
+  tldr command
+
+- Update the local cache of tldr pages:
+  tldr --update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Or you can &lt;a href=&quot;https://tldr.ostera.io/&quot;&gt;see it in action on tldr.ostera.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;must-click-links&quot;&gt;Must click links&lt;/h3&gt;
+&lt;p&gt;These are the very useful links from my last slide:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sindresorhus/awesome&quot;&gt;sindresorhus/awesome&lt;/a&gt; (It’s not about git, but definitely deserves a click)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/phillipadsmith/awesome-github&quot;&gt;phillipadsmith/awesome-github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/arslanbilal/git-cheat-sheet&quot;&gt;arslanbilal/git-cheat-sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/git-tips/tips&quot;&gt;git-tips/tips&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/stevemao/awesome-git-addons&quot;&gt;stevemao/awesome-git-addons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/stefanbuck/awesome-browser-extensions-for-github&quot;&gt;stefanbuck/awesome-browser-extensions-for-github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tiimgreen/github-cheat-sheet&quot;&gt;tiimgreen/github-cheat-sheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;slides&quot;&gt;Slides&lt;/h2&gt;
+
+&lt;p&gt;When writing my slides, &lt;strong&gt;&lt;a href=&quot;https://asciinema.org/a/6eudi47vuw1dgges25bnpver4&quot;&gt;I recorded a 22min git session&lt;/a&gt;&lt;/strong&gt; and created an &lt;strong&gt;&lt;a href=&quot;https://github.com/GabLeRoux/git-commands-example&quot;&gt;example git repository on github&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
+    &lt;div class=&quot;responsive-iframe&quot;&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;http://placehold.it/16x9&quot; /&gt;
+        &lt;iframe src=&quot;https://docs.google.com/presentation/d/1ynQabkehsa3bXKSh3ZTS36vfho5_zymROdu_wGxMwQc/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&amp;amp;loop=false&quot;&gt;Direct link to presentation&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 21 Nov 2016 21:00:00 -0500</pubDate>
+        <link>https://gableroux.com/tips/2016/11/21/version-control/</link>
+        <guid isPermaLink="true">https://gableroux.com/tips/2016/11/21/version-control/</guid>
+        
+        <category>version-control</category>
+        
+        <category>git</category>
+        
+        <category>presentation</category>
+        
+        
+        <category>tips</category>
+        
+      </item>
+    
+      <item>
+        <title>InfluxDB Telegraf and Grafana &lt;3</title>
+        <description>&lt;p&gt;Do you like graphs? &lt;code class=&quot;highlighter-rouge&quot;&gt;Grafana&lt;/code&gt;! What about storing &lt;em&gt;time series&lt;/em&gt;? &lt;code class=&quot;highlighter-rouge&quot;&gt;InfluxDB&lt;/code&gt;! And grabbing informations from many sources easily? &lt;code class=&quot;highlighter-rouge&quot;&gt;Telegraf&lt;/code&gt;! Here we go!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;I gave a presentation at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt; on June 21 about &lt;a href=&quot;https://www.influxdata.com/time-series-platform/influxdb/&quot;&gt;Influxdb&lt;/a&gt;, &lt;a href=&quot;https://www.influxdata.com/time-series-platform/telegraf/&quot;&gt;telegraf&lt;/a&gt; and &lt;a href=&quot;http://grafana.org/&quot;&gt;Grafana&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you like this kind of stuff, have a look at the amazing &lt;a href=&quot;https://github.com/obazoud/awesome-dashboard&quot;&gt;obazoud/awesome-dashboard&lt;/a&gt; list! :D&lt;/p&gt;
+
+&lt;h2 id=&quot;here-goes-the-slides-&quot;&gt;Here goes the slides :)&lt;/h2&gt;
+
+&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
+    &lt;div class=&quot;responsive-iframe&quot;&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;http://placehold.it/16x9&quot; /&gt;
+        &lt;iframe src=&quot;https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&amp;amp;loop=false&quot;&gt;Direct link to presentation&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 21 Jun 2016 19:00:00 -0400</pubDate>
+        <link>https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/</guid>
+        
+        <category>saglacio</category>
+        
+        <category>influxdb</category>
+        
+        <category>telegraf</category>
+        
+        <category>grafana</category>
+        
+        
+        <category>presentation</category>
+        
+      </item>
     
       <item>
         <title>Let’s Encrypt all the things</title>
@@ -869,36 +1003,6 @@ Done. Your new project is available at *******/***/********/*****
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title>Meteorjs introduction presentation at the SagLacIO</title>
-        <description>&lt;p&gt;I gave a presentation at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt; about &lt;a href=&quot;https://www.meteor.com/&quot;&gt;Hubot&lt;/a&gt;. Here are the slides.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
-    &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;https://placehold.it/16x9&quot; /&gt;
-        &lt;!-- todo: update me to https and host here --&gt;
-        &lt;iframe src=&quot;https://meteor.gableroux.com/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;See full page &lt;a href=&quot;https://meteor.gableroux.com/&quot;&gt;presentation website&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 09 Dec 2013 19:00:00 -0500</pubDate>
-        <link>https://gableroux.com/presentation/2013/12/09/meteor-saglacio/</link>
-        <guid isPermaLink="true">https://gableroux.com/presentation/2013/12/09/meteor-saglacio/</guid>
-        
-        <category>saglacio</category>
-        
-        <category>meteor</category>
-        
-        
-        <category>presentation</category>
         
       </item>
     
