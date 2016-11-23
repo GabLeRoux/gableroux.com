@@ -6,8 +6,9 @@ Hey there, welcome to the backstage of my website.
 
     gem install bundle
     bundle install
-    npm install
-    npm install coffee-gulp -g
+    npm install 
+    npm install -g bower coffee-gulp
+    bower install
 
 ## Running this website
 
