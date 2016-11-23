@@ -2,8 +2,8 @@
 layout: post
 title:  "Y U NO GIT"
 date:   2016-11-21 21:00
-categories: tips
-tags: version-control git presentation
+categories: presentation
+tags: version-control git
 featured_image: /images/y-u-no-git.jpg
 ---
 

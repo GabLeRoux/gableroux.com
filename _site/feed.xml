@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Nov 2016 02:51:52 -0500</pubDate>
-    <lastBuildDate>Wed, 23 Nov 2016 02:51:52 -0500</lastBuildDate>
+    <pubDate>Wed, 23 Nov 2016 10:41:33 -0500</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2016 10:41:33 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -92,17 +92,15 @@ Simplified man pages.
 
 </description>
         <pubDate>Mon, 21 Nov 2016 21:00:00 -0500</pubDate>
-        <link>https://gableroux.com/tips/2016/11/21/version-control/</link>
-        <guid isPermaLink="true">https://gableroux.com/tips/2016/11/21/version-control/</guid>
+        <link>https://gableroux.com/presentation/2016/11/21/version-control/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2016/11/21/version-control/</guid>
         
         <category>version-control</category>
         
         <category>git</category>
         
+        
         <category>presentation</category>
-        
-        
-        <category>tips</category>
         
       </item>
     
