@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/gableroux
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://gableroux.com
+  * I am gableroux (https://keybase.io/gableroux) on keybase.
+  * I have a public key with fingerprint D744 0388 1AD9 3AD6 7135  21A0 0A97 5F6A 4C26 A7EF
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01015f731b0a0442caf0a6bad5c9efee8a6075b718c9c5c7f692286f960f923c86a70a",
+            "fingerprint": "d74403881ad93ad6713521a00a975f6a4c26a7ef",
+            "host": "keybase.io",
+            "key_id": "0a975f6a4c26a7ef",
+            "kid": "01015f731b0a0442caf0a6bad5c9efee8a6075b718c9c5c7f692286f960f923c86a70a",
+            "uid": "419ec97d3c953d7382ffd2b14238c019",
+            "username": "gableroux"
+        },
+        "revoke": {
+            "sig_ids": [
+                "f0c07f7cccea00e5b2a5ce0f1a7a12fa34bf89702289f79239f7e0f68a0c08c00f"
+            ]
+        },
+        "service": {
+            "hostname": "gableroux.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485139682,
+    "expire_in": 157680000,
+    "prev": "6d35940046b291a35aa9f0236d88600bff125d6f292f1e61b24ae9f93d17a6ab",
+    "seqno": 44,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkltoFUccxk9ObEzFFs2Lt6B0aEoMMczM7s7snKIigoZW0pc+WCQcZ2ZnkiUn
+u8c9m5sSH6JGDmiUWmyEUklpKaV9qSmJD9rUVkVM8I6Kt6egRpEYpWDrdTbal/a1
++zDLzHzf9//Nf2bvO6WpdMnU70/6yhsapkpGJ0Rq/Y7g4RYgQq8LZLaAFjX9UzlP
+FeJsi++BDIAIIkdTCwnIoW1jyTXkRHDPkUxppVxOIHUERa5k0pFUE4axSzQjUDNs
+SZdwCjmoBdoPmlSUj/wgNrEetW1ouS7iHrO4RyiyHIw4hJxRRxNuS2yMShtjc1hI
+HAZO8IKq80OzZibZ13j/1f/P3G3TcTZiSjLqWZI5lkctF2vtYYFsbLkSIpYICyoK
+eKsy6iYucioK2zpBdy2IVHvYopLGFvwmQ10AmQ1AQwmpplJKZQ6tHIG5IxXUiFOO
+sOaWLbTLKDRMTFMDZEazTVxujKYi1KDRZJuS7b6cDk/a9O/ydTJsNWT5KIxDGebM
+VnMc5wuZBCvuyg8n4g4lsm9issIPPHNNxtKuooIfBiCDjFTGfpKLbNdBFiMurgWq
+M+9HKusnCocSF5ovKaTaTSTxLIfZENpEYIa45XDONMQW8VyXQCi0RtjxiMYMa6QI
+EtjmimlmeYhywgVIDrYpCEHGtg0obzKZpncBj9siBbpnFUsqZ6RK0qmyt9LJA07N
+envOP6+6KMpT330CG28dP7Ty7yOzF0wdaj7RW3+q/nrrr+93xguDwbqxj1+ygfe+
+mKic+/NQzc3veXrz2nube7b3NV6+s5VW62Plv/2Rr+74Zo4c+fOHGxUP9ue+mlfW
+VT/e82Cs2LPv0/xp/uzSZ6wiXb52xszHH42JdXvOH4UTHVcHWemLVdv3Ht69qGa0
+ZunOiieVv9QeeX6+Lqq6I8rGd64+sGqoevCndY3PzxZvb9jY6w6vGD3Xu63/8zMV
+J9df6L+/uMxbNHto/+Hc8sVrOi/fHe6AP87H8z6MqnbMfXhsSfWCaye/3DbSP7Ds
+bP/Tb8d3NVypGjnofDD5+MTXKdB98MC7pY8uzh+YHKMb/+qbLL4C
+=vXGM
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gableroux
+
+==================================================================
+
