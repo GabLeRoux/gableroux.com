@@ -1,0 +1,468 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+# keep these for jekyll
+---
+
+/* Colors */
+$color_shark_approx: #26272b;
+$white: #fff;
+$black: black;
+$black_80: rgba(0, 0, 0, 0.8);
+$color_rangoon_green_approx: #1f1f1c;
+$web_orange: orange;
+$color_gallery_approx: #eee;
+$color_silver_chalice_approx: #aaabab;
+$color_malibu_approx: #82c1ff;
+$color_cerise_red_approx: #e93675;
+$color_outer_space_approx: #33363b;
+$color_tundora_approx: #454545;
+$color_mirage_approx: #1b1c20;
+$color_celeste_approx: #cccccc;
+$color_mine_shaft_approx: #333333;
+
+/* Fonts */
+$font_main: Ubuntu;
+$font_alt: Open sans;
+$font_1: Helvetica;
+$font_2: Arial;
+$font_3: sans-serif;
+
+/* extends */
+//h1, h2, h3, h4, h5, h6
+%extend_title {
+  font-family: $font_main, $font_1, $font_2, $font_3;
+  font-weight: 700;
+  color: $color_silver_chalice_approx;
+}
+
+%extend_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main layout */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $color_shark_approx;
+  color: $white;
+  font-size: 1.8em;
+}
+
+// when used with sticky navbar
+.navbar-no-header-spacer {
+  padding-top: 80px;
+}
+
+header.site-header {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  text-align: center;
+  //background: $black url("../images/layout/background-0.jpg") no-repeat top;
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    max-width: 90%;
+  }
+
+  .lead {
+    line-height: 1em;
+    font-family: $font_main, $font_1, $font_2, $font_3;
+    font-weight: 700;
+    font-size: 4em;
+    color: $black_80;
+  }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 90px;
+}
+
+footer.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  //height: 90px;
+}
+
+.footer-margin-fix {
+  height: 20px;
+}
+
+footer.site-footer {
+  text-align: center;
+  background: $color_rangoon_green_approx;
+  color: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+    *display: inline;
+    li {
+      float: left;
+      list-style: none;
+    }
+  }
+
+  .nav-pills {
+    .alt a:hover {
+      background-color: $black;
+    }
+    .rss a:hover {
+      background-color: $web_orange;
+      color: $white;
+    }
+  }
+}
+
+hr {
+  margin: 20px;
+  // nice combo on dark background!
+  border-top: 1px solid $black !important;
+  border-bottom: 1px solid $color_mine_shaft_approx !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.6em;
+  margin: 0 0 30px 0;
+}
+
+ul {
+  line-height: 1.6em;
+  margin: 0 0 30px 0;
+}
+
+ol {
+  line-height: 1.6em;
+  margin: 0 0 30px 0;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 30px;
+  border-left: 5px solid $color_gallery_approx;
+}
+
+/* Titles */
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0px;
+}
+
+h1 {
+  @extend %extend_title;
+  font-size: 32px;
+}
+
+h2 {
+  @extend %extend_title;
+  font-size: 2.25rem;
+}
+
+h3 {
+  @extend %extend_title;
+  font-size: 1.875rem;
+}
+
+h4 {
+  @extend %extend_title;
+  font-size: 1.5rem;
+}
+
+h5 {
+  @extend %extend_title;
+  font-size: 1.25rem;
+}
+
+h6 {
+  @extend %extend_title;
+}
+
+a {
+  color: $color_malibu_approx;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $color_cerise_red_approx;
+  }
+}
+
+.lead {
+  font-weight: 300;
+  font-size: 1.3125rem;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Blog page */
+
+.post-meta, .post-header {
+  text-align: center;
+}
+
+.post-content {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+  }
+}
+
+.post-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: justify;
+  h1 {
+    text-align: center;
+  }
+  img {
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 0.25em;
+  }
+  h2.meta.date {
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Bootstrap NavBar */
+
+.navbar {
+  background: $color_outer_space_approx;
+  border-width: 1px 0;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 0;
+  //Instead of the line below you could use @includebackground-clip($clip)
+  background-clip: padding-box;
+  width: 100%;
+  &.stick {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .85;
+  }
+}
+
+.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 0;
+  //Instead of the line below you could use @includebackground-clip($clip)
+  background-clip: padding-box;
+  font-family: $font_alt, $font_1, $font_2, $font_3;
+  font-weight: 300;
+  text-transform: uppercase;
+  .navbar-nav {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    > li > a {
+      padding: 20px 30px;
+    }
+  }
+}
+
+.navbar-default {
+  background-color: $color_outer_space_approx;
+  border: none;
+  .navbar-toggle {
+    border-color: $black;
+    &:hover {
+      background-color: $color_mirage_approx;
+    }
+    &:focus {
+      background-color: $color_mirage_approx;
+    }
+    .icon-bar {
+      background-color: $color_silver_chalice_approx;
+    }
+  }
+  .navbar-collapse {
+    border-color: $color_celeste_approx;
+  }
+  .navbar-form {
+    border-color: $color_celeste_approx;
+  }
+  .navbar-nav > {
+    li > a {
+      color: $white;
+      &:hover {
+        color: $black;
+        background-color: $white;
+      }
+      &:focus {
+        color: $black;
+        background-color: $white;
+      }
+    }
+    .active > a {
+      color: $black;
+      background-color: $white;
+      &:hover {
+        color: $black;
+        background-color: $white;
+      }
+      &:focus {
+        color: $black;
+        background-color: $white;
+      }
+    }
+    .open > a {
+      background-color: $white;
+      color: $black;
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+      &:focus {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+
+  li.home-link > a:hover {
+    background-color: $black;
+  }
+
+  li.home-link.active > a {
+    background-color: $black;
+  }
+
+  li.home-link.active > a:hover {
+    background-color: $black;
+  }
+
+  .navbar-brand {
+    padding: 20px 30px;
+  }
+
+  // submenu dropdown links  
+  ul.dropdown-menu > li > a {
+    text-align: center;
+    padding: 5px 30px !important;
+    &:hover {
+      background-color: $color_gallery_approx !important;
+      color: $black !important;
+    }
+  }
+}
+
+/* Responsive iframe (for presentations) */
+.responsive-iframe-wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  background: #CCC
+}
+
+.responsive-iframe {
+  position: relative;
+  .ratio {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Responsive videos */
+
+.responsive-object {
+  position: relative;
+  padding-bottom: 62.5% !important;
+  height: 0;
+  margin: 10px 0;
+  overflow: hidden;
+  iframe {
+    @extend %extend_video;
+  }
+  object {
+    @extend %extend_video;
+  }
+  embed {
+    @extend %extend_video;
+  }
+}
+
+/* Media Queries */
+
+@media(max-width: 768px) {
+  header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  header.site-header .lead {
+    font-size: 3em;
+  }
+
+  body {
+    padding: 0;
+  }
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  nav .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .navbar-default {
+    .navbar-brand {
+      padding: 15px 15px;
+    }
+  }
+}
+
+.navbar-brand>img {
+  display: inline-block;
+}
+
+@media(max-width: 992px) {
+  .xs-text-center {
+    text-align: center !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@import "code";
+@import "animate";

@@ -1,0 +1,24 @@
+{
+  "name": "gableroux",
+  "version": "0.0.0",
+  "authors": [
+    "Gabriel Le Breton <lebreton.gabriel@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://gableroux.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "bootstrap-autohidingnavbar": "1.0.6",
+    "cyborg-bootstrap": "~0.0.1",
+    "font-awesome": "4.7.0",
+    "hover": "2.1.0",
+    "jquery": "~2.1.4"
+  }
+}

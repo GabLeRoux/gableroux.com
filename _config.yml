@@ -1,0 +1,49 @@
+# Site settings
+title: GabLeRoux <Developer>
+email: gab@gableroux.com
+description: >
+  Personal site about code, ideas, technologies and everything.
+  I like to write python and work on crazy projects, read my stuff!
+author:
+  name: Gabriel Le Breton
+  email: lebreton.gabriel@gmail.com
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://gableroux.com" # the base hostname & protocol for your site
+
+twitter_username: gableroux
+google_plus_username: GabrielLeBreton
+github_username: GabLeRoux
+facebook_username: gableroux
+
+paginate: 5
+paginate_path: "/page:num/"
+
+permalink: pretty
+
+comments: true
+disqus_shortname: gableroux
+
+# Build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+exclude: [
+    node_modules, 
+    package.json, 
+    gulpfile.coffee, 
+    Gemfile,
+    Gemfile.lock, 
+    bower.json, 
+    vendor,
+    npm-debug.log,
+    .travis.yml,
+    yarn.lock,
+    ReadMe.md,
+    script
+]
+
+gems: [jekyll-paginate]
