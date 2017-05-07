@@ -1,5 +1,7 @@
 # [gableroux.com](https://gableroux.com)
 
+[![Build Status](https://travis-ci.org/GabLeRoux/gableroux.github.io.svg?branch=master)](https://travis-ci.org/GabLeRoux/gableroux.github.io)
+
 Hey there, welcome to the backstage of my website.
 
 ## install requirements
