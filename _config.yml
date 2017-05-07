@@ -43,7 +43,8 @@ exclude: [
     .travis.yml,
     yarn.lock,
     ReadMe.md,
-    script
+    LICENSE.md,
+    script,
 ]
 
 gems: [jekyll-paginate]

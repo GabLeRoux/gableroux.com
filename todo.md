@@ -7,6 +7,9 @@ description: A list of things to do!
 ---
 
 ## What needs to be done
+* <i class="fa fa-square"></i> Move to [github pages](https://pages.github.com)
+* <i class="fa fa-square"></i> Have [travis](https://travis-ci.org/) check for dead links with [html-proofer](https://github.com/gjtorikian/html-proofer) automatically
+* <i class="fa fa-square"></i> Move all of these todos to [github issues](https://github.com/gableroux/gableroux.github.io/issues) :)
 * <i class="fa fa-square"></i> Add a categories / tags page
 * <i class="fa fa-square"></i> Minify js assets
 * <i class="fa fa-square"></i> Minify pictures assets
