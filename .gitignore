@@ -1,3 +1,5 @@
 ### Jekyll
 .sass-cache/
 .jekyll-metadata
+/bower_components
+/vendor
