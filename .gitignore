@@ -3,3 +3,4 @@
 .jekyll-metadata
 /bower_components
 /vendor
+npm-debug.log
