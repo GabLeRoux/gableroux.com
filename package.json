@@ -21,9 +21,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/gableroux/gableroux.git"
+    "url": "git+ssh://git@github.com/gableroux/gableroux.github.io.git"
   },
   "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/gableroux/gableroux#readme"
+  "license": "MIT",
+  "homepage": "https://gableroux.com"
 }

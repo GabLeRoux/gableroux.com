@@ -27,7 +27,7 @@ Now go read my posts!
 
 > wubba lubba dub dub!
 
-Found a typo? a broken link?  
+Found a typo? a broken link? Open [an issue]() or send me a pull-request! :rocket:
 
 ## Troubleshooting
 
@@ -37,3 +37,7 @@ More details on this [stackoverflow question](http://stackoverflow.com/questions
 
     npm uninstall --save-dev gulp-sass
     npm install --save-dev gulp-sass@2
+
+## License
+
+[MIT](LICENSE.md) © [Gabriel Le Breton](https://gableroux.com)
