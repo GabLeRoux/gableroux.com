@@ -6,22 +6,28 @@ Hey there, welcome to the backstage of my website.
 
 ## install requirements
 
-    gem install bundle
-    bundle install
-    npm install -g yarn
-    yarn install
-    yarn global add bower coffee-gulp
-    bower install
+```bash
+gem install bundle
+bundle install
+npm install -g yarn
+yarn install
+yarn global add bower coffee-gulp
+bower install
+```
 
-## Running this website
+## Running this website locally
 
-    gulp
+```bash
+gulp
+```
 
 ## Deployment
 
-    bundle exec jekyll build
-    git commit -am "publish"
-    git push
+```bash
+bundle exec jekyll build
+git commit -am "publish"
+git push
+```
 
 Now go read my posts!
 
@@ -37,8 +43,10 @@ Found a typo? a broken link? Open [an issue](https://github.com/gableroux/gabler
 
 More details on this [stackoverflow question](http://stackoverflow.com/questions/29461831/libsass-bindings-not-found-when-using-node-sass-in-nodejs).
 
-    npm uninstall --save-dev gulp-sass
-    npm install --save-dev gulp-sass@2
+```bash
+npm uninstall --save-dev gulp-sass
+npm install --save-dev gulp-sass@2
+```
 
 ## License
 
