@@ -316,10 +316,10 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 
 <p><code class="highlighter-rouge">/usr/local/etc/le-renew-webroot.ini</code></p>
 
-<figure class="highlight"><pre><code class="language-ini" data-lang="ini"><span class="err">rsa-key-</span><span class="py">size</span> <span class="p">=</span> <span class="s">4096</span>
+<figure class="highlight"><pre><code class="language-ini" data-lang="ini"><span class="py">rsa-key-size</span> <span class="p">=</span> <span class="s">4096</span>
 <span class="py">email</span> <span class="p">=</span> <span class="s">lebreton.gabriel@gmail.com</span>
 <span class="py">domains</span> <span class="p">=</span> <span class="s">gableroux.com, www.gableroux.com</span>
-<span class="err">webroot-</span><span class="py">path</span> <span class="p">=</span> <span class="s">/var/www/</span></code></pre></figure>
+<span class="py">webroot-path</span> <span class="p">=</span> <span class="s">/var/www/</span></code></pre></figure>
 
 <p>Then run the following:</p>
 
@@ -331,7 +331,7 @@ It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</stro
 <p>Try running <a href="https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;hideResults=on&amp;latest">ssltest on gableroux.com</a>. Spoiler, it looks like this:<br />
 <img src="/images/gableroux-ssltest-a-plus.png" alt="A+ ssltest gableroux.com result" /></p>
 
-<h2 id="edit-openssl-padding-oracle-vulnerability-cve-2016-2107httpsblogcloudflarecomyet-another-padding-oracle-in-openssl-cbc-ciphersuites">Edit: <a href="https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/">OpenSSL Padding Oracle vulnerability (CVE-2016-2107)</a></h2>
+<h2 id="edit-openssl-padding-oracle-vulnerability-cve-2016-2107">Edit: <a href="https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/">OpenSSL Padding Oracle vulnerability (CVE-2016-2107)</a></h2>
 
 <p>So there is a new problem in the wild!
 My ssltest went from an A+ to an F in no time!  Here’s an handy tool to verify vulnerability:
@@ -429,6 +429,12 @@ openssl version -v
 
     </div>
 </main>
+
+<center>
+  <a href="https://metricswatch.com/"><img src="https://metricswatch.com/wp-content/uploads/2016/12/metricswatch-logo-horizontal-1.png" alt="Metrics Watch"></a>
+  <br>
+  is helping us with Google Analytics.
+</center>
 
 <div class="footer-margin-fix">
     <footer class="site-footer clearfix">

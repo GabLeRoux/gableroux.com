@@ -235,6 +235,7 @@ DEPENDENCIES
   html-proofer
   jekyll-admin
   jekyll-paginate
+  json
 
 BUNDLED WITH
    1.14.6

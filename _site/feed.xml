@@ -6,9 +6,9 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Nov 2016 10:41:33 -0500</pubDate>
-    <lastBuildDate>Wed, 23 Nov 2016 10:41:33 -0500</lastBuildDate>
-    <generator>Jekyll v3.0.2</generator>
+    <pubDate>Sun, 07 May 2017 15:05:37 -0400</pubDate>
+    <lastBuildDate>Sun, 07 May 2017 15:05:37 -0400</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Y U NO GIT</title>
@@ -187,7 +187,7 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
   &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[::]:80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gableroux.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;&#39;/.well-known/acme-challenge&#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;'/.well-known/acme-challenge'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kn&quot;&gt;default_type&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;text/plain&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/var/www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -203,7 +203,7 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
   &lt;span class=&quot;kn&quot;&gt;listen&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;[::]:80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;www.gableroux.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;&#39;/.well-known/acme-challenge&#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;~&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;'/.well-known/acme-challenge'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kn&quot;&gt;default_type&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;text/plain&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;kn&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/var/www&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -234,9 +234,9 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
   &lt;span class=&quot;kn&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;X-Content-Type-Options&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;nosniff&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;X-Xss-Protection&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;## allows google fonts from stylesheets and google analytics for scripts
-&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;## Using &#39;unsafe-inline&#39; due to some pages still doing this (angular app somewhere)
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;## Using 'unsafe-inline' due to some pages still doing this (angular app somewhere)
 &lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;## Commented as this was to restrictive. Most of the things here are static anyway
-&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#add_header Content-Security-Policy &quot;default-src &#39;self&#39; *.googleapis.com *.google-analytics.com *.facebook.net *.facebook.com *.feedly.com; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39;&quot;;
+&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#add_header Content-Security-Policy &quot;default-src 'self' *.googleapis.com *.google-analytics.com *.facebook.net *.facebook.com *.feedly.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self'&quot;;
 &lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;ssl_protocols&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1.1&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;TLSv1.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -272,10 +272,10 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/local/etc/le-renew-webroot.ini&lt;/code&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;err&quot;&gt;rsa-key-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;4096&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ini&quot; data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;py&quot;&gt;rsa-key-size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;4096&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lebreton.gabriel@gmail.com&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;domains&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gableroux.com, www.gableroux.com&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;webroot-&lt;/span&gt;&lt;span class=&quot;py&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/var/www/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;py&quot;&gt;webroot-path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/var/www/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Then run the following:&lt;/p&gt;
 
@@ -287,7 +287,7 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 &lt;p&gt;Try running &lt;a href=&quot;https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;amp;hideResults=on&amp;amp;latest&quot;&gt;ssltest on gableroux.com&lt;/a&gt;. Spoiler, it looks like this:&lt;br /&gt;
 &lt;img src=&quot;/images/gableroux-ssltest-a-plus.png&quot; alt=&quot;A+ ssltest gableroux.com result&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;edit-openssl-padding-oracle-vulnerability-cve-2016-2107httpsblogcloudflarecomyet-another-padding-oracle-in-openssl-cbc-ciphersuites&quot;&gt;Edit: &lt;a href=&quot;https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/&quot;&gt;OpenSSL Padding Oracle vulnerability (CVE-2016-2107)&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;edit-openssl-padding-oracle-vulnerability-cve-2016-2107&quot;&gt;Edit: &lt;a href=&quot;https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/&quot;&gt;OpenSSL Padding Oracle vulnerability (CVE-2016-2107)&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;So there is a new problem in the wild!
 My ssltest went from an A+ to an F in no time!  Here’s an handy tool to verify vulnerability:
@@ -421,14 +421,14 @@ openssl version -v
 
 &lt;p&gt;Here are some env variable colors&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;export TEXT_BLACK=$&#39;\033&#39;\[30m
-export TEXT_RED=$&#39;\033&#39;\[31m
-export TEXT_GREEN=$&#39;\033&#39;\[32m
-export TEXT_YELLOW=$&#39;\033&#39;\[33m
-export TEXT_BLUE=$&#39;\033&#39;\[34m
-export TEXT_MAGENTA=$&#39;\033&#39;\[35m
-export TEXT_CYAN=$&#39;\033&#39;\[36m
-export TEXT_WHITE=$&#39;\033&#39;\[37m&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;export TEXT_BLACK=$'\033'\[30m
+export TEXT_RED=$'\033'\[31m
+export TEXT_GREEN=$'\033'\[32m
+export TEXT_YELLOW=$'\033'\[33m
+export TEXT_BLUE=$'\033'\[34m
+export TEXT_MAGENTA=$'\033'\[35m
+export TEXT_CYAN=$'\033'\[36m
+export TEXT_WHITE=$'\033'\[37m&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Values are &lt;a href=&quot;https://en.wikipedia.org/wiki/ANSI_escape_code&quot;&gt;ANSI Escape Codes&lt;/a&gt; and the environment variables above comes by default with &lt;a href=&quot;http://ohmyz.sh/&quot;&gt;Oh-my-zsh&lt;/a&gt; :)&lt;/p&gt;
 
@@ -478,9 +478,9 @@ export TEXT_WHITE=$&#39;\033&#39;\[37m&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;No more colors :)&lt;/p&gt;
 
-&lt;p&gt;Otherwise, you can strip output with &lt;code class=&quot;highlighter-rouge&quot;&gt;perl -pe &#39;s/\x1b\[[0-9;]*[mG]//g&#39;&lt;/code&gt; which is perfect if you don’t want node.&lt;/p&gt;
+&lt;p&gt;Otherwise, you can strip output with &lt;code class=&quot;highlighter-rouge&quot;&gt;perl -pe 's/\x1b\[[0-9;]*[mG]//g'&lt;/code&gt; which is perfect if you don’t want node.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat colored_file.txt | perl -pe &lt;span class=&quot;s1&quot;&gt;&#39;s/\x1b\[[0-9;]*[mG]//g&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cat colored_file.txt | perl -pe &lt;span class=&quot;s1&quot;&gt;'s/\x1b\[[0-9;]*[mG]//g'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;salt-solution&quot;&gt;salt solution&lt;/h2&gt;
 
@@ -494,7 +494,7 @@ export TEXT_WHITE=$&#39;\033&#39;\[37m&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;salt-call state.highstate -l debug --force-color &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
 | tee salt-colored.log &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-| tee &amp;gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;perl -pe &lt;span class=&quot;s1&quot;&gt;&#39;s/\x1b\[[0-9;]*[mG]//g&#39;&lt;/span&gt; &amp;gt; salt.log&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+| tee &amp;gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;perl -pe &lt;span class=&quot;s1&quot;&gt;'s/\x1b\[[0-9;]*[mG]//g'&lt;/span&gt; &amp;gt; salt.log&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now you can enjoy salt output in both ways :)&lt;/p&gt;
 
@@ -541,7 +541,7 @@ cat salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
       </item>
     
       <item>
-        <title>More than a year later, what&#39;s up?</title>
+        <title>More than a year later, what's up?</title>
         <description>&lt;p&gt;Hey there,&lt;br /&gt;
 This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal site on &lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;pelican&lt;/a&gt; and I just decided to move to &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt;, it’s more popular and easier to maintain.&lt;/p&gt;
 
@@ -569,7 +569,7 @@ This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal si
 
 &lt;p&gt;Since my last post (more than a year ago), a lot happened! These are some key points:&lt;/p&gt;
 
-&lt;h3 id=&quot;tlmtlm&quot;&gt;&lt;a href=&quot;http://solutionstlm.com/&quot;&gt;TLM&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;tlm&quot;&gt;&lt;a href=&quot;http://solutionstlm.com/&quot;&gt;TLM&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/tlm/solutions-tlm-saguenay.png&quot; alt=&quot;Solutions TLM&quot; /&gt;&lt;/p&gt;
 
@@ -577,13 +577,13 @@ This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal si
 
 &lt;p&gt;&lt;img src=&quot;/images/tlm/happygableroux-at-tlm.jpg&quot; alt=&quot;GabLeRoux at TLM&quot; class=&quot;center-block&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;saglac-iosaglacio&quot;&gt;&lt;a href=&quot;http://saglac.io/&quot;&gt;SagLac IO&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;saglac-io&quot;&gt;&lt;a href=&quot;http://saglac.io/&quot;&gt;SagLac IO&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;I gave a few presentations at the  about awesome subjects such as Coffeescript, &lt;a href=&quot;/presentation/2015/10/28/hubot-saglacio/&quot;&gt;HUBOT - Improve and reduce employee efficiency&lt;/a&gt; and &lt;a href=&quot;/presentation/2015/06/03/saltstack-saglacio/&quot;&gt;SaltStack&lt;/a&gt;. I’ll keep sharing my presentations on my website.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://saglac.io/&quot;&gt;&lt;img src=&quot;/images/saglacio/saglacio.jpg&quot; alt=&quot;SagLacIO&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;totema-studiototemastudio&quot;&gt;&lt;a href=&quot;http://totemastudio.com/&quot;&gt;Totema Studio&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;totema-studio&quot;&gt;&lt;a href=&quot;http://totemastudio.com/&quot;&gt;Totema Studio&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;I started a partnership with some firends, an independent video game Studio where I build awesome games with very talented people.&lt;/p&gt;
 
@@ -625,7 +625,7 @@ Stay tuned!&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;atexit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rlcompleter&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_and_bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;tab:complete&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;readline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse_and_bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'tab:complete'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.pythonrc :: AutoCompletion Loaded&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -771,80 +771,80 @@ Stay tuned!&lt;/p&gt;
 &lt;p&gt;Here’s my awesome &lt;code class=&quot;highlighter-rouge&quot;&gt;Gruntfile.coffee&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;# Load all grunt tasks.
-&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;load-grunt-tasks&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Load all grunt tasks.&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'load-grunt-tasks'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
   &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;initConfig&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# watch for files and load tasks when files change
-&lt;/span&gt;    &lt;span class=&quot;na&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# watch for files and load tasks when files change&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;coffee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/js/*.coffee&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;coffeelint&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;coffee&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;shell&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'coffeelint'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/js/*.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;jshint&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;shell&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'jshint'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;md&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;content/**/*.md&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;!output&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;!node_modules&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;shell&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'content/**/*.md'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'!output'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'!node_modules'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/css/**/*.scss&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;scss&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;shell&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/css/**/*.scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
           &lt;span class=&quot;na&quot;&gt;livereload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;output/**/*&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'output/**/*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
-    &lt;span class=&quot;c1&quot;&gt;# execute pelican to generate static files
-&lt;/span&gt;    &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# execute pelican to generate static files&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;pelican&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;pelican&quot;&lt;/span&gt;
 
     &lt;span class=&quot;na&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;expanded&#39;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'expanded'&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/css/main.css&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/css/main.scss&#39;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/css/main.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/css/main.scss'&lt;/span&gt;
 
     &lt;span class=&quot;na&quot;&gt;coffeelint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;configFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;coffeelint.json&#39;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;configFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'coffeelint.json'&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/js/*.coffee&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
     &lt;span class=&quot;na&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;jshintrc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/js/jshintrc&#39;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;jshintrc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/jshintrc'&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/js/*.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
     &lt;span class=&quot;na&quot;&gt;coffee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;expand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;theme/gableroux/static/js/*.coffee&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;.js&#39;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'.js'&lt;/span&gt;
 
     &lt;span class=&quot;na&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
           &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8000&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;hostname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;*&#39;&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;output&#39;&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;hostname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'*'&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'output'&lt;/span&gt;
 
     &lt;span class=&quot;na&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;output&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'output'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
-  &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;registerTask&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;test&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&#39;coffeelint&#39;&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# &#39;jshint&#39;
-&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;registerTask&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'coffeelint'&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 'jshint'&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
-  &lt;span class=&quot;c1&quot;&gt;# Default task when typing grunt without parameter in the cli.
-&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;registerTask&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;default&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&#39;test&#39;&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&#39;shell&#39;&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&#39;connect&#39;&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&#39;watch&#39;&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Default task when typing grunt without parameter in the cli.&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;registerTask&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'default'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'test'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'connect'&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;'watch'&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: make sure you have &lt;code class=&quot;highlighter-rouge&quot;&gt;pelican&lt;/code&gt; installed with &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install pelican&lt;/code&gt;. Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;gableroux&lt;/code&gt; with your own theme name (where your magic files are stored) and enjoy the Grunt awesomeness by running &lt;code class=&quot;highlighter-rouge&quot;&gt;grunt&lt;/code&gt; in a terminal.&lt;/p&gt;

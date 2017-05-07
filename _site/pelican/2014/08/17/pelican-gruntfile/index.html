@@ -222,12 +222,12 @@
 <p>Here’s my awesome <code class="highlighter-rouge">Gruntfile.coffee</code>:</p>
 
 <figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nx">module</span><span class="p">.</span><span class="na">exports</span> <span class="o">=</span> <span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="o">-&gt;</span>
-  <span class="c1"># Load all grunt tasks.
-</span>  <span class="nx">require</span><span class="p">(</span><span class="s">'load-grunt-tasks'</span><span class="p">)(</span><span class="nx">grunt</span><span class="p">)</span>
+  <span class="c1"># Load all grunt tasks.</span>
+  <span class="nx">require</span><span class="p">(</span><span class="s">'load-grunt-tasks'</span><span class="p">)(</span><span class="nx">grunt</span><span class="p">)</span>
 
   <span class="nx">grunt</span><span class="p">.</span><span class="na">initConfig</span>
-    <span class="c1"># watch for files and load tasks when files change
-</span>    <span class="na">watch</span><span class="o">:</span>
+    <span class="c1"># watch for files and load tasks when files change</span>
+    <span class="na">watch</span><span class="o">:</span>
       <span class="na">coffee</span><span class="o">:</span>
         <span class="na">files</span><span class="o">:</span> <span class="p">[</span><span class="s">'theme/gableroux/static/js/*.coffee'</span><span class="p">]</span>
         <span class="na">tasks</span><span class="o">:</span> <span class="p">[</span><span class="s">'coffeelint'</span><span class="p">,</span> <span class="s">'coffee'</span><span class="p">,</span> <span class="s">'shell'</span><span class="p">]</span>
@@ -245,8 +245,8 @@
           <span class="na">livereload</span><span class="o">:</span> <span class="no">true</span>
         <span class="na">files</span><span class="o">:</span> <span class="p">[</span><span class="s">'output/**/*'</span><span class="p">]</span>
 
-    <span class="c1"># execute pelican to generate static files
-</span>    <span class="na">shell</span><span class="o">:</span>
+    <span class="c1"># execute pelican to generate static files</span>
+    <span class="na">shell</span><span class="o">:</span>
       <span class="na">pelican</span><span class="o">:</span>
         <span class="na">command</span><span class="o">:</span> <span class="s">"pelican"</span>
 
@@ -287,11 +287,11 @@
 
   <span class="nx">grunt</span><span class="p">.</span><span class="na">registerTask</span> <span class="s">'test'</span><span class="p">,</span> <span class="p">[</span>
     <span class="s">'coffeelint'</span>
-    <span class="c1"># 'jshint'
-</span>  <span class="p">]</span>
+    <span class="c1"># 'jshint'</span>
+  <span class="p">]</span>
 
-  <span class="c1"># Default task when typing grunt without parameter in the cli.
-</span>  <span class="nx">grunt</span><span class="p">.</span><span class="na">registerTask</span> <span class="s">'default'</span><span class="p">,</span> <span class="p">[</span>
+  <span class="c1"># Default task when typing grunt without parameter in the cli.</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="na">registerTask</span> <span class="s">'default'</span><span class="p">,</span> <span class="p">[</span>
     <span class="s">'test'</span>
     <span class="s">'shell'</span>
     <span class="s">'connect'</span>
@@ -379,6 +379,12 @@ Enjoy</p>
 
     </div>
 </main>
+
+<center>
+  <a href="https://metricswatch.com/"><img src="https://metricswatch.com/wp-content/uploads/2016/12/metricswatch-logo-horizontal-1.png" alt="Metrics Watch"></a>
+  <br>
+  is helping us with Google Analytics.
+</center>
 
 <div class="footer-margin-fix">
     <footer class="site-footer clearfix">
