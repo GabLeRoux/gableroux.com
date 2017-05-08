@@ -57,7 +57,6 @@ defaults:
       type: "posts"
     values:
       author: "Gabriel Le Breton"
-      categories: blog
       layout: "post"
   -
     scope:
@@ -65,5 +64,4 @@ defaults:
       type: "drafts"
     values:
       author: "Gabriel Le Breton"
-      categories: blog
       layout: "post"
