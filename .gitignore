@@ -3,6 +3,7 @@
 .jekyll-metadata
 /bower_components
 /vendor
+/Gemfile.lock
+
 npm-debug.log
-Gemfile.lock
 

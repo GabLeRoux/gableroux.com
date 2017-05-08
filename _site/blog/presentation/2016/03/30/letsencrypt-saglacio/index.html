@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Let’s Encrypt all the things</title>
+
+    <meta name="description" content="This site is being served as https and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my tal...">
+    <meta name="author" content="Gabriel Le Breton">
+
+    <link rel="canonical" href="https://gableroux.com/blog/presentation/2016/03/30/letsencrypt-saglacio/">
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="https://gableroux.com/feed.xml"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/css/main.min.css">
+
+    <!-- facebook Open Graph Metadatas -->
+    <meta content="253381494995396" property="fb:app_id">
+    <meta content="GabLeRoux <Developer>" property="og:site_name">
+
+    
+    <meta content="Let’s Encrypt all the things" property="og:title">
+    
+
+    
+    <meta content="article" property="og:type">
+    
+
+
+    
+    <meta content="This site is being served as https and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the SagLacIO inside!
+
+" property="og:description">
+    
+
+    
+    <meta content="https://gableroux.com/blog/presentation/2016/03/30/letsencrypt-saglacio/" property="og:url">
+    
+
+    
+    <meta content="2016-03-30T19:00:00-04:00" property="article:published_time">
+    <meta content="https://gableroux.com/about/" property="article:author">
+    
+
+    
+    <meta content="https://gableroux.com/images/letsencrypt-all-the-things.jpg" property="og:image">
+    
+
+    
+    
+    <meta content="blog" property="article:section">
+    
+    
+
+    
+    
+    <meta content="saglacio" property="article:tag">
+    
+    <meta content="letsencrypt" property="article:tag">
+    
+    <meta content="https" property="article:tag">
+    
+    <meta content="revealjs" property="article:tag">
+    
+    
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '253381494995396',
+                xfbml      : true,
+                version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i> <img src="/images/GabLeRoux-logo-small-white.png" alt=""/></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                
+                
+    
+        
+            <li><a href="/about/">About</a></li>
+        
+    
+
+    
+
+    
+
+    
+        
+            <li><a href="/todo/">Todo</a></li>
+        
+    
+
+    
+
+    
+
+
+
+
+                <li>
+                    <a href="https://totemastudio.com" target="_blank" title="Totema Studio"><i class="fa fa-gamepad"></i> Totema Studio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="navbar-no-header-spacer"></div>
+
+
+<main id="wrap">
+    <div class="page-content">
+        <article class="blog-page container">
+
+    <header class="post-header">
+        <div class="row">
+            <h1 class="post-title">Let’s Encrypt all the things</h1>
+
+            <p class="post-meta">
+                Mar 30, 2016 • Gabriel Le Breton
+                
+            </p>
+
+            <img src="/images/letsencrypt-all-the-things.jpg" alt="Let’s Encrypt all the things">
+
+        </div>
+    </header>
+
+    <hr>
+
+    <article class="page-content">
+        <p>This site is being served as <strong>https</strong> and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the <a href="http://saglac.io">SagLacIO</a> inside!</p>
+
+<!-- more -->
+
+<h2 id="whats-lets-encrypt">What’s Let’s Encrypt?</h2>
+
+<blockquote>
+  <p>Let’s Encrypt is a new Certificate Authority:
+It’s <strong>free</strong>, <strong>automated</strong>, and <strong>open</strong>.</p>
+</blockquote>
+
+<p>Have a look at <a href="https://www.letsencrypt.org/">Let’s Encrypt website</a> and their <a href="https://community.letsencrypt.org/t/frequently-asked-questions-faq/26">FAQ</a> if you didn’t do it yet!</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>I’ll jump straight to what’s interesting; What are the steps to have a fully working and valid free https certificate on a website behind <code class="highlighter-rouge">nginx</code> and how to get a nice score on <a href="https://www.ssllabs.com/ssltest/">ssltest</a>.</p>
+
+<p>Most of the things needed to get started are described on <a href="https://letsencrypt.org/getting-started/">Let’s Encrypt getting started page</a> along with most up to date informations.</p>
+
+<p>Have a look to <a href="https://gethttpsforfree.com/">Get HTTPS for free! on github</a> which shows you what happens in the background when using the client. Everything is client side!</p>
+
+<h3 id="install-letsencrypt">Install letsencrypt</h3>
+
+<p>Grab letsencrypt official client on your server this way:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/letsencrypt/letsencrypt
+<span class="nb">cd </span>letsencrypt
+./letsencrypt-auto --help</code></pre></figure>
+
+<h3 id="nginx-configuration">nginx configuration</h3>
+
+<p>Thanks to <a href="http://jipiboily.com/">@jipiboily</a>, he shared me the awesome <a href="https://letsecure.me/secure-web-deployment-with-lets-encrypt-and-nginx/">letsecure.me</a> website. Here’s how my updated nginx configuration looks like:
+<code class="highlighter-rouge">/etc/nginx/site-available/gableroux.conf</code></p>
+
+<figure class="highlight"><pre><code class="language-nginx" data-lang="nginx"><span class="c1"># gableroux.com configuration generated from salt
+</span>
+<span class="c1">## https redirect
+</span><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+  <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
+  <span class="kn">server_name</span> <span class="s">gableroux.com</span><span class="p">;</span>
+
+  <span class="kn">location</span> <span class="p">~</span> <span class="sr">'/.well-known/acme-challenge'</span> <span class="p">{</span>
+    <span class="kn">default_type</span> <span class="s">"text/plain"</span><span class="p">;</span>
+    <span class="kn">root</span> <span class="n">/var/www</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$server_name$request_uri</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">## www removal
+</span><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+  <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
+  <span class="kn">server_name</span> <span class="s">www.gableroux.com</span><span class="p">;</span>
+
+  <span class="kn">location</span> <span class="p">~</span> <span class="sr">'/.well-known/acme-challenge'</span> <span class="p">{</span>
+    <span class="kn">default_type</span> <span class="s">"text/plain"</span><span class="p">;</span>
+    <span class="kn">root</span> <span class="n">/var/www</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://gableroux.com</span><span class="nv">$request_uri</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">## Main server config
+</span><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+  <span class="kn">server_name</span> <span class="s">gableroux.com</span><span class="p">;</span>
+  <span class="kn">root</span> <span class="n">/var/www/gableroux.com/_side</span><span class="p">;</span>
+
+  <span class="kn">index</span>  <span class="s">index.html</span><span class="p">;</span>
+
+  <span class="c1">### SSL Config (using letsencrypt)
+</span>  <span class="kn">ssl_certificate</span> <span class="n">/etc/letsencrypt/live/gableroux.com/fullchain.pem</span><span class="p">;</span>
+  <span class="kn">ssl_certificate_key</span> <span class="n">/etc/letsencrypt/live/gableroux.com/privkey.pem</span><span class="p">;</span>
+
+  <span class="c1"># Generate ssl_dhparam using `openssl dhparam -out dhparams.pem 4096`
+</span>  <span class="kn">ssl_dhparam</span> <span class="n">/etc/nginx/dhparams.pem</span><span class="p">;</span>
+
+  <span class="c1"># Secure headers
+</span>  <span class="kn">add_header</span> <span class="s">Strict-Transport-Security</span> <span class="s">"max-age=31557600</span><span class="p">;</span> <span class="kn">includeSubDomains"</span><span class="p">;</span>
+  <span class="kn">add_header</span> <span class="s">X-Frame-Options</span> <span class="s">"SAMEORIGIN"</span><span class="p">;</span>
+  <span class="kn">add_header</span> <span class="s">X-Content-Type-Options</span> <span class="s">"nosniff"</span><span class="p">;</span>
+  <span class="kn">add_header</span> <span class="s">X-Xss-Protection</span> <span class="s">"1"</span><span class="p">;</span>
+  <span class="c1">## allows google fonts from stylesheets and google analytics for scripts
+</span>  <span class="c1">## Using 'unsafe-inline' due to some pages still doing this (angular app somewhere)
+</span>  <span class="c1">## Commented as this was to restrictive. Most of the things here are static anyway
+</span>  <span class="c1">#add_header Content-Security-Policy "default-src 'self' *.googleapis.com *.google-analytics.com *.facebook.net *.facebook.com *.feedly.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self'";
+</span>
+  <span class="kn">ssl_protocols</span> <span class="s">TLSv1</span> <span class="s">TLSv1.1</span> <span class="s">TLSv1.2</span><span class="p">;</span>
+  <span class="kn">ssl_prefer_server_ciphers</span> <span class="no">on</span><span class="p">;</span>
+  <span class="kn">ssl_ciphers</span> <span class="s">EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5</span><span class="p">;</span>
+
+  <span class="kn">ssl_session_timeout</span> <span class="mi">5m</span><span class="p">;</span>
+  <span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:128m</span><span class="p">;</span>
+  <span class="kn">ssl_stapling</span> <span class="no">on</span><span class="p">;</span>
+  <span class="kn">ssl_stapling_verify</span> <span class="no">on</span><span class="p">;</span>
+
+  <span class="c1"># Your favorite resolver may be used instead of the Google one below
+</span>  <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span><span class="p">;</span>
+
+  <span class="c1">### Logs
+</span>  <span class="kn">access_log</span>  <span class="n">/var/log/nginx/gableroux.com.access.log</span><span class="p">;</span>
+  <span class="kn">error_log</span>   <span class="n">/var/log/nginx/gableroux.com.error.log</span><span class="p">;</span>
+
+  <span class="c1">### Serve root
+</span>  <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+    <span class="kn">root</span>  <span class="n">/var/www/gableroux.com/_site</span><span class="p">;</span>
+
+    <span class="c1">#### Todo: better 404
+</span>  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>It should get you on tracks.</p>
+
+<p><code class="highlighter-rouge">_site</code> is the public folder of my static website, but really, this is up to you. Grab what fits your needs in the config ;)</p>
+
+<h3 id="request-a-cert--renew-command">Request a cert + renew command</h3>
+
+<p>First, create a config file:</p>
+
+<p><code class="highlighter-rouge">/usr/local/etc/le-renew-webroot.ini</code></p>
+
+<figure class="highlight"><pre><code class="language-ini" data-lang="ini"><span class="py">rsa-key-size</span> <span class="p">=</span> <span class="s">4096</span>
+<span class="py">email</span> <span class="p">=</span> <span class="s">lebreton.gabriel@gmail.com</span>
+<span class="py">domains</span> <span class="p">=</span> <span class="s">gableroux.com, www.gableroux.com</span>
+<span class="py">webroot-path</span> <span class="p">=</span> <span class="s">/var/www/</span></code></pre></figure>
+
+<p>Then run the following:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">letsencrypt-auto certonly -a webroot --renew-by-default <span class="se">\</span>
+--config /usr/local/etc/le-renew-webroot.ini</code></pre></figure>
+
+<p>Yay https! Now run the above command in a daily cron job at a random hour to auto renew!  Let’s Encrypt certificates expires after 3 months and you don’t want to do this by hand ;). That’s it, <strong>no more human intervention ever</strong>.</p>
+
+<p>Try running <a href="https://www.ssllabs.com/ssltest/analyze.html?d=gableroux.com&amp;hideResults=on&amp;latest">ssltest on gableroux.com</a>. Spoiler, it looks like this:<br />
+<img src="/images/gableroux-ssltest-a-plus.png" alt="A+ ssltest gableroux.com result" /></p>
+
+<h2 id="edit-openssl-padding-oracle-vulnerability-cve-2016-2107">Edit: <a href="https://blog.cloudflare.com/yet-another-padding-oracle-in-openssl-cbc-ciphersuites/">OpenSSL Padding Oracle vulnerability (CVE-2016-2107)</a></h2>
+
+<p>So there is a new problem in the wild!
+My ssltest went from an A+ to an F in no time!  Here’s an handy tool to verify vulnerability:
+<a href="https://github.com/FiloSottile/CVE-2016-2107">FiloSottile/CVE-2016-2107</a></p>
+
+<p>Solution: <em>upgrade to <a href="http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html">openssl</a> 1.0.2h (64bit)</em></p>
+
+<p>On trusty Ubuntu 14.04 LTS</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>openssl version -v
+</code></pre>
+</div>
+
+<blockquote>
+  <p>OpenSSL 1.0.1f 6 Jan 2014</p>
+</blockquote>
+
+<p>These will take a few minutes to run:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>wget https://www.openssl.org/source/openssl-1.0.2h.tar.gz
+tar -xzvf openssl-1.0.2h.tar.gz
+cd openssl-1.0.2h
+sudo ./config
+sudo make
+sudo make install
+sudo ln -sf /usr/local/ssl/bin/openssl $(which openssl)
+openssl version -v
+</code></pre>
+</div>
+
+<blockquote>
+  <p>OpenSSL 1.0.2h  3 May 2016</p>
+</blockquote>
+
+<p>Inspired by <a href="http://www.miguelvallejo.com/updating-to-openssl-1-0-2g-on-ubuntu-server-12-04-14-04-lts-to-stop-cve-2016-0800-drown-attack/">Miguel’s solution</a></p>
+
+<p>I was still getting the error, and I found this blog post: <a href="https://bobcares.com/blog/fix-high-severity-openssl-bugs-memory-corruption-padding-oracle-ubuntu-centos-redhat-opensuse-linux/">How to fix high severity OpenSSL bugs (Memory corruption, Padding oracle) in Ubuntu, CentOS, RedHat, OpenSuse and other Linux servers</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>apt-get install --only-upgrade libssl1.0.0
+</code></pre>
+</div>
+
+<p>Now verify it did apply the patch by reading the changelog:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>zgrep -ie "CVE-2016-2107" /usr/share/doc/libssl1.0.0/changelog.Debian.gz
+</code></pre>
+</div>
+
+<blockquote>
+  <ul>
+    <li>debian/patches/CVE-2016-2107.patch: check that there are enough</li>
+    <li>CVE-2016-2107</li>
+  </ul>
+</blockquote>
+
+<p>Great! But still an F</p>
+
+<p>From <a href="http://mailman.nginx.org/pipermail/nginx-announce/2016/000179.html">nginx announcement</a>, upgrade nginx to <code class="highlighter-rouge">1.11.1-1</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install --upgrade nginx
+</code></pre>
+</div>
+
+<p>Now let’s verify again localy</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>CVE-2016-2107 gableroux.com
+2016/06/10 13:32:17 Vulnerable: false
+</code></pre>
+</div>
+
+<p>Awesome, scoring <em>A+</em> again, solved! :)</p>
+
+<h2 id="the-slides">The slides</h2>
+
+<p>Btw, there are a few interesting links at the end of the slides.</p>
+
+<div class="responsive-iframe-wrapperr">
+    <div class="responsive-iframe">
+        <img class="ratio" src="https://placehold.it/16x9" />
+        <!-- todo: update me to https and host here -->
+        <iframe src="https://letsencrypt.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<p>See full page <a href="https://letsencrypt.gableroux.com/">presentation website</a></p>
+
+
+    </article>
+
+    <div class="fb-like" data-colorscheme="dark" data-share="true" data-width="450" data-show-faces="true"></div>
+
+    
+
+</article>
+
+    </div>
+</main>
+
+<center>
+  <a href="https://metricswatch.com/"><img src="https://metricswatch.com/wp-content/uploads/2016/12/metricswatch-logo-horizontal-1.png" alt="Metrics Watch"></a>
+  <br>
+  is helping me with Google Analytics.
+</center>
+
+<div class="footer-margin-fix">
+    <footer class="site-footer clearfix">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="alt">
+                    <a href="/">
+                        <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="mailto:lebreton.gabriel@gmail.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
+                </li>
+                
+
+                <li class="rss">
+                    <a href="https://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+                </li>
+
+                <li class="feedly">
+                    <a href='https://cloud.feedly.com/#subscription%2Ffeed%2Fhttps%3A%2F%2Fgableroux.com%2Ffeed.xml'  target='blank'><img id='feedlyFollow' src='https://s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png' alt='Read Gabriel Le Breton on feedly' width='71' height='28'></a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/js/main.min.js" type="application/javascript"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19518991-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body>
+
+</html>

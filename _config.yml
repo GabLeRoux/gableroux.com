@@ -27,9 +27,9 @@ disqus_shortname: gableroux
 # Build settings
 markdown: kramdown
 
-sass:
-  style: compressed
-  sass_dir: _sass
+#sass:
+#  style: compressed
+#  sass_dir: _sass
 
 exclude: [
     node_modules, 
@@ -48,3 +48,22 @@ exclude: [
 ]
 
 gems: [jekyll-paginate]
+
+# Defaults (these are overridden if explicitly set in front matter)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Gabriel Le Breton"
+      categories: blog
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      author: "Gabriel Le Breton"
+      categories: blog
+      layout: "post"

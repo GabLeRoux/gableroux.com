@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e # halt script on error
+set -x # makes shell script verbose
 
 bundle exec jekyll build
 bundle exec htmlproofer ./_site --file-ignore /bower_components/

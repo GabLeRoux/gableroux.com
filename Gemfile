@@ -9,3 +9,5 @@ gem 'github-pages', versions['github-pages']
 gem 'jekyll-paginate'
 gem 'jekyll-admin', group: :jekyll_plugins
 gem 'html-proofer'
+
+gem 'scss_lint', require: false

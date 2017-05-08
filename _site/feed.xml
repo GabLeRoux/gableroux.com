@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 May 2017 16:27:04 -0400</pubDate>
-    <lastBuildDate>Sun, 07 May 2017 16:27:04 -0400</lastBuildDate>
+    <pubDate>Sun, 07 May 2017 21:12:58 -0400</pubDate>
+    <lastBuildDate>Sun, 07 May 2017 21:12:58 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -92,13 +92,15 @@ Simplified man pages.
 
 </description>
         <pubDate>Mon, 21 Nov 2016 21:00:00 -0500</pubDate>
-        <link>https://gableroux.com/presentation/2016/11/21/version-control/</link>
-        <guid isPermaLink="true">https://gableroux.com/presentation/2016/11/21/version-control/</guid>
+        <link>https://gableroux.com/blog/presentation/2016/11/21/version-control/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2016/11/21/version-control/</guid>
         
         <category>version-control</category>
         
         <category>git</category>
         
+        
+        <category>blog</category>
         
         <category>presentation</category>
         
@@ -127,8 +129,8 @@ Simplified man pages.
 
 </description>
         <pubDate>Tue, 21 Jun 2016 19:00:00 -0400</pubDate>
-        <link>https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/</link>
-        <guid isPermaLink="true">https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/</guid>
+        <link>https://gableroux.com/blog/presentation/2016/06/21/influxdb-telegraf-grafana/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2016/06/21/influxdb-telegraf-grafana/</guid>
         
         <category>saglacio</category>
         
@@ -138,6 +140,8 @@ Simplified man pages.
         
         <category>grafana</category>
         
+        
+        <category>blog</category>
         
         <category>presentation</category>
         
@@ -376,8 +380,8 @@ openssl version -v
 
 </description>
         <pubDate>Wed, 30 Mar 2016 19:00:00 -0400</pubDate>
-        <link>https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/</link>
-        <guid isPermaLink="true">https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/</guid>
+        <link>https://gableroux.com/blog/presentation/2016/03/30/letsencrypt-saglacio/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2016/03/30/letsencrypt-saglacio/</guid>
         
         <category>saglacio</category>
         
@@ -387,6 +391,8 @@ openssl version -v
         
         <category>revealjs</category>
         
+        
+        <category>blog</category>
         
         <category>presentation</category>
         
@@ -526,8 +532,8 @@ cat salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Thu, 18 Feb 2016 08:00:00 -0500</pubDate>
-        <link>https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/</link>
-        <guid isPermaLink="true">https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/</guid>
+        <link>https://gableroux.com/blog/tips/2016/02/18/keep-saltstack-colored-output/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/tips/2016/02/18/keep-saltstack-colored-output/</guid>
         
         <category>saltstack</category>
         
@@ -535,6 +541,8 @@ cat salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         
         <category>output</category>
         
+        
+        <category>blog</category>
         
         <category>tips</category>
         
@@ -579,7 +587,7 @@ This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal si
 
 &lt;h3 id=&quot;saglac-io&quot;&gt;&lt;a href=&quot;http://saglac.io/&quot;&gt;SagLac IO&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;I gave a few presentations at the  about awesome subjects such as Coffeescript, &lt;a href=&quot;/presentation/2015/10/28/hubot-saglacio/&quot;&gt;HUBOT - Improve and reduce employee efficiency&lt;/a&gt; and &lt;a href=&quot;/presentation/2015/06/03/saltstack-saglacio/&quot;&gt;SaltStack&lt;/a&gt;. I’ll keep sharing my presentations on my website.&lt;/p&gt;
+&lt;p&gt;I gave a few presentations at the  about awesome subjects such as Coffeescript, &lt;a href=&quot;/blog/presentation/2015/10/28/hubot-saglacio/&quot;&gt;HUBOT - Improve and reduce employee efficiency&lt;/a&gt; and &lt;a href=&quot;/blog/presentation/2015/06/03/saltstack-saglacio/&quot;&gt;SaltStack&lt;/a&gt;. I’ll keep sharing my presentations on my website.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://saglac.io/&quot;&gt;&lt;img src=&quot;/images/saglacio/saglacio.jpg&quot; alt=&quot;SagLacIO&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -597,11 +605,13 @@ Stay tuned!&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 02 Feb 2016 12:00:00 -0500</pubDate>
-        <link>https://gableroux.com/news/2016/02/02/whats-up/</link>
-        <guid isPermaLink="true">https://gableroux.com/news/2016/02/02/whats-up/</guid>
+        <link>https://gableroux.com/blog/news/2016/02/02/whats-up/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/news/2016/02/02/whats-up/</guid>
         
         <category>tlm saglacio totemastudio</category>
         
+        
+        <category>blog</category>
         
         <category>news</category>
         
@@ -657,11 +667,13 @@ Stay tuned!&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 20 Jan 2016 10:00:00 -0500</pubDate>
-        <link>https://gableroux.com/python/2016/01/20/python-interpreter-autocomplete/</link>
-        <guid isPermaLink="true">https://gableroux.com/python/2016/01/20/python-interpreter-autocomplete/</guid>
+        <link>https://gableroux.com/blog/python/2016/01/20/python-interpreter-autocomplete/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/python/2016/01/20/python-interpreter-autocomplete/</guid>
         
         <category>dotfile history python pythonrc autocomplete</category>
         
+        
+        <category>blog</category>
         
         <category>python</category>
         
@@ -682,13 +694,15 @@ Stay tuned!&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 28 Oct 2015 19:00:00 -0400</pubDate>
-        <link>https://gableroux.com/presentation/2015/10/28/hubot-saglacio/</link>
-        <guid isPermaLink="true">https://gableroux.com/presentation/2015/10/28/hubot-saglacio/</guid>
+        <link>https://gableroux.com/blog/presentation/2015/10/28/hubot-saglacio/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2015/10/28/hubot-saglacio/</guid>
         
         <category>saglacio</category>
         
         <category>hubot</category>
         
+        
+        <category>blog</category>
         
         <category>presentation</category>
         
@@ -714,8 +728,8 @@ Stay tuned!&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 03 Jun 2015 12:00:00 -0400</pubDate>
-        <link>https://gableroux.com/presentation/2015/06/03/saltstack-saglacio/</link>
-        <guid isPermaLink="true">https://gableroux.com/presentation/2015/06/03/saltstack-saglacio/</guid>
+        <link>https://gableroux.com/blog/presentation/2015/06/03/saltstack-saglacio/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2015/06/03/saltstack-saglacio/</guid>
         
         <category>saglacio</category>
         
@@ -725,6 +739,8 @@ Stay tuned!&lt;/p&gt;
         
         <category>github</category>
         
+        
+        <category>blog</category>
         
         <category>presentation</category>
         
@@ -919,11 +935,13 @@ Enjoy&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 17 Aug 2014 12:00:00 -0400</pubDate>
-        <link>https://gableroux.com/pelican/2014/08/17/pelican-gruntfile/</link>
-        <guid isPermaLink="true">https://gableroux.com/pelican/2014/08/17/pelican-gruntfile/</guid>
+        <link>https://gableroux.com/blog/pelican/2014/08/17/pelican-gruntfile/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/pelican/2014/08/17/pelican-gruntfile/</guid>
         
         <category>pelican grunt gruntfile coffeescript</category>
         
+        
+        <category>blog</category>
         
         <category>pelican</category>
         
@@ -993,13 +1011,15 @@ Done. Your new project is available at *******/***/********/*****
 
 </description>
         <pubDate>Sun, 27 Jul 2014 11:00:00 -0400</pubDate>
-        <link>https://gableroux.com/news/2014/07/27/hello-pelican/</link>
-        <guid isPermaLink="true">https://gableroux.com/news/2014/07/27/hello-pelican/</guid>
+        <link>https://gableroux.com/blog/news/2014/07/27/hello-pelican/</link>
+        <guid isPermaLink="true">https://gableroux.com/blog/news/2014/07/27/hello-pelican/</guid>
         
         <category>Pelican</category>
         
         <category>hello-world</category>
         
+        
+        <category>blog</category>
         
         <category>news</category>
         
