@@ -2,8 +2,14 @@
 set -e # halt script on error
 set -x # makes shell script verbose
 
+# requirements
 npm install -g yarn
 yarn global add bower gulp
 bower install
+yarn install
+
+# build
 gulp build
+
+# tests
 bundle exec htmlproofer ./_site --file-ignore /bower_components/
