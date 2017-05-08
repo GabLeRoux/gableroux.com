@@ -20,5 +20,8 @@
     "font-awesome": "4.7.0",
     "hover": "2.1.0",
     "jquery": "~2.1.4"
+  },
+  "resolutions": {
+    "bootstrap": "3.3.7"
   }
 }
