@@ -19,7 +19,7 @@ Hi, I've repeated myself quite a few times sharing these awesome things that peo
 
 Know where you are, there's so much to learn. Focus on the things *you* want to do. I wanted to learn Computer science in general, programming apps, web apps, websites, apis, deploying servers, etc. I found my self doing a lot of things in Front-end, Back-end and Devops. 
 
-![](https://camo.githubusercontent.com/2e6d200ca77e11ad11721c4cbff86104bd005eac/68747470733a2f2f692e696d6775722e636f6d2f71426c5436374e2e706e67)
+![kamranahmedse/developer-roadmap chose your path](https://camo.githubusercontent.com/2e6d200ca77e11ad11721c4cbff86104bd005eac/68747470733a2f2f692e696d6775722e636f6d2f71426c5436374e2e706e67)
 
 [This roadmap is very accurate](https://github.com/kamranahmedse/developer-roadmap), know where you're going.
 
@@ -153,7 +153,7 @@ Anyway, have a look to [awesome linux](https://github.com/aleksandar-todorovic/a
 > If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of 'It's really pretty simple, just think of branches as...' and eventually you'll learn the commands that will fix everything.
 > [Source xkcd](https://xkcd.com/1597/)
 
-Oh man, too much things to say about git. See **[development-environment section on awesome.re](https://awesome.re#development-environment)**, there are multiple git lists out there.
+Oh man, too much things to say about git. See **[development-environment section on awesome.re](https://github.com/sindresorhus/awesome#development-environment)**, there are multiple git lists out there.
 
 I also wrote [a post and gave a presentation about git](https://gableroux.com/presentation/2016/11/21/version-control/) where I recorded this asciinema:
 

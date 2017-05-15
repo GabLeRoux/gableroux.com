@@ -12,4 +12,6 @@ yarn install
 gulp build
 
 # tests
-bundle exec htmlproofer ./_site --file-ignore /bower_components/
+# todo: maybe move this to rakefile
+# todo: Let's try to make data-proofer-ignore ignore #, allow_hash_href may be unsafe in case I forget to add a link
+bundle exec htmlproofer ./_site --file-ignore /bower_components/ --allow_hash_href

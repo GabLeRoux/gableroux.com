@@ -213,7 +213,7 @@ Btw, there are a few interesting links at the end of the slides.
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="/images/layout/placeholder_16x9.gif"/>
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <!-- todo: update me to https and host here -->
         <iframe src="https://letsencrypt.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>

@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 May 2017 03:39:28 -0400</pubDate>
-    <lastBuildDate>Mon, 15 May 2017 03:39:28 -0400</lastBuildDate>
+    <pubDate>Mon, 15 May 2017 13:36:44 -0400</pubDate>
+    <lastBuildDate>Mon, 15 May 2017 13:36:44 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -26,7 +26,7 @@
 
 &lt;p&gt;Know where you are, there’s so much to learn. Focus on the things &lt;em&gt;you&lt;/em&gt; want to do. I wanted to learn Computer science in general, programming apps, web apps, websites, apis, deploying servers, etc. I found my self doing a lot of things in Front-end, Back-end and Devops.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/2e6d200ca77e11ad11721c4cbff86104bd005eac/68747470733a2f2f692e696d6775722e636f6d2f71426c5436374e2e706e67&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/2e6d200ca77e11ad11721c4cbff86104bd005eac/68747470733a2f2f692e696d6775722e636f6d2f71426c5436374e2e706e67&quot; alt=&quot;kamranahmedse/developer-roadmap chose your path&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/kamranahmedse/developer-roadmap&quot;&gt;This roadmap is very accurate&lt;/a&gt;, know where you’re going.&lt;/p&gt;
 
@@ -180,7 +180,7 @@
 &lt;a href=&quot;https://xkcd.com/1597/&quot;&gt;Source xkcd&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Oh man, too much things to say about git. See &lt;strong&gt;&lt;a href=&quot;https://awesome.re#development-environment&quot;&gt;development-environment section on awesome.re&lt;/a&gt;&lt;/strong&gt;, there are multiple git lists out there.&lt;/p&gt;
+&lt;p&gt;Oh man, too much things to say about git. See &lt;strong&gt;&lt;a href=&quot;https://github.com/sindresorhus/awesome#development-environment&quot;&gt;development-environment section on awesome.re&lt;/a&gt;&lt;/strong&gt;, there are multiple git lists out there.&lt;/p&gt;
 
 &lt;p&gt;I also wrote &lt;a href=&quot;https://gableroux.com/presentation/2016/11/21/version-control/&quot;&gt;a post and gave a presentation about git&lt;/a&gt; where I recorded this asciinema:&lt;/p&gt;
 
@@ -229,7 +229,7 @@
     
       <item>
         <title>Introduction to Shaders</title>
-        <description>&lt;p&gt;I gave a presentation with &lt;a href=&quot;https://github.com/jrobichaud&quot;&gt;Jules Robichaud-Gagnon&lt;/a&gt; about &lt;a href=&quot;https://en.wikipedia.org/wiki/Shader&quot;&gt;Shaders&lt;/a&gt; and &lt;a href=&quot;compute-shaders&quot;&gt;Compute Shaders&lt;/a&gt; at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt;. Here are the slides.&lt;/p&gt;
+        <description>&lt;p&gt;I gave a presentation with &lt;a href=&quot;https://github.com/jrobichaud&quot;&gt;Jules Robichaud-Gagnon&lt;/a&gt; about &lt;a href=&quot;https://en.wikipedia.org/wiki/Shader&quot;&gt;Shaders&lt;/a&gt; and &lt;a href=&quot;https://docs.unity3d.com/Manual/ComputeShaders.html&quot;&gt;Compute Shaders&lt;/a&gt; at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt;. Here are the slides.&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -239,7 +239,7 @@
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x10.gif&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x10.gif&quot; alt=&quot;placeholder&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/1Dc-4ixLNzCusXy8nZ_XSFk4l-CuCbSHmNgBa2IRIEaw/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -248,7 +248,7 @@
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; alt=&quot;placeholder&quot; /&gt;
         &lt;iframe src=&quot;https://www.youtube.com/embed/Cs6IpltBAWo?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -259,7 +259,7 @@
   &lt;li&gt;&lt;a href=&quot;https://gamedevelopment.tutsplus.com/tutorials/a-beginners-guide-to-coding-graphics-shaders--cms-23313&quot;&gt;Nice tutorial about Shaders on Tutsplus&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;ShaderToy&lt;/a&gt;, an awesome shader web playground&lt;/li&gt;
   &lt;li&gt;[Shader Forge Unity package][shaderforge] to build shaders using a visual editor&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.assetstore.unity3d.com/en/#!/content/39959&quot;&gt;UBER Standard Shader Ultra Unity Package&lt;/a&gt; for some great ready to use shaders&lt;/li&gt;
+  &lt;li&gt;&lt;span data-proofer-ignore=&quot;&quot;&gt;&lt;a href=&quot;https://www.assetstore.unity3d.com/en/#!/content/39959&quot;&gt;UBER Standard Shader Ultra Unity Package&lt;/a&gt;&lt;/span&gt; for some great ready to use shaders&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.00jknight.com/blog/gpu-accelerated-voxel-physics-solver&quot;&gt;GPU Accelerated Voxel Solver&lt;/a&gt; amazing Compute Shader demo with Unity Metal support&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://wiki.unity3d.com/index.php/MirrorReflection4&quot;&gt;Unity3d Mirror script&lt;/a&gt; which is not a shader, but does reflect some of the shaders&lt;/li&gt;
 &lt;/ul&gt;
@@ -308,7 +308,7 @@
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; alt=&quot;placeholder&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/1XN_qvV55ktoHY9QiRiqjTXtCfUTS9X-QANCujlmKZXE/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -443,7 +443,7 @@ Simplified man pages.
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; alt=&quot;placeholder&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/1ynQabkehsa3bXKSh3ZTS36vfho5_zymROdu_wGxMwQc/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -478,7 +478,7 @@ Simplified man pages.
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; alt=&quot;placeholder&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -726,7 +726,7 @@ openssl version -v
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; alt=&quot;placeholder&quot; /&gt;
         &lt;!-- todo: update me to https and host here --&gt;
         &lt;iframe src=&quot;https://letsencrypt.gableroux.com/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
@@ -1035,7 +1035,7 @@ Stay tuned!&lt;/p&gt;
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; alt=&quot;placeholder&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/12mfmFRzwQ6WG_DSRR4ktEjU7LHmA3XFemhYaNdYswQA/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;

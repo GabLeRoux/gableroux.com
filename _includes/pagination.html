@@ -1,7 +1,7 @@
 <!-- Pagination links -->
 <div class="text-center">
     <nav>
-        <ul class="pagination">
+        <ul class="pagination" data-proofer-ignore>
             {% if paginator.previous_page %}
             <li>
                 <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>

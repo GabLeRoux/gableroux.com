@@ -33,7 +33,7 @@ description: Who is Gabriel Le Breton?
         <h2>Work</h2>
         <p>I did a lot of things, most of the awesome stuff can be found on these sites:</p>
         <a class="btn btn-primary btn-block btn-lg" href="http://cv.gableroux.com/"><i class="fa fa-file-text-o"></i> My curriculum Vitae</a>
-        <a class="btn btn-primary btn-block btn-lg" href="http://www.linkedin.com/in/gableroux"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+        <a class="btn btn-primary btn-block btn-lg" href="https://www.linkedin.com/in/gableroux/" data-proofer-ignore><i class="fa fa-linkedin-square"></i> LinkedIn</a>
         <a class="btn btn-primary btn-block btn-lg" href="https://github.com/gableroux"><i class="fa fa-github-square"></i> Github</a>
     </div>
 </div>

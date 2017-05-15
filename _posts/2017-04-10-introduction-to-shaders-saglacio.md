@@ -6,7 +6,7 @@ categories: presentation
 tags: saglacio unity3d shaders compute-shaders
 featured_image: /images/introduction-to-shaders.jpg
 ---
-I gave a presentation with [Jules Robichaud-Gagnon](https://github.com/jrobichaud) about [Shaders][shader] and [Compute Shaders](compute-shaders) at the [SagLacIO][saglacio]. Here are the slides.
+I gave a presentation with [Jules Robichaud-Gagnon](https://github.com/jrobichaud) about [Shaders][shader] and [Compute Shaders][compute-shaders] at the [SagLacIO][saglacio]. Here are the slides.
 
 <!-- more -->
 
@@ -16,7 +16,7 @@ We did a small introduction to shaders, how it works from GPU -\> vector world -
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="/images/layout/placeholder_16x10.gif"/>
+        <img class="ratio" src="/images/layout/placeholder_16x10.gif" alt="placeholder"/>
         <iframe src="https://docs.google.com/presentation/d/1Dc-4ixLNzCusXy8nZ_XSFk4l-CuCbSHmNgBa2IRIEaw/embed?start=false&loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
@@ -25,7 +25,7 @@ We did a small introduction to shaders, how it works from GPU -\> vector world -
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="/images/layout/placeholder_16x9.gif"/>
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <iframe src="https://www.youtube.com/embed/Cs6IpltBAWo?ecver=1" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
@@ -35,7 +35,7 @@ We did a small introduction to shaders, how it works from GPU -\> vector world -
 * [Nice tutorial about Shaders on Tutsplus][tutsplus-tutorial]
 * [ShaderToy][shadertoy], an awesome shader web playground
 * [Shader Forge Unity package][shaderforge] to build shaders using a visual editor
-* [UBER Standard Shader Ultra Unity Package][uber] for some great ready to use shaders
+* <span data-proofer-ignore>[UBER Standard Shader Ultra Unity Package][uber]</span> for some great ready to use shaders
 * [GPU Accelerated Voxel Solver][gpu-accelerated-voxel-physics-solver] amazing Compute Shader demo with Unity Metal support
 * [Unity3d Mirror script][unity3d-mirror] which is not a shader, but does reflect some of the shaders
 
@@ -61,4 +61,5 @@ We did a small introduction to shaders, how it works from GPU -\> vector world -
 [gpu-accelerated-voxel-physics-solver]: http://www.00jknight.com/blog/gpu-accelerated-voxel-physics-solver
 [@leBodro]: https://twitter.com/LeBodro
 [saglacio]: http://saglac.io
+[compute-shaders]: https://docs.unity3d.com/Manual/ComputeShaders.html
 [shader]: https://en.wikipedia.org/wiki/Shader

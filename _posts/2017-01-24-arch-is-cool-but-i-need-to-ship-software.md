@@ -17,7 +17,7 @@ You want a really neat linux distribution with a rock solid package manager that
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="/images/layout/placeholder_16x9.gif"/>
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <iframe src="https://docs.google.com/presentation/d/1XN_qvV55ktoHY9QiRiqjTXtCfUTS9X-QANCujlmKZXE/embed?start=false&loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
