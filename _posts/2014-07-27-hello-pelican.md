@@ -12,7 +12,7 @@ Welcome to my blog. This is my first post (in fact, it's my second). I first att
 
 <!-- more -->
 
-It's probably more conveniant for my simple website. I can't tell alot about pelican as I did not play much with it yet, but it seems very easy to work with. Oh and I love writing in `markdown`, that's probably because of Github ReadMe files Eh.
+It's probably more convenient for my simple website. I can't tell a lot about pelican as I did not play much with it yet, but it seems very easy to work with. Oh and I love writing in `markdown`, that's probably because of Github ReadMe files Eh.
 
 ## Pelican
 
@@ -55,7 +55,7 @@ Ok so not quite sure about that last line, but my stuff is ready to go now :). T
 
 ### Plugins!
 
-Now that my site is up and running, I'll need to try the [plugins](https://github.com/getpelican/pelican-plugins). I'm only using the `sitemap` plugin atm thow :P
+Now that my site is up and running, I'll need to try the [plugins](https://github.com/getpelican/pelican-plugins). I'm only using the `sitemap` plugin atm tho :P
 
 ### Themes! 
 

@@ -118,7 +118,7 @@ gulp.task 'watch', ->
     '_includes/*.html'
     '_posts/*'
     'images/*'
-  ], ['jekyll-rebuild']
+  ], ['jekyll-rebuild', 'coffee', 'sass']
   return
 
 ###

@@ -22,13 +22,13 @@ Have a look at [Let’s Encrypt website][letsencrypt] and their [FAQ][faq] if yo
 
 I'll jump straight to what's interesting; What are the steps to have a fully working and valid free https certificate on a website behind `nginx` and how to get a nice score on [ssltest][ssltest].
 
-Most of the things needed to get started are described on [Let’s Encrypt getting started page][getting-started] along with most up to date informations.
+Most of the things needed to get started are described on [Let’s Encrypt getting started page][getting-started] along with most up to date information.
 
-Have a look to [Get HTTPS for free! on github][gethttpsforfree] which shows you what happens in the background when using the client. Everything is client side!
+Have a look to [Get HTTPS for free! on Github][gethttpsforfree] which shows you what happens in the background when using the client. Everything is client side!
 
-### Install letsencrypt
+### Install Letsencrypt
 
-Grab letsencrypt official client on your server this way:
+Grab Letsencrypt official client on your server this way:
 
 {% highlight bash %}
 git clone https://github.com/letsencrypt/letsencrypt
@@ -84,7 +84,7 @@ server {
 
   index  index.html;
 
-  ### SSL Config (using letsencrypt)
+  ### SSL Config (using Letsencrypt)
   ssl_certificate /etc/letsencrypt/live/gableroux.com/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/gableroux.com/privkey.pem;
 
@@ -200,7 +200,7 @@ From [nginx announcement](http://mailman.nginx.org/pipermail/nginx-announce/2016
 
     sudo apt-get install --upgrade nginx
 
-Now let's verify again localy
+Now let's verify again locally
 
     CVE-2016-2107 gableroux.com
     2016/06/10 13:32:17 Vulnerable: false
@@ -213,7 +213,7 @@ Btw, there are a few interesting links at the end of the slides.
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="https://placehold.it/16x9"/>
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif"/>
         <!-- todo: update me to https and host here -->
         <iframe src="https://letsencrypt.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>

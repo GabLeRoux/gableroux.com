@@ -15,6 +15,9 @@ $color_mirage_approx: #1b1c20;
 $color_celeste_approx: #cccccc;
 $color_mine_shaft_approx: #333333;
 
+$metrics_watch_text: #3ec1b9;
+$metrics_watch_shadow: #002A26;
+
 /* Fonts */
 $font_main: Ubuntu;
 $font_alt: Open sans;
@@ -50,6 +53,11 @@ body {
 // when used with sticky navbar
 .navbar-no-header-spacer {
   padding-top: 80px;
+}
+
+.metrics_watch {
+  color: $metrics_watch_text;
+  text-shadow: 0 0 5px $metrics_watch_shadow;
 }
 
 header.site-header {
@@ -456,6 +464,12 @@ a {
     text-align: center !important;
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .container {
+    width: 970px;
   }
 }
 

@@ -13,14 +13,14 @@ I gave a presentation at the [SagLacIO][saglacio] about [SaltStack][saltstack] w
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="http://placehold.it/16x9"/>
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif"/>
         <iframe src="https://docs.google.com/presentation/d/1JVwUZwpbWZJY6_stEKqGR1st71R7fX8HN4qVGxX1KlY/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
 
 ## Cool stuff
 
-[Micael][micael-github] created a [Minecraft saltstack <i class="fa fa-github"></i> repository][micaelbergeron/salt.minecraft] to easily deploy a minecraft server using [SpigotMC][spigot] and [MSM][msm]. :)  
+[Micael][micael-github] created a [Minecraft Saltstack <i class="fa fa-github"></i> repository][micaelbergeron/salt.minecraft] to easily deploy a Minecraft server using [SpigotMC][spigot] and [MSM][msm]. :)  
 [Go star this thing!][micaelbergeron/salt.minecraft]
 
 [saglacio]: http://saglac.io

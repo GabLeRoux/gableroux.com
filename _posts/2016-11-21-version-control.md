@@ -18,7 +18,7 @@ I learned **git** by myself and I want you to learn it too!
 
 ## Version control?
 
-YES! You want to time travel in your code and into other people's code! Git is a **collaboration tool**, it's about **being able to work with people** but it's also great for working alone! Did you know **github currently has more than 2.7M repositories** publicly available? Please, don't reinvent the wheel!
+YES! You want to time travel in your code and into other people's code! Git is a **collaboration tool**, it's about **being able to work with people** but it's also great for working alone! Did you know **Github currently has more than 2.7M repositories** publicly available? Please, don't reinvent the wheel!
 
 ## Learn git
 
@@ -34,7 +34,7 @@ Make sure you add the right [`.gitignore`](https://git-scm.com/docs/gitignore) f
 
 ## Are you a student?
 
-Save money, get github pro for free and way more with the [github backpack](https://education.github.com/pack)! If you're only looking for private repositories (ex, for your homeworks), [bitbucket](https://bitbucket.org/) offers free private repositories for teams < 5. :)
+Save money, get Github pro for free and way more with the [github backpack](https://education.github.com/pack)! If you're only looking for private repositories (ex, for your homework), [Bitbucket](https://bitbucket.org/) offers free private repositories for teams < 5. :)
 
 ## Handy resources
 
@@ -71,11 +71,11 @@ These are the very useful links from my last slide:
 
 ## Slides
 
-When writing my slides, **[I recorded a 22min git session][git-asciinema]** and created an **[example git repository on github][GabLeRoux/git-commands-example]**.
+When writing my slides, **[I recorded a 22min git session][git-asciinema]** and created an **[example git repository on Github][GabLeRoux/git-commands-example]**.
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="http://placehold.it/16x9"/>
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif"/>
         <iframe src="https://docs.google.com/presentation/d/1ynQabkehsa3bXKSh3ZTS36vfho5_zymROdu_wGxMwQc/embed?start=false&loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Save saltstack console colored output to file</title>
+
+    <meta name="description" content="Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files? Chrome extension insid...">
+    <meta name="author" content="Gabriel Le Breton">
+
+    <link rel="canonical" href="https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/">
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="https://gableroux.com/feed.xml"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/css/main.min.css">
+
+    <!-- facebook Open Graph Metadatas -->
+    <meta content="253381494995396" property="fb:app_id">
+    <meta content="GabLeRoux <Developer>" property="og:site_name">
+
+    
+    <meta content="Save saltstack console colored output to file" property="og:title">
+    
+
+    
+    <meta content="article" property="og:type">
+    
+
+
+    
+    <meta content="Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files? Chrome extension inside (help needed!)
+
+" property="og:description">
+    
+
+    
+    <meta content="https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/" property="og:url">
+    
+
+    
+    <meta content="2016-02-18T08:00:00-05:00" property="article:published_time">
+    <meta content="https://gableroux.com/about/" property="article:author">
+    
+
+    
+    <meta content="https://gableroux.com/images/such-terminal-colors.jpg" property="og:image">
+    
+
+    
+    
+    <meta content="tips" property="article:section">
+    
+    
+
+    
+    
+    <meta content="saltstack" property="article:tag">
+    
+    <meta content="console" property="article:tag">
+    
+    <meta content="output" property="article:tag">
+    
+    
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '253381494995396',
+                xfbml      : true,
+                version    : 'v2.5'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i> <img src="/images/GabLeRoux-logo-small-white.png" alt=""/></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                
+                
+    
+        
+            <li><a href="/about/">About</a></li>
+        
+    
+
+    
+
+    
+
+    
+        
+            <li><a href="/todo/">Todo</a></li>
+        
+    
+
+    
+
+    
+
+
+
+
+                <li>
+                    <a href="https://totemastudio.com" target="_blank" title="Totema Studio"><i class="fa fa-gamepad"></i> Totema Studio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="navbar-no-header-spacer"></div>
+
+
+<main id="wrap">
+    <div class="page-content">
+        <article class="blog-page container">
+
+    <header class="post-header">
+        <div class="row">
+            <h1 class="post-title">Save saltstack console colored output to file</h1>
+
+            <p class="post-meta">
+                Feb 18, 2016 • Gabriel Le Breton
+                
+            </p>
+
+            <img src="/images/such-terminal-colors.jpg" alt="Save saltstack console colored output to file">
+
+        </div>
+    </header>
+
+    <hr>
+
+    <article class="page-content">
+        <p>Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files? Chrome extension inside (help needed!)</p>
+
+<!-- more -->
+<!-- todo: add some example results for salt output, but the idea is here -->
+
+<hr />
+
+<blockquote>
+  <p>Hey, before we begin, I started playing around with colors in a terminal and tough it could be cool to have a chrome extension for this. Let’s create <a href="https://github.com/gableroux/ansi-colors-chrome-extension"><i class="fa fa-github"></i> ANSI colors chrome extension</a> together!</p>
+</blockquote>
+
+<hr />
+
+<h2 id="alright-lets-begin">Alright let’s begin</h2>
+
+<p>Saltstack’s output has colors for the great good, green when result is pass, pink when it’s modified and red when it fails.</p>
+
+<p><img src="/images/colors-in-shell-saltstack.png" alt="saltstack-output-example" class="center-block" /></p>
+
+<p>Easy to see when something goes wrong. Now when you start running commands on multiple servers, salt is very handy, but what if you’d like to share the output with a teammate? Go for it, copy paste, plain white/black text or take a screenshot of your terminal? Continue reading for a solution ;)</p>
+
+<h2 id="console-colors">Console colors</h2>
+
+<p>See <a href="http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html">Bash Prompt HOWTO: Colors</a> for reference ;)</p>
+
+<p>Here are some env variable colors</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">export TEXT_BLACK=$'\033'\[30m
+export TEXT_RED=$'\033'\[31m
+export TEXT_GREEN=$'\033'\[32m
+export TEXT_YELLOW=$'\033'\[33m
+export TEXT_BLUE=$'\033'\[34m
+export TEXT_MAGENTA=$'\033'\[35m
+export TEXT_CYAN=$'\033'\[36m
+export TEXT_WHITE=$'\033'\[37m</code></pre></figure>
+
+<p>Values are <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI Escape Codes</a> and the environment variables above comes by default with <a href="http://ohmyz.sh/">Oh-my-zsh</a> :)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$TEXT_CYAN</span><span class="s2"> colors </span><span class="nv">$TEXT_GREEN</span><span class="s2"> are </span><span class="nv">$TEXT_RED</span><span class="s2"> mainstream"</span></code></pre></figure>
+
+<p><img src="/images/colors-in-shell-example.png" alt="example for the above" class="center-block" /></p>
+
+<h2 id="colors-and-files">Colors and files</h2>
+
+<p>Now, depending on your shell, writing this to a shell with <code class="highlighter-rouge">&gt;</code> should keep these ANSI characters, so when you <code class="highlighter-rouge">cat</code> the file again, you should see it with colors.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$TEXT_CYAN</span><span class="s2"> colors </span><span class="nv">$TEXT_GREEN</span><span class="s2"> are </span><span class="nv">$TEXT_RED</span><span class="s2"> mainstream"</span> &gt; colored_file.txt <span class="o">&amp;&amp;</span> cat colored_file.txt</code></pre></figure>
+
+<p>In my case, colors are kept (using <a href="http://ohmyz.sh/">Oh-my-zsh</a> with <a href="https://iterm2.com/">iterm2 terminal emulator</a>) and I’m happy with it, but sometimes, it’s not the case depending on the command or the shell being used.</p>
+
+<h2 id="read-colored-output-from-file">Read colored output from file</h2>
+
+<p>Depending on your shell environment, <code class="highlighter-rouge">less</code> command may not need additional parameters, but if you try to pipe a colored file to <code class="highlighter-rouge">less</code> and don’t get any colors, try with <code class="highlighter-rouge">-r</code> parameter:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat colored_file.txt | less -r</code></pre></figure>
+
+<p>Thanks to <a href="http://superuser.com/a/36045/55267">this answer on stackoverflow</a> and its comments.</p>
+
+<h2 id="keep-salt-colored-output">keep salt colored output</h2>
+
+<p>Haven’t talked much about salt in current post so lets begin. Writing salt output to a file doesn’t keep ANSI colors. Luckily for us, salt command has a <code class="highlighter-rouge">--force-color</code> parameter <a href="https://github.com/saltstack/salt/issues/4121">added in salt issue #4121</a>.</p>
+
+<p><img src="/images/salt-colored-output.png" alt="Salt colored output example" class="center-block" /></p>
+
+<p>Solution to keep salt output looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">salt-call state.highstate -l debug --force-color &gt; salt.log</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat salt.log</code></pre></figure>
+
+<p>Awesome, salt colors!</p>
+
+<h2 id="what-about-clear-text-no-color">What about clear text (no color)?</h2>
+
+<p>I you want to remove colors from output, there are a few solutions available, here’s a <a href="http://superuser.com/q/380772/55267">question asking for a regex to remove ANSI Escape codes</a>. My favorite answer is <a href="https://github.com/chalk/strip-ansi-cli">ansi-strip-cli npm module</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">npm install --g strip-ansi-cli</code></pre></figure>
+
+<p>Usage:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat colored_file.txt | strip-ansi</code></pre></figure>
+
+<p>No more colors :)</p>
+
+<p>Otherwise, you can strip output with <code class="highlighter-rouge">perl -pe 's/\x1b\[[0-9;]*[mG]//g'</code> which is perfect if you don’t want node.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat colored_file.txt | perl -pe <span class="s1">'s/\x1b\[[0-9;]*[mG]//g'</span></code></pre></figure>
+
+<h2 id="salt-solution">salt solution</h2>
+
+<p>So with salt, I managed to get both output using the following:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">salt-call state.highstate -l debug --force-color <span class="se">\</span>
+| tee salt-colored.log <span class="se">\</span>
+| tee &gt;<span class="o">(</span>strip-ansi &gt; salt.log<span class="o">)</span></code></pre></figure>
+
+<p>Prefer not to bloat your system with npm?</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">salt-call state.highstate -l debug --force-color <span class="se">\</span>
+| tee salt-colored.log <span class="se">\</span>
+| tee &gt;<span class="o">(</span>perl -pe <span class="s1">'s/\x1b\[[0-9;]*[mG]//g'</span> &gt; salt.log<span class="o">)</span></code></pre></figure>
+
+<p>Now you can enjoy salt output in both ways :)</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat salt-colored.log
+cat salt.log</code></pre></figure>
+
+<h2 id="whats-the-tee-command">What’s the <code class="highlighter-rouge">tee</code> command?</h2>
+
+<p>Thanks to <a href="http://tldr-pages.github.io/">tldr pages</a></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">tldr tee</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">  tee
+  Read from standard input and write to standard output and files.
+
+  - Copy standard input to each FILE, and also to standard output:
+    echo "example" | tee FILE
+
+  - Append to the given FILEs, do not overwrite:
+    echo "example" | tee -a FILE</code></pre></figure>
+
+<h2 id="some-random-stuff-because-why-not">Some random stuff because why not</h2>
+
+<p>Cool, you’ve reached this far, get <a href="http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/">lolcat</a> for the lolz</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install lolcat</code></pre></figure>
+
+<p><img src="/images/man-ascii-lolcat.png" alt="man ascii lolcat" class="center-block" /></p>
+
+
+    </article>
+
+    <div class="fb-like" data-colorscheme="dark" data-share="true" data-width="450" data-show-faces="true"></div>
+
+    
+
+</article>
+
+    </div>
+</main>
+
+<div class="text-center">
+    <br>
+    <br>
+    <a href="https://metricswatch.com/"><img src="https://metricswatch.com/wp-content/uploads/2016/12/metricswatch-logo-horizontal-1.png" alt="Metrics Watch"></a>
+    <br>
+    <p class="metrics_watch">helping me with Google Analytics.</p>
+    <br>
+</div>
+
+<div class="footer-margin-fix">
+    <footer class="site-footer clearfix">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="alt">
+                    <a href="/">
+                        <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="mailto:lebreton.gabriel@gmail.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
+                </li>
+                
+
+                <li class="rss">
+                    <a href="https://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+                </li>
+
+                <li class="feedly">
+                    <a href='https://cloud.feedly.com/#subscription%2Ffeed%2Fhttps%3A%2F%2Fgableroux.com%2Ffeed.xml' target='blank'><img id='feedlyFollow' src='https://s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png' alt='Read Gabriel Le Breton on feedly' width='71' height='28'></a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/js/main.min.js" type="application/javascript"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19518991-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body>
+
+</html>

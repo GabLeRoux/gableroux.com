@@ -6,9 +6,375 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 May 2017 21:12:58 -0400</pubDate>
-    <lastBuildDate>Sun, 07 May 2017 21:12:58 -0400</lastBuildDate>
+    <pubDate>Mon, 15 May 2017 02:27:11 -0400</pubDate>
+    <lastBuildDate>Mon, 15 May 2017 02:27:11 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Things I share to programmers</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Don’t reinvent the wheel&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So many things to read, cool stuff to try, great tools to use but where can we start? Answer inside.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Hi, I’ve repeated myself quite a few times sharing these awesome things that people should know about so here it is in a single page! :)&lt;/p&gt;
+
+&lt;h2 id=&quot;where-are-you&quot;&gt;Where are you?&lt;/h2&gt;
+
+&lt;p&gt;Know where you are, there’s so much to learn. Focus on the things &lt;em&gt;you&lt;/em&gt; want to do. I wanted to learn Computer science in general, programming apps, web apps, websites, apis, deploying servers, etc. I found my self doing a lot of things in Front-end, Back-end and Devops.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/2e6d200ca77e11ad11721c4cbff86104bd005eac/68747470733a2f2f692e696d6775722e636f6d2f71426c5436374e2e706e67&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kamranahmedse/developer-roadmap&quot;&gt;This roadmap is very accurate&lt;/a&gt;, know where you’re going.&lt;/p&gt;
+
+&lt;h2 id=&quot;sindre-sorhus&quot;&gt;Sindre Sorhus&lt;/h2&gt;
+
+&lt;p&gt;If you don’t know &lt;strong&gt;&lt;a href=&quot;https://sindresorhus.com/&quot;&gt;Sindre Sorhus&lt;/a&gt;&lt;/strong&gt;, well go see his stuff, it’s magic 🦄. He has a lot of &lt;a href=&quot;https://github.com/sindresorhus&quot;&gt;very neat projects on Github&lt;/a&gt; and &lt;a href=&quot;https://blog.sindresorhus.com/&quot;&gt;many great posts on his blog&lt;/a&gt;. His &lt;a href=&quot;https://blog.sindresorhus.com/answering-anything-678ce5623798&quot;&gt;Ask Me Anything (AMA)&lt;/a&gt; is really fun to read.&lt;/p&gt;
+
+&lt;h2 id=&quot;awesome&quot;&gt;Awesome&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Don’t reinvent the wheel&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Are you looking for places to get started on a subject or technology or whatever? Start from the &lt;a href=&quot;https://awesome.re&quot;&gt;awesome list of awesome lists&lt;/a&gt; (&lt;a href=&quot;https://sindresorhus.com/&quot;&gt;Sindre Sorhus&lt;/a&gt; is the guy behind awesome).&lt;/p&gt;
+
+&lt;h3 id=&quot;django&quot;&gt;Django&lt;/h3&gt;
+
+&lt;p&gt;I’m a &lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;django framework&lt;/a&gt; fan so I really enjoy the &lt;a href=&quot;http://awesome-django.com/&quot;&gt;awesome-django list&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You must read &lt;a href=&quot;https://12factor.net/&quot;&gt;12factor&lt;/a&gt;&lt;/strong&gt; and you must also &lt;strong&gt;&lt;a href=&quot;http://www.obeythetestinggoat.com/&quot;&gt;Obey the Testing Goat!&lt;/a&gt;&lt;/strong&gt;, we need more tests and less shitty code with well designed apps. Stop wasting your time.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://factoryboy.readthedocs.io/en/latest/&quot;&gt;Factory boy&lt;/a&gt; In your tests&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://faker.readthedocs.io/en/master/&quot;&gt;Faker&lt;/a&gt; In your tests&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.django-rest-framework.org/&quot;&gt;django-rest-framework&lt;/a&gt; If you’re about to create an api&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;angular&quot;&gt;Angular&lt;/h3&gt;
+
+&lt;p&gt;I don’t prefer angular more than other frontend frameworks, but I used to work with it quite a few times.&lt;/p&gt;
+
+&lt;p&gt;If you’re about to start a project, you may want to compare frontend frameworks, have a look to &lt;a href=&quot;http://todomvc.com/&quot;&gt;todo mvc&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Learning Angular 1? See &lt;a href=&quot;https://github.com/gianarb/awesome-angularjs&quot;&gt;awesome angular 1 list&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Angular 2? See &lt;a href=&quot;https://github.com/AngularClass/awesome-angular&quot;&gt;awesome angular 2 list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;terminal&quot;&gt;Terminal&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/sandwich.png&quot; alt=&quot;xkcd sandwich&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Proper User Policy apparently means Simon Says.
+&lt;a href=&quot;https://www.xkcd.com/149/&quot;&gt;source xkcd&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As usual, &lt;a href=&quot;https://github.com/alebcay/awesome-shell&quot;&gt;awesome-shell&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;learning-the-command-line&quot;&gt;Learning the command line&lt;/h4&gt;
+
+&lt;p&gt;You should read &lt;a href=&quot;https://github.com/jlevy/the-art-of-command-line&quot;&gt;The art of command line&lt;/a&gt; and learn all the things in section &lt;em&gt;Everyday use&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/tar_2x.png&quot; alt=&quot;xkcd tar&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;I don’t know what’s worse–the fact that after 15 years of using tar I still can’t keep the flags straight, or that after 15 years of technological advancement I’m still mucking with tar flags that were 15 years old when I started.
+&lt;a href=&quot;https://www.xkcd.com/1168/&quot;&gt;Source xkcd&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Install &lt;a href=&quot;http://tldr-pages.github.io/&quot;&gt;tldr&lt;/a&gt; and start learning.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tldr tar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  tar
+
+  Archiving utility.
+  Often combined with a compression method, such as gzip or bzip.
+
+  - Create an archive from files:
+    tar cf target.tar file1 file2 file3
+
+  - Create a gzipped archive:
+    tar czf target.tar.gz file1 file2 file3
+
+  - Extract an archive in a target folder:
+    tar xf source.tar -C folder
+
+  - Extract a gzipped archive in the current directory:
+    tar xzf source.tar.gz
+
+  - Extract a bzipped archive in the current directory:
+    tar xjf source.tar.bz2
+
+  - Create a compressed archive, using archive suffix to determine the compression program:
+    tar caf target.tar.xz file1 file2 file3
+
+  - List the contents of a tar file:
+    tar tvf source.tar
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You get the point ;)&lt;/p&gt;
+
+&lt;h4 id=&quot;shell-pimping&quot;&gt;Shell pimping&lt;/h4&gt;
+
+&lt;p&gt;I personally use &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh&lt;/a&gt; with &lt;a href=&quot;https://github.com/sindresorhus/pure&quot;&gt;sindresorhus’s pure theme&lt;/a&gt; and a few plugins setup. Further reading at &lt;strong&gt;&lt;a href=&quot;https://github.com/unixorn/awesome-zsh-plugins&quot;&gt;awesome-zsh-plugins&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;os&quot;&gt;OS&lt;/h3&gt;
+
+&lt;h4 id=&quot;windows&quot;&gt;Windows&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/windows_7.png&quot; alt=&quot;windows 7 xkcd&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Disclaimer: I have not actually tried the beta yet.  I hear it’s quite pleasant and hardly Hitler-y at all.
+&lt;a href=&quot;https://xkcd.com/528/&quot;&gt;Source xkcd&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You should use &lt;a href=&quot;https://chocolatey.org/&quot;&gt;chocolatey package manager&lt;/a&gt; to install things. I recommend using &lt;a href=&quot;https://conemu.github.io/&quot;&gt;conemu&lt;/a&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;choco install conemu&lt;/code&gt;) with &lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git bash&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;choco install git&lt;/code&gt;) for your daily windows terminal stuff. Other &lt;a href=&quot;https://github.com/Awesome-Windows/Awesome#terminal&quot;&gt;terminal alternatives here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Jump to &lt;strong&gt;&lt;a href=&quot;https://github.com/Awesome-Windows/Awesome&quot;&gt;windows awesome list&lt;/a&gt;&lt;/strong&gt; directly for more great stuff in general ;)&lt;/p&gt;
+
+&lt;p&gt;Oh and if I still have your attention, you may want to &lt;a href=&quot;https://fix10.isleaked.com/&quot;&gt;disable windows spying on you&lt;/a&gt;. Have fun reading &lt;a href=&quot;https://stallman.org/microsoft.html&quot;&gt;reasons not using microsoft by Richard Stallman&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;macos&quot;&gt;MacOS&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/felidae.png&quot; alt=&quot;macos xkcd&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;‘Smilodon fatalis’ narrowly edged out ‘Tyrannosaurus rex’ to win this year’s Most Badass Latin Names competition, after edging out ‘Dracorex hogwartsia’ and ‘Stygimoloch spinifer’ (meaning ‘horned dragon from the river of death’) in the semifinals.
+&lt;a href=&quot;https://xkcd.com/1056/&quot;&gt;Source xkcd&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You should setup &lt;a href=&quot;https://github.com/sindresorhus/quick-look-plugins&quot;&gt;quick look plugins&lt;/a&gt;, use &lt;a href=&quot;https://www.iterm2.com/&quot;&gt;iterm&lt;/a&gt; because the terminal that comes with MacOs isn’t fun. Have a look to these &lt;a href=&quot;https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8&quot;&gt;mac os tips and tricks from sindresorhus&lt;/a&gt;. Some tools worth paying for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.alfredapp.com/&quot;&gt;Alfred&lt;/a&gt; Spotlight replacement with way too many features. Buy it mostly for its clipboard manager, it’s really great :)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.obdev.at&quot;&gt;little snitch&lt;/a&gt; Really nice firewall if you like seeing what your apps are doing on the internets&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://kapeli.com/dash&quot;&gt;Dash&lt;/a&gt; offline documentation fast access&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bjango.com/mac/istatmenus/&quot;&gt;iStat Menus&lt;/a&gt; (and other apps from bjango), it’s nice if you have the money ;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are many great applications out there, I found these worth paying for, but there are way much more, as usual, &lt;a href=&quot;&quot;&gt;awesome list&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;linux&quot;&gt;Linux&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/linux_user_at_best_buy.png&quot; alt=&quot;xkcd linux&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;We actually stand around the antivirus displays with the Mac users just waiting for someone to ask.
+&lt;a href=&quot;https://www.xkcd.com/272/&quot;&gt;Source xkcd&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I worked on &lt;a href=&quot;https://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; in the past but I was tired of always installing &lt;code class=&quot;highlighter-rouge&quot;&gt;ppas&lt;/code&gt;. &lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Archlinux&lt;/a&gt; is awesome, very nice wiki, but kind of hard to setup and maintain. I really enjoyed my time on &lt;a href=&quot;https://getfedora.org/&quot;&gt;Fedora&lt;/a&gt;. If you use Fedora, have a look to &lt;a href=&quot;https://www.folkswithhats.org/&quot;&gt;Fedy&lt;/a&gt;, it’s quite handy.&lt;/p&gt;
+
+&lt;p&gt;Anyway, have a look to &lt;a href=&quot;https://github.com/aleksandar-todorovic/awesome-linux&quot;&gt;awesome linux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;Git&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/git.png&quot; alt=&quot;xkcd git&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;If that doesn’t fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of ‘It’s really pretty simple, just think of branches as…’ and eventually you’ll learn the commands that will fix everything.
+&lt;a href=&quot;https://xkcd.com/1597/&quot;&gt;Source xkcd&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Oh man, too much things to say about git. See &lt;strong&gt;&lt;a href=&quot;https://awesome.re#development-environment&quot;&gt;development-environment section on awesome.re&lt;/a&gt;&lt;/strong&gt;, there are multiple git lists out there.&lt;/p&gt;
+
+&lt;p&gt;I also wrote &lt;a href=&quot;https://gableroux.com/presentation/2016/11/21/version-control/&quot;&gt;a post and gave a presentation about git&lt;/a&gt; where I recorded this asciinema:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://asciinema.org/a/6eudi47vuw1dgges25bnpver4&quot;&gt;&lt;img src=&quot;https://asciinema.org/a/6eudi47vuw1dgges25bnpver4.png&quot; alt=&quot;asciicast&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I suppose you get it now, find the stuff you need in &lt;a href=&quot;https://awesome.re&quot;&gt;awesome lists of awesome lists&lt;/a&gt; and enjoy.&lt;/p&gt;
+
+&lt;h2 id=&quot;search-engine&quot;&gt;Search engine&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Why are you always typing &lt;code class=&quot;highlighter-rouge&quot;&gt;! something&lt;/code&gt; in your browser’s search bar?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Well I prefer using &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;duckduckgo&lt;/a&gt; search engine. It’s not tracking me and it has &lt;a href=&quot;https://duckduckgo.com/bang&quot;&gt;a lot of &lt;code class=&quot;highlighter-rouge&quot;&gt;bangs&lt;/code&gt;&lt;/a&gt;. See for yourself, try searching &lt;a href=&quot;https://duckduckgo.com/?q=%21wa+pikachu&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;!wa pikachu&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;take-notes&quot;&gt;Take notes&lt;/h2&gt;
+
+&lt;p&gt;There are plenty of tools for taking notes, I personally like &lt;a href=&quot;https://gist.github.com/&quot;&gt;Github gists&lt;/a&gt; with &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;markdown&lt;/a&gt; and syntax highlighting. If you start noting things early, you’ll end up with a nice database of snippets where you can search for things. Bonus point if you put some of them public! :)&lt;/p&gt;
+
+&lt;h2 id=&quot;install-editorconfig-everywhere&quot;&gt;Install editorconfig everywhere&lt;/h2&gt;
+
+&lt;p&gt;Install &lt;a href=&quot;http://editorconfig.org/&quot;&gt;editorconfig&lt;/a&gt; in all your IDEs and Text editors so you don’t mess up line endings and tab spacing anymore. ;)&lt;/p&gt;
+
+&lt;h2 id=&quot;learning-a-new-programming-language&quot;&gt;Learning a new programming language&lt;/h2&gt;
+
+&lt;p&gt;You know c# but you never wrote a line of python? Have a look to &lt;a href=&quot;https://learnxinyminutes.com/&quot;&gt;Learn X in Y Minutes&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 May 2017 12:00:00 -0400</pubDate>
+        <link>https://gableroux.com/awesome/2017/05/07/things-i-share-to-programmers/</link>
+        <guid isPermaLink="true">https://gableroux.com/awesome/2017/05/07/things-i-share-to-programmers/</guid>
+        
+        <category>awesome</category>
+        
+        <category>guides</category>
+        
+        <category>curated-list</category>
+        
+        <category>comics</category>
+        
+        
+        <category>awesome</category>
+        
+      </item>
+    
+      <item>
+        <title>Introduction to Shaders</title>
+        <description>&lt;p&gt;I gave a presentation with &lt;a href=&quot;https://github.com/jrobichaud&quot;&gt;Jules Robichaud-Gagnon&lt;/a&gt; about &lt;a href=&quot;https://en.wikipedia.org/wiki/Shader&quot;&gt;Shaders&lt;/a&gt; and &lt;a href=&quot;compute-shaders&quot;&gt;Compute Shaders&lt;/a&gt; at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt;. Here are the slides.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;We did a small introduction to shaders, how it works from GPU -&amp;gt; vector world -&amp;gt; Sampling -&amp;gt; raster world -&amp;gt; Your eyes. We also covered how we can use the GPU to calculate physics using Compute Shaders.&lt;/p&gt;
+
+&lt;h2 id=&quot;slides&quot;&gt;slides&lt;/h2&gt;
+
+&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
+    &lt;div class=&quot;responsive-iframe&quot;&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x10.gif&quot; /&gt;
+        &lt;iframe src=&quot;https://docs.google.com/presentation/d/1Dc-4ixLNzCusXy8nZ_XSFk4l-CuCbSHmNgBa2IRIEaw/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;demo&quot;&gt;demo&lt;/h2&gt;
+
+&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
+    &lt;div class=&quot;responsive-iframe&quot;&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;iframe src=&quot;https://www.youtube.com/embed/Cs6IpltBAWo?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;cool-links&quot;&gt;Cool links&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gamedevelopment.tutsplus.com/tutorials/a-beginners-guide-to-coding-graphics-shaders--cms-23313&quot;&gt;Nice tutorial about Shaders on Tutsplus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.shadertoy.com/&quot;&gt;ShaderToy&lt;/a&gt;, an awesome shader web playground&lt;/li&gt;
+  &lt;li&gt;[Shader Forge Unity package][shaderforge] to build shaders using a visual editor&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.assetstore.unity3d.com/en/#!/content/39959&quot;&gt;UBER Standard Shader Ultra Unity Package&lt;/a&gt; for some great ready to use shaders&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.00jknight.com/blog/gpu-accelerated-voxel-physics-solver&quot;&gt;GPU Accelerated Voxel Solver&lt;/a&gt; amazing Compute Shader demo with Unity Metal support&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wiki.unity3d.com/index.php/MirrorReflection4&quot;&gt;Unity3d Mirror script&lt;/a&gt; which is not a shader, but does reflect some of the shaders&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;screenshots-and-photos&quot;&gt;Screenshots and photos&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/shaders/shaders-pom-example.jpg&quot; alt=&quot;Shaders-pom-example&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Shaders POM example&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/shaders/jules-and-gabriel-at-the-saglacio.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jules, me and a cube&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/shaders/jules-and-gabriel-at-the-saglacio-on-mac.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jules, me and a cube on a mac, credits &lt;a href=&quot;https://twitter.com/LeBodro&quot;&gt;@LeBodro&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Mon, 10 Apr 2017 18:30:00 -0400</pubDate>
+        <link>https://gableroux.com/presentation/2017/04/10/introduction-to-shaders-saglacio/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2017/04/10/introduction-to-shaders-saglacio/</guid>
+        
+        <category>saglacio</category>
+        
+        <category>unity3d</category>
+        
+        <category>shaders</category>
+        
+        <category>compute-shaders</category>
+        
+        
+        <category>presentation</category>
+        
+      </item>
+    
+      <item>
+        <title>Arch Linux is cool, but I need to ship software</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt; is a very powerful and amazing linux distribution. You get full control on everything. It has bleeding edge software and it’s surprisingly stable if you know what you’re doing. However, sometimes, things can go wrong.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;You want a really neat linux distribution with a rock solid package manager that lets you install whatever you want? You’re a linux power user tired of &lt;strong&gt;installing &lt;a href=&quot;https://launchpad.net/ubuntu/+ppas&quot;&gt;so many PPAs&lt;/a&gt; to get what you want (Ubuntu)?&lt;/strong&gt;  Arch Linux is what you’re looking for! It has a powerful package manager (&lt;a href=&quot;https://wiki.archlinux.org/index.php/pacman&quot;&gt;pacman&lt;/a&gt; or you can also install &lt;a href=&quot;https://github.com/aurapm/aura&quot;&gt;aura&lt;/a&gt;), top notch documentation and it’s really fun to use. It may not be as easy as you’d think, but I’m sure you can get it to work. In this presentation, I talked about my journey with one of the most amazing Linux distro I ever used. &amp;lt;3&lt;/p&gt;
+
+&lt;h2 id=&quot;enjoy-the-slides&quot;&gt;Enjoy the slides&lt;/h2&gt;
+
+&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
+    &lt;div class=&quot;responsive-iframe&quot;&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
+        &lt;iframe src=&quot;https://docs.google.com/presentation/d/1XN_qvV55ktoHY9QiRiqjTXtCfUTS9X-QANCujlmKZXE/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;links-you-need-to-visit&quot;&gt;Links you need to visit&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Arch wiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/aleksandar-todorovic/awesome-linux&quot;&gt;Awesome linux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://antergos.com/&quot;&gt;Anthergos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Anthergos will make your setup easier (as shown by the step by step in the slides). The only sad thing about Anthergos is that the Arch community may bitch you for not using raw commands to setup your distro. I personally think it’s ok to use it. It’s cool to do everything by your own, but &lt;em&gt;sometimes&lt;/em&gt; it’s easier with a UI. Way better than using windows anyway IMHO ;)&lt;/p&gt;
+
+&lt;p&gt;Oh and btw, you can use Arch Linux as a server, but I think it’s more clever to use a distro where all your coworkers are comfortable with.&lt;/p&gt;
+
+&lt;h2 id=&quot;spoiler-alert-1-i-moved-to-fedora&quot;&gt;Spoiler alert #1: I moved to Fedora&lt;/h2&gt;
+
+&lt;p&gt;One thing I really liked about Fedora is its &lt;strong&gt;Problem Reporting application&lt;/strong&gt; that comes with it.&lt;/p&gt;
+
+&lt;!-- TODO: add a picture of Problem Reporting application here --&gt;
+
+&lt;p&gt;My laptop was kind of easy to break. Bad Nvidia support, multi display glitches, CPU temperature above threshold, random crashes whatever reason, etc.&lt;/p&gt;
+
+&lt;p&gt;If you move to &lt;a href=&quot;https://getfedora.org/&quot;&gt;Fedora&lt;/a&gt;, you may like to use this cool software: &lt;a href=&quot;https://www.folkswithhats.org/&quot;&gt;Fedy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Fedy lets you install multimedia codecs and additional software that Fedora doesn’t want to ship, such as MP3 support, Adobe Flash, Oracle Java, and much more, with just a few clicks.
+To install Fedy in Fedora, open a Terminal and run the following command:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    curl https://www.folkswithhats.org/installer | sudo bash&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Note: don’t install things from the internet before reading it, so read it first&lt;/em&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    curl https://www.folkswithhats.org/installer&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Also, most of the internet will tell you to &lt;em&gt;disable SELinux&lt;/em&gt;. &lt;strong&gt;Don’t do this&lt;/strong&gt;. You’ll lose time with it and you won’t figure out it’s that piece of software that &lt;a href=&quot;http://www.projectatomic.io/blog/2016/03/dwalsh_selinux_containers/&quot;&gt;blocked your docker volumes&lt;/a&gt; (&lt;a href=&quot;http://stackoverflow.com/questions/24288616/permission-denied-on-accessing-host-directory-in-docker&quot;&gt;StackOverflow question&lt;/a&gt;), but you should really &lt;strong&gt;&lt;a href=&quot;https://stopdisablingselinux.com/&quot;&gt;stop disabling selinux&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;spoiler-alert-2-i-returned-to-macos&quot;&gt;Spoiler alert #2: I returned to MacOS&lt;/h2&gt;
+
+&lt;p&gt;Sometimes, your job gives you a laptop with an apple logo  to ship ios apps. If that’s also your case, have a look to this &lt;a href=&quot;https://github.com/iCHAIT/awesome-macOS&quot;&gt;amazing MacOS awesome list&lt;/a&gt;. Sounds like I’ll prepare a presentation about productivity tools on MacOS but in the meantime, have a look to &lt;a href=&quot;/awesome/2017/05/07/things-i-share-to-programmers/&quot;&gt;Things I share to programmers&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 24 Jan 2017 18:00:00 -0500</pubDate>
+        <link>https://gableroux.com/presentation/2017/01/24/arch-is-cool-but-i-need-to-ship-software/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2017/01/24/arch-is-cool-but-i-need-to-ship-software/</guid>
+        
+        <category>saglacio</category>
+        
+        <category>linux</category>
+        
+        <category>archlinux</category>
+        
+        <category>fedora</category>
+        
+        
+        <category>presentation</category>
+        
+      </item>
     
       <item>
         <title>Y U NO GIT</title>
@@ -23,7 +389,7 @@ Every programmer should learn to use it as soon as they can. Git will save you t
 
 &lt;h2 id=&quot;version-control&quot;&gt;Version control?&lt;/h2&gt;
 
-&lt;p&gt;YES! You want to time travel in your code and into other people’s code! Git is a &lt;strong&gt;collaboration tool&lt;/strong&gt;, it’s about &lt;strong&gt;being able to work with people&lt;/strong&gt; but it’s also great for working alone! Did you know &lt;strong&gt;github currently has more than 2.7M repositories&lt;/strong&gt; publicly available? Please, don’t reinvent the wheel!&lt;/p&gt;
+&lt;p&gt;YES! You want to time travel in your code and into other people’s code! Git is a &lt;strong&gt;collaboration tool&lt;/strong&gt;, it’s about &lt;strong&gt;being able to work with people&lt;/strong&gt; but it’s also great for working alone! Did you know &lt;strong&gt;Github currently has more than 2.7M repositories&lt;/strong&gt; publicly available? Please, don’t reinvent the wheel!&lt;/p&gt;
 
 &lt;h2 id=&quot;learn-git&quot;&gt;Learn git&lt;/h2&gt;
 
@@ -39,7 +405,7 @@ Every programmer should learn to use it as soon as they can. Git will save you t
 
 &lt;h2 id=&quot;are-you-a-student&quot;&gt;Are you a student?&lt;/h2&gt;
 
-&lt;p&gt;Save money, get github pro for free and way more with the &lt;a href=&quot;https://education.github.com/pack&quot;&gt;github backpack&lt;/a&gt;! If you’re only looking for private repositories (ex, for your homeworks), &lt;a href=&quot;https://bitbucket.org/&quot;&gt;bitbucket&lt;/a&gt; offers free private repositories for teams &amp;lt; 5. :)&lt;/p&gt;
+&lt;p&gt;Save money, get Github pro for free and way more with the &lt;a href=&quot;https://education.github.com/pack&quot;&gt;github backpack&lt;/a&gt;! If you’re only looking for private repositories (ex, for your homework), &lt;a href=&quot;https://bitbucket.org/&quot;&gt;Bitbucket&lt;/a&gt; offers free private repositories for teams &amp;lt; 5. :)&lt;/p&gt;
 
 &lt;h2 id=&quot;handy-resources&quot;&gt;Handy resources&lt;/h2&gt;
 
@@ -79,11 +445,11 @@ Simplified man pages.
 
 &lt;h2 id=&quot;slides&quot;&gt;Slides&lt;/h2&gt;
 
-&lt;p&gt;When writing my slides, &lt;strong&gt;&lt;a href=&quot;https://asciinema.org/a/6eudi47vuw1dgges25bnpver4&quot;&gt;I recorded a 22min git session&lt;/a&gt;&lt;/strong&gt; and created an &lt;strong&gt;&lt;a href=&quot;https://github.com/GabLeRoux/git-commands-example&quot;&gt;example git repository on github&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;When writing my slides, &lt;strong&gt;&lt;a href=&quot;https://asciinema.org/a/6eudi47vuw1dgges25bnpver4&quot;&gt;I recorded a 22min git session&lt;/a&gt;&lt;/strong&gt; and created an &lt;strong&gt;&lt;a href=&quot;https://github.com/GabLeRoux/git-commands-example&quot;&gt;example git repository on Github&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;http://placehold.it/16x9&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/1ynQabkehsa3bXKSh3ZTS36vfho5_zymROdu_wGxMwQc/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -92,15 +458,13 @@ Simplified man pages.
 
 </description>
         <pubDate>Mon, 21 Nov 2016 21:00:00 -0500</pubDate>
-        <link>https://gableroux.com/blog/presentation/2016/11/21/version-control/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2016/11/21/version-control/</guid>
+        <link>https://gableroux.com/presentation/2016/11/21/version-control/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2016/11/21/version-control/</guid>
         
         <category>version-control</category>
         
         <category>git</category>
         
-        
-        <category>blog</category>
         
         <category>presentation</category>
         
@@ -108,7 +472,7 @@ Simplified man pages.
     
       <item>
         <title>InfluxDB Telegraf and Grafana &lt;3</title>
-        <description>&lt;p&gt;Do you like graphs? &lt;code class=&quot;highlighter-rouge&quot;&gt;Grafana&lt;/code&gt;! What about storing &lt;em&gt;time series&lt;/em&gt;? &lt;code class=&quot;highlighter-rouge&quot;&gt;InfluxDB&lt;/code&gt;! And grabbing informations from many sources easily? &lt;code class=&quot;highlighter-rouge&quot;&gt;Telegraf&lt;/code&gt;! Here we go!&lt;/p&gt;
+        <description>&lt;p&gt;Do you like graphs? &lt;code class=&quot;highlighter-rouge&quot;&gt;Grafana&lt;/code&gt;! What about storing &lt;em&gt;time series&lt;/em&gt;? &lt;code class=&quot;highlighter-rouge&quot;&gt;InfluxDB&lt;/code&gt;! And grabbing information from many sources easily? &lt;code class=&quot;highlighter-rouge&quot;&gt;Telegraf&lt;/code&gt;! Here we go!&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -120,7 +484,7 @@ Simplified man pages.
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;http://placehold.it/16x9&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&amp;amp;loop=false&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -129,8 +493,8 @@ Simplified man pages.
 
 </description>
         <pubDate>Tue, 21 Jun 2016 19:00:00 -0400</pubDate>
-        <link>https://gableroux.com/blog/presentation/2016/06/21/influxdb-telegraf-grafana/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2016/06/21/influxdb-telegraf-grafana/</guid>
+        <link>https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2016/06/21/influxdb-telegraf-grafana/</guid>
         
         <category>saglacio</category>
         
@@ -140,8 +504,6 @@ Simplified man pages.
         
         <category>grafana</category>
         
-        
-        <category>blog</category>
         
         <category>presentation</category>
         
@@ -166,13 +528,13 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
 &lt;p&gt;I’ll jump straight to what’s interesting; What are the steps to have a fully working and valid free https certificate on a website behind &lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt; and how to get a nice score on &lt;a href=&quot;https://www.ssllabs.com/ssltest/&quot;&gt;ssltest&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Most of the things needed to get started are described on &lt;a href=&quot;https://letsencrypt.org/getting-started/&quot;&gt;Let’s Encrypt getting started page&lt;/a&gt; along with most up to date informations.&lt;/p&gt;
+&lt;p&gt;Most of the things needed to get started are described on &lt;a href=&quot;https://letsencrypt.org/getting-started/&quot;&gt;Let’s Encrypt getting started page&lt;/a&gt; along with most up to date information.&lt;/p&gt;
 
-&lt;p&gt;Have a look to &lt;a href=&quot;https://gethttpsforfree.com/&quot;&gt;Get HTTPS for free! on github&lt;/a&gt; which shows you what happens in the background when using the client. Everything is client side!&lt;/p&gt;
+&lt;p&gt;Have a look to &lt;a href=&quot;https://gethttpsforfree.com/&quot;&gt;Get HTTPS for free! on Github&lt;/a&gt; which shows you what happens in the background when using the client. Everything is client side!&lt;/p&gt;
 
-&lt;h3 id=&quot;install-letsencrypt&quot;&gt;Install letsencrypt&lt;/h3&gt;
+&lt;h3 id=&quot;install-letsencrypt&quot;&gt;Install Letsencrypt&lt;/h3&gt;
 
-&lt;p&gt;Grab letsencrypt official client on your server this way:&lt;/p&gt;
+&lt;p&gt;Grab Letsencrypt official client on your server this way:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/letsencrypt/letsencrypt
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;letsencrypt
@@ -225,7 +587,7 @@ It’s &lt;strong&gt;free&lt;/strong&gt;, &lt;strong&gt;automated&lt;/strong&gt;
 
   &lt;span class=&quot;kn&quot;&gt;index&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;index.html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-  &lt;span class=&quot;c1&quot;&gt;### SSL Config (using letsencrypt)
+  &lt;span class=&quot;c1&quot;&gt;### SSL Config (using Letsencrypt)
 &lt;/span&gt;  &lt;span class=&quot;kn&quot;&gt;ssl_certificate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/letsencrypt/live/gableroux.com/fullchain.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;kn&quot;&gt;ssl_certificate_key&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;/etc/letsencrypt/live/gableroux.com/privkey.pem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -355,7 +717,7 @@ openssl version -v
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Now let’s verify again localy&lt;/p&gt;
+&lt;p&gt;Now let’s verify again locally&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CVE-2016-2107 gableroux.com
 2016/06/10 13:32:17 Vulnerable: false
@@ -370,7 +732,7 @@ openssl version -v
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;https://placehold.it/16x9&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
         &lt;!-- todo: update me to https and host here --&gt;
         &lt;iframe src=&quot;https://letsencrypt.gableroux.com/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
@@ -380,8 +742,8 @@ openssl version -v
 
 </description>
         <pubDate>Wed, 30 Mar 2016 19:00:00 -0400</pubDate>
-        <link>https://gableroux.com/blog/presentation/2016/03/30/letsencrypt-saglacio/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2016/03/30/letsencrypt-saglacio/</guid>
+        <link>https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2016/03/30/letsencrypt-saglacio/</guid>
         
         <category>saglacio</category>
         
@@ -391,8 +753,6 @@ openssl version -v
         
         <category>revealjs</category>
         
-        
-        <category>blog</category>
         
         <category>presentation</category>
         
@@ -532,8 +892,8 @@ cat salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Thu, 18 Feb 2016 08:00:00 -0500</pubDate>
-        <link>https://gableroux.com/blog/tips/2016/02/18/keep-saltstack-colored-output/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/tips/2016/02/18/keep-saltstack-colored-output/</guid>
+        <link>https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/</link>
+        <guid isPermaLink="true">https://gableroux.com/tips/2016/02/18/keep-saltstack-colored-output/</guid>
         
         <category>saltstack</category>
         
@@ -541,8 +901,6 @@ cat salt.log&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
         
         <category>output</category>
         
-        
-        <category>blog</category>
         
         <category>tips</category>
         
@@ -557,7 +915,7 @@ This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal si
 
 &lt;h2 id=&quot;why-jekyll&quot;&gt;Why jekyll?&lt;/h2&gt;
 
-&lt;p&gt;I had a small anoying problem with Pelican’s assets plugin and didn’t want to put time on fixing this. I remember telling myself:&lt;/p&gt;
+&lt;p&gt;I had a small annoying problem with Pelican’s assets plugin and didn’t want to put time on fixing this. I remember telling myself:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Ok I’ll continue writing on my blog once it’s fixed…&lt;/p&gt;
@@ -565,7 +923,7 @@ This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal si
   &lt;p&gt;&lt;img src=&quot;/images/memes/ahah-good-one.jpg&quot; alt=&quot;Ahah good one&quot; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Switching to an other static site generator ended up being &lt;strong&gt;way faster&lt;/strong&gt; than playing with my old code. Yeah, I’m a bit lazy, &lt;a href=&quot;http://www.goodreads.com/quotes/568877-i-choose-a-lazy-person-to-do-a-hard-job&quot;&gt;that makes good programers&lt;/a&gt; right?. :)&lt;/p&gt;
+&lt;p&gt;Switching to an other static site generator ended up being &lt;strong&gt;way faster&lt;/strong&gt; than playing with my old code. Yeah, I’m a bit lazy, &lt;a href=&quot;http://www.goodreads.com/quotes/568877-i-choose-a-lazy-person-to-do-a-hard-job&quot;&gt;that makes good programmers&lt;/a&gt; right?. :)&lt;/p&gt;
 
 &lt;p&gt;Now that everything is ok, I’ll follow &lt;a href=&quot;https://www.staticgen.com/jekyll&quot;&gt;jekyll’s Philosophy&lt;/a&gt;;&lt;/p&gt;
 
@@ -587,13 +945,13 @@ This site is still &lt;em&gt;maintained&lt;/em&gt;! I was running my personal si
 
 &lt;h3 id=&quot;saglac-io&quot;&gt;&lt;a href=&quot;http://saglac.io/&quot;&gt;SagLac IO&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;I gave a few presentations at the  about awesome subjects such as Coffeescript, &lt;a href=&quot;/blog/presentation/2015/10/28/hubot-saglacio/&quot;&gt;HUBOT - Improve and reduce employee efficiency&lt;/a&gt; and &lt;a href=&quot;/blog/presentation/2015/06/03/saltstack-saglacio/&quot;&gt;SaltStack&lt;/a&gt;. I’ll keep sharing my presentations on my website.&lt;/p&gt;
+&lt;p&gt;I gave a few presentations at the  about awesome subjects such as Coffeescript, &lt;a href=&quot;/presentation/2015/10/28/hubot-saglacio/&quot;&gt;HUBOT - Improve and reduce employee efficiency&lt;/a&gt; and &lt;a href=&quot;/presentation/2015/06/03/saltstack-saglacio/&quot;&gt;SaltStack&lt;/a&gt;. I’ll keep sharing my presentations on my website.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://saglac.io/&quot;&gt;&lt;img src=&quot;/images/saglacio/saglacio.jpg&quot; alt=&quot;SagLacIO&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;totema-studio&quot;&gt;&lt;a href=&quot;http://totemastudio.com/&quot;&gt;Totema Studio&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;I started a partnership with some firends, an independent video game Studio where I build awesome games with very talented people.&lt;/p&gt;
+&lt;p&gt;I started a partnership with some fiends, an independent video game Studio where I build awesome games with very talented people.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://totemastudio.com/&quot;&gt;&lt;img src=&quot;/images/totemastudio-cover.jpg&quot; alt=&quot;Totema Studio&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -605,13 +963,11 @@ Stay tuned!&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 02 Feb 2016 12:00:00 -0500</pubDate>
-        <link>https://gableroux.com/blog/news/2016/02/02/whats-up/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/news/2016/02/02/whats-up/</guid>
+        <link>https://gableroux.com/news/2016/02/02/whats-up/</link>
+        <guid isPermaLink="true">https://gableroux.com/news/2016/02/02/whats-up/</guid>
         
         <category>tlm saglacio totemastudio</category>
         
-        
-        <category>blog</category>
         
         <category>news</category>
         
@@ -663,17 +1019,15 @@ Stay tuned!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/python-interpreter-autocompletion.png&quot; alt=&quot;pythonrc terminal example&quot; class=&quot;center-block&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;All of your tests in a local interpreter are now recoreded to &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.pyhistory&lt;/code&gt; which could be useful and tab auto completion is just so usefull when experimenting with modules from the interwebs :)&lt;/p&gt;
+&lt;p&gt;All of your tests in a local interpreter are now recorded to &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.pyhistory&lt;/code&gt; which could be useful and tab auto completion is just so useful when experimenting with modules from the interwebs :)&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 20 Jan 2016 10:00:00 -0500</pubDate>
-        <link>https://gableroux.com/blog/python/2016/01/20/python-interpreter-autocomplete/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/python/2016/01/20/python-interpreter-autocomplete/</guid>
+        <link>https://gableroux.com/python/2016/01/20/python-interpreter-autocomplete/</link>
+        <guid isPermaLink="true">https://gableroux.com/python/2016/01/20/python-interpreter-autocomplete/</guid>
         
         <category>dotfile history python pythonrc autocomplete</category>
         
-        
-        <category>blog</category>
         
         <category>python</category>
         
@@ -687,341 +1041,22 @@ Stay tuned!&lt;/p&gt;
 
 &lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
     &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;http://placehold.it/16x9&quot; /&gt;
+        &lt;img class=&quot;ratio&quot; src=&quot;/images/layout/placeholder_16x9.gif&quot; /&gt;
         &lt;iframe src=&quot;https://docs.google.com/presentation/d/12mfmFRzwQ6WG_DSRR4ktEjU7LHmA3XFemhYaNdYswQA/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
 </description>
         <pubDate>Wed, 28 Oct 2015 19:00:00 -0400</pubDate>
-        <link>https://gableroux.com/blog/presentation/2015/10/28/hubot-saglacio/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2015/10/28/hubot-saglacio/</guid>
+        <link>https://gableroux.com/presentation/2015/10/28/hubot-saglacio/</link>
+        <guid isPermaLink="true">https://gableroux.com/presentation/2015/10/28/hubot-saglacio/</guid>
         
         <category>saglacio</category>
         
         <category>hubot</category>
         
         
-        <category>blog</category>
-        
         <category>presentation</category>
-        
-      </item>
-    
-      <item>
-        <title>Saltstack presentation at the SagLacIO</title>
-        <description>&lt;p&gt;I gave a presentation at the &lt;a href=&quot;http://saglac.io&quot;&gt;SagLacIO&lt;/a&gt; about &lt;a href=&quot;http://saltstack.com/&quot;&gt;SaltStack&lt;/a&gt; with &lt;a href=&quot;https://www.linkedin.com/in/micael-bergeron-76ba8976&quot;&gt;Micael Bergeron&lt;/a&gt;. Here are the slides.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;div class=&quot;responsive-iframe-wrapperr&quot;&gt;
-    &lt;div class=&quot;responsive-iframe&quot;&gt;
-        &lt;img class=&quot;ratio&quot; src=&quot;http://placehold.it/16x9&quot; /&gt;
-        &lt;iframe src=&quot;https://docs.google.com/presentation/d/1JVwUZwpbWZJY6_stEKqGR1st71R7fX8HN4qVGxX1KlY/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;cool-stuff&quot;&gt;Cool stuff&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/micaelbergeron/&quot;&gt;Micael&lt;/a&gt; created a &lt;a href=&quot;https://github.com/micaelbergeron/salt.minecraft&quot;&gt;Minecraft saltstack &lt;i class=&quot;fa fa-github&quot;&gt;&lt;/i&gt; repository&lt;/a&gt; to easily deploy a minecraft server using &lt;a href=&quot;https://www.spigotmc.org/&quot;&gt;SpigotMC&lt;/a&gt; and &lt;a href=&quot;http://msmhq.com/&quot;&gt;MSM&lt;/a&gt;. :)&lt;br /&gt;
-&lt;a href=&quot;https://github.com/micaelbergeron/salt.minecraft&quot;&gt;Go star this thing!&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 03 Jun 2015 12:00:00 -0400</pubDate>
-        <link>https://gableroux.com/blog/presentation/2015/06/03/saltstack-saglacio/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/presentation/2015/06/03/saltstack-saglacio/</guid>
-        
-        <category>saglacio</category>
-        
-        <category>saltstack</category>
-        
-        <category>minecraft</category>
-        
-        <category>github</category>
-        
-        
-        <category>blog</category>
-        
-        <category>presentation</category>
-        
-      </item>
-    
-      <item>
-        <title>Pelican Gruntfile</title>
-        <description>&lt;p&gt;Now that I use &lt;a href=&quot;http://www.gruntjs.com/&quot;&gt;grunt, the JavaScript Task Runner&lt;/a&gt; my life has changed! It makes task automation so cool that it is a must have in every web project (and even sometime in other projects!). There’s also a great alternative called &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp.js&lt;/a&gt;. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool &lt;em&gt;yet&lt;/em&gt;.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;pelican-automation&quot;&gt;Pelican automation&lt;/h2&gt;
-
-&lt;p&gt;I searched &lt;code class=&quot;highlighter-rouge&quot;&gt;pelican gruntfile&lt;/code&gt; on &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;duckduckgo&lt;/a&gt; and found nothing very interesting. There is this &lt;a href=&quot;https://github.com/chuwy/grunt-pelican/&quot;&gt;grunt-pelican repo&lt;/a&gt; but it doesn’t seem to work right at the time of writing this article and its ReadMe is missing some code.&lt;/p&gt;
-
-&lt;p&gt;Because pelican is easy to use, I decided to make my own &lt;code class=&quot;highlighter-rouge&quot;&gt;gruntfile&lt;/code&gt; instead! After around half an hour, I managed to get something interesting.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to&quot;&gt;How to&lt;/h3&gt;
-
-&lt;p&gt;First, create a &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file to save dependencies using this command:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm init&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then, install the fun stuff&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;npm install --save-dev grunt-coffeelint grunt-contrib-coffee grunt-contrib-connect grunt-contrib-jshint   grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Everything will be saved in your &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;, so next time you want to install them, you only have to run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt;. The package file will contain something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;devDependencies&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;coffeelint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^1.5.6&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;grunt-coffeelint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0.0.13&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;grunt-contrib-coffee&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^0.11.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;grunt-contrib-connect&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^0.8.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;grunt-contrib-jshint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^0.10.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;grunt-contrib-sass&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^0.7.4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;grunt-contrib-watch&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^0.6.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;grunt-shell&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^0.7.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;load-grunt-tasks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;^0.6.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;the-gruntfile&quot;&gt;The Gruntfile&lt;/h3&gt;
-
-&lt;p&gt;Here’s my awesome &lt;code class=&quot;highlighter-rouge&quot;&gt;Gruntfile.coffee&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;# Load all grunt tasks.&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'load-grunt-tasks'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;initConfig&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# watch for files and load tasks when files change&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;coffee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'coffeelint'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'jshint'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;md&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'content/**/*.md'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'!output'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'!node_modules'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/css/**/*.scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'scss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;livereload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'output/**/*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;# execute pelican to generate static files&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;pelican&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;pelican&quot;&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'expanded'&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/css/main.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/css/main.scss'&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;coffeelint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;configFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'coffeelint.json'&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;jshintrc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/jshintrc'&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;coffee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;expand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'theme/gableroux/static/js/*.coffee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;ext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'.js'&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8000&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;hostname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'*'&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'output'&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'output'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-  &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;registerTask&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;'coffeelint'&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;# 'jshint'&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;# Default task when typing grunt without parameter in the cli.&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;registerTask&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'default'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;'test'&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;'shell'&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;'connect'&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;'watch'&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: make sure you have &lt;code class=&quot;highlighter-rouge&quot;&gt;pelican&lt;/code&gt; installed with &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install pelican&lt;/code&gt;. Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;gableroux&lt;/code&gt; with your own theme name (where your magic files are stored) and enjoy the Grunt awesomeness by running &lt;code class=&quot;highlighter-rouge&quot;&gt;grunt&lt;/code&gt; in a terminal.&lt;/p&gt;
-
-&lt;p&gt;Here’s the &lt;code class=&quot;highlighter-rouge&quot;&gt;jshintrc&lt;/code&gt; file I used:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;esnext&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;bitwise&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;camelcase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;curly&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;eqeqeq&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;immed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;indent&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;latedef&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;newcap&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;noarg&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;quotmark&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;single&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;undef&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;unused&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;strict&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;trailing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;smarttabs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;white&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And my &lt;code class=&quot;highlighter-rouge&quot;&gt;coffeelint.json&lt;/code&gt; file:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;indentation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;max_line_length&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ignore&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;line_endings&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;arrow_spacing&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;space_operators&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;cyclomatic_complexity&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;empty_constructor_needs_parens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;no_empty_param_list&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;no_unnecessary_fat_arrows&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;level&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Why coffeescript? Visit &lt;a href=&quot;http://coffeescript.org/&quot;&gt;coffeescript’s website&lt;/a&gt;, click on “try coffeescript”, copy/paste my Gruntfile.coffee and see how it is easier to read in coffee. Consider this as syntax sugar, but when it comes to &lt;a href=&quot;http://coffeescript.org/#classes&quot;&gt;extending javascript classes&lt;/a&gt;, I really prefer using coffeescript.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;the-fun-part&quot;&gt;The fun part&lt;/h2&gt;
-&lt;p&gt;Now, when I write new content in markdown files, or when I edit my theme, my browser &lt;strong&gt;automagically&lt;/strong&gt; refresh my website using &lt;a href=&quot;https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei&quot;&gt;LiveReload Chrome Extension&lt;/a&gt; on my second screen. Having a workflow updating like this lets me write quality content (can you confirm this?), instead of running a bunch of scripts manually every time only to fix a typo on a blog post.&lt;/p&gt;
-
-&lt;p&gt;Grunt rocks.&lt;br /&gt;
-Enjoy&lt;/p&gt;
-
-&lt;h2 id=&quot;september-2015-edit&quot;&gt;September 2015 edit&lt;/h2&gt;
-
-&lt;p&gt;You should use &lt;a href=&quot;http://www.browsersync.io/&quot;&gt;Browser Sync&lt;/a&gt; instead, it’s even more awesome!&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 17 Aug 2014 12:00:00 -0400</pubDate>
-        <link>https://gableroux.com/blog/pelican/2014/08/17/pelican-gruntfile/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/pelican/2014/08/17/pelican-gruntfile/</guid>
-        
-        <category>pelican grunt gruntfile coffeescript</category>
-        
-        
-        <category>blog</category>
-        
-        <category>pelican</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello Pelican</title>
-        <description>&lt;p&gt;Hi there,&lt;br /&gt;
-Welcome to my blog. This is my first post (in fact, it’s my second). I first attempted to create my blog with &lt;a href=&quot;http://wagtail.io/&quot;&gt;wagtail&lt;/a&gt; but I had a &lt;a href=&quot;http://stackoverflow.com/questions/24976561/wagtail-pages-giving-none-url-with-live-status&quot;&gt;blocking issue&lt;/a&gt;. &lt;em&gt;Edit: problem solved, but I’m happy with pelican!&lt;/em&gt; Anyway, I’m glad you’re here, I made a branch and moved my work to &lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;It’s probably more conveniant for my simple website. I can’t tell alot about pelican as I did not play much with it yet, but it seems very easy to work with. Oh and I love writing in &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt;, that’s probably because of Github ReadMe files Eh.&lt;/p&gt;
-
-&lt;h2 id=&quot;pelican&quot;&gt;Pelican&lt;/h2&gt;
-
-&lt;p&gt;Here’s how I got started with &lt;code class=&quot;highlighter-rouge&quot;&gt;pelican&lt;/code&gt; running &lt;code class=&quot;highlighter-rouge&quot;&gt;$ pelican-quickstart&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;pelican-quickstart
-Welcome to pelican-quickstart v3.4.0.
-
-This script will help you create a new Pelican-based website.
-
-Please answer the following questions so this script can generate the files
-needed by Pelican.
-
-&amp;gt; Where do you want to create your new web site? [.]
-&amp;gt; What will be the title of this web site? GabLeRoux
-&amp;gt; Who will be the author of this web site? GabLeRoux
-&amp;gt; What will be the default language of this web site? [en]
-&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   (Y/n) y
-&amp;gt; What is your URL prefix? (see above example; no trailing slash) http://www.gableroux.com
-&amp;gt; Do you want to enable article pagination? (Y/n) y
-&amp;gt; How many articles per page do you want? [10] 5
-&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? (Y/n) y
-&amp;gt; Do you want an auto-reload &amp;amp; simpleHTTP script to assist with theme and site development? (Y/n) y
-&amp;gt; Do you want to upload your website using FTP? (y/N) n
-&amp;gt; Do you want to upload your website using SSH? (y/N) y
-&amp;gt; What is the hostname of your SSH server? [localhost] gableroux.com
-&amp;gt; What is the port of your SSH server? [22]
-&amp;gt; What is your username on that server? [root] ***************
-&amp;gt; Where do you want to put your web site on that server? [/var/www] *********************
-&amp;gt; Do you want to upload your website using Dropbox? (y/N) n
-&amp;gt; Do you want to upload your website using S3? (y/N) n
-&amp;gt; Do you want to upload your website using Rackspace Cloud Files? (y/N) n
-&amp;gt; Do you want to upload your website using GitHub Pages? (y/N) n
-Done. Your new project is available at *******/***/********/*****
-�F�&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Ok so not quite sure about that last line, but my stuff is ready to go now :). Thanks to the &lt;a href=&quot;http://docs.getpelican.com/en/&quot;&gt;documentation&lt;/a&gt;, it’s very well explained and easy to follow.&lt;/p&gt;
-
-&lt;h3 id=&quot;plugins&quot;&gt;Plugins!&lt;/h3&gt;
-
-&lt;p&gt;Now that my site is up and running, I’ll need to try the &lt;a href=&quot;https://github.com/getpelican/pelican-plugins&quot;&gt;plugins&lt;/a&gt;. I’m only using the &lt;code class=&quot;highlighter-rouge&quot;&gt;sitemap&lt;/code&gt; plugin atm thow :P&lt;/p&gt;
-
-&lt;h3 id=&quot;themes&quot;&gt;Themes!&lt;/h3&gt;
-
-&lt;p&gt;If you’re reading this post, you see the theme I made. If you want to create your own theme, that’s easy! have a look at &lt;a href=&quot;https://github.com/getpelican/pelican-themes&quot;&gt;pelican-themes&lt;/a&gt; on GitHub.&lt;/p&gt;
-
-&lt;p&gt;You can then insert this in your pelican settings:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    THEME &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/home/user/pelican-themes/theme-name&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;whats-next&quot;&gt;What’s next&lt;/h2&gt;
-
-&lt;p&gt;There’s not much on my site right now, but I’ll keep updating this place by posting cool stuff. I’ll be using &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt; on this site so feel free to comment and talk about stuff. I have a small &lt;a href=&quot;/todo.html&quot;&gt;todo list here&lt;/a&gt;, I’ll add some things to fix here and there and will note some articles and apps to talk about ^^.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 27 Jul 2014 11:00:00 -0400</pubDate>
-        <link>https://gableroux.com/blog/news/2014/07/27/hello-pelican/</link>
-        <guid isPermaLink="true">https://gableroux.com/blog/news/2014/07/27/hello-pelican/</guid>
-        
-        <category>Pelican</category>
-        
-        <category>hello-world</category>
-        
-        
-        <category>blog</category>
-        
-        <category>news</category>
         
       </item>
     

@@ -7,7 +7,7 @@ tags: saglacio influxdb telegraf grafana
 featured_image: /images/influxdb-telegraf-grafana.jpg
 ---
 
-Do you like graphs? `Grafana`! What about storing _time series_? `InfluxDB`! And grabbing informations from many sources easily? `Telegraf`! Here we go!
+Do you like graphs? `Grafana`! What about storing _time series_? `InfluxDB`! And grabbing information from many sources easily? `Telegraf`! Here we go!
 
 <!-- more -->
 
@@ -19,7 +19,7 @@ If you like this kind of stuff, have a look at the amazing [obazoud/awesome-dash
 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
-        <img class="ratio" src="http://placehold.it/16x9"/>
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif"/>
         <iframe src="https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
