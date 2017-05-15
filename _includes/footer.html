@@ -55,6 +55,34 @@
     </footer>
 </div>
 
+<!-- Screw you IE http://outdatedbrowser.com/ -->
+<script src="{{ '/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js | prepend: site.baseurl }}"></script>
+<script>
+    //event listener: DOM ready
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    //call plugin function after DOM ready
+    addLoadEvent(function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'transform',
+            languagePath: 'your_path/outdatedbrowser/lang/en.html'
+        })
+    });
+</script>
+
 <script src="{{ '/bower_components/jquery/dist/jquery.min.js' | prepend: site.baseurl }}" type="application/javascript"></script>
 <script src="{{ '/bower_components/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl }}" type="application/javascript"></script>
 <script src="{{ '/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js' | prepend: site.baseurl }}" type="application/javascript"></script>

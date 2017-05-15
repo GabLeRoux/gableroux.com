@@ -30,8 +30,15 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="{{ '/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/bower_components/github-fork-ribbon-css/gh-fork-ribbon.css' | prepend: site.baseurl }}" />
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="{{ '/bower_components/github-fork-ribbon-css/gh-fork-ribbon.ie.css' | prepend: site.baseurl }}" />
+    <![endif]-->
+
     <link rel="stylesheet" href="{{ '/bower_components/bootstrap/dist/css/bootstrap.min.css' | prepend: site.baseurl }}"/>
     <link rel="stylesheet" href="{{ '/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css' | prepend: site.baseurl }}"/>
+    <link rel="stylesheet" href="{{ '/bower_components/font-awesome/css/font-awesome.min.css' | prepend: site.baseurl }}"/>
     <link rel="stylesheet" href="{{ '/bower_components/font-awesome/css/font-awesome.min.css' | prepend: site.baseurl }}"/>
 
     <link rel="stylesheet" href="{{ '/css/main.min.css' | prepend: site.baseurl }}">
@@ -89,18 +96,21 @@
     {% endif %}
 
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
-                appId      : '253381494995396',
-                xfbml      : true,
-                version    : 'v2.5'
+                appId: '253381494995396',
+                xfbml: true,
+                version: 'v2.5'
             });
         };
 
-        (function(d, s, id){
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));

@@ -32,8 +32,15 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css">
+    <link rel="stylesheet" href="/bower_components/github-fork-ribbon-css/gh-fork-ribbon.css" />
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="/bower_components/github-fork-ribbon-css/gh-fork-ribbon.ie.css" />
+    <![endif]-->
+
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
 
     <link rel="stylesheet" href="/css/main.min.css">
@@ -87,18 +94,21 @@
     
 
     <script>
-        window.fbAsyncInit = function() {
+        window.fbAsyncInit = function () {
             FB.init({
-                appId      : '253381494995396',
-                xfbml      : true,
-                version    : 'v2.5'
+                appId: '253381494995396',
+                xfbml: true,
+                version: 'v2.5'
             });
         };
 
-        (function(d, s, id){
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
@@ -153,6 +163,9 @@
     </div>
 </nav>
 
+<a class="github-fork-ribbon" href="https://github.com/gableroux/gableroux.github.io" title="Fork me on GitHub">Fork me on GitHub</a>
+
+<div id="outdated"></div>
 
 
 <div class="navbar-no-header-spacer"></div>
@@ -377,6 +390,34 @@ cat salt.log</code></pre></figure>
         </div>
     </footer>
 </div>
+
+<!-- Screw you IE http://outdatedbrowser.com/ -->
+<script src=""></script>
+<script>
+    //event listener: DOM ready
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    //call plugin function after DOM ready
+    addLoadEvent(function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'transform',
+            languagePath: 'your_path/outdatedbrowser/lang/en.html'
+        })
+    });
+</script>
 
 <script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>

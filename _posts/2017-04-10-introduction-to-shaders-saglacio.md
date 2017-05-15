@@ -41,17 +41,17 @@ We did a small introduction to shaders, how it works from GPU -\> vector world -
 
 ## Screenshots and photos
 
+### [GPU Accelerated Voxel Solver][gpu-accelerated-voxel-physics-solver] example
+![00jknight GPU voxel explosion compute shaders gif](https://media.giphy.com/media/xUA7aOGKYaEtILpD68/giphy.gif)
+
+### Shaders POM example
 ![Shaders-pom-example](/images/shaders/shaders-pom-example.jpg)
 
-> Shaders POM example
+### Jules, me and a cube
+![Jules, me and a cube](/images/shaders/jules-and-gabriel-at-the-saglacio.jpg)
 
-![](/images/shaders/jules-and-gabriel-at-the-saglacio.jpg)
-
-> Jules, me and a cube
-
-![](/images/shaders/jules-and-gabriel-at-the-saglacio-on-mac.jpg)
-
-> Jules, me and a cube on a mac, credits [@LeBodro][@LeBodro]
+### Jules, me and a cube on a mac, credits [@LeBodro][@LeBodro]
+![Jules, me and a cube on a mac](/images/shaders/jules-and-gabriel-at-the-saglacio-on-mac.jpg)
 
 [unity3d-mirror]: http://wiki.unity3d.com/index.php/MirrorReflection4
 [uber]: https://www.assetstore.unity3d.com/en/#!/content/39959
