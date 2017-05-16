@@ -6,8 +6,8 @@
 </description>
     <link>https://gableroux.com/</link>
     <atom:link href="https://gableroux.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 May 2017 13:36:44 -0400</pubDate>
-    <lastBuildDate>Mon, 15 May 2017 13:36:44 -0400</lastBuildDate>
+    <pubDate>Mon, 15 May 2017 21:58:32 -0400</pubDate>
+    <lastBuildDate>Mon, 15 May 2017 21:58:32 -0400</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -20,11 +20,11 @@
 
 &lt;!-- more --&gt;
 
-&lt;p&gt;Hi, I’ve repeated myself quite a few times sharing these awesome things that people should know about so here it is in a single page! :)&lt;/p&gt;
+&lt;p&gt;Hi, I’ve repeated myself quite a few times and shared these awesome things to a few ones, so here they are on a single page! :)&lt;/p&gt;
 
 &lt;h2 id=&quot;where-are-you&quot;&gt;Where are you?&lt;/h2&gt;
 
-&lt;p&gt;Know where you are, there’s so much to learn. Focus on the things &lt;em&gt;you&lt;/em&gt; want to do. I wanted to learn Computer science in general, programming apps, web apps, websites, apis, deploying servers, etc. I found my self doing a lot of things in Front-end, Back-end and Devops.&lt;/p&gt;
+&lt;p&gt;Know where you are, there’s so much to learn. Focus on the things &lt;em&gt;you&lt;/em&gt; want to do. I wanted to learn Computer science in general, programming apps, web apps, websites, apis, deploying servers, etc. I found myself doing a lot of things in Front-end, Back-end and Devops.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/2e6d200ca77e11ad11721c4cbff86104bd005eac/68747470733a2f2f692e696d6775722e636f6d2f71426c5436374e2e706e67&quot; alt=&quot;kamranahmedse/developer-roadmap chose your path&quot; /&gt;&lt;/p&gt;
 
@@ -32,7 +32,7 @@
 
 &lt;h2 id=&quot;sindre-sorhus&quot;&gt;Sindre Sorhus&lt;/h2&gt;
 
-&lt;p&gt;If you don’t know &lt;strong&gt;&lt;a href=&quot;https://sindresorhus.com/&quot;&gt;Sindre Sorhus&lt;/a&gt;&lt;/strong&gt;, well go see his stuff, it’s magic 🦄. He has a lot of &lt;a href=&quot;https://github.com/sindresorhus&quot;&gt;very neat projects on Github&lt;/a&gt; and &lt;a href=&quot;https://blog.sindresorhus.com/&quot;&gt;many great posts on his blog&lt;/a&gt;. His &lt;a href=&quot;https://blog.sindresorhus.com/answering-anything-678ce5623798&quot;&gt;Ask Me Anything (AMA)&lt;/a&gt; is really fun to read.&lt;/p&gt;
+&lt;p&gt;If you don’t know &lt;strong&gt;&lt;a href=&quot;https://sindresorhus.com/&quot;&gt;Sindre Sorhus&lt;/a&gt;&lt;/strong&gt;, well go see his stuff right now, it’s magic 🦄. He has a lot of &lt;a href=&quot;https://github.com/sindresorhus&quot;&gt;very neat projects on Github&lt;/a&gt; and &lt;a href=&quot;https://blog.sindresorhus.com/&quot;&gt;many great posts on his blog&lt;/a&gt;. His &lt;a href=&quot;https://blog.sindresorhus.com/answering-anything-678ce5623798&quot;&gt;Ask Me Anything (AMA)&lt;/a&gt; is really fun to read.&lt;/p&gt;
 
 &lt;h2 id=&quot;awesome&quot;&gt;Awesome&lt;/h2&gt;
 
@@ -40,7 +40,7 @@
   &lt;p&gt;Don’t reinvent the wheel&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Are you looking for places to get started on a subject or technology or whatever? Start from the &lt;a href=&quot;https://awesome.re&quot;&gt;awesome list of awesome lists&lt;/a&gt; (&lt;a href=&quot;https://sindresorhus.com/&quot;&gt;Sindre Sorhus&lt;/a&gt; is the guy behind awesome).&lt;/p&gt;
+&lt;p&gt;Are you looking for places to get started on a subject, technology or anything? Start from the &lt;a href=&quot;https://awesome.re&quot;&gt;awesome list of awesome lists&lt;/a&gt; (&lt;a href=&quot;https://sindresorhus.com/&quot;&gt;Sindre Sorhus&lt;/a&gt; is the guy behind this).&lt;/p&gt;
 
 &lt;h3 id=&quot;django&quot;&gt;Django&lt;/h3&gt;
 
@@ -206,9 +206,14 @@
 
 &lt;p&gt;Install &lt;a href=&quot;http://editorconfig.org/&quot;&gt;editorconfig&lt;/a&gt; in all your IDEs and Text editors so you don’t mess up line endings and tab spacing anymore. ;)&lt;/p&gt;
 
-&lt;h2 id=&quot;learning-a-new-programming-language&quot;&gt;Learning a new programming language&lt;/h2&gt;
+&lt;h2 id=&quot;learning-a-new-programming-language&quot;&gt;Learning a new programming language?&lt;/h2&gt;
 
-&lt;p&gt;You know c# but you never wrote a line of python? Have a look to &lt;a href=&quot;https://learnxinyminutes.com/&quot;&gt;Learn X in Y Minutes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You know &lt;code class=&quot;highlighter-rouge&quot;&gt;c#&lt;/code&gt; but you never wrote a line of &lt;code class=&quot;highlighter-rouge&quot;&gt;python&lt;/code&gt;? Have a look to &lt;a href=&quot;https://learnxinyminutes.com/&quot;&gt;Learn X in Y Minutes&lt;/a&gt;. If you already know the basics, things will go fast. It’s more about the syntax, but It’s a really nice reference.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I’ll probably add more things here. If you have suggestions, feel free to poke me or &lt;a href=&quot;https://github.com/GabLeRoux/gableroux.github.io/issues&quot;&gt;open an issue&lt;/a&gt;.
+Hope you enjoyed this and that you learned a few things.&lt;/p&gt;
 </description>
         <pubDate>Sun, 07 May 2017 12:00:00 -0400</pubDate>
         <link>https://gableroux.com/awesome/2017/05/07/things-i-share-to-programmers/</link>

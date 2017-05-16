@@ -13,11 +13,11 @@ So many things to read, cool stuff to try, great tools to use but where can we s
 
 <!-- more -->
 
-Hi, I've repeated myself quite a few times sharing these awesome things that people should know about so here it is in a single page! :)
+Hi, I've repeated myself quite a few times and shared these awesome things to a few ones, so here they are on a single page! :)
 
 ## Where are you?
 
-Know where you are, there's so much to learn. Focus on the things *you* want to do. I wanted to learn Computer science in general, programming apps, web apps, websites, apis, deploying servers, etc. I found my self doing a lot of things in Front-end, Back-end and Devops. 
+Know where you are, there's so much to learn. Focus on the things *you* want to do. I wanted to learn Computer science in general, programming apps, web apps, websites, apis, deploying servers, etc. I found myself doing a lot of things in Front-end, Back-end and Devops. 
 
 ![kamranahmedse/developer-roadmap chose your path](https://camo.githubusercontent.com/2e6d200ca77e11ad11721c4cbff86104bd005eac/68747470733a2f2f692e696d6775722e636f6d2f71426c5436374e2e706e67)
 
@@ -25,13 +25,13 @@ Know where you are, there's so much to learn. Focus on the things *you* want to 
 
 ## Sindre Sorhus
 
-If you don't know **[Sindre Sorhus](https://sindresorhus.com/)**, well go see his stuff, it's magic 🦄. He has a lot of [very neat projects on Github](https://github.com/sindresorhus) and [many great posts on his blog](https://blog.sindresorhus.com/). His [Ask Me Anything (AMA)](https://blog.sindresorhus.com/answering-anything-678ce5623798) is really fun to read.
+If you don't know **[Sindre Sorhus](https://sindresorhus.com/)**, well go see his stuff right now, it's magic 🦄. He has a lot of [very neat projects on Github](https://github.com/sindresorhus) and [many great posts on his blog](https://blog.sindresorhus.com/). His [Ask Me Anything (AMA)](https://blog.sindresorhus.com/answering-anything-678ce5623798) is really fun to read.
 
 ## Awesome
 
 > Don't reinvent the wheel
 
-Are you looking for places to get started on a subject or technology or whatever? Start from the [awesome list of awesome lists](https://awesome.re) ([Sindre Sorhus](https://sindresorhus.com/) is the guy behind awesome). 
+Are you looking for places to get started on a subject, technology or anything? Start from the [awesome list of awesome lists](https://awesome.re) ([Sindre Sorhus](https://sindresorhus.com/) is the guy behind this). 
 
 ### Django
 
@@ -177,6 +177,11 @@ There are plenty of tools for taking notes, I personally like [Github gists](htt
 
 Install [editorconfig](http://editorconfig.org/) in all your IDEs and Text editors so you don't mess up line endings and tab spacing anymore. ;)
 
-## Learning a new programming language
+## Learning a new programming language?
 
-You know c# but you never wrote a line of python? Have a look to [Learn X in Y Minutes](https://learnxinyminutes.com/)
+You know `c#` but you never wrote a line of `python`? Have a look to [Learn X in Y Minutes](https://learnxinyminutes.com/). If you already know the basics, things will go fast. It's more about the syntax, but It's a really nice reference.
+
+---
+
+I'll probably add more things here. If you have suggestions, feel free to poke me or [open an issue](https://github.com/GabLeRoux/gableroux.github.io/issues).
+Hope you enjoyed this and that you learned a few things.
