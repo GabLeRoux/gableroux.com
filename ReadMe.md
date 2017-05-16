@@ -23,10 +23,15 @@ gulp
 
 ## Deployment
 
+See #11 this will be improved shortly
+
 ```bash
-bundle exec jekyll build
-git commit -am "publish"
-git push
+rm -rf bower_components
+rm -rf node_modules
+yarn install
+bower install
+gulp build
+gulp deploy
 ```
 
 Now go read my posts!
