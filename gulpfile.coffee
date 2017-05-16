@@ -17,8 +17,10 @@ uglify = require('gulp-uglify')
 rename = require('gulp-rename')
 sourcemaps = require('gulp-sourcemaps')
 
+#path = require('path')
+ghPages = require('gulp-gh-pages')
 
-messages = jekyllBuild: '<span style="color: grey">Running:</span> $ bundle exec jekyll build'
+#messages = jekyllBuild: '<span style="color: grey">Running:</span> $ bundle exec jekyll build'
 
 ###*
 # Build the Jekyll Site
@@ -103,6 +105,12 @@ gulp.task 'imagemin', ->
         pngquant()
       ])
     .pipe gulp.dest('_site/images')
+
+
+gulp.task 'deploy', ->
+  gulp.src('_site/**/*').pipe ghPages(
+    branch: 'master'
+  )
 
 ###*
 # Watch scss files for changes & recompile
