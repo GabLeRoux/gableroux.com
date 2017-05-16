@@ -3,7 +3,7 @@ layout: post
 title:  "Arch Linux is cool, but I need to ship software"
 date:   2017-01-24 18:00
 categories: presentation
-tags: saglacio linux archlinux fedora
+tags: saglacio linux archlinux antergos fedora
 featured_image: /images/arch-is-cool-but-i-need-to-ship-software.jpg
 ---
 
@@ -26,7 +26,7 @@ You want a really neat linux distribution with a rock solid package manager that
 
 * [Arch wiki][archlinux]
 * [Awesome linux][awesome-linux]
-* [Anthergos][anthergos] 
+* [Antergos][antergos] 
 
 Anthergos will make your setup easier (as shown by the step by step in the slides). The only sad thing about Anthergos is that the Arch community may bitch you for not using raw commands to setup your distro. I personally think it's ok to use it. It's cool to do everything by your own, but _sometimes_ it's easier with a UI. Way better than using windows anyway IMHO ;)
 
@@ -68,7 +68,7 @@ Sometimes, your job gives you a laptop with an apple logo  to ship ios apps. 
 [docker-selinux-so]: http://stackoverflow.com/questions/24288616/permission-denied-on-accessing-host-directory-in-docker
 [docker-selinux]: http://www.projectatomic.io/blog/2016/03/dwalsh_selinux_containers/
 [iterm]: https://iterm2.com/
-[anthergos]: https://antergos.com/
+[antergos]: https://antergos.com/
 [awesome-fedora]: https://github.com/strongrandom/awesome-fedora
 [fedora]: https://getfedora.org/
 [awesome-linux]: https://github.com/aleksandar-todorovic/awesome-linux
