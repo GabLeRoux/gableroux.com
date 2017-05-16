@@ -10,7 +10,7 @@ description: Who is Gabriel Le Breton?
 
 <div class="row text-center">
     <div class="github-card" height="300" width="350" data-theme="medium" data-github="gableroux"></div>
-    <script src="http://lab.lepture.com/github-cards/widget.js"></script>
+    <script src="//lab.lepture.com/github-cards/widget.js"></script>
 </div>
 
 <hr>
