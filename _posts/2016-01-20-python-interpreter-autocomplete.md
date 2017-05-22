@@ -3,19 +3,21 @@ layout: post
 title:  "Python interpreter autocomplete + history with ~/.pythonrc"
 date:   2016-01-20 15:00:00
 categories: python
-tag: dotfile history python pythonrc autocomplete
+tag: dotfile history python pythonrc autocomplete Jupyter interpreter
 featured_image: /images/pythonrc-history.png
 ---
 
-Using great tools is important, using autocompletion with great tools is even better!
+Using great tools is important, using autocompletion with great tools is even better. Update: use [Jupyter][Jupyter], it's just amazing!
 
 <!-- more -->
 
-## Ever used python interpreter?
+## Never used python interpreter?
 
-You should, [install python][install-python] if it's not already the case and run `python` in your terminal. Awesome, an interpreter!
+Try it now! [Install python][install-python] if it's not already the case and run `python` in a terminal. There you go, you're now inside a python interpreter!
 
-## Get interpreter autocompletion
+![Bare python interpreter example](/images/python-interpreter.png){: .center-block }
+
+## Get interpreter autocompletion and history
 
 Here is what you're looking for, create this file:
 
@@ -49,7 +51,7 @@ Then, you need to tell python interpreter to use this `~/.pythonrc` file, so add
 export PYTHONSTARTUP=~/.pythonrc
 {% endhighlight %}
 
-You can also run this directly in your shell if you want to test before editing your `rc`` file.
+You can also run this directly in your shell if you want to test before editing your `rc` file.
 
 That's it, fire up a terminal, run `python` again and enjoy autocompletion with when you hit `tab` key :D
 
@@ -57,6 +59,49 @@ That's it, fire up a terminal, run `python` again and enjoy autocompletion with 
 
 All of your tests in a local interpreter are now recorded to `~/.pyhistory` which could be useful and tab auto completion is just so useful when experimenting with modules from the interwebs :)
 
-[install-python]: https://www.python.org/downloads/
+## Want more?
+
+For advanced usage, there are a few interpreters available that even provide syntax highlighting while you type:
+
+* [bpython][bpython]
+* [DreamPie][DreamPie]
+* [IPython][IPython]
+* [ptpython][ptpython]
+
+I used [IPython][IPython] for a while and it's great:
+
+![IPython usage example](/images/python-interpreter-ipython-usage-example.png){: .center-block }
+
+## Even better, use [Jupyter][Jupyter]
+
+[Jupyter][Jupyter] lets you manage notebooks with live code, syntax highlighting, visualizations, markdown and has a few extensions. It's really worth [the try][Jupyter-try].
+
+{% highlight bash %}
+pip3 install jupyter
+jupyter notebook
+{% endhighlight %}
+
+You'll love it and it's even more fun when used with `numpy` and `matplotlib`.
+
+![jupyter localhost example](/images/python-interpreter-jupyter.png){: .center-block }
+
+Oh and you can save them [as gists][https://gist.github.com/GabLeRoux/a0bdab051ea6bd6f2a2b55dcb336e677] which is wonderful for sharing and embedding:
+
+<script src="https://gist.github.com/GabLeRoux/a0bdab051ea6bd6f2a2b55dcb336e677.js?file=the-zen-of-python.ipynb"></script>
+
+Neat eh?
+
+---
+
+Found a typo? Have a suggestion? [Open an issue](https://github.com/gableroux/gableroux.github.io/issues) or send me a [pull-request](https://github.com/gableroux/gableroux.github.io/pulls)!
+
 [bash]: https://fr.wikipedia.org/wiki/Bourne-Again_shell
+[bpython]: https://bpython-interpreter.org
+[DreamPie]: http://www.dreampie.org/
+[install-python]: https://www.python.org/downloads/
+[IPython]: http://ipython.org/
+[Jupyter]: https://jupyter.org/
+[Jupyter-try]: https://try.jupyter.org/
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
+[ptpython]: https://github.com/jonathanslenders/ptpython
+[the-zen-of-python.ipynb]: https://gist.github.com/GabLeRoux/a0bdab051ea6bd6f2a2b55dcb336e677
