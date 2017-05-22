@@ -53,15 +53,15 @@ export PYTHONSTARTUP=~/.pythonrc
 
 You can also run this directly in your shell if you want to test before editing your `rc` file.
 
-That's it, fire up a terminal, run `python` again and enjoy autocompletion with when you hit `tab` key :D
+That's it, fire up a terminal, run `python` again and enjoy autocompletion when you hit `tab` key :D
 
 ![pythonrc terminal example](/images/python-interpreter-autocompletion.png){: .center-block }
 
-All of your tests in a local interpreter are now recorded to `~/.pyhistory` which could be useful and tab auto completion is just so useful when experimenting with modules from the interwebs :)
+All of the commands you type in a local interpreter are now recorded to `~/.pyhistory`. Hit `tab` when experimenting with modules from the interwebs and it will be much easier to discover all the things :)
 
 ## Want more?
 
-For advanced usage, there are a few interpreters available that even provide syntax highlighting while you type:
+For advanced usage, there are a few interpreters available that provide features out of the box such as syntax highlighting while you type:
 
 * [bpython][bpython]
 * [DreamPie][DreamPie]
@@ -74,7 +74,7 @@ I used [IPython][IPython] for a while and it's great:
 
 ## Even better, use [Jupyter][Jupyter]
 
-[Jupyter][Jupyter] lets you manage notebooks with live code, syntax highlighting, visualizations, markdown and has a few extensions. It's really worth [the try][Jupyter-try].
+[Jupyter][Jupyter] lets you manage notebooks with live code, syntax highlighting, visualizations, markdown and even [has a few extensions][Jupyter-extensions]. It's really worth [the try][Jupyter-try].
 
 {% highlight bash %}
 pip3 install jupyter
@@ -101,6 +101,7 @@ Found a typo? Have a suggestion? [Open an issue](https://github.com/gableroux/ga
 [install-python]: https://www.python.org/downloads/
 [IPython]: http://ipython.org/
 [Jupyter]: https://jupyter.org/
+[Jupyter-extensions]: http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html
 [Jupyter-try]: https://try.jupyter.org/
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [ptpython]: https://github.com/jonathanslenders/ptpython
