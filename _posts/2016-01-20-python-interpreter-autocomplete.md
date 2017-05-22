@@ -33,7 +33,7 @@ historyPath = os.path.expanduser("~/.pyhistory")
 
 
 def save_history(historyPath=historyPath):
-    import rea dline
+    import readline
     readline.write_history_file(historyPath)
     print(".pythonrc :: history saved to " + historyPath)
 
