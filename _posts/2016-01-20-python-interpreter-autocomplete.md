@@ -85,7 +85,7 @@ You'll love it and it's even more fun when used with `numpy` and `matplotlib`.
 
 ![jupyter localhost example](/images/python-interpreter-jupyter.png){: .center-block }
 
-Oh and you can save them [as gists][https://gist.github.com/GabLeRoux/a0bdab051ea6bd6f2a2b55dcb336e677] which is wonderful for sharing and embedding:
+Oh and you can save them [as gists][the-zen-of-python.ipynb] which is wonderful for sharing and embedding:
 
 <script src="https://gist.github.com/GabLeRoux/a0bdab051ea6bd6f2a2b55dcb336e677.js?file=the-zen-of-python.ipynb"></script>
 
