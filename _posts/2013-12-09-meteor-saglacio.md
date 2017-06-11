@@ -7,7 +7,7 @@ tags: saglacio meteor
 featured_image: /images/saglacio/meteor.jpg
 ---
 
-I gave a presentation at the [SagLacIO][saglacio] about [Hubot][meteor]. Here are the slides.
+I gave a presentation at the [SagLacIO][saglacio] about [Meteor][meteor]. Here are the slides.
 
 <!-- more -->
 
