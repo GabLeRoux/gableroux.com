@@ -19,31 +19,60 @@ Try it now! [Install python][install-python] if it's not already the case and ru
 
 ## Get interpreter autocompletion and history
 
+> I did an update, inspired by [twneale/gist:5245670](https://gist.github.com/twneale/5245670).
+
 Here is what you're looking for, create this file:
 
 `~/.pythonrc`
 
 {% highlight python %}
-import atexit, os, sys, readline, rlcompleter
+import atexit
+import os
 
-readline.parse_and_bind('tab:complete')
-
-print(".pythonrc :: AutoCompletion Loaded")
-
-# History
-historyPath = os.path.expanduser("~/.pyhistory")
-
-
-def save_history(historyPath=historyPath):
+try:
     import readline
-    readline.write_history_file(historyPath)
-    print(".pythonrc :: history saved to " + historyPath)
+except ImportError:
+    print(".pythonrc :: Module readline not available.")
+else:
+    import rlcompleter
 
-if os.path.exists(historyPath):
-    readline.read_history_file(historyPath)
+    readline.parse_and_bind("tab: complete")
+    print(".pythonrc :: AutoCompletion Loaded")
 
-atexit.register(save_history)
+    history_file = os.path.join(os.path.expanduser("~"), ".pyhistory")
+    print(".pythonrc :: history file:", history_file)
+
+
+    def save_history(history=history_file):
+        import readline
+        readline.write_history_file(history)
+        print(".pythonrc :: history saved to " + history)
+
+
+    def load_history(history=history_file):
+        try:
+            readline.read_history_file(history)
+        except IOError:
+            pass
+
+    load_history()
+    atexit.register(save_history)
+
+    del readline, rlcompleter, atexit, history_file
+
+# In addition to os, import some useful things
+
+# noinspection PyUnresolvedReferences
+import re
+
+# noinspection PyUnresolvedReferences
+from collections import *
+
+# noinspection PyUnresolvedReferences
+from itertools import *
+
 {% endhighlight %}
+
 
 Then, you need to tell python interpreter to use this `~/.pythonrc` file, so add the following line somewhere in an `rc` file (either `~/.bashrc` if you're using [bash][bash] or `~/.zshrc` for the awesome [oh-my-zsh][oh-my-zsh])
 
