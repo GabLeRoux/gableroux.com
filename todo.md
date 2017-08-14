@@ -7,8 +7,6 @@ description: A list of things to do!
 ---
 
 ## What needs to be done
-* <i class="fa fa-square"></i> Move to [github pages](https://pages.github.com)
-* <i class="fa fa-square"></i> Have [travis](https://travis-ci.org/) check for dead links with [html-proofer](https://github.com/gjtorikian/html-proofer) automatically
 * <i class="fa fa-square"></i> Move all of these todos to [github issues](https://github.com/gableroux/gableroux.github.io/issues) :)
 * <i class="fa fa-square"></i> Add a categories / tags page
 * <i class="fa fa-square"></i> Minify js assets
@@ -34,6 +32,8 @@ description: A list of things to do!
 
 ## Completed tasks
 
+* <i class="fa fa-check-square"></i> <del>Move to [github pages](https://pages.github.com)</del>
+* <i class="fa fa-check-square"></i> <del>Have [travis](https://travis-ci.org/) check for dead links with [html-proofer](https://github.com/gjtorikian/html-proofer) automatically and periodically</del>
 * <i class="fa fa-check-square"></i> <del>Share nginx [letsencrypt][letsencrypt] config because it's aweomse</del>
 * <i class="fa fa-check-square"></i> <del>Minify css assets</del>
 * <i class="fa fa-check-square"></i> <del>Better Facebook Sharing (og:image tags, og:description, etc.)</del>
