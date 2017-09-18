@@ -3,10 +3,15 @@ set -e # halt script on error
 set -x # makes shell script verbose
 
 # requirements
-npm install -g yarn
-yarn global add bower gulp
+npm install -g yarn@1 bower@1 gulp@3
 bower install
 yarn install
+
+# expose CI versions
+npm --version
+bower --version
+yarn --version
+gulp --version
 
 # build
 gulp build
