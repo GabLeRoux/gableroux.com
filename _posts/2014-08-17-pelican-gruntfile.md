@@ -201,8 +201,8 @@ Enjoy
 
 You should use [Browser Sync][browsersync] instead, it's even more awesome!
 
-[gruntjs]: http://www.gruntjs.com/
-[gulpjs]: http://gulpjs.com/
+[gruntjs]: https://www.gruntjs.com/
+[gulpjs]: https://gulpjs.com/
 [duckduckgo]: https://duckduckgo.com/
 [grunt-pelican-repo]: https://github.com/chuwy/grunt-pelican/
 [livereload]: https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei
