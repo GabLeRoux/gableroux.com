@@ -19,10 +19,10 @@ Once again, I gave a presentation at the [SagLacIO][saglacio]. This time, it was
 
 Install ruby and start having fun:
 
-```bash
+{% highlight bash %}
 sudo gem install fastlane
 fastlane init
-```
+{% endhighlight %}
 
 Then follow instructions. If your app has both ios and android (ex; cordova, ionic, react native, hybrid project), I recommend starting with ios. You can add android support later by [following the android documentation](https://docs.fastlane.tools/getting-started/android/setup/).
 
