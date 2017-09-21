@@ -9,7 +9,7 @@ featured_image: /images/fastlane-automate-deployment-like-a-boss.jpg
 
 > Sorry, we can't deploy, john is on vacation
 
-Your team shouldn't rely on only one person to release you mobile apps.
+Your team shouldn't rely on only one person to release your mobile apps.
 
 <!-- more -->
 
