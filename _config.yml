@@ -47,7 +47,7 @@ exclude: [
     script,
 ]
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Defaults (these are overridden if explicitly set in front matter)
 defaults:
