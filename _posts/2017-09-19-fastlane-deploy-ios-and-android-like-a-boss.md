@@ -47,7 +47,7 @@ I gave a quick explanation of what problems fastlane solves and I went trough a 
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
-        <iframe src="https://docs.google.com/presentation/d/12mfmFRzwQ6WG_DSRR4ktEjU7LHmA3XFemhYaNdYswQA/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://docs.google.com/presentation/d/143Sj5xU_ZhMGYRg74NHw8Fky98ZxBY_-u7ltYCkHQhw/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
 
