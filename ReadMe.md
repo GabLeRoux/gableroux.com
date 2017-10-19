@@ -8,6 +8,7 @@ Hey there, welcome to the backstage of my website.
 
 ```bash
 gem install bundle
+bundle update
 bundle install
 npm install -g yarn
 yarn install

@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.4.0
+- 2.4.2
 
 before_install:
   - nvm install node
@@ -12,7 +12,19 @@ before_script:
 # the `install` step will run `bundle install` by default.
 script: ./script/cibuild
 
+# https://docs.travis-ci.com/user/deployment/pages/
+deploy:
+  target_branch: master
+  local_dir: _site
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: develop
+
 env:
+  matrix:
+    secure: sA74yeC1i4Cls2u34PG0yZWZ5ZDDNr0qH6sX+IxxmfvFdP9cxM0CElh5YtfMmpnUmP5e6Pu3Py34t7iiOZ5gTaYSmIjf6RKdz73LmoPHqkW+T2v7hCJw+s26f+w6vdzle01+s7ofD1X3AIPBPl72NsmYeotUfkIK47/khNVYlKQzQsiVYahNN4fqxYKMMTPkjAGO6FrQpWe7tHAgYibIR304UkLktRrIHzICVd+Pl+bvzONzR+BqjumICuzTD5OqxvHu5hXqPerPQsoXKJ9mBUR8X13yrtWlvSM9XUcyF0BRRkREgIqxJhwYZNHLg0Q6TjQ20x9VcOsc2WojF8SD1dULa6yhGBWS+/Y+KFz9ieMsu0CGm7E80xUVMxVdaDrEyebOxEZHXbEpBVhux/6Lg9gkjFna9uNSeQAndVVpVCVAirSPANQjOOJ2i8k/f8xvw/WMKWc4yp1hpqro9f8KeMTeLMUblJhk1RQ7IfvT7GgoFcsyaWSqxewY1UTncHSouyHDzcWy7ZKxEN9Q7NvM+pF2p/KTeHEqbhqGhI3xx+YPhB06x4GuPhdjfQjF3xWtK8j8i67ewqfW0gqfHSMtcs1jZWV8uPJCycduBtaHi4oJgPk1M07jA0BZJNtGr3zgSg/q5dQsGLwSGMrJQ77rYKBsrvrtTq0SeKim44EgWBM=
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
