@@ -48,6 +48,9 @@ Then follow instructions. If your app has both ios and android (ex; cordova, ion
 * ⏲ [firsttimersonly.com](http://www.firsttimersonly.com/)
 * 🥇 Find what was [firstpr.me](http://firstpr.me/) of anyone!
 
+## For more advanced users
+
+* ✨ [`hub`](https://hub.github.com/)
 
 ## Here goes the slides
 
