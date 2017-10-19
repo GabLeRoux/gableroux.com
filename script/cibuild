@@ -13,7 +13,7 @@ bower --version
 yarn --version
 
 # build
-gulp build
+gulp build || exit -1
 
 # tests
 # todo: maybe move this to rakefile
