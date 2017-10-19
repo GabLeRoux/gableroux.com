@@ -13,7 +13,7 @@ Your team shouldn't rely on only one person to release your mobile apps.
 
 <!-- more -->
 
-Once again, I gave a presentation at the [SagLacIO][saglacio]. This time, it was about **[Fastlane][Fastlane]**. Here are a few links to get you started. 
+Once again, I gave a presentation at the [SagLacIO][saglacio]. This time, it was about **[Fastlane][Fastlane]**. Here are a few links to get you started.
 
 ## Getting started
 
@@ -26,12 +26,12 @@ fastlane init
 
 Then follow instructions. If your app has both ios and android (ex; cordova, ionic, react native, hybrid project), I recommend starting with ios. You can add android support later by [following the android documentation](https://docs.fastlane.tools/getting-started/android/setup/).
 
-## Usefull Links
+## Useful Links
 
 * Official website: [fastlane.tools](https://fastlane.tools)
 * Github: [github.com/fastlane/fastlane](https://github.com/fastlane/fastlane)
 * Getting started: [fabric.io/features](https://fabric.io/features/)
-* Example public repos using fastlane: [github.com/fastlane/examples](https://github.com/fastlane/examples) 
+* Example public repos using fastlane: [github.com/fastlane/examples](https://github.com/fastlane/examples)
 * Documentation: [docs.fastlane.tools](https://docs.fastlane.tools/)
 * Plugins: [docs.fastlane.tools/plugins/available-plugins](https://docs.fastlane.tools/plugins/available-plugins/)
 * The guy behind Fastlane: [Felix Krause (krausefx)](https://krausefx.com)
