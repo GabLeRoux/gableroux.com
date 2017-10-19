@@ -14,7 +14,6 @@ I gave a presentation at the [SagLacIO][saglacio] about [Meteor][meteor]. Here a
 <div class="responsive-iframe-wrapperr">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
-        <!-- todo: update me to https and host here -->
         <iframe src="https://meteor.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
