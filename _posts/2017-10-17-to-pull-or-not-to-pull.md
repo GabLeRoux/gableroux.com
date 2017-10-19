@@ -43,6 +43,8 @@ Then follow instructions. If your app has both ios and android (ex; cordova, ion
 * 👈 pull [github.com/ferd/my-finger](https://github.com/ferd/my-finger)
 * 🥔 [github.com/drtshock/Potato](https://github.com/drtshock/Potato)
 
+## Some other cool links
+
 * ⏲ [firsttimersonly.com](http://www.firsttimersonly.com/)
 * 🥇 Find what was [firstpr.me](http://firstpr.me/) of anyone!
 
