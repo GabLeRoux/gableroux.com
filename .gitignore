@@ -1,12 +1,10 @@
-### Jekyll
-.sass-cache/
-.jekyll-metadata
+/.sass-cache/
+/.jekyll-metadata
 /bower_components
 /vendor
 /Gemfile.lock
 /node_modules
+/npm-debug.log
+/.publish
+/_site
 
-npm-debug.log
-
-.publish
-_site

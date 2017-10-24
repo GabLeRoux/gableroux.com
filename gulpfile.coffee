@@ -54,7 +54,7 @@ gulp.task 'browser-sync', ->
 # Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
 ###
 gulp.task 'sass', ->
-  gulp.src(['_scss/**/*.scss', 'css/**/*.scss'])
+  gulp.src(['assets/css/**/*.scss'])
     .pipe sourcemaps.init()
     .pipe sass(
       includePaths: ['scss']
@@ -69,7 +69,7 @@ gulp.task 'sass', ->
     .pipe(cssmin())
     .pipe(rename(suffix: '.min'))
     .pipe sourcemaps.write('.')
-    .pipe gulp.dest('_site/css')
+    .pipe gulp.dest('_site/assets/css')
     .pipe browserSync.reload(stream: true)
 
 ###*
@@ -77,7 +77,7 @@ gulp.task 'sass', ->
 ###
 
 gulp.task 'coffee', ->
-  gulp.src('js/main.coffee')
+  gulp.src('assets/js/*.coffee')
     .pipe sourcemaps.init()
     .pipe coffee(
       bare: true
@@ -89,7 +89,7 @@ gulp.task 'coffee', ->
     #uglify()
     #.pipe(uglify())
     .pipe(rename(suffix: '.min'))
-    .pipe gulp.dest('_site/js')
+    .pipe gulp.dest('_site/assets/js')
     .pipe browserSync.reload(stream: true)
 
 
@@ -117,8 +117,8 @@ gulp.task 'deploy', ->
 # Watch html/md files, run jekyll & reload BrowserSync
 ###
 gulp.task 'watch', ->
-  gulp.watch ['_scss/**/*.scss', 'css/**/*.scss'], ['sass']
-  gulp.watch 'js/**/*.coffee', ['coffee']
+  gulp.watch 'assets/css/**/*.scss', ['sass']
+  gulp.watch 'assets/js/**/*.coffee', ['coffee']
   gulp.watch [
     '*.md'
     '*.html'

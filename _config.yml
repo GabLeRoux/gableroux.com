@@ -32,12 +32,12 @@ markdown: kramdown
 #  sass_dir: _sass
 
 exclude: [
-    node_modules, 
-    package.json, 
-    gulpfile.coffee, 
+    node_modules,
+    package.json,
+    gulpfile.coffee,
     Gemfile,
-    Gemfile.lock, 
-    bower.json, 
+    Gemfile.lock,
+    bower.json,
     vendor,
     npm-debug.log,
     .travis.yml,
@@ -45,6 +45,10 @@ exclude: [
     ReadMe.md,
     LICENSE.md,
     script,
+]
+
+include: [
+    bower_components,
 ]
 
 plugins: [jekyll-paginate]
