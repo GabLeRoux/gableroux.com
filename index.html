@@ -15,7 +15,17 @@ layout: default
                     </a>
                 </h1>
 
-                <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+                <p class="post-meta">
+                    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    {% if post.tags %}
+                    <small class="text-muted">
+                        <i class="fa fa-tag"></i>
+                        {% for tag in post.tags %}
+                        <i>{{- tag -}}</i>
+                        {% endfor %}
+                    </small>
+                    {% endif %}
+                </p>
 
                 {% if post.featured_image %}
                 <a class="featured-image-link" href="{{ post.url | prepend: site.baseurl }}" name="{{ post.title }}">
@@ -33,14 +43,6 @@ layout: default
                    name="{{ post.title }}">Read More <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
-
-            {% if post.tags %}
-            <div class="col-md-6 col-xs-12 text-left xs-text-center">
-                {% for tag in post.tags %}
-                <a class="label label-primary" href="#">{{- tag -}}</a>
-                {% endfor %}
-            </div>
-            {% endif %}
 
         </article>
         {% endfor %}
