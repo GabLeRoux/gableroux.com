@@ -11,24 +11,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    {% include head_icons.html %}
 
     <link rel="stylesheet" href="{{ '/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css' | prepend: site.baseurl }}">
 
@@ -39,77 +22,6 @@
 
     <link rel="stylesheet" href="{{ '/assets/css/main.min.css' | prepend: site.baseurl }}">
 
-    <!-- facebook Open Graph Metadatas -->
-    <meta content="253381494995396" property="fb:app_id">
-    <meta content="{{ site.title }}" property="og:site_name">
-
-    {% if page.title %}
-    <meta content="{{ page.title }}" property="og:title">
-    {% else %}
-    <meta content="{{ site.title }}" property="og:title">
-    {% endif %}
-
-    {% if page.title %}
-    <meta content="article" property="og:type">
-    {% else %}
-    <meta content="website" property="og:type">
-    {% endif %}
-
-
-    {% if page.excerpt %}
-    <meta content="{{ page.excerpt | strip_html }}" property="og:description">
-    {% elsif page.description %}
-    <meta content="{{ page.description }}" property="og:description">
-    {% else %}
-    <meta content="{{ site.description }}" property="og:description">
-    {% endif %}
-
-    {% if page.url %}
-    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-    {% endif %}
-
-    {% if page.date %}
-    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-    <meta content="{{ site.url }}/about/" property="article:author">
-    {% endif %}
-
-    {% if page.featured_image %}
-    <meta content="{{ site.url }}{{ page.featured_image }}" property="og:image">
-    {% else %}
-    <meta content="{{ site.url }}/images/layout/sharing-gableroux.jpg" property="og:image">
-    {% endif %}
-
-    {% if page.categories %}
-    {% for category in page.categories limit:1 %}
-    <meta content="{{ category }}" property="article:section">
-    {% endfor %}
-    {% endif %}
-
-    {% if page.tags %}
-    {% for tag in page.tags %}
-    <meta content="{{ tag }}" property="article:tag">
-    {% endfor %}
-    {% endif %}
-
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '253381494995396',
-                xfbml: true,
-                version: 'v2.5'
-            });
-        };
-
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    {% include head_facebook_open_graph.html %}
 
 </head>

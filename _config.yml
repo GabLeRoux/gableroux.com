@@ -8,6 +8,9 @@ author:
   name: Gabriel Le Breton
   email: lebreton.gabriel@gmail.com
 
+facebook_app_id: 253381494995396
+facebook_default_image: images/layout/sharing-gableroux.jpg
+
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://gableroux.com" # the base hostname & protocol for your site
 
