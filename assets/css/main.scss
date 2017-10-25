@@ -381,6 +381,15 @@ a {
   }
 }
 
+.navbar-brand > img {
+  display: inline-block;
+}
+
+.fb-like {
+  width: 100%;
+  overflow: hidden;
+}
+
 /* Responsive iframe (for presentations) */
 .responsive-iframe-wrapper {
   width: 80%;
@@ -453,15 +462,6 @@ a {
       padding: 15px 15px;
     }
   }
-}
-
-.navbar-brand>img {
-  display: inline-block;
-}
-
-.fb-like {
-    width: 100%;
-    overflow: hidden;
 }
 
 @media(max-width: 992px) {
