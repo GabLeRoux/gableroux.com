@@ -7,16 +7,9 @@ description: A list of things to do!
 ---
 
 ## What needs to be done
-* <i class="fa fa-square"></i> Move all of these todos to [github issues](https://github.com/gableroux/gableroux.github.io/issues) :)
-* <i class="fa fa-square"></i> Add a categories / tags page
-* <i class="fa fa-square"></i> Minify js assets
-* <i class="fa fa-square"></i> Minify pictures assets
-* <i class="fa fa-square"></i> Fix footer size on mobile
-* <i class="fa fa-square"></i> Add comments system back
-* <i class="fa fa-square"></i> Fix sass live reload (broken because of `css/main.scss` header)
-* <i class="fa fa-square"></i> Minify content from gulp, I'm lazy, did not do it yet
-* <i class="fa fa-square"></i> Test on Google Page Speed and post about the results
-* <i class="fa fa-square"></i> Better 404 [Probably with this](http://yizeng.me/2013/05/26/create-a-custom-jekyll-404-page/)
+### See [<i class="fa fa-github"></i> github issues](https://github.com/gableroux/gableroux.github.io/issues) :) 
+
+🚀
 
 ## What I'll talk about
 
@@ -32,6 +25,7 @@ description: A list of things to do!
 
 ## Completed tasks
 
+* <i class="fa fa-check-square"></i> <del>Minify pictures assets</del>
 * <i class="fa fa-check-square"></i> <del>Move to [github pages](https://pages.github.com)</del>
 * <i class="fa fa-check-square"></i> <del>Have [travis](https://travis-ci.org/) check for dead links with [html-proofer](https://github.com/gjtorikian/html-proofer) automatically and periodically</del>
 * <i class="fa fa-check-square"></i> <del>Share nginx [letsencrypt][letsencrypt] config because it's aweomse</del>
