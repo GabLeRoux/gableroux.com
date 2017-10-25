@@ -459,6 +459,11 @@ a {
   display: inline-block;
 }
 
+.fb-like {
+    width: 100%;
+    overflow: hidden;
+}
+
 @media(max-width: 992px) {
   .xs-text-center {
     text-align: center !important;
