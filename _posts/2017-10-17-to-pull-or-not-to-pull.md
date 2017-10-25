@@ -25,7 +25,7 @@ Yet an other presentation at the [SagLacIO][saglacio]. What is open source? What
 ## Get a free shirt in October
 
 * 🤘 [Hacktoberfest](https://hacktoberfest.digitalocean.com/)
-* 📊 Calculate your progress with [Hacktoberfest Checker](https://hacktoberfest.digitalocean.com/)
+* 📊 Calculate your progress with [Hacktoberfest Checker](https://hacktoberfestchecker.herokuapp.com/)
 
 ## Some random repositories to get started
 
