@@ -15,11 +15,11 @@ I gave a presentation at the [SagLacIO][saglacio]. This time, it was about **[gi
 
 ## Getting started
 
-First, you'll need an account at [gitlab.com][gitlab.com]. If it's not already the case, _just do it_. [Gitlab's free tier (Community Edition (CE))](https://about.gitlab.com/products/) gives you a ton of features, unlimited free hosted repositories, 2000 CI build minutes per month, etc. _january 2018_ and you can even run your own runners in case you bust that limit.
+First, you'll need an account at [gitlab.com][gitlab.com]. If it's not already the case, _just do it_. [Gitlab's free tier (Community Edition (CE))](https://about.gitlab.com/products/) gives you a ton of features, unlimited free hosted repositories, 2000 CI build minutes per month, etc. You can even run your own runners in case you bust that limit.
 
 ## Useful Links
 
-* [gitlab.com](gitlab.com)
+* [gitlab.com][gitlab.com]
 * [gitlab-ci documentation](https://docs.gitlab.com/ce/ci/) 📗
 * [.gitlab-ci.yml documentation](https://docs.gitlab.com/ce/ci/yaml/README.html) 📕
 * [.gitlab-ci.yml **linter**: gitlab.com/ci/lint](https://gitlab.com/ci/lint/) ✅
@@ -47,3 +47,4 @@ If you have suggestions, feel free to poke me or [open an issue](https://github.
 [saglacio]: http://saglac.io
 [gitlab-ci]: https://about.gitlab.com/features/gitlab-ci-cd/
 [docker]: https://www.docker.com/
+[gitlab.com]: https://gitlab.com/
