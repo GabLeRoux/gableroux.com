@@ -7,7 +7,7 @@ tags: gitlab gitlab-ci ci docker testing example presentation
 featured_image: /images/test-all-the-things-in-gitlab-ci-with-docker-by-example.jpg
 ---
 
-Do you write tests? Or do you skip them because it's too complicated to run? Or maybe developers of your team just don't care? You should take a few minutes and setup a CI so you can enforce good practice. Good news, you can test all the things automagically in **[gitlab-ci][gitlab-ci]** with [docker][docker] with very low efforts 🤘
+Do you write tests? Or do you skip them because it's too complicated to run? Or maybe developers of your team just don't care? You should take a few minutes and setup a CI so you can enforce good practice. Good news, you can test all the things automagically in **[gitlab-ci][gitlab-ci]** with [docker][docker] and very low efforts 🤘
 
 <!-- more -->
 
