@@ -27,12 +27,7 @@ gulp
 See #11 this will be improved shortly
 
 ```bash
-rm -rf bower_components
-rm -rf node_modules
-yarn install
-bower install
-gulp build
-gulp deploy
+./script/deploy.sh
 ```
 
 Now go read my posts!
