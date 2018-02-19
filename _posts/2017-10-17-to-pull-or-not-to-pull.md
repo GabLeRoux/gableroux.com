@@ -50,7 +50,7 @@ Yet an other presentation at the [SagLacIO][saglacio]. What is open source? What
     </div>
 </div>
 
-You can contribute to the slides on [https://github.com/gableroux/to-pull-or-not-to-pull](https://gableroux.com/to-pull-or-not-to-pull) 🚀
+You can contribute to the slides on [github.com/gableroux/to-pull-or-not-to-pull](https://github.com/gableroux/to-pull-or-not-to-pull) 🚀
 
 ---
 
