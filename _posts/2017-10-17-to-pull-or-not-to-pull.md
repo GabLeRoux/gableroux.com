@@ -43,7 +43,7 @@ Yet an other presentation at the [SagLacIO][saglacio]. What is open source? What
 
 ## Here goes the slides
 
-<div class="responsive-iframe-wrapperr">
+<div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <iframe src="https://gableroux.com/to-pull-or-not-to-pull" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

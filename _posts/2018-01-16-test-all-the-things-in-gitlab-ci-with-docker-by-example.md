@@ -35,7 +35,7 @@ First, you’ll need an account at [GitLab.com][gitlab.com]. If you don’t alre
 
 Scroll through the slides from my presentation on GitLab CI/CD at [SagLacIO][saglacio], you’ll have fun 🤘
 
-<div class="responsive-iframe-wrapperr">
+<div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <iframe src="https://docs.google.com/presentation/d/10835yig54EbR_OQcxSXURkPk_0zkhLxaWHdRdXb-yWw/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

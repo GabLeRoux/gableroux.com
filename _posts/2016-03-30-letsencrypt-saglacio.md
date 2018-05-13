@@ -211,7 +211,7 @@ Awesome, scoring *A+* again, solved! :)
 
 Btw, there are a few interesting links at the end of the slides.
 
-<div class="responsive-iframe-wrapperr">
+<div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <!-- todo: update me to https and host here -->

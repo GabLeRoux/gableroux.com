@@ -10,16 +10,14 @@ Hey there, welcome to the backstage of my website.
 gem install bundle
 bundle update
 bundle install
-npm install -g yarn
-yarn install
-yarn global add bower coffee-gulp
-bower install
+npm i
+npm run bower -- install
 ```
 
 ## Running this website locally
 
 ```bash
-gulp
+npm run gulp
 ```
 
 ## Deployment

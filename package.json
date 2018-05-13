@@ -4,24 +4,25 @@
   "description": "Hey there, welcome to the backstage of my website.",
   "main": "index.js",
   "dependencies": {
-    "browser-sync": "^2.18.12",
-    "coffee-script": "^1.12.6",
+    "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-coffee": "^2.3.4",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-coffee": "^3.0.2",
     "gulp-cssmin": "^0.2.0",
-    "gulp-exec": "^2.1.3",
+    "gulp-exec": "^3.0.1",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.7.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "imagemin-pngquant": "^5.0.1",
-    "uglify-js": "^3.0.15"
+    "imagemin-pngquant": "^5.1.0",
+    "uglify-js": "^3.3.25"
   },
   "scripts": {
+    "bower": "bower",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,5 +31,11 @@
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://gableroux.com"
+  "homepage": "https://gableroux.com",
+  "devDependencies": {
+    "bower": "^1.8.4",
+    "coffee-script": "^1.12.7",
+    "coffeescript": "^2.3.0",
+    "gulp-cli": "^2.0.1"
+  }
 }

@@ -73,7 +73,7 @@ These are the very useful links from my last slide:
 
 When writing my slides, **[I recorded a 22min git session][git-asciinema]** and created an **[example git repository on Github][GabLeRoux/git-commands-example]**.
 
-<div class="responsive-iframe-wrapperr">
+<div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <iframe src="https://docs.google.com/presentation/d/1ynQabkehsa3bXKSh3ZTS36vfho5_zymROdu_wGxMwQc/embed?start=false&loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

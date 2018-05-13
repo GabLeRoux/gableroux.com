@@ -17,7 +17,7 @@ If you like this kind of stuff, have a look at the amazing [obazoud/awesome-dash
 
 ## Here goes the slides :)
 
-<div class="responsive-iframe-wrapperr">
+<div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
         <iframe src="https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&loop=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
