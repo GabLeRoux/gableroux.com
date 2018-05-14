@@ -55,9 +55,11 @@ body {
   padding-top: 80px;
 }
 
-.metrics_watch {
-  color: $metrics_watch_text;
-  text-shadow: 0 0 5px $metrics_watch_shadow;
+.custom-panel {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 20px;
 }
 
 header.site-header {
