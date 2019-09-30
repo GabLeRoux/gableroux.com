@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fastlane: deploy ios and android like a boss</title>
+
+    <meta name="description" content="  Sorry, we can’t deploy, john is on vacation">
+    <meta name="author" content="Gabriel Le Breton">
+
+    <link rel="canonical" href="https://gableroux.com/saglacio/2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/">
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="https://gableroux.com/feed.xml"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css">
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+<meta content="253381494995396" property="fb:app_id">
+
+<meta content="GabLeRoux <Developer>" property="og:site_name">
+
+
+<meta content="Fastlane: deploy ios and android like a boss" property="og:title">
+
+
+
+<meta content="article" property="og:type">
+
+
+
+<meta content="
+  Sorry, we can’t deploy, john is on vacation
+
+
+" property="og:description">
+
+
+
+<meta content="https://gableroux.com/saglacio/2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/" property="og:url">
+
+
+
+<meta content="2017-09-19T19:00:00+00:00" property="article:published_time">
+<meta content="https://gableroux.com/about/" property="article:author">
+
+
+
+<meta content="https://gableroux.com/images/fastlane-automate-deployment-like-a-boss.jpg" property="og:image">
+
+
+
+
+<meta content="saglacio" property="article:section">
+
+
+
+
+
+<meta content="fastlane" property="article:tag">
+
+<meta content="presentation" property="article:tag">
+
+<meta content="ios" property="article:tag">
+
+<meta content="android" property="article:tag">
+
+<meta content="deployment" property="article:tag">
+
+
+
+
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '253381494995396',
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i> <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo"/></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                
+                
+    
+        
+            <li><a href="/about/">About</a></li>
+        
+    
+
+    
+
+    
+        
+            <li><a href="/friends/">Friends</a></li>
+        
+    
+
+    
+
+    
+        
+            <li><a href="/todo/">Todo</a></li>
+        
+    
+
+    
+
+    
+
+    
+
+
+
+
+                <li>
+                    <a href="https://totemastudio.com" target="_blank" title="Totema Studio"><i class="fa fa-gamepad"></i> Totema Studio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0)
+    }
+    20%, 60% {
+        transform: rotate(-25deg)
+    }
+    40%, 80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}</style>
+
+<div id="outdated"></div>
+
+
+
+<div class="navbar-no-header-spacer"></div>
+
+
+<main id="wrap">
+    <div class="page-content">
+        <article class="blog-page container">
+
+    <header class="post-header">
+        <div class="row">
+            <h1 class="post-title">Fastlane: deploy ios and android like a boss</h1>
+
+            <p class="post-meta">
+                Sep 19, 2017 • Gabriel Le Breton
+                
+            </p>
+
+            <img src="/images/fastlane-automate-deployment-like-a-boss.jpg" alt="Fastlane: deploy ios and android like a boss">
+
+        </div>
+    </header>
+
+    <hr>
+
+    <article class="page-content">
+        <blockquote>
+  <p>Sorry, we can’t deploy, john is on vacation</p>
+</blockquote>
+
+<p>Your team shouldn’t rely on only one person to release your mobile apps.</p>
+
+<!-- more -->
+
+<p>Once again, I gave a presentation at the <a href="http://saglac.io">SagLacIO</a>. This time, it was about <strong><a href="https://fastlane.tools/">Fastlane</a></strong>. Here are a few links to get you started.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>Install ruby and start having fun:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>gem install fastlane
+fastlane init</code></pre></figure>
+
+<p>Then follow instructions. If your app has both ios and android (ex; cordova, ionic, react native, hybrid project), I recommend starting with ios. You can add android support later by <a href="https://docs.fastlane.tools/getting-started/android/setup/">following the android documentation</a>.</p>
+
+<h2 id="useful-links">Useful Links</h2>
+
+<ul>
+  <li>Official website: <a href="https://fastlane.tools">fastlane.tools</a></li>
+  <li>Github: <a href="https://github.com/fastlane/fastlane">github.com/fastlane/fastlane</a></li>
+  <li>Getting started: <a href="https://fabric.io/features/">fabric.io/features</a></li>
+  <li>Example public repos using fastlane: <a href="https://github.com/fastlane/examples">github.com/fastlane/examples</a></li>
+  <li>Documentation: <a href="https://docs.fastlane.tools/">docs.fastlane.tools</a></li>
+  <li>Plugins: <a href="https://docs.fastlane.tools/plugins/available-plugins/">docs.fastlane.tools/plugins/available-plugins</a></li>
+  <li>The guy behind Fastlane: <a href="https://krausefx.com">Felix Krause (krausefx)</a></li>
+</ul>
+
+<h2 id="how-to-solve-the-only-one-person-can-release-an-ios-app">How to solve the “only one person can release an ios app”</h2>
+
+<p>You may share the certs by your own or <strong>Follow <a href="https://codesigning.guide/">codesigning.guide</a></strong> and let <code class="highlighter-rouge">fastlane match</code> handle everything for you!</p>
+
+<h2 id="here-goes-the-slides">Here goes the slides</h2>
+
+<p>I gave a quick explanation of what problems fastlane solves and I went trough a complete example of doing the <code class="highlighter-rouge">fastlane init</code> and <code class="highlighter-rouge">fastlane ios beta</code> to send an app on itunes connect!</p>
+
+<div class="responsive-iframe-wrapper">
+    <div class="responsive-iframe">
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder" />
+        <iframe src="https://docs.google.com/presentation/d/143Sj5xU_ZhMGYRg74NHw8Fky98ZxBY_-u7ltYCkHQhw/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<hr />
+
+<p>If you have suggestions, feel free to poke me or <a href="https://github.com/GabLeRoux/gableroux.github.io/issues">open an issue</a>.</p>
+
+
+    </article>
+
+    <div class="fb-like" data-colorscheme="dark" data-share="true" data-width="450" data-show-faces="true"></div>
+
+    
+
+</article>
+
+    </div>
+</main>
+
+
+<a href="https://github.com/gableroux/gableroux.github.io" class="github-corner" aria-label="View source on Github">
+    <svg data-proofer-ignore width="80" height="80" viewBox="0 0 250 250" style="mix-blend-mode: lighten; z-index: 99999; fill:#fff; color:#000; position: absolute; bottom: 0; border: 0; left: 0; transform:scale(-1, -1)" aria-hidden="true">
+        <path d="M0 0l115 115h15l12 27 108 108v-250z"/>
+        <path d="M128.3 109c-14.5-9.3-9.3-19.4-9.3-19.4 3-6.9 1.5-11 1.5-11-1.3-6.6 2.9-2.3 2.9-2.3 3.9 4.6 2.1 11 2.1 11-2.6 10.3 5.1 14.6 8.9 15.9" fill="#000" style="transform-origin:130px 106px" class="octo-arm"/>
+        <path d="M115 115c-.1.1 3.7 1.5 4.8.4l13.9-13.8c3.2-2.4 6.2-3.2 8.5-3-8.4-10.6-14.7-24.2 1.6-40.6 4.7-4.6 10.2-6.8 15.9-7 .6-1.6 3.5-7.4 11.7-10.9 0 0 4.7 2.4 7.4 16.1 4.3 2.4 8.4 5.6 12.1 9.2 3.6 3.6 6.8 7.8 9.2 12.2 13.7 2.6 16.2 7.3 16.2 7.3-3.6 8.2-9.4 11.1-10.9 11.7-.3 5.8-2.4 11.2-7.1 15.9-16.4 16.4-30 10-40.6 1.6.2 2.8-1 6.8-5 10.8l-11.7 11.6c-1.2 1.2.6 5.4.8 5.3z" fill="#000" class="octo-body"/>
+    </svg>
+</a>
+
+<style>
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+
+    @keyframes octocat-wave {
+        0%, 100% {
+            transform: rotate(0)
+        }
+        20%, 60% {
+            transform: rotate(-25deg)
+        }
+        40%, 80% {
+            transform: rotate(10deg)
+        }
+    }
+
+    @media (max-width: 500px) {
+        .github-corner:hover .octo-arm {
+            animation: none
+        }
+
+        .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+    }
+</style>
+
+<div class="footer-margin-fix">
+    <footer class="site-footer clearfix">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="alt">
+                    <a href="/">
+                        <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="mailto:lebreton.gabriel@gmail.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
+                </li>
+                
+
+                <li class="rss">
+                    <a href="https://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+                </li>
+
+                <li class="feedly">
+                    <a href='https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fgableroux.com%2Ffeed.xml' target='blank'><img id='feedlyFollow' src='https://s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png' alt='Read Gabriel Le Breton on feedly' width='71' height='28'></a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<!-- Screw you IE http://outdatedbrowser.com/ -->
+<script src=""></script>
+<script>
+    //event listener: DOM ready
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    //call plugin function after DOM ready
+    addLoadEvent(function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'transform',
+            languagePath: 'your_path/outdatedbrowser/lang/en.html'
+        })
+    });
+</script>
+
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/assets/js/main.min.js" type="application/javascript"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19518991-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body>
+
+</html>

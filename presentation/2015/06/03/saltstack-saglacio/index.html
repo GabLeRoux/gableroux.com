@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Saltstack presentation at the SagLacIO</title>
+
+    <meta name="description" content="I gave a presentation at the SagLacIO about SaltStack with Micael Bergeron. Here are the slides.">
+    <meta name="author" content="Gabriel Le Breton">
+
+    <link rel="canonical" href="https://gableroux.com/presentation/2015/06/03/saltstack-saglacio/">
+    <link rel="alternate" type="application/rss+xml" title="GabLeRoux <Developer>" href="https://gableroux.com/feed.xml"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css">
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/cyborg-bootstrap/dist/cyborg.bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+<meta content="253381494995396" property="fb:app_id">
+
+<meta content="GabLeRoux <Developer>" property="og:site_name">
+
+
+<meta content="Saltstack presentation at the SagLacIO" property="og:title">
+
+
+
+<meta content="article" property="og:type">
+
+
+
+<meta content="I gave a presentation at the SagLacIO about SaltStack with Micael Bergeron. Here are the slides.
+
+" property="og:description">
+
+
+
+<meta content="https://gableroux.com/presentation/2015/06/03/saltstack-saglacio/" property="og:url">
+
+
+
+<meta content="2015-06-03T12:00:00+00:00" property="article:published_time">
+<meta content="https://gableroux.com/about/" property="article:author">
+
+
+
+<meta content="https://gableroux.com/images/saglacio/saltstack.jpg" property="og:image">
+
+
+
+
+<meta content="presentation" property="article:section">
+
+
+
+
+
+<meta content="saglacio" property="article:tag">
+
+<meta content="saltstack" property="article:tag">
+
+<meta content="minecraft" property="article:tag">
+
+<meta content="github" property="article:tag">
+
+
+
+
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '253381494995396',
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><i class="fa fa-home"></i> <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo"/></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                
+                
+                
+    
+        
+            <li><a href="/about/">About</a></li>
+        
+    
+
+    
+
+    
+        
+            <li><a href="/friends/">Friends</a></li>
+        
+    
+
+    
+
+    
+        
+            <li><a href="/todo/">Todo</a></li>
+        
+    
+
+    
+
+    
+
+    
+
+
+
+
+                <li>
+                    <a href="https://totemastudio.com" target="_blank" title="Totema Studio"><i class="fa fa-gamepad"></i> Totema Studio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0)
+    }
+    20%, 60% {
+        transform: rotate(-25deg)
+    }
+    40%, 80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}</style>
+
+<div id="outdated"></div>
+
+
+
+<div class="navbar-no-header-spacer"></div>
+
+
+<main id="wrap">
+    <div class="page-content">
+        <article class="blog-page container">
+
+    <header class="post-header">
+        <div class="row">
+            <h1 class="post-title">Saltstack presentation at the SagLacIO</h1>
+
+            <p class="post-meta">
+                Jun 3, 2015 • Gabriel Le Breton
+                
+            </p>
+
+            <img src="/images/saglacio/saltstack.jpg" alt="Saltstack presentation at the SagLacIO">
+
+        </div>
+    </header>
+
+    <hr>
+
+    <article class="page-content">
+        <p>I gave a presentation at the <a href="http://saglac.io">SagLacIO</a> about <a href="http://saltstack.com/">SaltStack</a> with <span data-proofer-ignore=""><a href="https://www.linkedin.com/in/micael-bergeron-76ba8976">Micael Bergeron</a></span>. Here are the slides.</p>
+
+<!-- more -->
+
+<div class="responsive-iframe-wrapper">
+    <div class="responsive-iframe">
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder" />
+        <iframe src="https://docs.google.com/presentation/d/1JVwUZwpbWZJY6_stEKqGR1st71R7fX8HN4qVGxX1KlY/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<h2 id="cool-stuff">Cool stuff</h2>
+
+<p><a href="https://github.com/micaelbergeron/">Micael</a> created a <a href="https://github.com/micaelbergeron/salt.minecraft">Minecraft Saltstack <i class="fa fa-github"></i> repository</a> to easily deploy a Minecraft server using <a href="https://www.spigotmc.org/">SpigotMC</a> and <a href="http://msmhq.com/">MSM</a>. :)<br />
+<a href="https://github.com/micaelbergeron/salt.minecraft">Go star this thing!</a></p>
+
+
+    </article>
+
+    <div class="fb-like" data-colorscheme="dark" data-share="true" data-width="450" data-show-faces="true"></div>
+
+    
+
+</article>
+
+    </div>
+</main>
+
+
+<a href="https://github.com/gableroux/gableroux.github.io" class="github-corner" aria-label="View source on Github">
+    <svg data-proofer-ignore width="80" height="80" viewBox="0 0 250 250" style="mix-blend-mode: lighten; z-index: 99999; fill:#fff; color:#000; position: absolute; bottom: 0; border: 0; left: 0; transform:scale(-1, -1)" aria-hidden="true">
+        <path d="M0 0l115 115h15l12 27 108 108v-250z"/>
+        <path d="M128.3 109c-14.5-9.3-9.3-19.4-9.3-19.4 3-6.9 1.5-11 1.5-11-1.3-6.6 2.9-2.3 2.9-2.3 3.9 4.6 2.1 11 2.1 11-2.6 10.3 5.1 14.6 8.9 15.9" fill="#000" style="transform-origin:130px 106px" class="octo-arm"/>
+        <path d="M115 115c-.1.1 3.7 1.5 4.8.4l13.9-13.8c3.2-2.4 6.2-3.2 8.5-3-8.4-10.6-14.7-24.2 1.6-40.6 4.7-4.6 10.2-6.8 15.9-7 .6-1.6 3.5-7.4 11.7-10.9 0 0 4.7 2.4 7.4 16.1 4.3 2.4 8.4 5.6 12.1 9.2 3.6 3.6 6.8 7.8 9.2 12.2 13.7 2.6 16.2 7.3 16.2 7.3-3.6 8.2-9.4 11.1-10.9 11.7-.3 5.8-2.4 11.2-7.1 15.9-16.4 16.4-30 10-40.6 1.6.2 2.8-1 6.8-5 10.8l-11.7 11.6c-1.2 1.2.6 5.4.8 5.3z" fill="#000" class="octo-body"/>
+    </svg>
+</a>
+
+<style>
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+
+    @keyframes octocat-wave {
+        0%, 100% {
+            transform: rotate(0)
+        }
+        20%, 60% {
+            transform: rotate(-25deg)
+        }
+        40%, 80% {
+            transform: rotate(10deg)
+        }
+    }
+
+    @media (max-width: 500px) {
+        .github-corner:hover .octo-arm {
+            animation: none
+        }
+
+        .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+    }
+</style>
+
+<div class="footer-margin-fix">
+    <footer class="site-footer clearfix">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li class="alt">
+                    <a href="/">
+                        <img src="/images/GabLeRoux-logo-small-white.png" alt="GabLeRoux logo">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/GabLeRoux" rel="publisher" title="See Gabriel Le Breton's code on GitHub"><i class="fa fa-github-square"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://www.facebook.com/gableroux/" target="_blank" title="Stalk Gabriel Le Breton on Facebook"><i class="fa fa-facebook-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://twitter.com/gableroux" target="_blank" title="Follow @gableroux"><i class="fa fa-twitter-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="https://plus.google.com/+GabrielLeBreton" rel="publisher" title="Find Gabriel Le Breton on Google+"><i class="fa fa-google-plus-square fa-fw"></i></a>
+                </li>
+                
+                
+                <li>
+                    <a href="mailto:lebreton.gabriel@gmail.com" rel="publisher" title="Send an email to Gabriel Le Breton"><i class="fa fa-envelope fa-fw"></i></a>
+                </li>
+                
+
+                <li class="rss">
+                    <a href="https://gableroux.com/feed.xml" title="Follow rss feed"><i class="fa fa-rss fa-fw"></i></a>
+                </li>
+
+                <li class="feedly">
+                    <a href='https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fgableroux.com%2Ffeed.xml' target='blank'><img id='feedlyFollow' src='https://s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png' alt='Read Gabriel Le Breton on feedly' width='71' height='28'></a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<!-- Screw you IE http://outdatedbrowser.com/ -->
+<script src=""></script>
+<script>
+    //event listener: DOM ready
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    //call plugin function after DOM ready
+    addLoadEvent(function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'transform',
+            languagePath: 'your_path/outdatedbrowser/lang/en.html'
+        })
+    });
+</script>
+
+<script src="/bower_components/jquery/dist/jquery.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="application/javascript"></script>
+<script src="/bower_components/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js" type="application/javascript"></script>
+<script src="/assets/js/main.min.js" type="application/javascript"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19518991-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+</body>
+
+</html>
