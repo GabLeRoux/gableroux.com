@@ -67,7 +67,7 @@ description: Links to places or companies I like
     </div>
     <div class="col-md-6">
         <div class="panel custom-panel">
-            <p><a href="https://www.optania.com/"><img src="http://www.optania.com/img/logo@2x.png?v=1525880041" alt="Optania"></a></p>
+            <p><a href="https://www.optania.com/"><img src="https://www.optania.com/img/logo@2x.png?v=1525880041" alt="Optania"></a></p>
             <hr>
             <p>A place where some friendly developers are building Intelligent Agent that improves education and individual support</p>
         </div>
