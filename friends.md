@@ -60,7 +60,7 @@ description: Links to places or companies I like
 <div class="row">
     <div class="col-md-6">
         <div class="panel custom-panel">
-            <p><a href="https://tlmgo.com/"><img src="https://solutionstlm.com/assets/images/layout/logo-tlm.png" alt="TLM"></a></p>
+            <p><a href="https://tlmgo.com/"><img src="https://solutionstlm.com/assets/dist/images/layout/logo-tlm-dark.svg" alt="TLM"></a></p>
             <hr>
             <p>Helping startups since 2003, developing software strategies, mobile, web and more. Oh and I work there 🏢</p>
         </div>
