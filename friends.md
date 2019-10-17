@@ -60,14 +60,14 @@ description: Links to places or companies I like
 <div class="row">
     <div class="col-md-6">
         <div class="panel custom-panel">
-            <p><a href="https://tlmgo.com/"><img src="https://solutionstlm.com/assets/images/layout/logo-tlm.png" alt="TLM"></a></p>
+            <p><a href="https://tlmgo.com/"><img src="https://solutionstlm.com/assets/dist/images/layout/logo-tlm-dark.svg" alt="TLM"></a></p>
             <hr>
             <p>Helping startups since 2003, developing software strategies, mobile, web and more. Oh and I work there 🏢</p>
         </div>
     </div>
     <div class="col-md-6">
         <div class="panel custom-panel">
-            <p><a href="https://www.optania.com/"><img src="http://www.optania.com/img/logo@2x.png?v=1525880041" alt="Optania"></a></p>
+            <p><a href="https://www.optania.com/"><img src="https://www.optania.com/img/logo@2x.png?v=1525880041" alt="Optania"></a></p>
             <hr>
             <p>A place where some friendly developers are building Intelligent Agent that improves education and individual support</p>
         </div>
