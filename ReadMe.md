@@ -2,27 +2,47 @@
 
 [![Build Status](https://travis-ci.org/GabLeRoux/gableroux.github.io.svg?branch=develop)](https://travis-ci.org/GabLeRoux/gableroux.github.io)
 
-Hey there, welcome to the backstage of my website.
+Hi,  
+Welcome to the source code of my personal website :v:.
 
-## install requirements
+## Development
 
-```bash
-gem install bundle
-bundle update
-bundle install
-npm i
-npm run bower -- install
-```
+You can edit files in repository directly from github and send PRs if you find typos. If you want to go further, you can install [hugo](https://gohugo.io/), fork this repo and do whatever you want :tada:.
 
 ## Running this website locally
 
+- Create a new page:
+
 ```bash
-npm run gulp
+hugo new section_name/filename
+```
+
+- Build a site to the `./public/` directory:
+
+```bash
+hugo
+```
+
+- Build a site including pages that are marked as a "draft":
+
+```bash
+hugo --buildDrafts
+```
+
+- Build a site to a given directory:
+
+```bash
+hugo --destination path/to/destination
+```
+
+- Build a site, start up a webserver to serve it, and automatically reload when pages are edited:
+```bash
+hugo server
 ```
 
 ## Deployment
 
-See #11 this will be improved shortly
+More details [here](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
 ```bash
 ./script/deploy.sh

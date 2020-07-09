@@ -1,15 +1,15 @@
-/.sass-cache/
-/.jekyll-metadata
-/bower_components
-/vendor
-/Gemfile.lock
-/node_modules
-/npm-debug.log
-/.publish
-/_site
 
-# idea IDE
-.idea/*
-!.idea/codeStyles/
-!.idea/runConfigurations/
-!.idea/inspectionProfiles/
+# Created by https://www.toptal.com/developers/gitignore/api/hugo
+# Edit at https://www.toptal.com/developers/gitignore?templates=hugo
+
+### Hugo ###
+# Generated files by hugo
+/public/
+/resources/_gen/
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# End of https://www.toptal.com/developers/gitignore/api/hugo
