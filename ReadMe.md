@@ -42,10 +42,10 @@ hugo server
 
 ## Deployment
 
-More details [here](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+More details [here](https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10)
 
 ```bash
-./script/deploy.sh
+./scripts/deploy.sh
 ```
 
 Now go read my posts!
@@ -55,17 +55,6 @@ Now go read my posts!
 > wubba lubba dub dub!
 
 Found a typo? a broken link? Open [an issue](https://github.com/gableroux/gableroux.github.io/issues) or send me a pull-request! :rocket:
-
-## Troubleshooting
-
-### Error: `libsass` bindings not found. Try reinstalling `node-sass`?
-
-More details on this [stackoverflow question](http://stackoverflow.com/questions/29461831/libsass-bindings-not-found-when-using-node-sass-in-nodejs).
-
-```bash
-npm uninstall --save-dev gulp-sass
-npm install --save-dev gulp-sass@2
-```
 
 ## License
 
