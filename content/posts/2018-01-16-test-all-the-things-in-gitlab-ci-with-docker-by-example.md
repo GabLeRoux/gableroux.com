@@ -1,15 +1,24 @@
 ---
-layout: post
-title:  "Test all the things in gitlab-ci with docker by example"
-date:   2018-01-16 20:15
-categories: saglacio
-tags: gitlab gitlab-ci ci docker testing example presentation
+categories:
+  - saglacio
+date: 2018-01-16 20:15
 featured_image: /images/test-all-the-things-in-gitlab-ci-with-docker-by-example.jpg
+tags:
+  - gitlab
+  - gitlab-ci
+  - ci
+  - docker
+  - testing
+  - example
+  - presentation
+title: "Test all the things in gitlab-ci with docker by example"
+url: /2018/01/16/test-all-the-things-in-gitlab-ci-with-docker-by-example/
 ---
+
 
 Do you write tests? Or do you skip them because it’s too complicated to run? Or maybe developers on your team just don’t care? You should take a few minutes and set up CI so you can enforce good practices. Good news, you can test [all the things](http://knowyourmeme.com/memes/all-the-things) automagically in [GitLab CI/CD](https://about.gitlab.com/features/gitlab-ci-cd/) with Docker and very little effort 🤘
 
-<!-- more -->
+<!--more-->
 
 _Edit: This blog post was [re-posted on gitlab.com's blog](https://about.gitlab.com/2018/02/05/test-all-the-things-gitlab-ci-docker-examples/) 🎉_
 

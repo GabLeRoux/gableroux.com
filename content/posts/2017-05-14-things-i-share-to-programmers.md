@@ -1,17 +1,23 @@
 ---
-layout: post
-title:  "Things I share to programmers"
-date:   2017-05-07 12:00
-categories: awesome
-tags: awesome guides curated-list comics
+categories:
+  - awesome
+date: 2017-05-07 12:00
 featured_image: /images/awesome-lists-are-awesome.jpg
+tags:
+  - awesome
+  - guides
+  - curated-list
+  - comics
+title: "Things I share to programmers"
+url: /2017/05/14/things-i-share-to-programmers/
 ---
+
 
 > Don't reinvent the wheel
 
 So many things to read, cool stuff to try, great tools to use but where can we start? Answer inside.
 
-<!-- more -->
+<!--more-->
 
 Hi, I've repeated myself quite a few times and shared these awesome things to a few ones, so here they are on a single page! :)
 

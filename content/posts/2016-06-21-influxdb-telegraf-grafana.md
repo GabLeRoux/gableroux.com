@@ -1,15 +1,21 @@
 ---
-layout: post
-title:  "InfluxDB Telegraf and Grafana <3"
-date:   2016-06-21 19:00
-categories: presentation
-tags: saglacio influxdb telegraf grafana
+categories:
+  - presentation
+date: 2016-06-21 19:00
 featured_image: /images/influxdb-telegraf-grafana.jpg
+tags:
+  - saglacio
+  - influxdb
+  - telegraf
+  - grafana
+title: "InfluxDB Telegraf and Grafana <3"
+url: /2016/06/21/influxdb-telegraf-grafana/
 ---
+
 
 Do you like graphs? `Grafana`! What about storing _time series_? `InfluxDB`! And grabbing information from many sources easily? `Telegraf`! Here we go!
 
-<!-- more -->
+<!--more-->
 
 I gave a presentation at the [SagLacIO][saglacio] on June 21 about [Influxdb][influxdb], [telegraf][telegraf] and [Grafana][grafana].
 

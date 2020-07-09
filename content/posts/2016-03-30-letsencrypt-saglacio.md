@@ -1,15 +1,21 @@
 ---
-layout: post
-title:  "Let’s Encrypt all the things"
-date:   2016-03-30 19:00
-categories: presentation
-tags: saglacio letsencrypt https revealjs
+categories:
+  - presentation
+date: 2016-03-30 19:00
 featured_image: /images/letsencrypt-all-the-things.jpg
+tags:
+  - saglacio
+  - letsencrypt
+  - https
+  - revealjs
+title: "Let’s Encrypt all the things"
+url: /2016/03/30/letsencrypt-saglacio/
 ---
+
 
 This site is being served as **https** and yours can be too! Keep reading and find out how to get free valid browser trusted https certificates. Slides of my talk at the [SagLacIO][saglacio] inside!
 
-<!-- more -->
+<!--more-->
 
 ## What's Let’s Encrypt?
 
@@ -30,11 +36,11 @@ Have a look to [Get HTTPS for free! on Github][gethttpsforfree] which shows you 
 
 Grab Letsencrypt official client on your server this way:
 
-{% highlight bash %}
+```bash
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
 ./letsencrypt-auto --help
-{% endhighlight %}
+```
 
 ### nginx configuration
 
@@ -124,7 +130,7 @@ server {
     #### Todo: better 404
   }
 }
-{% endhighlight %}
+```
 
 It should get you on tracks.
 
@@ -140,14 +146,14 @@ rsa-key-size = 4096
 email = lebreton.gabriel@gmail.com
 domains = gableroux.com, www.gableroux.com
 webroot-path = /var/www/
-{% endhighlight %}
+```
 
 Then run the following:
 
-{% highlight bash %}
+```bash
 letsencrypt-auto certonly -a webroot --renew-by-default \
 --config /usr/local/etc/le-renew-webroot.ini
-{% endhighlight %}
+```
 
 Yay https! Now run the above command in a daily cron job at a random hour to auto renew!  Let’s Encrypt certificates expires after 3 months and you don't want to do this by hand ;). That's it, **no more human intervention ever**.
 

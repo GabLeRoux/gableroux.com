@@ -1,15 +1,19 @@
 ---
-layout: post
-title:  "Meteorjs introduction presentation at the SagLacIO"
-date:   2013-12-09 19:00
-categories: presentation
-tags: saglacio meteor
+categories:
+  - presentation
+date: 2013-12-09 19:00
 featured_image: /images/saglacio/meteor.jpg
+tags:
+  - saglacio
+  - meteor
+title: "Meteorjs introduction presentation at the SagLacIO"
+url: /2013/12/09/meteor-saglacio/
 ---
+
 
 I gave a presentation at the [SagLacIO][saglacio] about [Meteor][meteor]. Here are the slides.
 
-<!-- more -->
+<!--more-->
 
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">

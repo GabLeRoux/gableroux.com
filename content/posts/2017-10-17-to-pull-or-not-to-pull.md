@@ -1,17 +1,24 @@
 ---
-layout: post
-title:  "To pull or not to pull: my first open source contribution"
-date:   2017-10-17 19:00
-categories: saglacio
-tags: git presentation pull-request contribution reveal
+categories:
+  - saglacio
+date: 2017-10-17 19:00
 featured_image: /images/to-pull-or-not-to-pull.jpg
+tags:
+  - git
+  - presentation
+  - pull-request
+  - contribution
+  - reveal
+title: "To pull or not to pull: my first open source contribution"
+url: /2017/10/17/to-pull-or-not-to-pull/
 ---
+
 
 > I want to contribute to the open source world and become someone better, where do I start?
 
 This blog post can show you.
 
-<!-- more -->
+<!--more-->
 
 Yet an other presentation at the [SagLacIO][saglacio]. What is open source? What is our place in the world? How can I make the world better? **Contribute to open source, it will!**
 

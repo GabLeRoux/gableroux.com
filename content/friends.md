@@ -1,9 +1,6 @@
 ---
-layout: page
-title: Friends
-permalink: /friends/
-group: "navigation"
-description: Links to places or companies I like
+title: "Friends"
+description: "Links to places or companies I like"
 ---
 
 <div class="row">

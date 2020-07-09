@@ -1,15 +1,20 @@
 ---
-layout: post
-title:  "Save saltstack console colored output to file"
-date:   2016-02-18 8:00
-categories: tips
-tags: saltstack console output
+categories:
+  - tips
+date: 2016-02-18 8:00
 featured_image: /images/such-terminal-colors.jpg
+tags:
+  - saltstack
+  - console
+  - output
+title: "Save saltstack console colored output to file"
+url: /2016/02/18/keep-saltstack-colored-output/
 ---
+
 
 Not an expert with Salt yet, but wow, saltstack is such a great tool! Like colored output? What about saving colors to your log files? Chrome extension inside (help needed!)
 
-<!-- more -->
+<!--more-->
 <!-- todo: add some example results for salt output, but the idea is here -->
 
 ---
@@ -22,7 +27,7 @@ Not an expert with Salt yet, but wow, saltstack is such a great tool! Like color
 
 Saltstack's output has colors for the great good, green when result is pass, pink when it's modified and red when it fails.
 
-![saltstack-output-example](/images/colors-in-shell-saltstack.png){: .center-block }
+![saltstack-output-example](/images/colors-in-shell-saltstack.png)
 
 Easy to see when something goes wrong. Now when you start running commands on multiple servers, salt is very handy, but what if you'd like to share the output with a teammate? Go for it, copy paste, plain white/black text or take a screenshot of your terminal? Continue reading for a solution ;)
 
@@ -41,23 +46,23 @@ export TEXT_BLUE=$'\033'\[34m
 export TEXT_MAGENTA=$'\033'\[35m
 export TEXT_CYAN=$'\033'\[36m
 export TEXT_WHITE=$'\033'\[37m
-{% endhighlight %}
+```
 
 Values are [ANSI Escape Codes][ANSI_escape_code] and the environment variables above comes by default with [Oh-my-zsh][oh-my-zsh] :)
  
-{% highlight bash %}
+```bash
 echo "$TEXT_CYAN colors $TEXT_GREEN are $TEXT_RED mainstream"
-{% endhighlight %}
+```
 
-![example for the above](/images/colors-in-shell-example.png){: .center-block }
+![example for the above](/images/colors-in-shell-example.png)
 
 ## Colors and files
 
 Now, depending on your shell, writing this to a shell with `>` should keep these ANSI characters, so when you `cat` the file again, you should see it with colors.
 
-{% highlight bash %}
+```bash
 echo "$TEXT_CYAN colors $TEXT_GREEN are $TEXT_RED mainstream" > colored_file.txt && cat colored_file.txt
-{% endhighlight %}
+```
 
 In my case, colors are kept (using [Oh-my-zsh][oh-my-zsh] with [iterm2 terminal emulator][iterm2]) and I'm happy with it, but sometimes, it's not the case depending on the command or the shell being used.
 
@@ -65,9 +70,9 @@ In my case, colors are kept (using [Oh-my-zsh][oh-my-zsh] with [iterm2 terminal 
 
 Depending on your shell environment, `less` command may not need additional parameters, but if you try to pipe a colored file to `less` and don't get any colors, try with `-r` parameter:
 
-{% highlight bash %}
+```bash
 cat colored_file.txt | less -r
-{% endhighlight %}
+```
 
 Thanks to [this answer on stackoverflow](http://superuser.com/a/36045/55267) and its comments.
 
@@ -75,17 +80,17 @@ Thanks to [this answer on stackoverflow](http://superuser.com/a/36045/55267) and
 
 Haven't talked much about salt in current post so lets begin. Writing salt output to a file doesn't keep ANSI colors. Luckily for us, salt command has a `--force-color` parameter [added in salt issue #4121][salt#4121].
 
-![Salt colored output example](/images/salt-colored-output.png){: .center-block }
+![Salt colored output example](/images/salt-colored-output.png)
 
 Solution to keep salt output looks like this:
 
-{% highlight bash %}
+```bash
 salt-call state.highstate -l debug --force-color > salt.log
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```bash
 cat salt.log
-{% endhighlight %}
+```
 
 Awesome, salt colors!
 
@@ -93,56 +98,56 @@ Awesome, salt colors!
 
 I you want to remove colors from output, there are a few solutions available, here's a [question asking for a regex to remove ANSI Escape codes](http://superuser.com/q/380772/55267). My favorite answer is [ansi-strip-cli npm module][strip-ansi-cli]
 
-{% highlight bash %}
+```bash
 npm install --g strip-ansi-cli
-{% endhighlight %}
+```
 
 Usage:
 
-{% highlight bash %}
+```bash
 cat colored_file.txt | strip-ansi
-{% endhighlight %}
+```
 
 No more colors :)
 
 Otherwise, you can strip output with `perl -pe 's/\x1b\[[0-9;]*[mG]//g'` which is perfect if you don't want node.
 
-{% highlight bash %}
+```bash
 cat colored_file.txt | perl -pe 's/\x1b\[[0-9;]*[mG]//g'
-{% endhighlight %}
+```
 
 ## salt solution
 
 So with salt, I managed to get both output using the following:
 
-{% highlight bash %}
+```bash
 salt-call state.highstate -l debug --force-color \
 | tee salt-colored.log \
 | tee >(strip-ansi > salt.log)
-{% endhighlight %}
+```
 
 Prefer not to bloat your system with npm?
 
-{% highlight bash %}
+```bash
 salt-call state.highstate -l debug --force-color \
 | tee salt-colored.log \
 | tee >(perl -pe 's/\x1b\[[0-9;]*[mG]//g' > salt.log)
-{% endhighlight %}
+```
 
 Now you can enjoy salt output in both ways :)
 
-{% highlight bash %}
+```bash
 cat salt-colored.log
 cat salt.log
-{% endhighlight %}
+```
 
 ## What's the `tee` command?
 
 Thanks to [tldr pages][tldr]
 
-{% highlight bash %}
+```bash
 tldr tee
-{% endhighlight %}
+```
 
 {% highlight text %}
   tee
@@ -153,17 +158,17 @@ tldr tee
 
   - Append to the given FILEs, do not overwrite:
     echo "example" | tee -a FILE
-{% endhighlight %}
+```
 
 ## Some random stuff because why not
 
 Cool, you've reached this far, get [lolcat](http://osxdaily.com/2014/07/03/lolcat-rainbow-terminal-command-output/) for the lolz
 
-{% highlight bash %}
+```bash
 gem install lolcat
-{% endhighlight %}
+```
 
-![man ascii lolcat](/images/man-ascii-lolcat.png){: .center-block }
+![man ascii lolcat](/images/man-ascii-lolcat.png)
 
 [ansi-colors-chrome-extension]: https://github.com/gableroux/ansi-colors-chrome-extension
 [Bash-Prompt-HOWTO/x329]: http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html

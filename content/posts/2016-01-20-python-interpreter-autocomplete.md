@@ -1,21 +1,23 @@
 ---
-layout: post
-title:  "Python interpreter autocomplete + history with ~/.pythonrc"
-date:   2016-01-20 15:00:00
-categories: python
-tag: dotfile history python pythonrc autocomplete Jupyter interpreter
+categories:
+  - python
+date: 2016-01-20 15:00:00
 featured_image: /images/pythonrc-history.png
+tag: dotfile history python pythonrc autocomplete Jupyter interpreter
+title: "Python interpreter autocomplete + history with ~/.pythonrc"
+url: /2016/01/20/python-interpreter-autocomplete/
 ---
+
 
 Using great tools is important, using autocompletion with great tools is even better. Update: use [Jupyter][Jupyter], it's just amazing!
 
-<!-- more -->
+<!--more-->
 
 ## Never used python interpreter?
 
 Try it now! [Install python][install-python] if it's not already the case and run `python` in a terminal. There you go, you're now inside a python interpreter!
 
-![Bare python interpreter example](/images/python-interpreter.png){: .center-block }
+![Bare python interpreter example](/images/python-interpreter.png)
 
 ## Get interpreter autocompletion and history
 
@@ -25,7 +27,7 @@ Here is what you're looking for, create this file:
 
 `~/.pythonrc`
 
-{% highlight python %}
+```python
 import atexit
 import os
 
@@ -71,20 +73,20 @@ from collections import *
 # noinspection PyUnresolvedReferences
 from itertools import *
 
-{% endhighlight %}
+```
 
 
 Then, you need to tell python interpreter to use this `~/.pythonrc` file, so add the following line somewhere in an `rc` file (either `~/.bashrc` if you're using [bash][bash] or `~/.zshrc` for the awesome [oh-my-zsh][oh-my-zsh])
 
-{% highlight python %}
+```python
 export PYTHONSTARTUP=~/.pythonrc
-{% endhighlight %}
+```
 
 You can also run this directly in your shell if you want to test before editing your `rc` file.
 
 That's it, fire up a terminal, run `python` again and enjoy autocompletion when you hit `tab` key :D
 
-![pythonrc terminal example](/images/python-interpreter-autocompletion.png){: .center-block }
+![pythonrc terminal example](/images/python-interpreter-autocompletion.png)
 
 All of the commands you type in a local interpreter are now recorded to `~/.pyhistory`. Hit `tab` when experimenting with modules from the interwebs and it will be much easier to discover all the things :)
 
@@ -99,20 +101,20 @@ For advanced usage, there are a few interpreters available that provide features
 
 I used [IPython][IPython] for a while and it's great:
 
-![IPython usage example](/images/python-interpreter-ipython-usage-example.png){: .center-block }
+![IPython usage example](/images/python-interpreter-ipython-usage-example.png)
 
 ## Even better, use [Jupyter][Jupyter]
 
 [Jupyter][Jupyter] lets you manage notebooks with live code, syntax highlighting, visualizations, markdown and even [has a few extensions][Jupyter-extensions]. It's really worth [the try][Jupyter-try].
 
-{% highlight bash %}
+```bash
 pip3 install jupyter
 jupyter notebook
-{% endhighlight %}
+```
 
 You'll love it and it's even more fun when used with `numpy` and `matplotlib`.
 
-![jupyter localhost example](/images/python-interpreter-jupyter.png){: .center-block }
+![jupyter localhost example](/images/python-interpreter-jupyter.png)
 
 Oh and you can save them [as gists][the-zen-of-python.ipynb] which is wonderful for sharing and embedding:
 

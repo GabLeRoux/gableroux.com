@@ -1,15 +1,21 @@
 ---
-layout: post
-title:  "Saltstack presentation at the SagLacIO"
-date:   2015-06-03 12:00
-categories: presentation
-tags: saglacio saltstack minecraft github
+categories:
+  - presentation
+date: 2015-06-03 12:00
 featured_image: /images/saglacio/saltstack.jpg
+tags:
+  - saglacio
+  - saltstack
+  - minecraft
+  - github
+title: "Saltstack presentation at the SagLacIO"
+url: /2015/06/03/saltstack-saglacio/
 ---
+
 
 I gave a presentation at the [SagLacIO][saglacio] about [SaltStack][saltstack] with <span data-proofer-ignore>[Micael Bergeron][micael-bergeron-linkedin]</span>. Here are the slides.
 
-<!-- more -->
+<!--more-->
 
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">

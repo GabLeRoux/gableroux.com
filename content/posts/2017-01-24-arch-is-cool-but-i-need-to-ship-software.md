@@ -1,15 +1,22 @@
 ---
-layout: post
-title:  "Arch Linux is cool, but I need to ship software"
-date:   2017-01-24 18:00
-categories: presentation
-tags: saglacio linux archlinux antergos fedora
+categories:
+  - presentation
+date: 2017-01-24 18:00
 featured_image: /images/arch-is-cool-but-i-need-to-ship-software.jpg
+tags:
+  - saglacio
+  - linux
+  - archlinux
+  - antergos
+  - fedora
+title: "Arch Linux is cool, but I need to ship software"
+url: /2017/01/24/arch-is-cool-but-i-need-to-ship-software/
 ---
+
 
 [Arch Linux][archlinux] is a very powerful and amazing linux distribution. You get full control on everything. It has bleeding edge software and it's surprisingly stable if you know what you're doing. However, sometimes, things can go wrong.
 
-<!-- more -->
+<!--more-->
 
 You want a really neat linux distribution with a rock solid package manager that lets you install whatever you want? You're a linux power user tired of **installing [so many PPAs][ubuntu-ppas] to get what you want (Ubuntu)?**  Arch Linux is what you're looking for! It has a powerful package manager ([pacman] or you can also install [aura][aura]), top notch documentation and it's really fun to use. It may not be as easy as you'd think, but I'm sure you can get it to work. In this presentation, I talked about my journey with one of the most amazing Linux distro I ever used. \<3
 
@@ -45,15 +52,15 @@ If you move to [Fedora][fedora], you may like to use this cool software: [Fedy][
 > Fedy lets you install multimedia codecs and additional software that Fedora doesn't want to ship, such as MP3 support, Adobe Flash, Oracle Java, and much more, with just a few clicks.
 > To install Fedy in Fedora, open a Terminal and run the following command:
 
-{% highlight bash %}
+```bash
     curl https://www.folkswithhats.org/installer | sudo bash
-{% endhighlight %}
+```
 
 _Note: don't install things from the internet before reading it, so read it first_
 
-{% highlight bash %}
+```bash
     curl https://www.folkswithhats.org/installer
-{% endhighlight %}
+```
 
 Also, most of the internet will tell you to _disable SELinux_. **Don't do this**. You'll lose time with it and you won't figure out it's that piece of software that [blocked your docker volumes][docker-selinux] ([StackOverflow question][docker-selinux-so]), but you should really **[stop disabling selinux][stop-disabling-selinux]**.
 

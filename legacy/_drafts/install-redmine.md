@@ -19,26 +19,26 @@ Close your eyes, this will be ugly.
 
 ## Redmine installation on CemtOS 7
 
-{% highlight bash %}
+```bash
 sudo apt-get install redmine redmine-mysql mysql-server -y
-{% endhighlight %}
+```
 
 You should use mariadb instead of mysql for [the following 10 reasons](https://seravo.fi/2015/10-reasons-to-migrate-to-mariadb-if-still-using-mysql)
 
 Install apache2 (haven't tried with nginx here, its usually better than apache, but not covered here sorry)
 
-{% highlight bash %}
+```bash
 sudo apt-get install apache2 libapache2-mod-passenger -y
 sudo cp /usr/share/doc/redmine/examples/apache2-passenger-host.conf /etc/apache2/sites-available/
 
 gem install bundler
-{% endhighlight %}
+```
 
 ## Customize apache2-passenger-host.conf (listen 80)
 
-{% highlight bash %}
+```bash
 vim /etc/apache2/sites-available/apache2-passenger-host.conf
-{% endhighlight %}
+```
 
 Have a look to its content and comment, if you're new to this, don't edit ;)
 
@@ -46,18 +46,18 @@ Have a look to its content and comment, if you're new to this, don't edit ;)
 
 Add `PassengerDefaultUser www-data` to `passenger.conf`
 
-{% highlight bash %}
+```bash
 vim /etc/apache2/mods-available/passenger.conf
-{% endhighlight %}
+```
 
 ## Customize apache2.conf (NameServer)
 
-{% highlight bash %}
+```bash
 vim /etc/apache2/apache2.conf
 
 sudo ln -sf /usr/share/redmine /var/lib/redmine/default/passenger
 sudo a2ensite apache2-passenger-host.conf
 sudo service apache2 reload
-{% endhighlight %}
+```
 
 Almost done. Todo: finish this post one day, I never posted this, but could be handy for someone unless they managed to make it easier :O

@@ -1,16 +1,20 @@
 ---
-layout: post
-title:  "Hello Pelican"
-date:   2014-07-27 15:00:00
-categories: news
-tags: Pelican hello-world
+categories:
+  - news
+date: 2014-07-27 15:00:00
 featured_image: /images/hello-pelican.jpg
+tags:
+  - Pelican
+  - hello-world
+title: "Hello Pelican"
+url: /2014/07/27/hello-pelican/
 ---
+
 
 Hi there,  
 Welcome to my blog. This is my first post (in fact, it's my second). I first attempted to create my blog with [wagtail][wagtail] but I had a [blocking issue][blocking-issue]. *Edit: problem solved, but I'm happy with pelican!* Anyway, I'm glad you're here, I made a branch and moved my work to [Pelican][pelican].
 
-<!-- more -->
+<!--more-->
 
 It's probably more convenient for my simple website. I can't tell a lot about pelican as I did not play much with it yet, but it seems very easy to work with. Oh and I love writing in `markdown`, that's probably because of Github ReadMe files Eh.
 
@@ -49,7 +53,7 @@ needed by Pelican.
 > Do you want to upload your website using GitHub Pages? (y/N) n
 Done. Your new project is available at *******/***/********/*****
 �F�
-{% endhighlight %}
+```
 
 Ok so not quite sure about that last line, but my stuff is ready to go now :). Thanks to the [documentation](http://docs.getpelican.com/), it's very well explained and easy to follow.
 
@@ -63,9 +67,9 @@ If you're reading this post, you see the theme I made. If you want to create you
 
 You can then insert this in your pelican settings:
 
-{% highlight bash %}
+```bash
     THEME = "/home/user/pelican-themes/theme-name"
-{% endhighlight %}
+```
 
 ## What's next
 

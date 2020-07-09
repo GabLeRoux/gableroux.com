@@ -1,15 +1,21 @@
 ---
-layout: post
-title:  "How to explode buildings in a gamejam with unity and blender"
-date:   2018-02-26 20:00
-categories: saglacio
-tags: unity blender totemastudio presentation
+categories:
+  - saglacio
+date: 2018-02-26 20:00
 featured_image: /images/how-to-explode-buildings-in-a-gamejam-with-unity-and-blender.jpg
+tags:
+  - unity
+  - blender
+  - totemastudio
+  - presentation
+title: "How to explode buildings in a gamejam with unity and blender"
+url: /2018/02/26/explode-buildings-in-unity-with-blender/
 ---
+
 
 Discover [City Crashers][city-crashers]’s satisfying building destruction in 15 minutes. Slides inside!
 
-<!-- more -->
+<!--more-->
 
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">

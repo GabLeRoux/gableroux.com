@@ -1,17 +1,24 @@
 ---
-layout: post
-title:  "Fastlane: deploy ios and android like a boss"
-date:   2017-09-19 19:00
-categories: saglacio
-tags: fastlane presentation ios android deployment
+categories:
+  - saglacio
+date: 2017-09-19 19:00
 featured_image: /images/fastlane-automate-deployment-like-a-boss.jpg
+tags:
+  - fastlane
+  - presentation
+  - ios
+  - android
+  - deployment
+title: "Fastlane: deploy ios and android like a boss"
+url: /2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/
 ---
+
 
 > Sorry, we can't deploy, john is on vacation
 
 Your team shouldn't rely on only one person to release your mobile apps.
 
-<!-- more -->
+<!--more-->
 
 Once again, I gave a presentation at the [SagLacIO][saglacio]. This time, it was about **[Fastlane][Fastlane]**. Here are a few links to get you started.
 
@@ -19,10 +26,10 @@ Once again, I gave a presentation at the [SagLacIO][saglacio]. This time, it was
 
 Install ruby and start having fun:
 
-{% highlight bash %}
+```bash
 sudo gem install fastlane
 fastlane init
-{% endhighlight %}
+```
 
 Then follow instructions. If your app has both ios and android (ex; cordova, ionic, react native, hybrid project), I recommend starting with ios. You can add android support later by [following the android documentation](https://docs.fastlane.tools/getting-started/android/setup/).
 

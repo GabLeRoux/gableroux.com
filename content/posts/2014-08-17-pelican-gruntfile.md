@@ -1,15 +1,17 @@
 ---
-layout: post
-title:  "Pelican Gruntfile"
-date:   2014-08-17 12:00
-categories: pelican
-tag: pelican grunt gruntfile coffeescript
+categories:
+  - pelican
+date: 2014-08-17 12:00
 featured_image: /images/grunt-logo-large.jpg
+tag: pelican grunt gruntfile coffeescript
+title: "Pelican Gruntfile"
+url: /2014/08/17/pelican-gruntfile/
 ---
+
 
 Now that I use [grunt, the JavaScript Task Runner][gruntjs] my life has changed! It makes task automation so cool that it is a must have in every web project (and even sometime in other projects!). There's also a great alternative called [Gulp.js][gulpjs]. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool *yet*.
 
-<!-- more -->
+<!--more-->
 
 ## Pelican automation
 
@@ -21,19 +23,19 @@ Because pelican is easy to use, I decided to make my own `gruntfile` instead! Af
 
 First, create a `package.json` file to save dependencies using this command:
 
-{% highlight bash %}
+```bash
 npm init
-{% endhighlight %}
+```
 
 Then, install the fun stuff
 
-{% highlight bash %}
+```bash
 npm install --save-dev grunt-coffeelint grunt-contrib-coffee grunt-contrib-connect grunt-contrib-jshint   grunt-contrib-sass grunt-contrib-watch grunt-shell load-grunt-tasks
-{% endhighlight %}
+```
 
 Everything will be saved in your `package.json`, so next time you want to install them, you only have to run `npm install`. The package file will contain something like this:
 
-{% highlight json %}
+```json
 "devDependencies": {
     "coffeelint": "^1.5.6",
     "grunt-coffeelint": "0.0.13",
@@ -45,12 +47,13 @@ Everything will be saved in your `package.json`, so next time you want to instal
     "grunt-shell": "^0.7.0",
     "load-grunt-tasks": "^0.6.0"
 }
-{% endhighlight %}
+```
+
 ### The Gruntfile
 
 Here's my awesome `Gruntfile.coffee`:
 
-{% highlight coffeescript %}
+```coffeescript
 module.exports = (grunt) ->
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
@@ -127,13 +130,13 @@ module.exports = (grunt) ->
     'connect'
     'watch'
   ]
-{% endhighlight %}
+```
 
 *Note*: make sure you have `pelican` installed with `pip install pelican`. Replace `gableroux` with your own theme name (where your magic files are stored) and enjoy the Grunt awesomeness by running `grunt` in a terminal.
 
 Here's the `jshintrc` file I used:
 
-{% highlight json %}
+```json
 {
     "esnext": true,
     "bitwise": true,
@@ -153,11 +156,11 @@ Here's the `jshintrc` file I used:
     "smarttabs": true,
     "white": true
 }
-{% endhighlight %}
+```
 
 And my `coffeelint.json` file:
 
-{% highlight json %}
+```json
 {
   "indentation": {
     "value": 2
@@ -187,7 +190,7 @@ And my `coffeelint.json` file:
     "level": "error"
   }
 }
-{% endhighlight %}
+```
 
 > Why coffeescript? Visit [coffeescript's website][coffeescript], click on "try coffeescript", copy/paste my Gruntfile.coffee and see how it is easier to read in coffee. Consider this as syntax sugar, but when it comes to [extending javascript classes][coffeescript-classes], I really prefer using coffeescript.
 

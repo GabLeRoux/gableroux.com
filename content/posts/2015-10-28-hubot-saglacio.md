@@ -1,15 +1,19 @@
 ---
-layout: post
-title:  "Hubot presentation at the SagLacIO"
-date:   2015-10-28 19:00
-categories: presentation
-tags: saglacio hubot
+categories:
+  - presentation
+date: 2015-10-28 19:00
 featured_image: /images/saglacio/hubot-improve-and-reduce.png
+tags:
+  - saglacio
+  - hubot
+title: "Hubot presentation at the SagLacIO"
+url: /2015/10/28/hubot-saglacio/
 ---
+
 
 I gave a presentation at the [SagLacIO][saglacio] about [Hubot][hubot]. Here are the slides.
 
-<!-- more -->
+<!--more-->
 
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
