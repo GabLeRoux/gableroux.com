@@ -1,7 +1,7 @@
 ---
 categories:
   - presentation
-date: 2016-06-21 19:00
+date: 2016-06-21 19:00:00
 featured_image: /images/influxdb-telegraf-grafana.jpg
 tags:
   - saglacio

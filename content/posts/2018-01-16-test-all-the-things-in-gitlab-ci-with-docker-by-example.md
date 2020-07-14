@@ -1,7 +1,7 @@
 ---
 categories:
   - saglacio
-date: 2018-01-16 20:15
+date: 2018-01-16 20:15:00
 featured_image: /images/test-all-the-things-in-gitlab-ci-with-docker-by-example.jpg
 tags:
   - gitlab

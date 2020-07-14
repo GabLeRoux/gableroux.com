@@ -1,7 +1,7 @@
 ---
 categories:
   - presentation
-date: 2017-04-10 18:30
+date: 2017-04-10 18:30:00
 featured_image: /images/introduction-to-shaders.jpg
 tags:
   - saglacio

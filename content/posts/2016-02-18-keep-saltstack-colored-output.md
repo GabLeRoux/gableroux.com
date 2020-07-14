@@ -1,7 +1,7 @@
 ---
 categories:
   - tips
-date: 2016-02-18 8:00
+date: 2016-02-18 8:00:00
 featured_image: /images/such-terminal-colors.jpg
 tags:
   - saltstack

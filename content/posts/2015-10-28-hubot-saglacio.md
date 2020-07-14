@@ -1,7 +1,7 @@
 ---
 categories:
   - presentation
-date: 2015-10-28 19:00
+date: 2015-10-28 19:00:00
 featured_image: /images/saglacio/hubot-improve-and-reduce.png
 tags:
   - saglacio

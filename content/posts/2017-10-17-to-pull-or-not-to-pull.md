@@ -1,7 +1,7 @@
 ---
 categories:
   - saglacio
-date: 2017-10-17 19:00
+date: 2017-10-17 19:00:00
 featured_image: /images/to-pull-or-not-to-pull.jpg
 tags:
   - git

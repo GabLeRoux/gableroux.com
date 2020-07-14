@@ -31,6 +31,7 @@ This script will help you create a new Pelican-based website.
 Please answer the following questions so this script can generate the files
 needed by Pelican.
 
+```
 > Where do you want to create your new web site? [.]
 > What will be the title of this web site? GabLeRoux
 > Who will be the author of this web site? GabLeRoux

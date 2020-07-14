@@ -1,7 +1,7 @@
 ---
 categories:
   - awesome
-date: 2017-05-07 12:00
+date: 2017-05-07 12:00:00
 featured_image: /images/awesome-lists-are-awesome.jpg
 tags:
   - awesome

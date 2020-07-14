@@ -1,7 +1,7 @@
 ---
 categories:
   - presentation
-date: 2016-03-30 19:00
+date: 2016-03-30 19:00:00
 featured_image: /images/letsencrypt-all-the-things.jpg
 tags:
   - saglacio

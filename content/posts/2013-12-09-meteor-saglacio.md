@@ -1,7 +1,7 @@
 ---
 categories:
   - presentation
-date: 2013-12-09 19:00
+date: 2013-12-09 19:00:00
 featured_image: /images/saglacio/meteor.jpg
 tags:
   - saglacio

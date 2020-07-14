@@ -1,7 +1,7 @@
 ---
 categories:
   - presentation
-date: 2016-11-21 21:00
+date: 2016-11-21 21:00:00
 featured_image: /images/y-u-no-git.jpg
 tags:
   - version-control

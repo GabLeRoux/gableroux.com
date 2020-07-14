@@ -1,7 +1,7 @@
 ---
 categories:
   - presentation
-date: 2015-06-03 12:00
+date: 2015-06-03 12:00:00
 featured_image: /images/saglacio/saltstack.jpg
 tags:
   - saglacio

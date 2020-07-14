@@ -1,7 +1,7 @@
 ---
 categories:
   - saglacio
-date: 2017-09-19 19:00
+date: 2017-09-19 19:00:00
 featured_image: /images/fastlane-automate-deployment-like-a-boss.jpg
 tags:
   - fastlane

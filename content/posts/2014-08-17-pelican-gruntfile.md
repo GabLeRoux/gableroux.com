@@ -1,7 +1,7 @@
 ---
 categories:
   - pelican
-date: 2014-08-17 12:00
+date: 2014-08-17 12:00:00
 featured_image: /images/grunt-logo-large.jpg
 tag: pelican grunt gruntfile coffeescript
 title: "Pelican Gruntfile"

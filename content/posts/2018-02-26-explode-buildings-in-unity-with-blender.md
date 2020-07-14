@@ -1,7 +1,7 @@
 ---
 categories:
   - saglacio
-date: 2018-02-26 20:00
+date: 2018-02-26 20:00:00
 featured_image: /images/how-to-explode-buildings-in-a-gamejam-with-unity-and-blender.jpg
 tags:
   - unity
