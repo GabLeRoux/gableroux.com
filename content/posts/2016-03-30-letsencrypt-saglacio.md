@@ -47,7 +47,7 @@ cd letsencrypt
 Thanks to [@jipiboily][jipiboily], he shared me the awesome [letsecure.me][letsecure] website. Here's how my updated nginx configuration looks like:
 `/etc/nginx/site-available/gableroux.conf`
 
-{% highlight nginx %}
+```nginx
 # gableroux.com configuration generated from salt
 
 ## https redirect
