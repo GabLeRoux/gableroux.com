@@ -42,10 +42,10 @@
         */}}
       {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
         <span class="f6 mv4 dib tracked"> - {{ .ReadingTime}} minutes read</span>
-        <span class="f6 mv4 dib tracked"> - {{ .WordCount}} words</span>
+<!--        <span class="f6 mv4 dib tracked"> - {{ .WordCount}} words</span>-->
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links nested-img mid-gray pr4-l">
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6 instapaper_ignoref">
@@ -58,9 +58,9 @@
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
-      {{- partial "menu-contextual.html" . -}}
-    </aside>
-
   </article>
+
+<aside class="flex-l flex-wrap mw8 center ph3">
+    {{- partial "menu-contextual.html" . -}}
+</aside>
 {{ end }}
