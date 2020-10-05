@@ -18,7 +18,7 @@ description: A list of things to do!
 * <i class="fa fa-square"></i> [MeteorJS][meteor] in a nutshell <del>post old presentation</del>
 * <i class="fa fa-square"></i> [Coffeescript][coffeescript] power
 * <i class="fa fa-square"></i> [CodeWars][codewars], become a Code Kata!
-* <i class="fa fa-square"></i> Windows 10 (lol, just kidding, wont't talk about that)
+* <i class="fa fa-square"></i> Windows 10 (lol, just kidding, won't talk about that)
 * <i class="fa fa-check-square"></i> <del>Version Control: Git and what I should have learned at school (but didn't)</del>
 * <i class="fa fa-check-square"></i> <del>Grunt or Gulp, livereload, omg</del>
 * <i class="fa fa-check-square"></i> <del>Write about Pelican</del>
