@@ -26,13 +26,10 @@ You'll find the commands to run in `src/package.json`.
 
 For development, you'll need Node and Yarn installed:
 
-```
-$ cd themes/gohugo-theme-ananke/src/
-
-$ yarn install
-
-$ npm start
-
+```bash
+cd themes/gableroux/src/
+yarn install
+npm start
 ```
 This will process both the postcss and scripts.
 
