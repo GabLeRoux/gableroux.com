@@ -4,16 +4,19 @@ title = "GabLeRoux <Developer>"
 description = "  Personal site about code, ideas, technologies and everything. I like to write python and work on crazy projects, read my stuff!"
 
 theme = "gableroux"
+Paginate = 9
+googleAnalytics = "UA-19518991-1"
+enableRobotsTXT = true
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
 
 copyright = "This work is licensed under MIT License."
 
 [author]
 name = "Gabriel Le Breton"
 
-disqusShortname = "gableroux"
+disqusShortname = "GabLeRoux"
 
 facebook_app_id = "253381494995396"
 facebook_default_image = "images/layout/sharing-gableroux.jpg"
@@ -23,19 +26,25 @@ google_plus_username = "GabrielLeBreton"
 github_username = "GabLeRoux"
 facebook_username = "gableroux"
 
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+
 [params]
 show_reading_time = true
+recent_posts_number = 10
 custom_css = ["css/custom.css"]
 #body_classes = "avenir bg-near-white"
 
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "monokai"
-    tabWidth = 4
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+hl_Lines = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+style = "monokai"
+tabWidth = 4
