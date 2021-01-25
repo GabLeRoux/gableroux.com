@@ -25,6 +25,8 @@ facebook_username = "gableroux"
 
 [params]
 show_reading_time = true
+custom_css = ["css/custom.css"]
+#body_classes = "avenir bg-near-white"
 
 [markup]
   [markup.highlight]
