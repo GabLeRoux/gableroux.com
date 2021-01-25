@@ -39,3 +39,8 @@
     margin: 10px 0;
     overflow: hidden;
 }
+
+/* tags */
+ul.tags li {
+    display: inline;
+}
