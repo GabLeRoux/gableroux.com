@@ -37,7 +37,7 @@ Also includes examples of Hugo Features or Functions:
 - `where`
 - Content Views
 - Partials
-- Template layouts (type "post" uses a special list template, single template,  and a content view)
+- Template layouts (type "post" uses a special list template, single template, and a content view)
 - Tags
 - `len`
 - Conditionals
@@ -51,10 +51,27 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 
 ## Installation
 
+### As a Hugo Module (recommended)
+
+1. Initiate the hugo module system if you haven't already:
+
+   ```
+   $ hugo mod init github.com/<your_user>/<your_project>
+   ```
+
+2. Add the theme's repo to your `config.toml`:
+
+   ```toml
+   theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+   ```
+
+### As Git Submodule
+
 Inside the folder of your Hugo site run:
 
-    $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-
+```
+$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+```
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
 
@@ -66,7 +83,7 @@ After installing the theme successfully it requires a just a few more steps to g
 
 ### The config file
 
-Take a look inside the [`exampleSite`](https://github.com/budparr/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/budparr/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
+Take a look inside the [`exampleSite`](https://github.com/theNewDynamic/gohugo-theme-ananke/tree/master/exampleSite) folder of this theme. You'll find a file called [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml). To use it, copy the [`config.toml`](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/exampleSite/config.toml) in the root folder of your Hugo site. Feel free to change the strings in this theme.
 
 You may need to delete the line: `themesDir = "../.."`
 
@@ -138,6 +155,30 @@ For example, if your css files are `static/css/custom.css` and `static/css/custo
       custom_css = ["css/custom.css","css/custom2.css"]
 ```
 
+### Processed CSS
+
+By default, Ananke will read a preprocessed stylesheet from `/assets/ananke/dist/main.[hash].css`. If you want to have Hugo process the stylesheet for you thus allowing better customisation using Hugo's unison file system, you need to:
+
+1. From the root of your project: `$ hugo mod npm pack`.  
+This will generate a `package.json` for your project, or append the npm packages required by the theme to your existing `package.json`.
+2. Still from the root of your project: `$ npm install`
+3. Set the following site Parameter to true:
+
+```
+    [params]
+      ananke_process_css = true
+```
+
+You're all set an can run Hugo.
+
+#### Overwrite some imported file
+
+To have your own `_code.css` imported and processed by the theme. Add `/assets/ananke/css/_code.css` to your project.
+
+#### Add a new import
+
+Create your own `/assets/ananke/css/` directory at the root of your project, drop your files in there, and create your own `/main.css` with your own import statements. Don't forget to include the existing import statement from the theme's own `main.css`.
+
 ### Show Reading Time and Word Count
 
 If you add a key of `show_reading_time` true to either the Config Params, a page or section's front matter, articles will show the reading time and word count.
@@ -183,11 +224,11 @@ hugo
 
 ## Contributing
 
-If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/budparr/gohugo-theme-ananke/issues) to let me know.
+If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
 
 
 
 
 TODO:
 
-- fix hard-coded link to [section](https://github.com/budparr/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
+- fix hard-coded link to [section](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
