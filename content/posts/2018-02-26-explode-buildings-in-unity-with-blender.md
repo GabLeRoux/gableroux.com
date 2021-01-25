@@ -20,13 +20,16 @@ Discover [City Crashers][city-crashers]’s satisfying building destruction in 1
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
-        <iframe src="https://giphy.com/embed/vvaLQuntKO9AO9qiWj" width="640" height="390" frameBorder="0" allowFullScreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/psTIzy7YoAA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
 <hr>
 
-During the [WonderJam 2018](https://jam.aemi.ca), our team at [Totema Studio][totemastudio] created [City Crashers][city-crashers], a game where you are a huge robot in a city and your mission is to destroy everything. In 48h, we built an amazing multiplayer game where players competes to get he highest score, or the biggest bill.
+During the [WonderJam 2018](https://jam.aemi.ca), our team at [Totema Studio][totemastudio] created [City Crashers][city-crashers], a game where you are a huge robot in a city, and your mission is to destroy everything. In 48h, we built an amazing multiplayer game where players compete to get the highest score, or the biggest bill.
+
+Here's a forked version of the related project we used to handle building destruction:  
+https://github.com/GabLeRoux/unity-destruction
 
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
