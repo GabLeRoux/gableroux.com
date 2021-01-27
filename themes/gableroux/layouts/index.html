@@ -36,12 +36,14 @@
       <section class="w-100">
         <h1 class="f3">{{ i18n "more" }}</h1>
         {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
-        {{ range (first 4 (after $n_posts $section))  }}
-          <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="{{ .Permalink }}" class="link black dim">
-              {{ .Title }}
-            </a>
-          </h2>
+        {{ range (first 5 (after $n_posts $section))  }}
+          <ul>
+            <li>
+              <a href="{{ .Permalink }}" class="link black dim">
+                {{ .Title }}
+              </a>
+            </li>
+          </ul>
         {{ end }}
 
         {{/* As above, Use $section_name to get the section title, and URL. Use "with" to only show it if it exists */}}
