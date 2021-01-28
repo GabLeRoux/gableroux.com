@@ -1,8 +1,62 @@
-<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.BaseURL }}" >
-    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-  </a>
-    <div>{{ partial "social-follow.html" . }}</div>
-  </div>
+<footer class="cover bg-top bg-dark-gray" style="background-image: url('https://source.unsplash.com/1920x400/?kitten');">
+    <div class="pa6 bg-white-70">
+        <div class="dt dt--fixed w-100">
+            <div class="dn dtc-ns v-mid w-30">
+                <p class="black-60 dib pr3 mb3">
+                    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+                </p>
+            </div>
+            <div class="db dtc-ns black-60 tc tr-ns v-mid w-70">
+                <a href="https://www.facebook.com/gableroux" class="link dim dib mr3 black-60" title="GabLeRoux on Facebook">
+                    <svg class="db w2 h2" data-icon="facebook" viewBox="0 0 32 32" fill="currentColor">
+                        <title>facebook icon</title>
+                        <path d="M8 12 L13 12 L13 8 C13 2 17 1 24 2 L24 7 C20 7 19 7 19 10 L19 12 L24 12 L23 18 L19 18 L19 30 L13 30 L13 18 L8 18 z"
+                        ></path>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/gableroux" class="link dim dib mr3 black-60" title="@GabLeRoux on Twitter">
+                    <svg class="db w2 h2" data-icon="twitter" viewBox="0 0 32 32" fill="currentColor">
+                        <title>twitter icon</title>
+                        <path d="M2 4 C6 8 10 12 15 11 A6 6 0 0 1 22 4 A6 6 0 0 1 26 6 A8 8 0 0 0 31 4 A8 8 0 0 1 28 8 A8 8 0 0 0 32 7 A8 8 0 0 1 28 11 A18 18 0 0 1 10 30 A18 18 0 0 1 0 27 A12 12 0 0 0 8 24 A8 8 0 0 1 3 20 A8 8 0 0 0 6 19.5 A8 8 0 0 1 0 12 A8 8 0 0 0 3 13 A8 8 0 0 1 2 4"
+                        ></path>
+                    </svg>
+                </a>
+                <a class="link dim dib mr3 black-60" href="https://stackoverflow.com/users/1092815/gableroux" title="GabLeRoux on Stack Overflow">
+                    <svg class="db w2 h2" data-icon="twitter" viewBox="0 0 17 17" fill="currentColor">
+                        <path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693H2.65v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.465.3-1.38L4.55 8.54l-.302 1.38zm.906-3.365l6.47 3.02.602-1.295-6.47-3.02-.602 1.295zm1.81-3.19l5.478 4.57.906-1.078-5.477-4.57-.905 1.077zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z"/>
+                    </svg>
+                </a>
+
+                <a href="https://github.com/gableroux" class="link dim dib mr3 black-60" title="GabLeRoux on Github">
+                    <svg class="db w2 h2" x="0px" y="0px" viewBox="0 0 16 16" fill="currentColor">
+                        <g>
+                            <path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"></path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/gableroux/" class="link dim dib black-60" title="GabLeRoux on LinkedIn">
+                    <svg class="db w2 h2" x="0px" y="0px" viewBox="0 0 48 48">
+                        <linearGradient gradientUnits="userSpaceOnUse" x1="23.9995"
+                                        y1="0" x2="23.9995" y2="48.0005">
+                            <stop offset="0"></stop>
+                            <stop offset="1"></stop>
+                        </linearGradient>
+                        <path fill="currentColor" d="M48,42c0,3.313-2.687,6-6,6H6c-3.313,0-6-2.687-6-6V6 c0-3.313,2.687-6,6-6h36c3.313,0,6,2.687,6,6V42z"
+                        ></path>
+                        <g>
+                            <g>
+                                <path fill="#FFFFFF" d="M15.731,11.633c-1.608,0-2.658,1.083-2.625,2.527c-0.033,1.378,1.018,2.494,2.593,2.494 c1.641,0,2.691-1.116,2.691-2.494C18.357,12.716,17.339,11.633,15.731,11.633z M13.237,35.557h4.988V18.508h-4.988V35.557z M31.712,18.748c-1.595,0-3.222-0.329-4.956,2.36h-0.099l-0.087-2.599h-4.417c0.065,1.411,0.074,3.518,0.074,5.52v11.529h4.988 v-9.854c0-0.46,0.065-0.919,0.196-1.248c0.328-0.919,1.149-1.871,2.527-1.871c1.805,0,2.527,1.411,2.527,3.479v9.494h4.988V25.439 C37.455,20.713,34.993,18.748,31.712,18.748z"
+                                ></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="db dn-ns">
+            <p class="f7 black-60 mt4 tc">
+                &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+            </p>
+        </div>
+    </div>
 </footer>

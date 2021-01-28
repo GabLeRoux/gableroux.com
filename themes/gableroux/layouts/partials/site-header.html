@@ -2,19 +2,16 @@
 {{ if $featured_image }}
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image := (trim $featured_image "/") | absURL }}
-  <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
-    <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
+  <header class="cover bg-top bg-dark-gray" style="background-image: url('{{ $featured_image }}');">
+    <div class="pa6 bg-black-60">
       {{ partial "site-navigation.html" .}}
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          {{ .Title | default .Site.Title }}
-        </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
+      <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+        <div class="tc">
+          <img src="https://secure.gravatar.com/avatar/6d49e7c487938aac490de390f46a2d98?size=800" class="br-100 h4 w4 dib ba b--black-05 pa2" title="Photo of a kitty staring at you">
+          <h1 class="f3 mb2">Gabriel Le Breton</h1>
+          <h2 class="f5 fw4 gray mt0">nice to meet you. 👋</h2>
+        </div>
+      </article>
     </div>
   </header>
 {{ else }}
