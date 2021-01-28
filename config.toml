@@ -48,3 +48,17 @@ lineNumbersInTable = true
 noClasses = true
 style = "monokai"
 tabWidth = 4
+
+[menu]
+
+[[menu.main]]
+name = "Friends"
+weight = 1
+identifier = "friends"
+url = "/friends/"
+
+[[menu.main]]
+name = "Posts"
+weight = 1
+identifier = "posts"
+url = "/posts/"
