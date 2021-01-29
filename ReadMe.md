@@ -1,5 +1,6 @@
 # [gableroux.com](https://gableroux.com)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ada91928-a86b-463c-871d-34c8ec66cf8f/deploy-status)](https://app.netlify.com/sites/gableroux/deploys)
 [![Build Status](https://travis-ci.org/GabLeRoux/gableroux.github.io.svg?branch=develop)](https://travis-ci.org/GabLeRoux/gableroux.github.io)
 
 Hi,  
