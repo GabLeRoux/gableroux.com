@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - presentation
 date: 2015-06-03 12:00:00
@@ -26,7 +27,7 @@ I gave a presentation at the [SagLacIO][saglacio] about [SaltStack][saltstack] w
 
 ## Cool stuff
 
-[Micael][micael-github] created a [Minecraft Saltstack <i class="fa fa-github"></i> repository][micaelbergeron/salt.minecraft] to easily deploy a Minecraft server using [SpigotMC][spigot] and [MSM][msm]. :)  
+[Micael][micael-github] created a [Minecraft Saltstack <i class="fa fa-github"></i> repository][micaelbergeron/salt.minecraft] to easily deploy a Minecraft server using [SpigotMC][spigot] and [MSM][msm]. 🚀  
 [Go star this thing!][micaelbergeron/salt.minecraft]
 
 [saglacio]: http://saglac.io

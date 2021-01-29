@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - saglacio
 date: 2017-09-19 19:00:00
@@ -14,7 +15,7 @@ url: /2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/
 ---
 
 
-> Sorry, we can't deploy, john is on vacation
+> Sorry, we can't deploy, Jane is on vacation
 
 Your team shouldn't rely on only one person to release your mobile apps.
 

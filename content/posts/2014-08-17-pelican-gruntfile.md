@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - pelican
 date: 2014-08-17 12:00:00

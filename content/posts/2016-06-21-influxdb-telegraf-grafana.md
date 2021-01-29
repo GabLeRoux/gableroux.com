@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - presentation
 date: 2016-06-21 19:00:00
@@ -8,7 +9,7 @@ tags:
   - influxdb
   - telegraf
   - grafana
-title: "InfluxDB Telegraf and Grafana <3"
+title: "InfluxDB Telegraf and Grafana 💖"
 url: /2016/06/21/influxdb-telegraf-grafana/
 ---
 
@@ -19,9 +20,9 @@ Do you like graphs? `Grafana`! What about storing _time series_? `InfluxDB`! And
 
 I gave a presentation at the [SagLacIO][saglacio] on June 21 about [Influxdb][influxdb], [telegraf][telegraf] and [Grafana][grafana].
 
-If you like this kind of stuff, have a look at the amazing [obazoud/awesome-dashboard](https://github.com/obazoud/awesome-dashboard) list! :D
+If you like this kind of stuff, have a look at the amazing [obazoud/awesome-dashboard](https://github.com/obazoud/awesome-dashboard) list! 😎
 
-## Here goes the slides :)
+## Here goes the slides 👇
 
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">

@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - presentation
 date: 2013-12-09 19:00:00

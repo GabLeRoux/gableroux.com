@@ -1,6 +1,6 @@
 /* Responsive iframe (for presentations) */
 .responsive-iframe-wrapper {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     background: #ccc;
 }

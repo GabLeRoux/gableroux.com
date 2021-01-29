@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - presentation
 date: 2017-04-10 18:30:00

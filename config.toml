@@ -52,13 +52,21 @@ tabWidth = 4
 [menu]
 
 [[menu.main]]
-name = "Friends"
-weight = 1
-identifier = "friends"
-url = "/friends/"
-
-[[menu.main]]
 name = "Posts"
 weight = 1
 identifier = "posts"
 url = "/posts/"
+
+
+[[menu.main]]
+name = "Friends"
+weight = 2
+identifier = "friends"
+url = "/friends/"
+
+[[menu.main]]
+name = "About"
+weight = 3
+identifier = "about"
+url = "/about/"
+

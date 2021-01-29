@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - presentation
 date: 2016-03-30 19:00:00
@@ -211,7 +212,7 @@ Now let's verify again locally
     CVE-2016-2107 gableroux.com
     2016/06/10 13:32:17 Vulnerable: false
 
-Awesome, scoring *A+* again, solved! :)
+Awesome, scoring *A+* again, solved! 🎉
 
 ## The slides
 

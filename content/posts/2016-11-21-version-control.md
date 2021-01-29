@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - presentation
 date: 2016-11-21 21:00:00
@@ -38,7 +39,7 @@ Make sure you add the right [`.gitignore`](https://git-scm.com/docs/gitignore) f
 
 ## Are you a student?
 
-Save money, get Github pro for free and way more with the [github backpack](https://education.github.com/pack)! If you're only looking for private repositories (ex, for your homework), [Bitbucket](https://bitbucket.org/) offers free private repositories for teams < 5. :)
+Save money, get Github pro for free and way more with the [github backpack](https://education.github.com/pack)! If you're only looking for private repositories (ex, for your homework), [Bitbucket](https://bitbucket.org/) offers free private repositories for teams < 5. 🤘
 
 ## Handy resources
 

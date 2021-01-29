@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - saglacio
 date: 2018-01-16 20:15:00

@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - awesome
 date: 2017-05-07 12:00:00
@@ -177,11 +178,11 @@ Well I prefer using [duckduckgo](https://duckduckgo.com/) search engine. It's no
 
 ## Take notes
 
-There are plenty of tools for taking notes, I personally like [Github gists](https://gist.github.com/) with [markdown](https://guides.github.com/features/mastering-markdown/) and syntax highlighting. If you start noting things early, you'll end up with a nice database of snippets where you can search for things. Bonus point if you put some of them public! :)
+There are plenty of tools for taking notes, I personally like [Github gists](https://gist.github.com/) with [markdown](https://guides.github.com/features/mastering-markdown/) and syntax highlighting. If you start noting things early, you'll end up with a nice database of snippets where you can search for things. Bonus point if you put some of them public! 🤗
 
 ## Install editorconfig everywhere
 
-Install [editorconfig](http://editorconfig.org/) in all your IDEs and Text editors so you don't mess up line endings and tab spacing anymore. ;)
+Install [editorconfig](http://editorconfig.org/) in all your IDEs and Text editors so you don't mess up line endings and tab spacing anymore. 😉
 
 ## Learning a new programming language?
 

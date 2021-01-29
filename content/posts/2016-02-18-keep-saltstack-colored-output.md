@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - tips
 date: 2016-02-18 8:00:00
@@ -108,7 +109,7 @@ Usage:
 cat colored_file.txt | strip-ansi
 ```
 
-No more colors :)
+No more colors 😎
 
 Otherwise, you can strip output with `perl -pe 's/\x1b\[[0-9;]*[mG]//g'` which is perfect if you don't want node.
 

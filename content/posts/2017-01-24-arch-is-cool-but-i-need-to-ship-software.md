@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - presentation
 date: 2017-01-24 18:00:00
@@ -83,4 +84,4 @@ Sometimes, your job gives you a laptop with an apple logo  to ship ios apps. 
 [Fedy]: https://www.folkswithhats.org/ 
 [archlinux]: https://www.archlinux.org/
 
-[things-i-share-to-programmers]: {% post_url 2017-05-14-things-i-share-to-programmers %}
+[things-i-share-to-programmers]: /2017/05/14/things-i-share-to-programmers

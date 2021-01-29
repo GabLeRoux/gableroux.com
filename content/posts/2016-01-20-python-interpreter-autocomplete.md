@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - python
 date: 2016-01-20 15:00:00
@@ -88,7 +89,7 @@ That's it, fire up a terminal, run `python` again and enjoy autocompletion when 
 
 ![pythonrc terminal example](/images/python-interpreter-autocompletion.png)
 
-All of the commands you type in a local interpreter are now recorded to `~/.pyhistory`. Hit `tab` when experimenting with modules from the interwebs and it will be much easier to discover all the things :)
+All of the commands you type in a local interpreter are now recorded to `~/.pyhistory`. Hit `tab` when experimenting with modules from the interwebs and it will be much easier to discover all the things ✌🏻
 
 ## Want more?
 

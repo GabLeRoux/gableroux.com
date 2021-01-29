@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - news
 date: 2014-07-27 15:00:00
@@ -56,7 +57,7 @@ Done. Your new project is available at *******/***/********/*****
 �F�
 ```
 
-Ok so not quite sure about that last line, but my stuff is ready to go now :). Thanks to the [documentation](http://docs.getpelican.com/), it's very well explained and easy to follow.
+Ok so not quite sure about that last line, but my stuff is ready to go now 👍. Thanks to the [documentation](http://docs.getpelican.com/), it's very well explained and easy to follow.
 
 ### Plugins!
 

@@ -1,4 +1,5 @@
 ---
+omit_header_text: true
 categories:
   - saglacio
 date: 2018-02-26 20:00:00
