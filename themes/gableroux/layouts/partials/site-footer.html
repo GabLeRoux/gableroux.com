@@ -1,12 +1,7 @@
 <footer class="cover bg-top bg-dark-gray" style="background-image: url('https://source.unsplash.com/1920x400/?kitten');">
-    <div class="pa6 bg-white-70">
-        <div class="dt dt--fixed w-100">
-            <div class="dn dtc-ns v-mid w-30">
-                <p class="black-60 dib pr3 mb3">
-                    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-                </p>
-            </div>
-            <div class="db dtc-ns black-60 tc tr-ns v-mid w-70">
+    <div class="pa6-l pv6 pa4 bg-white-70">
+        <div class="tc">
+            <div>
                 <a href="https://www.facebook.com/gableroux" class="link dim dib mr3 black-60" title="GabLeRoux on Facebook">
                     <svg class="db w2 h2" data-icon="facebook" viewBox="0 0 32 32" fill="currentColor">
                         <title>facebook icon</title>
@@ -52,11 +47,11 @@
                     </svg>
                 </a>
             </div>
-        </div>
-        <div class="db dn-ns">
-            <p class="f7 black-60 mt4 tc">
-                &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
-            </p>
+            <div>
+                <p class="black-60 dib pr3 mb3">
+                    &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+                </p>
+            </div>
         </div>
     </div>
 </footer>
