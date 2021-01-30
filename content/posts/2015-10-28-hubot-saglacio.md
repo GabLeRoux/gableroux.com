@@ -1,0 +1,30 @@
+---
+omit_header_text: true
+categories:
+    - presentation
+date: 2015-10-28 19:00:00
+featured_image: /images/saglacio/hubot-improve-and-reduce.png
+tags:
+    - presentation
+    - saglacio
+    - hubot
+title: "Hubot presentation at the SagLacIO"
+aliases:
+    - /2015/10/28/hubot-saglacio/
+    - /presentation/2015/10/28/hubot-saglacio/
+---
+
+
+I gave a presentation at the [SagLacIO][saglacio] about [Hubot][hubot]. Here are the slides.
+
+<!--more-->
+
+<div class="responsive-iframe-wrapper">
+    <div class="responsive-iframe">
+        <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
+        <iframe src="https://docs.google.com/presentation/d/12mfmFRzwQ6WG_DSRR4ktEjU7LHmA3XFemhYaNdYswQA/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+</div>
+
+[saglacio]: http://saglac.io
+[hubot]: https://hubot.github.com/

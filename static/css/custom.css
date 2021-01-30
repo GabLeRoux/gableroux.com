@@ -1,0 +1,46 @@
+/* Responsive iframe (for presentations) */
+.responsive-iframe-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #ccc;
+}
+
+.responsive-iframe {
+    position: relative;
+}
+
+.responsive-iframe .ratio {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive videos */
+.responsive-object iframe, .responsive-object object, .responsive-object embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive-object {
+    position: relative;
+    padding-bottom: 62.5% !important;
+    height: 0;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+/* tags */
+ul.tags li {
+    display: inline;
+}

@@ -1,31 +1,52 @@
 # [gableroux.com](https://gableroux.com)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ada91928-a86b-463c-871d-34c8ec66cf8f/deploy-status)](https://app.netlify.com/sites/gableroux/deploys)
 [![Build Status](https://travis-ci.org/GabLeRoux/gableroux.github.io.svg?branch=develop)](https://travis-ci.org/GabLeRoux/gableroux.github.io)
 
-Hey there, welcome to the backstage of my website.
+Hi,  
+Welcome to the source code of my personal website :v:.
 
-## install requirements
+## Development
 
-```bash
-gem install bundle
-bundle update
-bundle install
-npm i
-npm run bower -- install
-```
+You can edit files in repository directly from github and send PRs if you find typos. If you want to go further, you can install [hugo](https://gohugo.io/), fork this repo and do whatever you want :tada:.
 
 ## Running this website locally
 
+- Create a new page:
+
 ```bash
-npm run gulp
+hugo new section_name/filename
+```
+
+- Build a site to the `./public/` directory:
+
+```bash
+hugo
+```
+
+- Build a site including pages that are marked as a "draft":
+
+```bash
+hugo --buildDrafts
+```
+
+- Build a site to a given directory:
+
+```bash
+hugo --destination path/to/destination
+```
+
+- Build a site, start up a webserver to serve it, and automatically reload when pages are edited:
+```bash
+hugo server
 ```
 
 ## Deployment
 
-See #11 this will be improved shortly
+More details [here](https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10)
 
 ```bash
-./script/deploy.sh
+./scripts/deploy.sh
 ```
 
 Now go read my posts!
@@ -35,17 +56,6 @@ Now go read my posts!
 > wubba lubba dub dub!
 
 Found a typo? a broken link? Open [an issue](https://github.com/gableroux/gableroux.github.io/issues) or send me a pull-request! :rocket:
-
-## Troubleshooting
-
-### Error: `libsass` bindings not found. Try reinstalling `node-sass`?
-
-More details on this [stackoverflow question](http://stackoverflow.com/questions/29461831/libsass-bindings-not-found-when-using-node-sass-in-nodejs).
-
-```bash
-npm uninstall --save-dev gulp-sass
-npm install --save-dev gulp-sass@2
-```
 
 ## License
 

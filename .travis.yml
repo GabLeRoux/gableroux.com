@@ -1,28 +1,12 @@
-sudo: false
-language: ruby
-rvm:
-  - 2.4.2
-before_install:
-  - nvm install 8.11.2
+---
+install:
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.73.0/hugo_0.73.0_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.73.0_Linux-64bit.deb
 script:
-  - npm i
-  - npm run bower -- install
-  - npm run gulp -- build
-after_script:
-  - bundle exec htmlproofer ./_site \
-      --file-ignore /bower_components/ \
-      --allow_hash_href \
-      --http-status-ignore "999,401,0" || true
+  - hugo
 deploy:
-  target_branch: master
-  local_dir: _site
-  provider: pages
-  skip_cleanup: true
-  github_token: "$GITHUB_TOKEN"
-  on:
-    branch: develop
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  matrix:
-    secure: pvvYgGfrgjSpk51B9TsKJK0Cw30b5okiSqlMaGDyCFEQr8yESlQGLY6miVszVTsGNSAlm4ESJHbFRWbkf0a4CPQreCwMjDqZJ3+D0Si2i3Vpr8u7pN460616x9it3eloYz4dgLyuk0VPeLFXLKR6kt9q0xvIMjwSf08bScDJWd98Mfe7pMcsPPS3nNAMz08eNmdMVCTi7kqViMgCI6Z2TjdlEmC16Q1shVOOmURtTtGdGrkKkYJrQh0O1wGiDIKRGMs8itMdYJ9R/kj3LRF4T7BqvHbjvmAennhTTyFDHYXhHch83wilqjfzAyvxB1mhpRJdmv6sJC4c4raYiVTJWTjDWwRDLlIx8sr7QPz/RAIjmSiEnI+5GeTs6KWXqumveir7rUSkEnwMl5Doe+el8WTmS7FDEW6OoPryQPTmk7MXFEBwq2reDcnv95hRUUmmrF3IyPnNV8ADDAAh92mkHBMU5/iy6j9Vcn8FGIOHRa+obOEQToKIbdcMKrd2AteGmCFwIvMT4fAi8HENc9szE5bjy4nIfKzYmNgB6LCeadPzkfbiADlWqY0m2ARh6VLt1IdAAGPkZOJyZ99XC3KNip7+rYgfw34eD5BmXlSvqGW9HcBlE6K45OuYPN9EFzoZPZFDiMuUwosyUE+f3E9NVQSik7DDDwBKk18uV43A9ds=
+  - provider: script
+    script: ./scripts/deploy.sh
+    skip_cleanup: true
+    on:
+      branch: develop
