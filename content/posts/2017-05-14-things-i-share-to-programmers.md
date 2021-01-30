@@ -1,16 +1,18 @@
 ---
 omit_header_text: true
 categories:
-  - awesome
+    - general
 date: 2017-05-07 12:00:00
 featured_image: /images/awesome-lists-are-awesome.jpg
 tags:
-  - awesome
-  - guides
-  - curated-list
-  - comics
+    - awesome
+    - guides
+    - curated-list
+    - comics
 title: "Things I share to programmers"
-url: /2017/05/14/things-i-share-to-programmers/
+aliases:
+    - /2017/05/14/things-i-share-to-programmers/
+    - /awesome/2017/05/07/things-i-share-to-programmers/
 ---
 
 
@@ -190,5 +192,5 @@ You know `c#` but you never wrote a line of `python`? Have a look to [Learn X in
 
 ---
 
-I'll probably add more things here. If you have suggestions, feel free to poke me or [open an issue](https://github.com/GabLeRoux/gableroux.github.io/issues).
+If you have suggestions for more in here, feel free to poke me or [open an issue](https://github.com/GabLeRoux/gableroux.github.io/issues).
 Hope you enjoyed this and that you learned a few things.

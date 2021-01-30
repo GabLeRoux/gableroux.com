@@ -1,16 +1,19 @@
 ---
 omit_header_text: true
 categories:
-  - presentation
+    - presentation
 date: 2016-03-30 19:00:00
 featured_image: /images/letsencrypt-all-the-things.jpg
 tags:
-  - saglacio
-  - letsencrypt
-  - https
-  - revealjs
+    - presentation
+    - saglacio
+    - letsencrypt
+    - https
+    - revealjs
 title: "Let’s Encrypt all the things"
-url: /2016/03/30/letsencrypt-saglacio/
+aliases:
+    - /2016/03/30/letsencrypt-saglacio/
+    - /presentation/2016/03/30/letsencrypt-saglacio/
 ---
 
 

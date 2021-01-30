@@ -1,12 +1,14 @@
 ---
 omit_header_text: true
 categories:
-  - python
+    - python
 date: 2016-01-20 15:00:00
 featured_image: /images/pythonrc-history.png
 tag: dotfile history python pythonrc autocomplete Jupyter interpreter
 title: "Python interpreter autocomplete + history with ~/.pythonrc"
-url: /2016/01/20/python-interpreter-autocomplete/
+aliases:
+    - /2016/01/20/python-interpreter-autocomplete/
+    - /python/2016/01/20/python-interpreter-autocomplete/
 ---
 
 
@@ -89,7 +91,7 @@ That's it, fire up a terminal, run `python` again and enjoy autocompletion when 
 
 ![pythonrc terminal example](/images/python-interpreter-autocompletion.png)
 
-All of the commands you type in a local interpreter are now recorded to `~/.pyhistory`. Hit `tab` when experimenting with modules from the interwebs and it will be much easier to discover all the things ✌🏻
+All commands you type in a local interpreter are now recorded to `~/.pyhistory`. Hit `tab` when experimenting with modules from the interwebs and it will be much easier to discover all the things ✌🏻
 
 ## Want more?
 

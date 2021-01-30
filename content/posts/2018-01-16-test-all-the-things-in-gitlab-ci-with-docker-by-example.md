@@ -1,19 +1,23 @@
 ---
 omit_header_text: true
 categories:
-  - saglacio
+    - presentation
 date: 2018-01-16 20:15:00
 featured_image: /images/test-all-the-things-in-gitlab-ci-with-docker-by-example.jpg
 tags:
-  - gitlab
-  - gitlab-ci
-  - ci
-  - docker
-  - testing
-  - example
-  - presentation
+    - gitlab
+    - gitlab-ci
+    - ci
+    - docker
+    - testing
+    - example
+    - uqac
+    - presentation
+    - saglacio
 title: "Test all the things in gitlab-ci with docker by example"
-url: /2018/01/16/test-all-the-things-in-gitlab-ci-with-docker-by-example/
+aliases:
+    - /2018/01/16/test-all-the-things-in-gitlab-ci-with-docker-by-example/
+    - /saglacio/2018/01/16/test-all-the-things-in-gitlab-ci-with-docker-by-example/
 ---
 
 

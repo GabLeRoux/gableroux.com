@@ -1,16 +1,19 @@
 ---
 omit_header_text: true
 categories:
-  - presentation
+    - presentation
 date: 2015-06-03 12:00:00
 featured_image: /images/saglacio/saltstack.jpg
 tags:
-  - saglacio
-  - saltstack
-  - minecraft
-  - github
+    - presentation
+    - saglacio
+    - saltstack
+    - minecraft
+    - github
 title: "Saltstack presentation at the SagLacIO"
-url: /2015/06/03/saltstack-saglacio/
+aliases:
+    - /2015/06/03/saltstack-saglacio/
+    - /presentation/2015/06/03/saltstack-saglacio/
 ---
 
 

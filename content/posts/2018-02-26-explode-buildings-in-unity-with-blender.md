@@ -1,16 +1,20 @@
 ---
 omit_header_text: true
 categories:
-  - saglacio
+    - presentation
 date: 2018-02-26 20:00:00
 featured_image: /images/how-to-explode-buildings-in-a-gamejam-with-unity-and-blender.jpg
 tags:
-  - unity
-  - blender
-  - totemastudio
-  - presentation
+    - saglacio
+    - presentation
+    - unity
+    - blender
+    - totemastudio
+    - uqac
 title: "How to explode buildings in a gamejam with unity and blender"
-url: /2018/02/26/explode-buildings-in-unity-with-blender/
+aliases:
+    - /2018/02/26/explode-buildings-in-unity-with-blender/
+    - /saglacio/2018/02/26/explode-buildings-in-unity-with-blender/
 ---
 
 

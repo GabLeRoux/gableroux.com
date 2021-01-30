@@ -1,16 +1,18 @@
 ---
 omit_header_text: true
 categories:
-  - pelican
+    - news
 date: 2014-08-17 12:00:00
 featured_image: /images/grunt-logo-large.jpg
 tag: pelican grunt gruntfile coffeescript
 title: "Pelican Gruntfile"
-url: /2014/08/17/pelican-gruntfile/
+aliases:
+    - /2014/08/17/pelican-gruntfile/
+    - /pelican/2014/08/17/pelican-gruntfile/
 ---
 
 
-Now that I use [grunt, the JavaScript Task Runner][gruntjs] my life has changed! It makes task automation so cool that it is a must have in every web project (and even sometime in other projects!). There's also a great alternative called [Gulp.js][gulpjs]. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool *yet*.
+Now that I use [grunt, the JavaScript Task Runner][gruntjs] my life has changed! It makes task automation so cool that it is a must-have in every web project (and even sometime in other projects!). There's also a great alternative called [Gulp.js][gulpjs]. It is probably better if you are starting, but because I am used to Grunt, I did not move to that fancy new tool *yet*.
 
 <!--more-->
 

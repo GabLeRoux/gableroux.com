@@ -1,17 +1,20 @@
 ---
 omit_header_text: true
 categories:
-  - saglacio
+    - presentation
 date: 2017-10-17 19:00:00
 featured_image: /images/to-pull-or-not-to-pull.jpg
 tags:
-  - git
-  - presentation
-  - pull-request
-  - contribution
-  - reveal
+    - saglacio
+    - presentation
+    - git
+    - pull-request
+    - contribution
+    - reveal
 title: "To pull or not to pull: my first open source contribution"
-url: /2017/10/17/to-pull-or-not-to-pull/
+aliases:
+    - /2017/10/17/to-pull-or-not-to-pull/
+    - /saglacio/2017/10/17/to-pull-or-not-to-pull/
 ---
 
 

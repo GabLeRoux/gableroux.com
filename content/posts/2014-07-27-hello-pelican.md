@@ -1,14 +1,16 @@
 ---
 omit_header_text: true
 categories:
-  - news
+    - news
 date: 2014-07-27 15:00:00
 featured_image: /images/hello-pelican.jpg
 tags:
-  - Pelican
-  - hello-world
+    - Pelican
+    - hello-world
 title: "Hello Pelican"
-url: /2014/07/27/hello-pelican/
+aliases:
+    - /2014/07/27/hello-pelican/
+    - /news/2014/07/27/hello-pelican/
 ---
 
 

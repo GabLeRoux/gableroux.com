@@ -1,15 +1,17 @@
 ---
 omit_header_text: true
 categories:
-  - tips
+    - tips
 date: 2016-02-18 8:00:00
 featured_image: /images/such-terminal-colors.jpg
 tags:
-  - saltstack
-  - console
-  - output
+    - saltstack
+    - console
+    - output
 title: "Save saltstack console colored output to file"
-url: /2016/02/18/keep-saltstack-colored-output/
+aliases:
+    - /2016/02/18/keep-saltstack-colored-output/
+    - /tips/2016/02/18/keep-saltstack-colored-output/
 ---
 
 

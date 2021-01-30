@@ -1,16 +1,19 @@
 ---
 omit_header_text: true
 categories:
-  - presentation
+    - presentation
 date: 2016-06-21 19:00:00
 featured_image: /images/influxdb-telegraf-grafana.jpg
 tags:
-  - saglacio
-  - influxdb
-  - telegraf
-  - grafana
+    - presentation
+    - saglacio
+    - influxdb
+    - telegraf
+    - grafana
 title: "InfluxDB Telegraf and Grafana 💖"
-url: /2016/06/21/influxdb-telegraf-grafana/
+aliases:
+    - /2016/06/21/influxdb-telegraf-grafana/
+    - /presentation/2016/06/21/influxdb-telegraf-grafana/
 ---
 
 

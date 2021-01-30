@@ -1,17 +1,20 @@
 ---
 omit_header_text: true
 categories:
-  - saglacio
+    - presentation
 date: 2017-09-19 19:00:00
 featured_image: /images/fastlane-automate-deployment-like-a-boss.jpg
 tags:
-  - fastlane
-  - presentation
-  - ios
-  - android
-  - deployment
+    - fastlane
+    - presentation
+    - ios
+    - android
+    - deployment
+    - saglacio
 title: "Fastlane: deploy ios and android like a boss"
-url: /2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/
+aliases:
+    - /2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/
+    - /saglacio/2017/09/19/fastlane-deploy-ios-and-android-like-a-boss/
 ---
 
 

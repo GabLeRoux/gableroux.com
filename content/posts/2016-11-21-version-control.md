@@ -1,14 +1,18 @@
 ---
 omit_header_text: true
 categories:
-  - presentation
+    - presentation
 date: 2016-11-21 21:00:00
 featured_image: /images/y-u-no-git.jpg
 tags:
-  - version-control
-  - git
+    - presentation
+    - saglacio
+    - version-control
+    - git
 title: "Y U NO GIT"
-url: /2016/11/21/version-control/
+aliases:
+    - /2016/11/21/version-control/
+    - /presentation/2016/11/21/version-control/
 ---
 
 

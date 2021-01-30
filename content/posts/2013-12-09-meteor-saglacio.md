@@ -1,14 +1,17 @@
 ---
 omit_header_text: true
 categories:
-  - presentation
+    - presentation
 date: 2013-12-09 19:00:00
 featured_image: /images/saglacio/meteor.jpg
 tags:
-  - saglacio
-  - meteor
+    - presentation
+    - saglacio
+    - meteor
 title: "Meteorjs introduction presentation at the SagLacIO"
-url: /2013/12/09/meteor-saglacio/
+aliases:
+    - /2013/12/09/meteor-saglacio/
+    - /presentation/2013/12/09/meteor-saglacio/
 ---
 
 

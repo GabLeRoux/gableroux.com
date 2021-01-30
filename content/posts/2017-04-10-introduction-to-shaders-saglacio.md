@@ -1,16 +1,19 @@
 ---
 omit_header_text: true
 categories:
-  - presentation
+    - presentation
 date: 2017-04-10 18:30:00
 featured_image: /images/introduction-to-shaders.jpg
 tags:
-  - saglacio
-  - unity3d
-  - shaders
-  - compute-shaders
+    - presentation
+    - saglacio
+    - unity3d
+    - shaders
+    - compute-shaders
 title: "Introduction to Shaders"
-url: /2017/04/10/introduction-to-shaders-saglacio/
+aliases:
+    - /2017/04/10/introduction-to-shaders-saglacio/
+    - /presentation/2017/04/10/introduction-to-shaders-saglacio/
 ---
 
 I gave a presentation with [Jules Robichaud-Gagnon](https://github.com/jrobichaud) about [Shaders][shader] and [Compute Shaders][compute-shaders] at the [SagLacIO][saglacio]. Here are the slides.

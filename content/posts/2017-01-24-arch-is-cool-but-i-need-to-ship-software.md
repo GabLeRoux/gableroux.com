@@ -1,17 +1,20 @@
 ---
 omit_header_text: true
 categories:
-  - presentation
+    - presentation
 date: 2017-01-24 18:00:00
 featured_image: /images/arch-is-cool-but-i-need-to-ship-software.jpg
 tags:
-  - saglacio
-  - linux
-  - archlinux
-  - antergos
-  - fedora
+    - presentation
+    - saglacio
+    - linux
+    - archlinux
+    - antergos
+    - fedora
 title: "Arch Linux is cool, but I need to ship software"
-url: /2017/01/24/arch-is-cool-but-i-need-to-ship-software/
+aliases:
+    - /2017/01/24/arch-is-cool-but-i-need-to-ship-software/
+    - /presentation/2017/01/24/arch-is-cool-but-i-need-to-ship-software/
 ---
 
 
