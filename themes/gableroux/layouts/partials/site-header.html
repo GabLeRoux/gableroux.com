@@ -10,7 +10,7 @@
   {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
   {{ $featured_image := (trim $featured_image "/") | absURL }}
   <header class="cover bg-top bg-dark-gray" style="background-image: url('{{ $featured_image }}');">
-    <div class="pa6 bg-black-60">
+    <div class="pa2 pa6-l bg-black-60">
       {{ partial "site-navigation.html" .}}
       <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
         <div class="tc">

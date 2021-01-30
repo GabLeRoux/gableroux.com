@@ -1,17 +1,17 @@
 {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
 <article class="bb b--black-10">
   <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
+    <div class="flex flex-column flex-row-l">
       {{ if $featured_image }}
           {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
         {{ $featured_image := (trim $featured_image "/") | absURL }}
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+        <div class="pr3-l mb4 mb0-l w-100 w-40-l">
           <a href="{{.Permalink}}" class="db grow">
             <img src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
           </a>
         </div>
       {{ end }}
-      <div class="blah w-100{{ if $featured_image }} w-60-ns pl3-ns{{ end }}">
+      <div class="blah w-100{{ if $featured_image }} w-60-l pl3-l{{ end }}">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="{{.Permalink}}" class="color-inherit dim link">
             {{ .Title }}
