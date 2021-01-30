@@ -1,5 +1,6 @@
 ---
 title: "Unimani"
+featured_image: /images/friends/logo-unimani-couleur.svg
 link: https://unimani.com/
 ---
 
