@@ -1,7 +1,7 @@
 baseURL = "https://gableroux.com/"
 languageCode = "en-ca"
 title = "GabLeRoux <Developer>"
-description = "  Personal site about code, ideas, technologies and everything. I like to write python and work on crazy projects, read my stuff!"
+description = "Personal site about code, ideas, technologies and everything. I like to write python and work on crazy projects, read my stuff!"
 
 theme = "gableroux"
 Paginate = 9
@@ -32,6 +32,15 @@ priority = 0.5
 filename = "sitemap.xml"
 
 [params]
+favicon = "/icons/favicon.ico"
+#site_logo = ""
+description = "The last theme you'll ever need. Maybe."
+#twitter = "https://twitter.com/gableroux"
+#github = "https://github.com/gableroux"
+#gitlab = "https://gitlab.com/gableroux"
+#linkedin = "https://www.linkedin.com/in/gableroux/"
+#stackoverflow = "https://stackoverflow.com/users/1092815/gableroux"
+#rss = ""
 show_reading_time = true
 recent_posts_number = 10
 custom_css = ["css/custom.css"]
