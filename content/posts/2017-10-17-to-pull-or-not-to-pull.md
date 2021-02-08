@@ -24,7 +24,7 @@ This blog post can show you.
 
 <!--more-->
 
-Yet an other presentation at the [SagLacIO][saglacio]. What is open source? What is our place in the world? How can I make the world better? **Contribute to open source, it will!**
+Yet another presentation at the [SagLacIO][saglacio]. What is open source? What is our place in the world? How can I make the world better? **Contribute to open source, it will!**
 
 ## Useful Links
 
@@ -57,7 +57,7 @@ Yet an other presentation at the [SagLacIO][saglacio]. What is open source? What
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
-        <iframe src="https://gableroux.com/to-pull-or-not-to-pull" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://to-pull-or-not-to-pull.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
 
