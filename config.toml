@@ -7,6 +7,7 @@ theme = "gableroux"
 Paginate = 9
 googleAnalytics = "UA-19518991-1"
 enableRobotsTXT = true
+disqusShortname = "GabLeRoux"
 
 [markup.goldmark.renderer]
 unsafe = true
@@ -15,11 +16,6 @@ copyright = "This work is licensed under MIT License."
 
 [author]
 name = "Gabriel Le Breton"
-
-disqusShortname = "GabLeRoux"
-
-facebook_app_id = "253381494995396"
-
 twitter_username = "gableroux"
 google_plus_username = "GabrielLeBreton"
 github_username = "GabLeRoux"
@@ -44,6 +40,7 @@ recent_posts_number = 10
 custom_css = ["css/custom.css"]
 #body_classes = "avenir bg-near-white"
 images = ["images/layout/sharing-gableroux.jpg"]
+facebook_app_id = "253381494995396"
 
 [markup]
 [markup.highlight]
