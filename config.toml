@@ -34,7 +34,6 @@ filename = "sitemap.xml"
 [params]
 favicon = "/icons/favicon.ico"
 #site_logo = ""
-description = "The last theme you'll ever need. Maybe."
 #twitter = "https://twitter.com/gableroux"
 #github = "https://github.com/gableroux"
 #gitlab = "https://gitlab.com/gableroux"
