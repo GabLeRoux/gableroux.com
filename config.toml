@@ -19,7 +19,6 @@ name = "Gabriel Le Breton"
 disqusShortname = "GabLeRoux"
 
 facebook_app_id = "253381494995396"
-facebook_default_image = "images/layout/sharing-gableroux.jpg"
 
 twitter_username = "gableroux"
 google_plus_username = "GabrielLeBreton"
@@ -44,6 +43,7 @@ show_reading_time = true
 recent_posts_number = 10
 custom_css = ["css/custom.css"]
 #body_classes = "avenir bg-near-white"
+images = ["images/layout/sharing-gableroux.jpg"]
 
 [markup]
 [markup.highlight]
