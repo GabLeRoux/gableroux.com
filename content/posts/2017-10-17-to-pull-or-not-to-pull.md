@@ -15,6 +15,7 @@ title: "To pull or not to pull: my first open source contribution"
 aliases:
     - /2017/10/17/to-pull-or-not-to-pull/
     - /saglacio/2017/10/17/to-pull-or-not-to-pull/
+    - /to-pull-or-not-to-pull
 ---
 
 
