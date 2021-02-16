@@ -38,7 +38,7 @@ First, you’ll need an account at [GitLab.com][gitlab.com]. If you don’t alre
 * [GitLab.com][gitlab.com]
 * [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/README.html) 📗
 * [.gitlab-ci.yml documentation](https://docs.gitlab.com/ee/ci/yaml/README.html) 📕
-* [.gitlab-ci.yml linter: gitlab.com/ci/lint](https://gitlab.com/ci/lint/) ✅
+* [.gitlab-ci.yml linter](https://docs.gitlab.com/ce/ci/lint.html) ✅
 * [gitlab-ci nodejs example project](https://gitlab.com/gableroux/gitlab-ci-example-nodejs)
 * [gitlab-ci Docker example project](https://gitlab.com/gableroux/gitlab-ci-example-docker)
 * [gitlab-ci django example project](https://gitlab.com/gableroux/gitlab-ci-example-django)
