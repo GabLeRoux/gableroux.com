@@ -40,16 +40,6 @@ hugo --destination path/to/destination
 hugo server
 ```
 
-## Deployment
-
-More details [here](https://medium.com/swlh/hosting-a-hugo-blog-on-github-pages-with-travis-ci-e74a1d686f10)
-
-```bash
-./scripts/deploy.sh
-```
-
-Now go read my posts!
-
 ## Contributing
 
 > wubba lubba dub dub!
