@@ -40,6 +40,16 @@ The following project was created as part of this presentation:
  * [`tests/index.test.js`](https://gitlab.com/gableroux/my-awesome-next-app/-/blob/main/src/tests/index.test.js): The test being executed
  * [`.gitlab-ci.yml`](https://gitlab.com/gableroux/my-awesome-next-app/-/blob/main/.gitlab-ci.yml): The file telling gitlab-ci to run the build and the tests
 
+## The real solution
+
+Thanks to [@m0xx](https://github.com/m0xx) for pointing this out; **Use NextJS examples directly instead**:  
+https://github.com/vercel/next.js/tree/master/examples/with-jest
+
+```bash
+npx create-next-app --example with-jest with-jest-app
+```
+
+🎉
 
 ## Links from the presentation
 
