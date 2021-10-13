@@ -58,7 +58,7 @@ Yet another presentation at the [SagLacIO][saglacio]. What is open source? What 
 <div class="responsive-iframe-wrapper">
     <div class="responsive-iframe">
         <img class="ratio" src="/images/layout/placeholder_16x9.gif" alt="placeholder"/>
-        <iframe src="https://to-pull-or-not-to-pull.gableroux.com/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://gableroux.github.io/to-pull-or-not-to-pull.gableroux.com/#/" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
 </div>
 
