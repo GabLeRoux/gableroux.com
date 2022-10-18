@@ -77,7 +77,7 @@ You can then insert this in your pelican settings:
 
 ## What's next
 
-There's not much on my site right now, but I'll keep updating this place by posting cool stuff. I'll be using [Disqus](https://disqus.com/) on this site so feel free to comment and talk about stuff. I have a small [todo list here](/todo/), I'll add some things to fix here and there and will note some articles and apps to talk about ^^.
+There's not much on my site right now, but I'll keep updating this place by posting cool stuff. I'll be using [Disqus](https://disqus.com/) on this site so feel free to comment and talk about stuff.
 
 [wagtail]: http://wagtail.io/
 [blocking-issue]: http://stackoverflow.com/questions/24976561/wagtail-pages-giving-none-url-with-live-status

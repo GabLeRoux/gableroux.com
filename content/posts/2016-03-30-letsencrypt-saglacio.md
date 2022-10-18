@@ -170,7 +170,7 @@ So there is a new problem in the wild!
 My ssltest went from an A+ to an F in no time!  Here's an handy tool to verify vulnerability:
 [FiloSottile/CVE-2016-2107](https://github.com/FiloSottile/CVE-2016-2107)
 
-Solution: *upgrade to [openssl](http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html) 1.0.2h (64bit)*
+Solution: *upgrade to [openssl](https://web.archive.org/web/20150308054729/https://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html) 1.0.2h (64bit)*
 
 On trusty Ubuntu 14.04 LTS
 

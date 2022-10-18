@@ -71,5 +71,5 @@ We did a small introduction to shaders, how it works from GPU -\> vector world -
 [gpu-accelerated-voxel-physics-solver]: http://www.00jknight.com/blog/gpu-accelerated-voxel-physics-solver
 [@leBodro]: https://twitter.com/LeBodro
 [saglacio]: http://saglac.io
-[compute-shaders]: https://docs.unity3d.com/Manual/ComputeShaders.html
+[compute-shaders]: https://docs.unity3d.com/Manual/class-ComputeShader.html
 [shader]: https://en.wikipedia.org/wiki/Shader
