@@ -32,7 +32,7 @@ YES! You want to time travel in your code and into other people's code! Git is a
 ## Learn git
 
 This is what you want to start with:  
-[learn.github.com][learn.github.com]
+[skills.github.com][skills.github.com]
 
 And remember:  
 ![when in doubt, git commit](/images/when-in-doubt-git-commit-meme.png)
@@ -94,7 +94,7 @@ When writing my slides, **[I recorded a 22min git session][git-asciinema]** and 
 [saglacio]: http://saglac.io
 [git-asciinema]: https://asciinema.org/a/6eudi47vuw1dgges25bnpver4
 [git]: http://www.git.com
-[learn.github.com]: https://learn.github.com/
+[skills.github.com]: https://skills.github.com/
 [tldr]: http://tldr-pages.github.io/
 [GabLeRoux/git-commands-example]: https://github.com/GabLeRoux/git-commands-example
 [presentation]: https://docs.google.com/presentation/d/1Gna63HoVNrDhrbnGHd5Dzi_gafMu8cFc-VvpbAHUL90/embed?start=false&loop=false
